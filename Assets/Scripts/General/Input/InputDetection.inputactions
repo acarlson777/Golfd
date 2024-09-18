@@ -1,0 +1,54 @@
+{
+    "name": "InputDetection",
+    "maps": [
+        {
+            "name": "inputdetection",
+            "id": "d78ccff1-3d52-426d-9b30-e12dc9560a31",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "83487aeb-348c-4bae-b31a-e1161926cdf0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "touch",
+                    "type": "Value",
+                    "id": "f9576fbd-a8eb-4372-ae2c-11bcc2870d6d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c3593d3-3d83-494f-a97b-97de25ad49d4",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f8587d87-2ec9-4e18-9270-1dde0af2f29a",
+                    "path": "<Pointer>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
