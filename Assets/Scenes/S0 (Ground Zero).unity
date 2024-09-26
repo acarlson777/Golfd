@@ -370,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &363891952
 Transform:
   m_ObjectHideFlags: 0
@@ -380,11 +380,11 @@ Transform:
   m_GameObject: {fileID: 363891951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.25, z: 1}
+  m_LocalPosition: {x: 0, y: 0.478, z: 0.446}
+  m_LocalScale: {x: 1.1871641, y: 1.8378487, z: 0.29484403}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2087308311}
+  m_Father: {fileID: 508485113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &363891953
 BoxCollider:
@@ -516,8 +516,9 @@ Transform:
   m_LocalPosition: {x: 0.32, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.3333333, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2087308311}
+  m_Children:
+  - {fileID: 363891952}
+  m_Father: {fileID: 609484653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &508485115
 Rigidbody:
@@ -628,7 +629,7 @@ GameObject:
   - component: {fileID: 609484653}
   - component: {fileID: 609484654}
   m_Layer: 0
-  m_Name: FakeCamera
+  m_Name: CLUB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -647,8 +648,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2087308311}
-  m_Father: {fileID: 1454608338}
+  - {fileID: 508485113}
+  m_Father: {fileID: 1232030725}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &609484654
 MonoBehaviour:
@@ -665,7 +666,9 @@ MonoBehaviour:
   camera: {fileID: 1231909361}
   convergeConstant: 3
   clubBody: {fileID: 508485112}
+  clubHead: {fileID: 0}
   maxClubLength: 3
+  clubLength: 0
 --- !u!1 &1063707799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,8 +1077,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1454608338}
   - {fileID: 1663042703}
+  - {fileID: 609484653}
   m_Father: {fileID: 1631374603}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1272489172
@@ -1242,38 +1245,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!1 &1454608337
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1454608338}
-  m_Layer: 0
-  m_Name: CLUB
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1454608338
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454608337}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 609484653}
-  m_Father: {fileID: 1232030725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1612659495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,39 +1469,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1063707800}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2087308310
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2087308311}
-  m_Layer: 0
-  m_Name: GolfClub
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2087308311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087308310}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 363891952}
-  - {fileID: 508485113}
-  m_Father: {fileID: 609484653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095624586
 GameObject:

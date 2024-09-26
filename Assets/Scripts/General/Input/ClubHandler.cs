@@ -8,9 +8,11 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float convergeConstant;
 
     [SerializeField] private GameObject clubBody;
+    [SerializeField] private GameObject clubHead;
     [SerializeField] private float maxClubLength;
     private Ray toGroundRay;
     private RaycastHit groundHit;
+    [SerializeField] private float clubLength;
 
     private void Start()
     {
@@ -20,9 +22,8 @@ public class ClubHandler : MonoBehaviour
     private void Update()
     {
         UpdateClubPosition();
-
-        //Raycast is not being based off the correct local direction from clubBody
-        UpdateClubLength(clubBody.transform, clubBody.transform.forward);
+        UpdateClubLength(clubBody.transform, clubBody.transform.forward); //Use layermasks to avoid the raycast hitting the clubhead
+        UpdateClubHeadPosition();
     }
 
     private void UpdateClubPosition()
@@ -33,15 +34,23 @@ public class ClubHandler : MonoBehaviour
 
     private void UpdateClubLength(Transform activeTransform, Vector3 activeDirection)
     {
-        toGroundRay = new Ray(activeTransform.position, clubBody.transform.up);
+        toGroundRay = new Ray(activeTransform.position, activeDirection.normalized);
         if (Physics.Raycast(toGroundRay, out groundHit, 100))
         {
+            clubLength = Mathf.Min(groundHit.distance, maxClubLength);
             print("Ray hit " + groundHit.collider.gameObject.name);
-            Debug.DrawLine(activeTransform.position, transform.TransformDirection(activeDirection) * groundHit.distance, Color.green, 1f);
+            Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.green, 1f);
         } else
         {
             print("Ray hit nothing");
-            Debug.DrawLine(activeTransform.position, transform.TransformDirection(activeDirection) * 1000, Color.red, 1f);
+            Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.red, 1f);
         }
+
+        
+    }
+
+    private void UpdateClubHeadPosition()
+    {
+        clubHead.transform.localPosition = new Vector3(clubHead.transform.localPosition.x, clubHead.transform.localPosition.y, clubLength);
     }
 }
