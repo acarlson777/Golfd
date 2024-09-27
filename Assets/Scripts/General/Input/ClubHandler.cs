@@ -13,6 +13,7 @@ public class ClubHandler : MonoBehaviour
     private Ray toGroundRay;
     private RaycastHit groundHit;
     [SerializeField] private float clubLength;
+    [SerializeField] private LayerMask layerToHit;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class ClubHandler : MonoBehaviour
     private void UpdateClubLength(Transform activeTransform, Vector3 activeDirection)
     {
         toGroundRay = new Ray(activeTransform.position, activeDirection.normalized);
-        if (Physics.Raycast(toGroundRay, out groundHit, 100))
+        if (Physics.Raycast(toGroundRay, out groundHit, 100, layerToHit))
         {
             clubLength = Mathf.Min(groundHit.distance, maxClubLength);
             print("Ray hit " + groundHit.collider.gameObject.name);
