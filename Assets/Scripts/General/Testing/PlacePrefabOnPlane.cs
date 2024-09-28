@@ -23,7 +23,6 @@ public class PlacePrefabOnPlane : MonoBehaviour
         aRRayCastManager = GetComponent<ARRaycastManager>();
         press = playerInput.actions.FindAction("Press");
         pressPosition = playerInput.actions.FindAction("PressPosition");
-
     }
 
     private void OnEnable()
@@ -49,8 +48,8 @@ public class PlacePrefabOnPlane : MonoBehaviour
                 spawnedObject = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
             } else
             {
-                spawnedObject.transform.position = hitPose.position;
-                spawnedObject.transform.rotation = hitPose.rotation;
+                //spawnedObject.transform.position = hitPose.position;
+                //spawnedObject.transform.rotation = hitPose.rotation;
             }
         }
     }
