@@ -27,17 +27,17 @@ public class PlacePrefabOnPlane : MonoBehaviour
 
     private void OnEnable()
     {
-        press.performed += OnPressScreen;
+        press.performed += OnScreenPress;
     }
 
     private void OnDisable()
     {
-        press.performed -= OnPressScreen;
+        press.performed -= OnScreenPress;
     }
 
-    private void OnPressScreen(InputAction.CallbackContext context)
+    private void OnScreenPress(InputAction.CallbackContext context)
     {
-        print("Screen Pressed");
+        print("Screen Pressed 1");
 
         if (aRRayCastManager.Raycast(pressPosition.ReadValue<Vector2>(), hits, TrackableType.PlaneWithinPolygon))
         {
@@ -48,8 +48,8 @@ public class PlacePrefabOnPlane : MonoBehaviour
                 spawnedObject = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
             } else
             {
-                //spawnedObject.transform.position = hitPose.position;
-                //spawnedObject.transform.rotation = hitPose.rotation;
+                spawnedObject.transform.position = hitPose.position;
+                spawnedObject.transform.rotation = hitPose.rotation;
             }
         }
     }

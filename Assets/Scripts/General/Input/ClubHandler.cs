@@ -5,23 +5,21 @@ using UnityEngine.InputSystem;
 
 public class ClubHandler : MonoBehaviour
 {
-    [SerializeField] private Camera camera;
-    [SerializeField] private float convergeConstant;
+    [SerializeField] private new Camera camera;
 
     [SerializeField] private GameObject clubBody;
     [SerializeField] private GameObject clubHead;
+    [SerializeField] private Vector3 clubHeadOffset;
+    private Rigidbody rb;
     [SerializeField] private float maxClubLength;
-    [SerializeField] private GameObject ENVIRONMENT;
-    [SerializeField] private float THROW_FORCE;
     private Ray toGroundRay;
     private RaycastHit groundHit;
     private float clubLength;
     [SerializeField] private LayerMask layerToHit;
-    private bool isClubActive = false;
 
     private void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -33,8 +31,8 @@ public class ClubHandler : MonoBehaviour
 
     private void UpdateClubPosition()
     {
-        transform.position += (camera.transform.position - transform.position) / convergeConstant;
-        transform.rotation = camera.transform.rotation;
+        rb.MovePosition(camera.transform.position);
+        rb.MoveRotation(camera.transform.rotation);
     }
 
     private void UpdateClubLength(Transform activeTransform, Vector3 activeDirection)
@@ -55,30 +53,12 @@ public class ClubHandler : MonoBehaviour
 
     private void UpdateClubHeadPosition()
     {
-        clubHead.transform.localPosition = new Vector3(clubHead.transform.localPosition.x, clubHead.transform.localPosition.y, clubLength - clubHead.transform.localScale.z / 3);
+        clubHead.transform.position = clubBody.transform.TransformPoint(new Vector3(clubBody.transform.localPosition.x + clubHeadOffset.x, clubBody.transform.localPosition.y + clubHeadOffset.y, clubLength - clubHead.transform.localScale.z / 3 + clubHeadOffset.z));
     }
 
-    
+
     public void OnScreenPress(InputAction.CallbackContext context)
     {
-        print("Screen Pressed");
-
-        /*
-        print("toggled club");
-
-        if (isClubActive)
-        {
-            clubBody.transform.parent = ENVIRONMENT.transform;
-            clubBody.GetComponent<Rigidbody>().isKinematic = false;
-            clubBody.GetComponent<Rigidbody>().AddForce((transform.forward.normalized)*THROW_FORCE, ForceMode.Impulse);
-            clubBody.GetComponent<Rigidbody>().useGravity = true;
-            isClubActive = false;
-        } else
-        {
-            isClubActive = true;
-            clubBody.SetActive(true);
-        }
-        */
+        print("Screen Pressed 2");
     }
-
 }
