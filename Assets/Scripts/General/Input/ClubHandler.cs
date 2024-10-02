@@ -5,17 +5,17 @@ using UnityEngine.InputSystem;
 
 public class ClubHandler : MonoBehaviour
 {
-    [SerializeField] private new Camera camera;
+    [SerializeField] private new Camera _camera;
 
-    [SerializeField] private GameObject clubBody;
-    [SerializeField] private GameObject clubHead;
-    [SerializeField] private Vector3 clubHeadOffset;
+    [SerializeField] private GameObject _clubBody;
+    [SerializeField] private GameObject _clubHead;
+    [SerializeField] private Vector3 _clubHeadOffset;
     private Rigidbody rb;
-    [SerializeField] private float maxClubLength;
+    [SerializeField] private float _maxClubLength;
     private Ray toGroundRay;
     private RaycastHit groundHit;
     private float clubLength;
-    [SerializeField] private LayerMask layerToHit;
+    [SerializeField] private LayerMask _layerToHit;
 
     private void Start()
     {
@@ -25,22 +25,22 @@ public class ClubHandler : MonoBehaviour
     private void Update()
     {
         UpdateClubPosition();
-        UpdateClubLength(clubBody.transform, clubBody.transform.forward);
+        UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
         UpdateClubHeadPosition();
     }
 
     private void UpdateClubPosition()
     {
-        rb.MovePosition(camera.transform.position);
-        rb.MoveRotation(camera.transform.rotation);
+        rb.MovePosition(_camera.transform.position);
+        rb.MoveRotation(_camera.transform.rotation);
     }
 
     private void UpdateClubLength(Transform activeTransform, Vector3 activeDirection)
     {
         toGroundRay = new Ray(activeTransform.position, activeDirection.normalized);
-        if (Physics.Raycast(toGroundRay, out groundHit, 100, layerToHit))
+        if (Physics.Raycast(toGroundRay, out groundHit, 100, _layerToHit))
         {
-            clubLength = Mathf.Min(groundHit.distance, maxClubLength);
+            clubLength = Mathf.Min(groundHit.distance, _maxClubLength);
             //print("Ray hit " + groundHit.collider.gameObject.name);
             Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.green, 1f);
         }
@@ -53,7 +53,7 @@ public class ClubHandler : MonoBehaviour
 
     private void UpdateClubHeadPosition()
     {
-        clubHead.transform.position = clubBody.transform.TransformPoint(new Vector3(clubBody.transform.localPosition.x + clubHeadOffset.x, clubBody.transform.localPosition.y + clubHeadOffset.y, clubLength - clubHead.transform.localScale.z / 3 + clubHeadOffset.z));
+        _clubHead.transform.position = _clubBody.transform.TransformPoint(new Vector3(_clubBody.transform.localPosition.x + _clubHeadOffset.x, _clubBody.transform.localPosition.y + _clubHeadOffset.y, clubLength - _clubHead.transform.localScale.z / 3 + _clubHeadOffset.z));
     }
 
 

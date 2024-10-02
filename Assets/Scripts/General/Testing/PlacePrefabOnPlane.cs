@@ -12,7 +12,7 @@ public class PlacePrefabOnPlane : MonoBehaviour
     private InputAction press;
     private InputAction pressPosition;
 
-    [SerializeField] private GameObject placedPrefab;
+    [SerializeField] private GameObject _placedPrefab;
     private GameObject spawnedObject;
     private ARRaycastManager aRRayCastManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
@@ -45,7 +45,7 @@ public class PlacePrefabOnPlane : MonoBehaviour
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(placedPrefab, hitPose.position, hitPose.rotation);
+                spawnedObject = Instantiate(_placedPrefab, hitPose.position, hitPose.rotation);
             } else
             {
                 spawnedObject.transform.position = hitPose.position;
