@@ -8,6 +8,8 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARRaycastManager))]
 public class PlacePrefabOnPlane : MonoBehaviour
 {
+    [SerializeField] private string _sceneToGoTo;
+
     private PlayerInput playerInput;
     private InputAction press;
     private InputAction pressPosition;
@@ -37,6 +39,8 @@ public class PlacePrefabOnPlane : MonoBehaviour
 
     private void OnScreenPress(InputAction.CallbackContext context)
     {
+        SceneHandler.Instance.LoadScene(_sceneToGoTo);
+
         print("Screen Pressed 1");
 
         if (aRRayCastManager.Raycast(pressPosition.ReadValue<Vector2>(), hits, TrackableType.PlaneWithinPolygon))

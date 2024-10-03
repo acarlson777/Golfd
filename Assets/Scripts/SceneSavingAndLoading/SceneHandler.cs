@@ -27,14 +27,21 @@ public class SceneHandler : MonoBehaviour
 
     private IEnumerator LoadSceneCoroutine(string sceneName)
     {
-        var scene = SceneManager.LoadSceneAsync(sceneName);
-        scene.allowSceneActivation = false;
+        Scene currScene = SceneManager.GetActiveScene();
+        var nextScene = SceneManager.LoadSceneAsync(sceneName);
+        nextScene.allowSceneActivation = false;
 
         _transition.SetTrigger("Start");
+        _transition.ResetTrigger("End");
 
         yield return new WaitForSeconds(_transitionTime);
 
-        scene.allowSceneActivation = true;
+        nextScene.allowSceneActivation = true;
+
+        SceneManager.UnloadSceneAsync(currScene);
+
+        _transition.SetTrigger("End");
+        _transition.ResetTrigger("Start");
     }
 
     public void LoadScene(string sceneName)
