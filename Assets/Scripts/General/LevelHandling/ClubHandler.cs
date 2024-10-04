@@ -61,4 +61,13 @@ public class ClubHandler : MonoBehaviour
     {
         print("Screen Pressed 2");
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("GolfBall"))
+        {
+            print("Golf Ball hit!");
+            //disable club until ball velocity is very close to 0
+        }
+    }
 }

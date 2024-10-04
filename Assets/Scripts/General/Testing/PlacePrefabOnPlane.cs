@@ -39,7 +39,7 @@ public class PlacePrefabOnPlane : MonoBehaviour
 
     private void OnScreenPress(InputAction.CallbackContext context)
     {
-        SceneHandler.Instance.LoadScene(_sceneToGoTo);
+        //SceneHandler.Instance.LoadScene(_sceneToGoTo);
 
         print("Screen Pressed 1");
 
