@@ -3,9 +3,8 @@ using System.Collections;
 
 public class LevelHandler : MonoBehaviour
 {
-    private int strokeCount = 0;
     private float golfBallInHoleToLevelCompleteTransitionTime = 1f;
-    [SerializeField] private int _strokeCountNeededForPar;
+    public int par;
 
     private void Start()
     {
@@ -20,16 +19,6 @@ public class LevelHandler : MonoBehaviour
     public void AnimateOut()
     {
 
-    }
-
-    private int GetStrokeCount()
-    {
-        return strokeCount;
-    }
-
-    public void IncrementStrokeCount()
-    {
-        strokeCount++;
     }
 
     public IEnumerator OnLevelCompleted()
