@@ -1,18 +1,38 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
-public class DialogueManager : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class DialogueManager : MonoBehaviour{
+
+
+
+    public Image characterImage;
+    public TextMeshProUGUI dialogueText;
+    public List<string> dialogueLines;
+    public float typingSpeed = 0.05f;
+    private int currentLineIndex = 0;
+    private Action onDialogueComplete;
+
+
+
+    void Start(){
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
+
+        if (Input.GetMouseButtonDown(0)){
+            if (dialogueText.text != dialogueLines[currentLineIndex]){
+
+                dialogueText.text = dialogueLines[currentLineIndex];
+            }
+            else{
+                NextLine();
+            }
+        }
 
     }
 
@@ -20,11 +40,46 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(string[] lines, Action onDialogueComplete){
 
-        EndDialogue(onDialogueComplete);
+
+
+      this.onDialogueComplete = onDialogueComplete;
+
+      currentLineIndex = 0;
+      ShowLine(dialogueLines[currentLineIndex]);
+
     }
 
-    private void EndDialogue(Action onDialogueComplete){
+    private void EndDialogue(){
 
         onDialogueComplete?.Invoke();
+    }
+
+
+    private void ShowLine(string line){
+
+      dialogueText.text = "";
+      StartCoroutine(TypeLine(line));
+
+    }
+
+
+    public void NextLine(){
+        if (currentLineIndex < dialogueLines.Count - 1){
+            currentLineIndex++;
+            ShowLine(dialogueLines[currentLineIndex]);
+        }
+        else{
+            EndDialogue();
+        }
+    }
+
+
+    private IEnumerator TypeLine(string line){
+
+      foreach (char letter in line){
+        dialogueText.text += letter;
+        yield return new WaitForSeconds(typingSpeed);
+      }
+
     }
 }
