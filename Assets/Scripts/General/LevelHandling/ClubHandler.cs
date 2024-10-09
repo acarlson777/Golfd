@@ -12,6 +12,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private Vector3 _clubHeadOffset;
     private Rigidbody rb;
     private Rigidbody gBrb;
+    [SerializeField] private float _minClubLength;
     [SerializeField] private float _maxClubLength;
     private Ray toGroundRay;
     private RaycastHit groundHit;
@@ -60,6 +61,7 @@ public class ClubHandler : MonoBehaviour
         }
         else
         {
+            clubLength = _minClubLength;
             //print("Ray hit nothing");
             Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.red, 1f);
         }
@@ -81,9 +83,16 @@ public class ClubHandler : MonoBehaviour
         }
     }
 
-    public void OnScreenPress(InputAction.CallbackContext context)
+    public void OnScreenPressOrRelease(InputAction.CallbackContext context)
     {
-        print("Screen Pressed 2");
+        if (context.started) {
+            print("press or released");
+            _clubHead.SetActive(true);
+        } else if (context.canceled)
+        {
+            _clubHead.SetActive(false);
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -29,12 +29,12 @@ public class PlacePrefabOnPlane : MonoBehaviour
 
     private void OnEnable()
     {
-        press.performed += OnScreenPress;
+        //press.performed += OnScreenPress;
     }
 
     private void OnDisable()
     {
-        press.performed -= OnScreenPress;
+        //press.performed -= OnScreenPress;
     }
 
     private void OnScreenPress(InputAction.CallbackContext context)

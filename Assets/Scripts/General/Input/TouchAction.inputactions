@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Press",
-                    "type": "Value",
+                    "type": "Button",
                     "id": "02e93553-6dd8-47fc-8269-2433cf6b47bc",
                     "expectedControlType": "",
                     "processors": "",
@@ -29,7 +29,7 @@
                     "name": "",
                     "id": "849ef4ee-baf5-4cda-96f5-db33ba3aa891",
                     "path": "<Pointer>/press",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
                     "action": "Press",
