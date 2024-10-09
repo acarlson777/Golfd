@@ -13,32 +13,35 @@ public class DialogueManager : MonoBehaviour{
     public TextMeshProUGUI dialogueText;
     public List<string> dialogueLines;
     public float typingSpeed = 0.05f;
-    private int currentLineIndex = 0;
+    private int currentLineIndex = -1;
     private Action onDialogueComplete;
+    private Coroutine typingCoroutine;
 
 
 
     void Start(){
 
+
+
     }
 
-    void Update(){
-
-        if (Input.GetMouseButtonDown(0)){
-            if (dialogueText.text != dialogueLines[currentLineIndex]){
-
+    public void Tap() {
+        if (currentLineIndex >= 0) {
+            if (typingCoroutine != null) {
+                // Stop the typing coroutine and show the full text
+                StopCoroutine(typingCoroutine);
                 dialogueText.text = dialogueLines[currentLineIndex];
-            }
-            else{
+                typingCoroutine = null; // Reset the coroutine reference
+            } else if (dialogueText.text == dialogueLines[currentLineIndex]) {
+                // Proceed to the next line if the current line is fully displayed
                 NextLine();
             }
         }
-
     }
 
 
 
-    public void StartDialogue(string[] lines, Action onDialogueComplete){
+    public void StartDialogue(Action onDialogueComplete){
 
 
 
@@ -51,6 +54,8 @@ public class DialogueManager : MonoBehaviour{
 
     private void EndDialogue(){
 
+        Debug.Log("Dialoge Finished");
+
         onDialogueComplete?.Invoke();
     }
 
@@ -58,7 +63,7 @@ public class DialogueManager : MonoBehaviour{
     private void ShowLine(string line){
 
       dialogueText.text = "";
-      StartCoroutine(TypeLine(line));
+      typingCoroutine = StartCoroutine(TypeLine(line));
 
     }
 
@@ -80,6 +85,7 @@ public class DialogueManager : MonoBehaviour{
         dialogueText.text += letter;
         yield return new WaitForSeconds(typingSpeed);
       }
+      typingCoroutine = null; 
 
     }
 }
