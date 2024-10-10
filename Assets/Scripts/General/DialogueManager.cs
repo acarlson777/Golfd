@@ -4,88 +4,121 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
-public class DialogueManager : MonoBehaviour{
-
-
-
+public class DialogueManager : MonoBehaviour
+{
     public Image characterImage;
     public TextMeshProUGUI dialogueText;
-    public List<string> dialogueLines;
     public float typingSpeed = 0.05f;
+
+
+    [SerializeField]
+    private List<DialogueEntry> dialogueEntries;
+
+    private Dictionary<string, List<string>> dialogueDict;
     private int currentLineIndex = -1;
     private Action onDialogueComplete;
     private Coroutine typingCoroutine;
 
-
-
-    void Start(){
-
-
-
+    [System.Serializable]
+    public class DialogueEntry
+    {
+        public string name;
+        public List<string> lines;
     }
 
-    public void Tap() {
-        if (currentLineIndex >= 0) {
-            if (typingCoroutine != null) {
-                // Stop the typing coroutine and show the full text
-                StopCoroutine(typingCoroutine);
-                dialogueText.text = dialogueLines[currentLineIndex];
-                typingCoroutine = null; // Reset the coroutine reference
-            } else if (dialogueText.text == dialogueLines[currentLineIndex]) {
-                // Proceed to the next line if the current line is fully displayed
-                NextLine();
+    void Start(){
+        Debug.Log("STAZRT");
+        dialogueDict = new Dictionary<string, List<string>>();
+
+        foreach (var entry in dialogueEntries)
+        {
+            dialogueDict[entry.name] = entry.lines;
+        }
+
+
+
+        foreach (var kvp in dialogueDict){
+            Debug.Log($"Key: {kvp.Key}, Lines Count: {kvp.Value.Count}");
+        }
+    }
+
+    public void Tap(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if (currentLineIndex >= 0)
+            {
+                if (typingCoroutine != null)
+                {
+                    StopCoroutine(typingCoroutine);
+                    dialogueText.text = dialogueDict[dialogueEntries[0].name][currentLineIndex];
+                    typingCoroutine = null; //
+                }
+                else if (dialogueText.text == dialogueDict[dialogueEntries[0].name][currentLineIndex])
+                {
+
+                    NextLine();
+                }
             }
         }
     }
 
+    public void StartDialogue(string dialogueName, Action onDialogueComplete){
 
 
-    public void StartDialogue(Action onDialogueComplete){
+      foreach (var kvp in dialogueDict){
+          Debug.Log($"Keys: {kvp.Key}, Lines Count: {kvp.Value.Count}");
+      }
 
 
-
-      this.onDialogueComplete = onDialogueComplete;
-
-      currentLineIndex = 0;
-      ShowLine(dialogueLines[currentLineIndex]);
-
+        //
+        // if (dialogueDict.TryGetValue(dialogueName, out List<string> lines))
+        // {
+        //     this.onDialogueComplete = onDialogueComplete;
+        //     currentLineIndex = 0;
+        //
+        //     ShowLine(lines[currentLineIndex]);
+        // }
+        // else
+        // {
+        //     Debug.LogWarning($"Dialogue '{dialogueName}' not found!");
+        // }
     }
 
-    private void EndDialogue(){
-
-        Debug.Log("Dialoge Finished");
-
+    private void EndDialogue()
+    {
+        Debug.Log("Dialogue Finished");
         onDialogueComplete?.Invoke();
     }
 
-
-    private void ShowLine(string line){
-
-      dialogueText.text = "";
-      typingCoroutine = StartCoroutine(TypeLine(line));
-
+    private void ShowLine(string line)
+    {
+        dialogueText.text = "";
+        typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
-
-    public void NextLine(){
-        if (currentLineIndex < dialogueLines.Count - 1){
+    public void NextLine()
+    {
+        if (currentLineIndex < dialogueDict[dialogueEntries[0].name].Count - 1)
+        {
             currentLineIndex++;
-            ShowLine(dialogueLines[currentLineIndex]);
+            ShowLine(dialogueDict[dialogueEntries[0].name][currentLineIndex]);
         }
-        else{
+        else
+        {
             EndDialogue();
         }
     }
 
-
-    private IEnumerator TypeLine(string line){
-
-      foreach (char letter in line){
-        dialogueText.text += letter;
-        yield return new WaitForSeconds(typingSpeed);
-      }
-      typingCoroutine = null; 
-
+    private IEnumerator TypeLine(string line)
+    {
+        foreach (char letter in line)
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+        }
+        typingCoroutine = null;
     }
 }
