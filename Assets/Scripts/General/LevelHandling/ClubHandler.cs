@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ClubHandler : MonoBehaviour
 {
-    [SerializeField] private new Camera _camera;
+    [SerializeField] private Camera _camera;
 
     [SerializeField] private GameObject _clubBody;
     [SerializeField] private GameObject _clubHead;

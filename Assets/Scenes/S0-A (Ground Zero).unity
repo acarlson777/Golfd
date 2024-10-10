@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 276037016}
   - component: {fileID: 276037022}
   - component: {fileID: 276037021}
+  - component: {fileID: 276037023}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
   m_TagString: Untagged
@@ -347,7 +348,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276037015}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
   m_Name: 
@@ -395,6 +396,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 276037023}
+        m_TargetAssemblyTypeName: LevelPlacementHandler, Assembly-CSharp
+        m_MethodName: OnScreenPress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 02e93553-6dd8-47fc-8269-2433cf6b47bc
     m_ActionName: TouchControl/Press[/Mouse/press]
   - m_PersistentCalls:
@@ -406,6 +419,19 @@ MonoBehaviour:
   m_DefaultActionMap: TouchControl
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &276037023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276037015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddb9113ae7b84a819b70a3740ac92e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  golfClub: {fileID: 609484652}
 --- !u!1 &363891951
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &609484653
 Transform:
   m_ObjectHideFlags: 0
@@ -1514,7 +1540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fb0aa8dbbe74837bc97e7d8c740b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelIndex: -1
+  _worldIndex: 1
   _levelList:
   - {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
   _strokeCount: 0

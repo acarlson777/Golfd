@@ -5,7 +5,8 @@ public class WorldHandler : MonoBehaviour
 {
     public static WorldHandler Instance { get; private set; }
 
-    [SerializeField] private int _levelIndex = -1;
+    [SerializeField] private int _worldIndex;
+    private int _levelIndex = 0;
     [SerializeField] private GameObject[] _levelList;
     [SerializeField] private int _strokeCount = 0;
     private LevelHandler currLevelHandler = null;
@@ -22,6 +23,7 @@ public class WorldHandler : MonoBehaviour
             DontDestroyOnLoad(this);
         }
 
+        //Need to instantiate all golf levels at their animateout positions at the very beginning
         for (int i = 0; i < _levelList.Length; i++)
         {
             _levelList[i].SetActive(false);
@@ -30,7 +32,7 @@ public class WorldHandler : MonoBehaviour
 
     private void Start()
     {
-        LoadNextLevel();
+        //LoadNextLevel();
     }
 
     public void OnLevelCompleted()
@@ -40,7 +42,7 @@ public class WorldHandler : MonoBehaviour
         //Show Level Complete Screen whilst getting strokeCount
     }
 
-    private void LoadNextLevel()
+    public void LoadNextLevel()
     {
         if (currLevelHandler != null) {
             currLevelHandler.AnimateOut();
@@ -60,5 +62,10 @@ public class WorldHandler : MonoBehaviour
     private int CalculateScore()
     {
         return _strokeCount - currLevelHandler.par;
+    }
+
+    public GameObject GetCurrentLevelGameObject()
+    {
+        return _levelList[_levelIndex];
     }
 }

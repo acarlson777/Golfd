@@ -3,41 +3,46 @@ using System.Collections;
 
 public class LevelHandler : MonoBehaviour
 {
-    private float golfBallInHoleToLevelCompleteTransitionTime = 1f;
     public int par;
-    [SerializeField] private Vector3 animateInPosition;
-    private Vector3 animateOutPosition;
-
-    //https://www.youtube.com/watch?v=7vFwTt4isDY <-- Use this tutorial for masking
+    [SerializeField] private Vector3 _animateInPosition;
+    [SerializeField] private Vector3 _animateOutPosition;
+    [SerializeField] private float _animateInDuration;
+    [SerializeField] private float _animateOutDuration;
 
     private void Start()
     {
-        animateOutPosition = transform.position;
+        transform.position = _animateOutPosition;
     }
 
     public void AnimateIn()
     {
-        
+        StartCoroutine(AnimateInCoroutine());
     }
 
     public void AnimateOut()
     {
-
-    }
-
-    public IEnumerator OnLevelCompleted()
-    {
-        yield return new WaitForSeconds(golfBallInHoleToLevelCompleteTransitionTime);
-        WorldHandler.Instance.OnLevelCompleted();
+        StartCoroutine(AnimateOutCoroutine());
     }
 
     private IEnumerator AnimateInCoroutine()
     {
-        yield return null;
+        float timeElapsed = 0;
+        while (timeElapsed <= _animateInDuration)
+        {
+            transform.position = Vector3.Lerp(_animateInPosition, _animateOutPosition, timeElapsed / _animateInDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 
     private IEnumerator AnimateOutCoroutine()
     {
-        yield return null;
+        float timeElapsed = 0;
+        while (timeElapsed <= _animateOutDuration)
+        {
+            transform.position = Vector3.Lerp(_animateOutPosition, _animateInPosition, timeElapsed / _animateOutDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 }
