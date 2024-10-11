@@ -24,6 +24,7 @@ public class WorldHandler : MonoBehaviour
         }
 
         //Need to instantiate all golf levels at their animateout positions at the very beginning
+        //Make a list of instantiated mini golf levels and loop through that for level stuff
         for (int i = 0; i < _levelList.Length; i++)
         {
             _levelList[i].SetActive(false);
@@ -40,6 +41,13 @@ public class WorldHandler : MonoBehaviour
         int score = CalculateScore();
         _strokeCount = 0;
         //Show Level Complete Screen whilst getting strokeCount
+    }
+
+    public void LoadFirstLevel(GameObject firstLevel)
+    {
+        firstLevel.SetActive(true);
+        currLevelHandler = _levelList[_levelIndex].GetComponent<LevelHandler>();
+        currLevelHandler.AnimateIn();
     }
 
     public void LoadNextLevel()

@@ -40,7 +40,7 @@ public class LevelPlacementHandler : MonoBehaviour
                 if (spawnedObject == null)
                 {
                     spawnedObject = Instantiate(levelToPlace, hitPose.position, hitPose.rotation);
-                    spawnedObject.GetComponent<LevelHandler>().AnimateIn();
+                    WorldHandler.Instance.LoadFirstLevel(spawnedObject); //Change this to use universal level loading function
                     golfClub.SetActive(true);
                     this.enabled = false;
                 }
