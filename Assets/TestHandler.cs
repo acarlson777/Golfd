@@ -7,21 +7,10 @@ public class TestHandler : MonoBehaviour{
     public DialogueManager manager;
 
 
-    void Awake(){
-
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
-      Debug.Log("Init from TestHandler");
+    void Start(){
 
 
       StartCoroutine(PauseExecution());
-
-
-      manager.StartDialogue("test123", onDialogueComplete);
 
 
     }
@@ -47,6 +36,6 @@ public class TestHandler : MonoBehaviour{
         yield return new WaitForSeconds(2f);
 
         Debug.Log("Execution resumed.");
-        // Continue with the rest of your logic here
+        manager.StartDialogue("test123", onDialogueComplete);
     }
 }

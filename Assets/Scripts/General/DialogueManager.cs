@@ -22,8 +22,7 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typingCoroutine;
 
     [System.Serializable]
-    public class DialogueEntry
-    {
+    public class DialogueEntry{
         public string name;
         public List<string> lines;
     }
@@ -32,8 +31,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("STAZRT");
         dialogueDict = new Dictionary<string, List<string>>();
 
-        foreach (var entry in dialogueEntries)
-        {
+        foreach (var entry in dialogueEntries){
             dialogueDict[entry.name] = entry.lines;
         }
 
@@ -44,20 +42,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void Tap(InputAction.CallbackContext context)
-    {
-        if (context.started)
-        {
-            if (currentLineIndex >= 0)
-            {
-                if (typingCoroutine != null)
-                {
+    public void Tap(InputAction.CallbackContext context){
+
+      Debug.Log("click");
+        if (context.started){
+            if (currentLineIndex >= 0){
+                if (typingCoroutine != null){
                     StopCoroutine(typingCoroutine);
                     dialogueText.text = dialogueDict[dialogueEntries[0].name][currentLineIndex];
                     typingCoroutine = null; //
                 }
-                else if (dialogueText.text == dialogueDict[dialogueEntries[0].name][currentLineIndex])
-                {
+                else if (dialogueText.text == dialogueDict[dialogueEntries[0].name][currentLineIndex]){
 
                     NextLine();
                 }
@@ -68,54 +63,39 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(string dialogueName, Action onDialogueComplete){
 
 
-      foreach (var kvp in dialogueDict){
-          Debug.Log($"Keys: {kvp.Key}, Lines Count: {kvp.Value.Count}");
-      }
+        if (dialogueDict.TryGetValue(dialogueName, out List<string> lines)){
+            this.onDialogueComplete = onDialogueComplete;
+            currentLineIndex = 0;
 
+            ShowLine(lines[currentLineIndex]);
+        }else{
 
-        //
-        // if (dialogueDict.TryGetValue(dialogueName, out List<string> lines))
-        // {
-        //     this.onDialogueComplete = onDialogueComplete;
-        //     currentLineIndex = 0;
-        //
-        //     ShowLine(lines[currentLineIndex]);
-        // }
-        // else
-        // {
-        //     Debug.LogWarning($"Dialogue '{dialogueName}' not found!");
-        // }
+            Debug.LogWarning($"Dialogue '{dialogueName}' not found!");
+        }
     }
 
-    private void EndDialogue()
-    {
+    private void EndDialogue(){
         Debug.Log("Dialogue Finished");
         onDialogueComplete?.Invoke();
-    }
+      }
 
-    private void ShowLine(string line)
-    {
+    private void ShowLine(string line){
         dialogueText.text = "";
         typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
-    public void NextLine()
-    {
-        if (currentLineIndex < dialogueDict[dialogueEntries[0].name].Count - 1)
-        {
+    public void NextLine(){
+        if (currentLineIndex < dialogueDict[dialogueEntries[0].name].Count - 1){
             currentLineIndex++;
             ShowLine(dialogueDict[dialogueEntries[0].name][currentLineIndex]);
-        }
-        else
-        {
+
+        }else{
             EndDialogue();
         }
     }
 
-    private IEnumerator TypeLine(string line)
-    {
-        foreach (char letter in line)
-        {
+    private IEnumerator TypeLine(string line){
+        foreach (char letter in line){
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
