@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
 {
     public Image characterImage;
     public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI characterName;
     public float typingSpeed = 0.05f;
 
 
@@ -17,28 +18,33 @@ public class DialogueManager : MonoBehaviour
     private List<DialogueEntry> dialogueEntries;
 
     private Dictionary<string, List<string>> dialogueDict;
+    private Dictionary<string, List<string>> namesDict;
+    private Dictionary<string, List<Sprite>> imagesDict;
     private int currentLineIndex = -1;
     private Action onDialogueComplete;
     private Coroutine typingCoroutine;
+
+    private string currentDialogueName;
 
     [System.Serializable]
     public class DialogueEntry{
         public string name;
         public List<string> lines;
+        public List<string> names;
+        public List<Sprite> images;
+
     }
 
     void Start(){
-        Debug.Log("STAZRT");
         dialogueDict = new Dictionary<string, List<string>>();
+        namesDict = new Dictionary<string, List<string>>();
+        imagesDict = new Dictionary<string, List<Sprite>>();
 
         foreach (var entry in dialogueEntries){
             dialogueDict[entry.name] = entry.lines;
-        }
+            namesDict[entry.name] = entry.names;
+            imagesDict[entry.name] = entry.images;
 
-
-
-        foreach (var kvp in dialogueDict){
-            Debug.Log($"Key: {kvp.Key}, Lines Count: {kvp.Value.Count}");
         }
     }
 
@@ -49,10 +55,10 @@ public class DialogueManager : MonoBehaviour
             if (currentLineIndex >= 0){
                 if (typingCoroutine != null){
                     StopCoroutine(typingCoroutine);
-                    dialogueText.text = dialogueDict[dialogueEntries[0].name][currentLineIndex];
-                    typingCoroutine = null; //
+                    dialogueText.text = dialogueDict[currentDialogueName][currentLineIndex];
+                    typingCoroutine = null;
                 }
-                else if (dialogueText.text == dialogueDict[dialogueEntries[0].name][currentLineIndex]){
+                else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]){
 
                     NextLine();
                 }
@@ -61,6 +67,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void StartDialogue(string dialogueName, Action onDialogueComplete){
+
+
+        currentDialogueName  = dialogueName;
 
 
         if (dialogueDict.TryGetValue(dialogueName, out List<string> lines)){
@@ -80,14 +89,17 @@ public class DialogueManager : MonoBehaviour
       }
 
     private void ShowLine(string line){
+        Debug.Log("");
         dialogueText.text = "";
+        characterImage.sprite = dialogueEntries[0].images[currentLineIndex];
+        characterName.text = dialogueEntries[0].names[currentLineIndex];
         typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
     public void NextLine(){
-        if (currentLineIndex < dialogueDict[dialogueEntries[0].name].Count - 1){
+        if (currentLineIndex < dialogueDict[currentDialogueName].Count - 1){
             currentLineIndex++;
-            ShowLine(dialogueDict[dialogueEntries[0].name][currentLineIndex]);
+            ShowLine(dialogueDict[currentDialogueName][currentLineIndex]);
 
         }else{
             EndDialogue();
