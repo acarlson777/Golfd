@@ -4,7 +4,7 @@ using System.Collections;
 public class HoleHandler : MonoBehaviour
 {
     [SerializeField] private LevelHandler _levelHandler;
-    private float _ballVelocityTolerance = 1f;
+    private float _ballVelocityTolerance = 0.1f;
     private bool golfBallInHole;
     private Coroutine currCoroutine;
 
