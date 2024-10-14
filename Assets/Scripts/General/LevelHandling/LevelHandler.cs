@@ -6,8 +6,8 @@ public class LevelHandler : MonoBehaviour
     public int par;
     [SerializeField] private Vector3 _animateStartPosition;
     private Vector3 _animateEndPosition;
-    private float _animateInDuration = 5f;
-    private float _animateOutDuration = 5f;
+    private float _animateInDuration = 1f;
+    private float _animateOutDuration = 1f;
     public GameObject LEVEL;
     private float timeElapsed;
 

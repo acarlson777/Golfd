@@ -4,7 +4,7 @@ using System.Collections;
 public class HoleHandler : MonoBehaviour
 {
     [SerializeField] private LevelHandler _levelHandler;
-    private float _ballVelocityTolerance = 0.01f;
+    private float _ballVelocityTolerance = 1f;
     private bool golfBallInHole;
     private Coroutine currCoroutine;
 
@@ -36,7 +36,7 @@ public class HoleHandler : MonoBehaviour
 
         while (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
-            print("Checking for golf ball stopped");
+            //print("Checking for golf ball stopped");
             yield return null;
         }
         WorldHandler.Instance.OnLevelCompleted();
