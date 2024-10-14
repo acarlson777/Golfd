@@ -258,7 +258,6 @@ GameObject:
   - component: {fileID: 276037017}
   - component: {fileID: 276037016}
   - component: {fileID: 276037022}
-  - component: {fileID: 276037021}
   - component: {fileID: 276037023}
   m_Layer: 0
   m_Name: XR Origin (Mobile AR)
@@ -341,21 +340,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1063707800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &276037021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276037015}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _sceneToGoTo: S0-B (Ground Zero)
-  _placedPrefab: {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2,
-    type: 3}
 --- !u!114 &276037022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,8 +380,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 276037021}
-        m_TargetAssemblyTypeName: PlacePrefabOnPlane, Assembly-CSharp
+    m_ActionId: 02e93553-6dd8-47fc-8269-2433cf6b47bc
+    m_ActionName: TouchControl/Press[/Mouse/press]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 861627f4-5e40-4422-a3f3-13571cd9b305
+    m_ActionName: TouchControl/PressPosition[/Mouse/position]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 276037023}
+        m_TargetAssemblyTypeName: LevelPlacementHandler, Assembly-CSharp
         m_MethodName: OnScreenPress
         m_Mode: 0
         m_Arguments:
@@ -408,12 +400,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 02e93553-6dd8-47fc-8269-2433cf6b47bc
-    m_ActionName: TouchControl/Press[/Mouse/press]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 861627f4-5e40-4422-a3f3-13571cd9b305
-    m_ActionName: TouchControl/PressPosition[/Mouse/position]
+    m_ActionId: e8562534-4bdf-4352-9b8e-8011edd40edd
+    m_ActionName: TouchControl/JustPress[/Mouse/press]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: TouchControl
@@ -428,7 +416,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 276037015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddb9113ae7b84a819b70a3740ac92e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   golfClub: {fileID: 609484652}
@@ -1543,7 +1531,12 @@ MonoBehaviour:
   _worldIndex: 1
   _levelList:
   - {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
+  - {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
+  - {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
+  - {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
   _strokeCount: 0
+  isLevelComplete: 1
+  _ENVIRONMENT: {fileID: 1125088866}
 --- !u!1 &2095624586
 GameObject:
   m_ObjectHideFlags: 0

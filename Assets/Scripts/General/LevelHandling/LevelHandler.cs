@@ -4,43 +4,36 @@ using System.Collections;
 public class LevelHandler : MonoBehaviour
 {
     public int par;
-    [SerializeField] private Vector3 _animateInPosition;
-    [SerializeField] private Vector3 _animateOutPosition;
-    [SerializeField] private float _animateInDuration;
-    [SerializeField] private float _animateOutDuration;
+    [SerializeField] private Vector3 _animateStartPosition;
+    private Vector3 _animateEndPosition;
+    private float _animateInDuration = 5f;
+    private float _animateOutDuration = 5f;
+    public GameObject LEVEL;
+    private float timeElapsed;
 
     private void Start()
     {
-        transform.position = _animateOutPosition;
+        LEVEL.transform.position = _animateStartPosition;
+        _animateEndPosition = new Vector3(0, 0, 0);
     }
 
-    public void AnimateIn()
+    public IEnumerator AnimateInCoroutine()
     {
-        StartCoroutine(AnimateInCoroutine());
-    }
-
-    public void AnimateOut()
-    {
-        StartCoroutine(AnimateOutCoroutine());
-    }
-
-    private IEnumerator AnimateInCoroutine()
-    {
-        float timeElapsed = 0;
+        timeElapsed = 0;
         while (timeElapsed <= _animateInDuration)
         {
-            transform.position = Vector3.Lerp(_animateInPosition, _animateOutPosition, timeElapsed / _animateInDuration);
+            LEVEL.transform.position = Vector3.Lerp(_animateStartPosition, _animateEndPosition, timeElapsed / _animateInDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }
     }
 
-    private IEnumerator AnimateOutCoroutine()
+    public IEnumerator AnimateOutCoroutine()
     {
-        float timeElapsed = 0;
+        timeElapsed = 0;
         while (timeElapsed <= _animateOutDuration)
         {
-            transform.position = Vector3.Lerp(_animateOutPosition, _animateInPosition, timeElapsed / _animateOutDuration);
+            LEVEL.transform.position = Vector3.Lerp(_animateEndPosition, _animateStartPosition, timeElapsed / _animateOutDuration);
             timeElapsed += Time.deltaTime;
             yield return null;
         }

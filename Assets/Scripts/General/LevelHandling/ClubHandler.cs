@@ -77,16 +77,14 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
         {
-            print(gBrb.velocity.magnitude);
             _clubHead.GetComponent<BoxCollider>().enabled = true;
-            
         }
     }
 
     public void OnScreenPressOrRelease(InputAction.CallbackContext context)
     {
         if (context.started) {
-            print("press or released");
+            //print("press or released");
             _clubHead.SetActive(true);
         } else if (context.canceled)
         {
@@ -99,7 +97,7 @@ public class ClubHandler : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GolfBall"))
         {
-            print("Golf Ball Hit");
+            //print("Golf Ball Hit");
             StartCoroutine(SwingTime());
         }
     }

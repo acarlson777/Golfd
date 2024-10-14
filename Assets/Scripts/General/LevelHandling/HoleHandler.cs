@@ -4,15 +4,19 @@ using System.Collections;
 public class HoleHandler : MonoBehaviour
 {
     [SerializeField] private LevelHandler _levelHandler;
-    private float golfBallBounceOutCheckDuration = 1f;
-    private bool golfBallInHole = false;
+    private float _ballVelocityTolerance = 0.01f;
+    private bool golfBallInHole;
+    private Coroutine currCoroutine;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
-            golfBallInHole = true;
-            StartCoroutine(CheckForBounceOut());
+            if (!golfBallInHole)
+            {
+                currCoroutine = StartCoroutine(CheckForGolfBallStopped(other));
+                golfBallInHole = true;
+            }
         }
     }
 
@@ -20,16 +24,21 @@ public class HoleHandler : MonoBehaviour
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
+            StopCoroutine(currCoroutine);
+            currCoroutine = null;
             golfBallInHole = false;
         }
     }
 
-    private IEnumerator CheckForBounceOut()
+    private IEnumerator CheckForGolfBallStopped(Collider other)
     {
-        yield return new WaitForSeconds(golfBallBounceOutCheckDuration);
-        if (golfBallInHole)
+        Rigidbody gBrb = other.gameObject.GetComponent<Rigidbody>();
+
+        while (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
-            WorldHandler.Instance.OnLevelCompleted();
+            print("Checking for golf ball stopped");
+            yield return null;
         }
+        WorldHandler.Instance.OnLevelCompleted();
     }
 }

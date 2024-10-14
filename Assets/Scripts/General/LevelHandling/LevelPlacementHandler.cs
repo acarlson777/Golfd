@@ -8,25 +8,19 @@ using UnityEngine.XR.ARSubsystems;
 [RequireComponent(typeof(ARRaycastManager))]
 public class LevelPlacementHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject golfClub;
-
-    private GameObject levelToPlace;
-    private GameObject spawnedObject;
-    private ARRaycastManager aRRayCastManager;
-    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private PlayerInput playerInput;
     private InputAction pressPosition;
+    [SerializeField] private GameObject golfClub;
+    private bool hasTapOccured = false;
+
+    private ARRaycastManager aRRayCastManager;
+    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
+        aRRayCastManager = GetComponent<ARRaycastManager>();
         pressPosition = playerInput.actions.FindAction("PressPosition");
-    }
-
-    private void Start()
-    {
-        //Show text which tells the player to look around and that anywhere with dots the level can be placed
-        levelToPlace = WorldHandler.Instance.GetCurrentLevelGameObject();
     }
 
     public void OnScreenPress(InputAction.CallbackContext context)
@@ -37,12 +31,12 @@ public class LevelPlacementHandler : MonoBehaviour
             {
                 var hitPose = hits[0].pose;
 
-                if (spawnedObject == null)
+                if (!hasTapOccured)
                 {
-                    spawnedObject = Instantiate(levelToPlace, hitPose.position, hitPose.rotation);
-                    WorldHandler.Instance.LoadFirstLevel(spawnedObject); //Change this to use universal level loading function
+                    hasTapOccured = true;
+                    WorldHandler.Instance.LoadNextLevel();
+                    WorldHandler.Instance.UpdateLevelPosition(hitPose);
                     golfClub.SetActive(true);
-                    this.enabled = false;
                 }
             }
         }

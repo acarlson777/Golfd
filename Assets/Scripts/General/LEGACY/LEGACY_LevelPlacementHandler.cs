@@ -6,53 +6,45 @@ using System.Collections.Generic;
 using UnityEngine.XR.ARSubsystems;
 
 [RequireComponent(typeof(ARRaycastManager))]
-public class PlacePrefabOnPlane : MonoBehaviour
+public class LEGACY_LevelPlacementHandler : MonoBehaviour
 {
-    [SerializeField] private string _sceneToGoTo;
+    [SerializeField] private GameObject golfClub;
 
-    private PlayerInput playerInput;
-    private InputAction pressPosition;
-
-    [SerializeField] private GameObject _placedPrefab;
+    private GameObject levelToPlace;
     private GameObject spawnedObject;
     private ARRaycastManager aRRayCastManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private PlayerInput playerInput;
+    private InputAction pressPosition;
+    private bool hasScreenBeenPressed = false;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-        aRRayCastManager = GetComponent<ARRaycastManager>();
         pressPosition = playerInput.actions.FindAction("PressPosition");
     }
 
-    private void OnEnable()
+    private void Start()
     {
-        
-    }
-
-    private void OnDisable()
-    {
-        
+        //Show text which tells the player to look around and that anywhere with dots the level can be placed
+        //levelToPlace = WorldHandler.Instance.GetCurrentLevelGameObject();
     }
 
     public void OnScreenPress(InputAction.CallbackContext context)
     {
-        //SceneHandler.Instance.LoadScene(_sceneToGoTo);
-        
         if (context.started)
         {
             if (aRRayCastManager.Raycast(pressPosition.ReadValue<Vector2>(), hits, TrackableType.PlaneWithinPolygon))
             {
                 var hitPose = hits[0].pose;
 
-                if (spawnedObject == null)
+                if (!hasScreenBeenPressed)
                 {
-                    spawnedObject = Instantiate(_placedPrefab, hitPose.position, hitPose.rotation);
-                }
-                else
-                {
-                    spawnedObject.transform.position = hitPose.position;
-                    spawnedObject.transform.rotation = hitPose.rotation;
+                    hasScreenBeenPressed = true;
+                    //spawnedObject = Instantiate(levelToPlace, hitPose.position, hitPose.rotation);
+                    WorldHandler.Instance.LoadNextLevel(); //Change this to use universal level loading function
+                    golfClub.SetActive(true);
+                    this.enabled = false;
                 }
             }
         }
