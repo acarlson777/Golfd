@@ -41,9 +41,19 @@ public class DialogueManager : MonoBehaviour
         imagesDict = new Dictionary<string, List<Sprite>>();
 
         foreach (var entry in dialogueEntries){
-            dialogueDict[entry.name] = entry.lines;
-            namesDict[entry.name] = entry.names;
-            imagesDict[entry.name] = entry.images;
+
+            if((entry.lines.Count == entry.names.Count) && (entry.lines.Count == entry.images.Count)){
+
+                dialogueDict[entry.name] = entry.lines;
+                namesDict[entry.name] = entry.names;
+                imagesDict[entry.name] = entry.images;
+
+            }else{
+                Debug.LogError($"Dialogue entry {entry.name} components not equal in size! Dialogue will not work!");
+            }
+
+
+
 
         }
     }
@@ -85,14 +95,16 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue(){
         Debug.Log("Dialogue Finished");
+        currentLineIndex = -1;
+        currentDialogueName = "";
         onDialogueComplete?.Invoke();
       }
 
     private void ShowLine(string line){
         Debug.Log("");
         dialogueText.text = "";
-        characterImage.sprite = dialogueEntries[0].images[currentLineIndex];
-        characterName.text = dialogueEntries[0].names[currentLineIndex];
+        characterImage.sprite = imagesDict[currentDialogueName][currentLineIndex];
+        characterName.text = namesDict[currentDialogueName][currentLineIndex];
         typingCoroutine = StartCoroutine(TypeLine(line));
     }
 
