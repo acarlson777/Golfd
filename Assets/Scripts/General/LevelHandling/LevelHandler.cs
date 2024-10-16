@@ -3,38 +3,39 @@ using System.Collections;
 
 public class LevelHandler : MonoBehaviour
 {
-    private int strokeCount = 0;
-    private float golfBallInHoleToLevelCompleteTransitionTime = 1f;
-    [SerializeField] private int _strokeCountNeededForPar;
+    public int par;
+    [SerializeField] private Vector3 _animateStartPosition;
+    private Vector3 _animateEndPosition;
+    private float _animateInDuration = 1f;
+    private float _animateOutDuration = 1f;
+    public GameObject LEVEL;
+    private float timeElapsed;
 
     private void Start()
     {
-        
+        LEVEL.transform.position = _animateStartPosition;
+        _animateEndPosition = new Vector3(0, 0, 0);
     }
 
-    public void AnimateIn()
+    public IEnumerator AnimateInCoroutine()
     {
-
+        timeElapsed = 0;
+        while (timeElapsed <= _animateInDuration)
+        {
+            LEVEL.transform.position = Vector3.Lerp(_animateStartPosition, _animateEndPosition, timeElapsed / _animateInDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 
-    public void AnimateOut()
+    public IEnumerator AnimateOutCoroutine()
     {
-
-    }
-
-    private int GetStrokeCount()
-    {
-        return strokeCount;
-    }
-
-    public void IncrementStrokeCount()
-    {
-        strokeCount++;
-    }
-
-    public IEnumerator OnLevelCompleted()
-    {
-        yield return new WaitForSeconds(golfBallInHoleToLevelCompleteTransitionTime);
-        WorldHandler.Instance.OnLevelCompleted();
+        timeElapsed = 0;
+        while (timeElapsed <= _animateOutDuration)
+        {
+            LEVEL.transform.position = Vector3.Lerp(_animateEndPosition, _animateStartPosition, timeElapsed / _animateOutDuration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
+        }
     }
 }

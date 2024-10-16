@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 114999847245811208}
   - component: {fileID: 6082034917998997483}
   - component: {fileID: 6937952873183941523}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ARFeatheredPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,13 +30,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585201990951412}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &64925081986755876
 MeshCollider:
@@ -55,7 +55,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30

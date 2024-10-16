@@ -6,9 +6,18 @@
             "id": "4eddd9b3-0409-49ee-8f5f-47e29ef64bee",
             "actions": [
                 {
-                    "name": "Press",
-                    "type": "Value",
+                    "name": "PressAndRelease",
+                    "type": "Button",
                     "id": "02e93553-6dd8-47fc-8269-2433cf6b47bc",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Tap",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "JustPress",
+                    "type": "Button",
+                    "id": "e8562534-4bdf-4352-9b8e-8011edd40edd",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "Tap",
@@ -38,10 +47,21 @@
                     "name": "",
                     "id": "849ef4ee-baf5-4cda-96f5-db33ba3aa891",
                     "path": "<Pointer>/press",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
-                    "action": "Press",
+                    "action": "PressAndRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f86cba9-4a0f-4c1f-a095-1a4a3ca975b4",
+                    "path": "<Pointer>/press",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JustPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
