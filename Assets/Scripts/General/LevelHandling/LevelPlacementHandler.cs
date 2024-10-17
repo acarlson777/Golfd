@@ -29,13 +29,13 @@ public class LevelPlacementHandler : MonoBehaviour
         {
             if (aRRayCastManager.Raycast(pressPosition.ReadValue<Vector2>(), hits, TrackableType.PlaneWithinPolygon))
             {
-                var hitPose = hits[0].pose;
+                Pose hitPose = hits[0].pose;
 
                 if (!hasTapOccured)
                 {
                     hasTapOccured = true;
-                    WorldHandler.Instance.LoadNextLevel();
                     WorldHandler.Instance.UpdateLevelPosition(hitPose);
+                    WorldHandler.Instance.LoadNextLevel();
                     golfClub.SetActive(true);
                 }
             }

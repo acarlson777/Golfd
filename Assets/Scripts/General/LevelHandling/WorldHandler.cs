@@ -13,6 +13,7 @@ public class WorldHandler : MonoBehaviour
     private LevelHandler currLevelHandler = null;
     public bool isLevelComplete = true;
     [SerializeField] private GameObject _ENVIRONMENT;
+    [SerializeField] bool debug;
 
     private void Awake()
     {
@@ -38,6 +39,11 @@ public class WorldHandler : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (debug) { Time.timeScale = 0.1f; } else { Time.timeScale = 1; }
+    }
+
     public void OnLevelCompleted()
     {
         int score = CalculateScore();
@@ -53,7 +59,7 @@ public class WorldHandler : MonoBehaviour
 
     private IEnumerator LoadNextLevelCoroutine()
     {
-        yield return AnimateOut();
+        yield return AnimateOut(); //Remove movement of animations and revert back to animationless to make sure the level always reaches the right height after tap
         yield return AnimateIn();
     }
 
@@ -79,7 +85,9 @@ public class WorldHandler : MonoBehaviour
     public void UpdateLevelPosition(Pose hitPose)
     {
         _ENVIRONMENT.transform.position = hitPose.position;
-        _ENVIRONMENT.transform.rotation = hitPose.rotation;
+        //_ENVIRONMENT.transform.rotation = hitPose.rotation;
+
+        Debug.Log("Floor Height" + hitPose.position);
     }
 
     public void IncrementStrokeCount()
@@ -90,5 +98,10 @@ public class WorldHandler : MonoBehaviour
     private int CalculateScore()
     {
         return _strokeCount - currLevelHandler.par;
+    }
+
+    public LevelHandler GetCurrLevelHandler()
+    {
+        return currLevelHandler;
     }
 }
