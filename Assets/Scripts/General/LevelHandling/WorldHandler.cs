@@ -14,6 +14,7 @@ public class WorldHandler : MonoBehaviour
     public bool isLevelComplete = true;
     [SerializeField] private GameObject _ENVIRONMENT;
     [SerializeField] bool debug;
+    private Pose levelPosPose;
 
     private void Awake()
     {
@@ -79,15 +80,15 @@ public class WorldHandler : MonoBehaviour
     {
         currLevelHandler = instantiatedLevelList[levelIndex].GetComponent<LevelHandler>();
         currLevelHandler.LEVEL.SetActive(true);
+        currLevelHandler.SetAnimateEndHeight(levelPosPose.position.y);
         yield return currLevelHandler.AnimateInCoroutine();
     }
 
     public void UpdateLevelPosition(Pose hitPose)
     {
-        _ENVIRONMENT.transform.position = hitPose.position;
-        //_ENVIRONMENT.transform.rotation = hitPose.rotation;
-
-        Debug.Log("Floor Height" + hitPose.position);
+        //_ENVIRONMENT.transform.position = hitPose.position;
+        levelPosPose = hitPose;
+        //Fix the position of the mask according to the hitPose
     }
 
     public void IncrementStrokeCount()

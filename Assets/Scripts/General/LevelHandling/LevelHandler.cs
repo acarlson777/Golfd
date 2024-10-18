@@ -6,7 +6,7 @@ public class LevelHandler : MonoBehaviour
     public int par;
     [SerializeField] private float _animateStartHeight;
     [SerializeField] private float _animateEndHeight;
-    [SerializeField] public float _outsideEditorHeightOffset;
+    [SerializeField] public float _heightOffset;
     private float _animateInDuration = 1f;
     private float _animateOutDuration = 1f;
     public GameObject LEVEL;
@@ -52,5 +52,10 @@ public class LevelHandler : MonoBehaviour
     public void SetLevelTransformY(float newY)
     {
         LEVEL.transform.position = new Vector3(LEVEL.transform.position.x, newY, LEVEL.transform.position.z);
+    }
+
+    public void SetAnimateEndHeight(float animteEndHeight)
+    {
+        _animateEndHeight = animteEndHeight + _heightOffset;
     }
 }

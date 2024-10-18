@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class SliderToHeightOffset : MonoBehaviour
 {
+    /*
     public LevelHandler currLevelHandler;
     private Slider slider;
     [SerializeField] private TMP_Text _text;
@@ -21,4 +22,5 @@ public class SliderToHeightOffset : MonoBehaviour
         currLevelHandler.SetLevelTransformY(currLevelHandler._outsideEditorHeightOffset * slider.value);
         _text.SetText(Convert.ToString(currLevelHandler._outsideEditorHeightOffset * slider.value));
     }
+    */
 }
