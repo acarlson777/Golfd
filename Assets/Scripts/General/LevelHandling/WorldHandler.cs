@@ -13,6 +13,7 @@ public class WorldHandler : MonoBehaviour
     private LevelHandler currLevelHandler = null;
     public bool isLevelComplete = true;
     [SerializeField] private GameObject _ENVIRONMENT;
+    [SerializeField] private GameObject _mask;
     [SerializeField] bool debug;
     private Pose levelPosPose;
 
@@ -88,6 +89,7 @@ public class WorldHandler : MonoBehaviour
     {
         //_ENVIRONMENT.transform.position = hitPose.position;
         levelPosPose = hitPose;
+        _mask.transform.position = new Vector3(_mask.transform.position.x ,-25 + hitPose.position.y, _mask.transform.position.z);
         //Fix the position of the mask according to the hitPose
     }
 
