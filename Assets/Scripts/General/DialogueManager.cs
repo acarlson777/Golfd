@@ -44,7 +44,7 @@ public class DialogueManager : MonoBehaviour {
         audioDict = new Dictionary<string, List<AudioClip>>();
 
         audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("Master")[0];  // Set output to the master group
+        audioSource.outputAudioMixerGroup = audioMixer.FindMatchingGroups("SFX")[0];  // Set output to the SFX group
 
         foreach (var entry in dialogueEntries) {
             if ((entry.lines.Count == entry.names.Count) && 

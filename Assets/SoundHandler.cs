@@ -8,9 +8,7 @@ public class SoundHandler : MonoBehaviour {
 
 
 
-    public AudioMixer sfxMixer; 
-    public AudioMixer musicMixer; 
-
+    public AudioMixer mixer;
 
     private bool sfx = true;
     private bool music = true;
@@ -24,7 +22,7 @@ public class SoundHandler : MonoBehaviour {
         if (context.started){
 
 
-            sfxMixer.SetFloat("masterVol", sfx ? -80 : 0);
+            mixer.SetFloat("sfxVol", sfx ? -80 : 0);
             sfx = !sfx;
 
 
@@ -39,7 +37,7 @@ public class SoundHandler : MonoBehaviour {
 
         if (context.started){
 
-            musicMixer.SetFloat("masterVol", music ? -80 : 0);
+            mixer.SetFloat("musicVol", music ? -80 : 0);
             music = !music;
 
         }
