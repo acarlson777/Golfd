@@ -244,6 +244,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &145836287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145836288}
+  - component: {fileID: 145836289}
+  m_Layer: 0
+  m_Name: SOUND SYSTEM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145836288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145836287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145836289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145836287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df4347c996a064df9b981d33d55d0837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
+  musicMixer: {fileID: 24100000, guid: 6b047fb26c4d5449caad735de664536d, type: 2}
 --- !u!1 &152635675
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,9 +499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToGoTo: S0-A (Ground Zero)
-  _placedPrefab: {fileID: 1128924900543021876, guid: e4fb71dba940546f7bcc321b821596e2,
-    type: 3}
+  golfClub: {fileID: 0}
 --- !u!114 &276037022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +540,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 145836289}
+        m_TargetAssemblyTypeName: SoundHandler, Assembly-CSharp
+        m_MethodName: TapSfx
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 02e93553-6dd8-47fc-8269-2433cf6b47bc
     m_ActionName: TouchControl/Press[/Mouse/press]
   - m_PersistentCalls:
@@ -504,8 +560,8 @@ MonoBehaviour:
     m_ActionName: TouchControl/PressPosition[/Mouse/position]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 286a8f24-d5b9-4851-a106-013ad998824b
-    m_ActionName: TouchControl/PressAndRelease
+    m_ActionId: e8562534-4bdf-4352-9b8e-8011edd40edd
+    m_ActionName: TouchControl/JustPress[/Mouse/press,/Pen/press]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: TouchControl
@@ -1902,19 +1958,6 @@ MonoBehaviour:
   characterName: {fileID: 1092395766}
   typingSpeed: 0.05
   dialogueEntries:
-  - name: test123
-    lines:
-    - 123456789123456789AAAAAAA
-    - 123456789123456789BBBBBBBB
-    - 123456789123456789CCCCCCC
-    names:
-    - bober
-    - cylinder
-    - unity
-    images:
-    - {fileID: 21300000, guid: 94c9b09dfd4db4a66b6efaf748a1407e, type: 3}
-    - {fileID: 21300000, guid: 1c72e2211b1ba47d7baf8d6ee5a5daf5, type: 3}
-    - {fileID: 21300000, guid: 8a45b30277e4e4bf0a2104b9870d433b, type: 3}
   - name: test1234
     lines:
     - AAAA
@@ -1928,6 +1971,11 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 94c9b09dfd4db4a66b6efaf748a1407e, type: 3}
     - {fileID: 21300000, guid: 1c72e2211b1ba47d7baf8d6ee5a5daf5, type: 3}
     - {fileID: 21300000, guid: 8a45b30277e4e4bf0a2104b9870d433b, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    - {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+    - {fileID: 8300000, guid: 16fba6d30ed741d4a9fdd6e79ee2f3ac, type: 3}
+  audioMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
 --- !u!1 &1631374602
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,3 +2220,4 @@ SceneRoots:
   - {fileID: 627802747}
   - {fileID: 97731084}
   - {fileID: 1551504715}
+  - {fileID: 145836288}
