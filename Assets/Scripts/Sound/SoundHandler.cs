@@ -6,15 +6,22 @@ using UnityEngine.Audio;
 
 public class SoundHandler : MonoBehaviour {
 
-
+    public static SoundHandler Instance { get; private set; }
 
     public AudioMixer mixer;
 
     private bool sfx = true;
     private bool music = true;
 
-
-
+    private void Awake() {
+        if (Instance != null && Instance != this){
+            Destroy(this);
+        }
+        else{
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
 
     public void TapSfx(InputAction.CallbackContext context) {
 
@@ -24,14 +31,8 @@ public class SoundHandler : MonoBehaviour {
 
             mixer.SetFloat("sfxVol", sfx ? -80 : 0);
             sfx = !sfx;
-
-
-            Debug.Log("SFX volume changed");
-
         }
-
     }
-
 
     public void TapMusic(InputAction.CallbackContext context) {
 
@@ -39,10 +40,6 @@ public class SoundHandler : MonoBehaviour {
 
             mixer.SetFloat("musicVol", music ? -80 : 0);
             music = !music;
-
         }
-
     }
-
-    
 }
