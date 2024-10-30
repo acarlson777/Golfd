@@ -23,23 +23,35 @@ public class SoundHandler : MonoBehaviour {
         }
     }
 
-    public void TapSfx(InputAction.CallbackContext context) {
-
-
+    public void TapSfx(InputAction.CallbackContext context){
         if (context.started){
-
-
-            mixer.SetFloat("sfxVol", sfx ? -80 : 0);
-            sfx = !sfx;
+            ToggleSfx();
         }
     }
+
+    public void TapSfxButton(){
+        ToggleSfx();
+    }
+
+    private void ToggleSfx(){
+        mixer.SetFloat("sfxVol", sfx ? -80 : 0);
+        sfx = !sfx;
+    }
+
 
     public void TapMusic(InputAction.CallbackContext context) {
 
         if (context.started){
-
-            mixer.SetFloat("musicVol", music ? -80 : 0);
-            music = !music;
+            ToogleMusic();
         }
+    }
+
+    public void TapMusicButton(){
+        ToogleMusic();
+    }
+
+    private void ToogleMusic(){
+        mixer.SetFloat("musicVol", music ? -80 : 0);
+        music = !music;
     }
 }
