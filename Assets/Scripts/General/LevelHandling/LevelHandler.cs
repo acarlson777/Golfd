@@ -7,8 +7,8 @@ public class LevelHandler : MonoBehaviour
     [SerializeField] private float _animateStartHeight;
     [SerializeField] private float _animateEndHeight;
     [SerializeField] public float _heightOffset;
-    private float _animateInDuration = 1f;
-    private float _animateOutDuration = 1f;
+    private float _animateInDuration = 2f;
+    private float _animateOutDuration = 2f;
     public GameObject LEVEL;
     private float timeElapsed;
 
@@ -16,13 +16,6 @@ public class LevelHandler : MonoBehaviour
     {
         SetLevelTransformY(_animateStartHeight);
         _animateEndHeight = 0;
-#if UNITY_EDITOR
-        return;
-#endif
-#pragma warning disable CS0162 // Unreachable code detected
-        //_animateStartHeight += _outsideEditorHeightOffset;
-#pragma warning restore CS0162 // Unreachable code detected
-        //_animateEndHeight += _outsideEditorHeightOffset;
     }
 
     public IEnumerator AnimateInCoroutine()
@@ -47,6 +40,8 @@ public class LevelHandler : MonoBehaviour
             yield return null;
         }
         SetLevelTransformY(_animateStartHeight);
+        LEVEL.SetActive(false);
+        yield return true;
     }
 
     public void SetLevelTransformY(float newY)

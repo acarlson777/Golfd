@@ -61,7 +61,7 @@ public class WorldHandler : MonoBehaviour
 
     private IEnumerator LoadNextLevelCoroutine()
     {
-        yield return AnimateOut(); //Remove movement of animations and revert back to animationless to make sure the level always reaches the right height after tap
+        yield return AnimateOut();
         yield return AnimateIn();
     }
 
@@ -72,7 +72,6 @@ public class WorldHandler : MonoBehaviour
         if (currLevelHandler != null)
         {
             yield return currLevelHandler.AnimateOutCoroutine();
-            currLevelHandler.LEVEL.SetActive(false);
             levelIndex++;
         }
     }
@@ -90,7 +89,6 @@ public class WorldHandler : MonoBehaviour
         //_ENVIRONMENT.transform.position = hitPose.position;
         levelPosPose = hitPose;
         _mask.transform.position = new Vector3(_mask.transform.position.x ,-25 + hitPose.position.y, _mask.transform.position.z);
-        //Fix the position of the mask according to the hitPose
     }
 
     public void IncrementStrokeCount()
