@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class LevelSelectHandler : MonoBehaviour
+public class LevelSelectHandler : MonoBehaviour, IEndDragHandler
 {
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        
+    }
+
     //Follow this tutorial to create the level select screen: https://www.youtube.com/watch?v=qf9xe2mbWeU
-    [SerializeField] private GolfWorld[] WORLD_LIST;
 
     void Start()
     {
@@ -14,5 +19,10 @@ public class LevelSelectHandler : MonoBehaviour
     void Update()
     {
         //do swipe handling and level page handling
+    }
+
+    public void SetupLevelHandler()
+    {
+
     }
 }

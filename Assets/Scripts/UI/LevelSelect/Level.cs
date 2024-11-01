@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Level
+public class GolfLevel
 {
     [SerializeField] string name;
     [SerializeField] int par;
