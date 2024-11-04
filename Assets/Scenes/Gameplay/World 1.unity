@@ -122,7 +122,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &864916740176140643
+--- !u!1001 &608985903
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -130,27 +130,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1158016782362478872, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    - target: {fileID: 3850500458998445226, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      propertyPath: m_SizeDelta.y
+      value: 2000
       objectReference: {fileID: 0}
-    - target: {fileID: 1158016782362478872, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1158016782362478872, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: _levelList.Array.data[0]
-      value: 
-      objectReference: {fileID: 6115498859240813101, guid: 025afc9413f5d48e3bd00af37c9f7f88,
-        type: 3}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -201,6 +185,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6882956065840427117, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8862696904540685804, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_Name
@@ -215,4 +204,4 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 864916740176140643}
+  - {fileID: 608985903}
