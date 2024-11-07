@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
 {
     [SerializeField] private Vector3 _pageStep;
-    [SerializeField] private RectTransform _levelPagesRect;
+    [SerializeField] private RectTransform _pagesRect;
     [SerializeField] private float _tweenTime;
     [SerializeField] private LeanTweenType tweenType;
     [SerializeField] private int _maxPage;
@@ -17,7 +17,7 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
 
     private void Awake()
     {
-        targetPos = _levelPagesRect.localPosition;
+        targetPos = _pagesRect.localPosition;
         dragThreshold = Screen.width / 15;
     }
 
@@ -43,7 +43,7 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
 
     private void MovePage()
     {
-        _levelPagesRect.LeanMoveLocal(targetPos, _tweenTime).setEase(tweenType);
+        _pagesRect.LeanMoveLocal(targetPos, _tweenTime).setEase(tweenType);
     }
 
     public void OnEndDrag(PointerEventData eventData)
