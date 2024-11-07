@@ -3,6 +3,6 @@ using System.Collections;
 
 public class GolfWorld
 {
-    [SerializeField] string name;
-    [SerializeField] GolfLevel[] LEVELS;
+    [SerializeField] public string NAME;
+    [SerializeField] public GolfLevel[] LEVELS;
 }
