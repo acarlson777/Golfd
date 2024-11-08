@@ -8,7 +8,7 @@ public class LoadGolfPlayerData : MonoBehaviour
 
     private void Start()
     {
-        //ResetJSONData();
+        ResetJSONData();
         JsonSerializer.Instance.LoadByJSON();
 
         for (int worldID = 0;  worldID < WORLD_LIST.Count; worldID++)
