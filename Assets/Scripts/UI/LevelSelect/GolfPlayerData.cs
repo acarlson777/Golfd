@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
+[Serializable]
 public class GolfPlayerData
 {
-    [SerializeField] public GolfWorld[] WORLDS;
+    public List<GolfWorld> WORLDS;
 }

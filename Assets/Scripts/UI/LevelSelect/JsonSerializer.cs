@@ -1,12 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.IO;
+using Unity.VisualScripting.FullSerializer;
 
-public static class JsonSerializer
+public class JsonSerializer : MonoBehaviour
 {
-    public static GolfPlayerData golfPlayerData;
+    public static JsonSerializer Instance { get; private set; }
 
-    public static void SaveByJSON()
+    public GolfPlayerData golfPlayerData;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+    }
+
+    public void SaveByJSON()
     {
         string JsonString = JsonUtility.ToJson(golfPlayerData, true);
 
@@ -20,8 +36,7 @@ public static class JsonSerializer
         Debug.Log("==============SAVED================");
     }
 
-
-    public static void LoadByJSON()
+    public void LoadByJSON()
     {
         if (!Directory.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/")))
         {
@@ -29,11 +44,10 @@ public static class JsonSerializer
         }
         if (File.Exists(Application.persistentDataPath + "/Saves/JSONData.text"))
         {
-            //LOAD THE GAME
             StreamReader sr = new StreamReader(Application.persistentDataPath + "/Saves/JSONData.text");
 
             string JsonString = sr.ReadToEnd();
-
+            Debug.Log(JsonString);
             golfPlayerData = JsonUtility.FromJson<GolfPlayerData>(JsonString); //Convert JSON to the Object(GolfPlayerData)
             sr.Close();
             Debug.Log("==============LOADED================");

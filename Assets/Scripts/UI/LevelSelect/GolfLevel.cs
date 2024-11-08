@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
+[Serializable]
 public class GolfLevel
 {
-    [SerializeField] public string NAME;
-    [SerializeField] public int PAR;
-    [SerializeField] public int bestScore;
-    [SerializeField] public string LEVEL_PREFAB_NAME;
+    public string NAME;
+    public int PAR;
+    public int bestScore;
+    public string LEVEL_PREFAB_NAME;
 }
