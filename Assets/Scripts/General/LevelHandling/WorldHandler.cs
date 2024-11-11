@@ -16,6 +16,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] private GameObject _mask;
     [SerializeField] bool debug;
     private Pose levelPosPose;
+    private Coroutine updateCurrentLevelPositionToFloorHeightCoroutine = null;
 
     private void Awake()
     {
@@ -61,8 +62,10 @@ public class WorldHandler : MonoBehaviour
 
     private IEnumerator LoadNextLevelCoroutine()
     {
+        if (updateCurrentLevelPositionToFloorHeightCoroutine != null) { StopCoroutine(updateCurrentLevelPositionToFloorHeightCoroutine); }
         yield return AnimateOut();
         yield return AnimateIn();
+        updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
     }
 
     private IEnumerator AnimateOut()
@@ -82,6 +85,17 @@ public class WorldHandler : MonoBehaviour
         currLevelHandler.LEVEL.SetActive(true);
         currLevelHandler.SetAnimateEndHeight(levelPosPose.position.y);
         yield return currLevelHandler.AnimateInCoroutine();
+    }
+
+    private IEnumerator UpdateCurrentLevelHeightToFloorHeight()
+    {
+        GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
+        while (true)
+        {
+            currLevelHandler.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z);
+            currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
+            yield return null;
+        }
     }
 
     public void UpdateLevelPosition(Pose hitPose)
