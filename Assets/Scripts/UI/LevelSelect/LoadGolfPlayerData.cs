@@ -5,13 +5,21 @@ using UnityEngine;
 public class LoadGolfPlayerData : MonoBehaviour
 {
     [SerializeField] private List<WorldUI> WORLD_LIST;
+    [SerializeField] private bool shouldUpdateEditorChanges;
 
     private void Start()
     {
-        ResetJSONData();
         JsonSerializer.Instance.LoadByJSON();
 
-        for (int worldID = 0;  worldID < WORLD_LIST.Count; worldID++)
+        if (shouldUpdateEditorChanges)
+        {
+            UpdateEditorChanges();
+            JsonSerializer.Instance.SaveByJSON();
+            return;
+        }
+        //ResetJSONData();
+
+        for (int worldID = 0; worldID < WORLD_LIST.Count; worldID++)
         {
             WORLD_LIST[worldID].Setup(worldID);
         }
@@ -30,5 +38,14 @@ public class LoadGolfPlayerData : MonoBehaviour
         golfWorld.LEVELS = new List<GolfLevel>() { golfLevel, golfLevel, golfLevel, golfLevel, golfLevel, golfLevel };
         JsonSerializer.Instance.golfPlayerData.WORLDS = new List<GolfWorld> { golfWorld, golfWorld, golfWorld };
         JsonSerializer.Instance.SaveByJSON();
+    }
+
+    private void UpdateEditorChanges()
+    {
+        for (int i = 0; i < WORLD_LIST.Count; i++)
+        {
+            //For some reason the passed in JsonSerializer World at index i does not exist
+            JsonSerializer.Instance.golfPlayerData.WORLDS[i] = WORLD_LIST[i].UpdateEditorChanges(JsonSerializer.Instance.golfPlayerData.WORLDS[i]);
+        }
     }
 }
