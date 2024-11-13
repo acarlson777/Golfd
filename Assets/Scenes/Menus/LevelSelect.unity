@@ -533,7 +533,7 @@ MonoBehaviour:
   - {fileID: 6845377932880658487}
   - {fileID: 1046794756}
   - {fileID: 2118504218}
-  shouldUpdateEditorChanges: 1
+  shouldUpdateEditorChanges: 0
 --- !u!224 &374972422 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4678627700159716545, guid: 7640d54da46498942b2ab0148d5abf44,
@@ -1510,8 +1510,8 @@ Canvas:
   m_GameObject: {fileID: 1131728806}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 213642346}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

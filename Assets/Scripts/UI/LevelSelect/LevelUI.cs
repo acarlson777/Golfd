@@ -20,8 +20,8 @@ public class LevelUI : MonoBehaviour
         parText.GetComponent<TextMeshProUGUI>().text = golfLevel.PAR.ToString();
         bestScoreText.GetComponent<TextMeshProUGUI>().text = golfLevel.bestScore.ToString();
         levelModelPrefabName = golfLevel.LEVEL_PREFAB_NAME;
-        //GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);
-        //levelModel = Instantiate(levelModelPrefab, levelModelParent.transform);
+        GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);
+        levelModel = Instantiate(levelModelPrefab, levelModelParent.transform);
     }
 
     private bool Equals(GolfLevel golfLevel)
