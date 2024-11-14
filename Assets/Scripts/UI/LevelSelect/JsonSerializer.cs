@@ -31,6 +31,7 @@ public class JsonSerializer : MonoBehaviour
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
         }
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Saves/JSONData.text");
+        //print(Application.persistentDataPath + "/Saves/JSONData.text");
         sw.Write(JsonString);
         sw.Close();
         Debug.Log("==============SAVED================");

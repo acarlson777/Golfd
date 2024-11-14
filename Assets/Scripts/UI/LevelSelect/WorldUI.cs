@@ -38,4 +38,30 @@ public class WorldUI : MonoBehaviour
         }
         return new Vector2(parSum, bestScoreSum);
     }
+
+    private bool Equals(GolfWorld golfWorld)
+    {
+        if (!worldNameText.GetComponent<TextMeshProUGUI>().text.Equals(golfWorld.NAME)) { return false; }
+        if (LEVEL_LIST.Count != golfWorld.LEVELS.Count) { return false; }
+
+        for (int i = 0; i < LEVEL_LIST.Count; i++)
+        {
+            if (!LEVEL_LIST[i].Equals(golfWorld.LEVELS[i])) { return false; }
+        }
+
+        return true;
+    }
+
+    public GolfWorld UpdateEditorChanges(GolfWorld golfWorld)
+    {
+        if (!Equals(golfWorld))
+        {
+            golfWorld.NAME = worldNameText.GetComponent<TextMeshProUGUI>().text;
+            for (int i = 0; i < LEVEL_LIST.Count; i++)
+            {
+                golfWorld.LEVELS[i] = LEVEL_LIST[i].UpdateEditorChanges(golfWorld.LEVELS[i]);
+            }
+        }
+        return golfWorld;
+    }
 }
