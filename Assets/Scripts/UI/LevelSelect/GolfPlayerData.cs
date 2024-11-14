@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System;
 
 [Serializable]
-public class GolfWorld
+public class GolfPlayerData
 {
-    public string NAME;
-    public List<GolfLevel> LEVELS;
+    public List<GolfWorld> WORLDS;
 }
