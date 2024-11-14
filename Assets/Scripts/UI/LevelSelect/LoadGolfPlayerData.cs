@@ -11,7 +11,7 @@ public class LoadGolfPlayerData : MonoBehaviour
     {
         JsonSerializer.Instance.LoadByJSON();
 
-        if (shouldUpdateEditorChanges)
+        if (!JsonSerializer.Instance.DoesJSONDirectoryExist() || shouldUpdateEditorChanges)
         {
             UpdateEditorChanges();
             JsonSerializer.Instance.SaveByJSON();
@@ -44,7 +44,6 @@ public class LoadGolfPlayerData : MonoBehaviour
     {
         for (int i = 0; i < WORLD_LIST.Count; i++)
         {
-            //For some reason the passed in JsonSerializer World at index i does not exist
             JsonSerializer.Instance.golfPlayerData.WORLDS[i] = WORLD_LIST[i].UpdateEditorChanges(JsonSerializer.Instance.golfPlayerData.WORLDS[i]);
         }
     }

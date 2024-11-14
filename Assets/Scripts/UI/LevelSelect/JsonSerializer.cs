@@ -22,6 +22,11 @@ public class JsonSerializer : MonoBehaviour
         }
     }
 
+    public bool DoesJSONDirectoryExist()
+    {
+        return Directory.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
+    }
+
     public void SaveByJSON()
     {
         string JsonString = JsonUtility.ToJson(golfPlayerData, true);
