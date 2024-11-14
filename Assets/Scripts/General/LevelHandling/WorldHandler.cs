@@ -16,6 +16,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] private GameObject _mask;
     [SerializeField] bool debug;
     private Pose levelPosPose;
+    private Coroutine updateCurrentLevelPositionToFloorHeightCoroutine = null;
 
     private void Awake()
     {
@@ -61,8 +62,10 @@ public class WorldHandler : MonoBehaviour
 
     private IEnumerator LoadNextLevelCoroutine()
     {
-        yield return AnimateOut(); //Remove movement of animations and revert back to animationless to make sure the level always reaches the right height after tap
+        if (updateCurrentLevelPositionToFloorHeightCoroutine != null) { StopCoroutine(updateCurrentLevelPositionToFloorHeightCoroutine); }
+        yield return AnimateOut();
         yield return AnimateIn();
+        updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
     }
 
     private IEnumerator AnimateOut()
@@ -72,7 +75,6 @@ public class WorldHandler : MonoBehaviour
         if (currLevelHandler != null)
         {
             yield return currLevelHandler.AnimateOutCoroutine();
-            currLevelHandler.LEVEL.SetActive(false);
             levelIndex++;
         }
     }
@@ -85,12 +87,22 @@ public class WorldHandler : MonoBehaviour
         yield return currLevelHandler.AnimateInCoroutine();
     }
 
+    private IEnumerator UpdateCurrentLevelHeightToFloorHeight()
+    {
+        GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
+        while (true)
+        {
+            currLevelHandler.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z);
+            currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
+            yield return null;
+        }
+    }
+
     public void UpdateLevelPosition(Pose hitPose)
     {
         //_ENVIRONMENT.transform.position = hitPose.position;
         levelPosPose = hitPose;
         _mask.transform.position = new Vector3(_mask.transform.position.x ,-25 + hitPose.position.y, _mask.transform.position.z);
-        //Fix the position of the mask according to the hitPose
     }
 
     public void IncrementStrokeCount()
