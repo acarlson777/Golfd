@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 using System.Collections;
 
 public class WorldHandler : MonoBehaviour
@@ -40,6 +40,8 @@ public class WorldHandler : MonoBehaviour
             nextLevel.GetComponent<LevelHandler>().LEVEL.SetActive(false);
             instantiatedLevelList[i] = nextLevel;
         }
+
+        levelIndex = PlayerPrefs.GetInt(_worldIndex.ToString());
     }
 
     private void Update()
