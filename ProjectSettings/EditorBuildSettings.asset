@@ -5,15 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/MainScene.unity
-    guid: 4755b35b590504809a7525fd2109c2e2
+  - enabled: 1
+    path: Assets/Scenes/Menus/TitleScreen.unity
+    guid: 2b396452d7ec048b7b4f4eabd89b1a02
+  - enabled: 1
+    path: Assets/Scenes/Menus/LevelSelect.unity
+    guid: 6db755f9bfd384ff7a859d1604f4c8ca
   - enabled: 1
     path: Assets/Scenes/Gameplay/World 1.unity
     guid: 6261c0710c5254ed99c8c93672a8c4ed
-  - enabled: 1
-    path: Assets/Scenes/S0-B (Ground Zero).unity
-    guid: be116f46ab2844d28b9aa7a6ce02c6a1
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 6ee72d15cf39dd748a13eac57397b9af,
       type: 2}
