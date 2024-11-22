@@ -612,9 +612,8 @@ MonoBehaviour:
   _pageStep: {x: -375, y: 0, z: 0}
   _pagesRect: {fileID: 620350360}
   _tweenTime: 0.25
-  _tweenType: 0
+  tweenType: 1
   _maxPage: 3
-  _isWorldSwipeScreenHandler: 0
 --- !u!114 &346149944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1897,7 +1896,6 @@ GameObject:
   - component: {fileID: 1203091732}
   - component: {fileID: 1203091731}
   - component: {fileID: 1203091729}
-  - component: {fileID: 1203091733}
   m_Layer: 0
   m_Name: LevelPrefabCamera
   m_TagString: LevelPrefabCamera

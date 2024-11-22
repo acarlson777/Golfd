@@ -33,9 +33,4 @@ public class LevelPrefabCamera : MonoBehaviour
         Destroy(adjacentLevels[0]);
         Destroy(adjacentLevels[1]);
     }
-
-    private void Update()
-    {
-        
-    }
 }
