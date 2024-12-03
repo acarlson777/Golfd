@@ -27,6 +27,11 @@ public class JsonSerializer : MonoBehaviour
         return Directory.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
     }
 
+    public void DeleteJSONData()
+    {
+        Directory.Delete(Application.persistentDataPath + "/Saves/");
+    }
+
     public void SaveByJSON()
     {
         string JsonString = JsonUtility.ToJson(golfPlayerData, true);
@@ -36,9 +41,9 @@ public class JsonSerializer : MonoBehaviour
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
         }
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Saves/JSONData.text");
-        //print(Application.persistentDataPath + "/Saves/JSONData.text");
         sw.Write(JsonString);
         sw.Close();
+        print(Application.persistentDataPath + "/Saves/JSONData.text");
         Debug.Log("==============SAVED================");
     }
 
@@ -56,6 +61,7 @@ public class JsonSerializer : MonoBehaviour
             Debug.Log(JsonString);
             golfPlayerData = JsonUtility.FromJson<GolfPlayerData>(JsonString); //Convert JSON to the Object(GolfPlayerData)
             sr.Close();
+            print(Application.persistentDataPath + "/Saves/JSONData.text");
             Debug.Log("==============LOADED================");
         }
         else

@@ -9,15 +9,13 @@ public class LoadGolfPlayerData : MonoBehaviour
 
     private void Start()
     {
-        JsonSerializer.Instance.LoadByJSON();
-
         if (!JsonSerializer.Instance.DoesJSONDirectoryExist() || shouldUpdateEditorChanges)
         {
+            ResetJSONData();
             UpdateEditorChanges();
             JsonSerializer.Instance.SaveByJSON();
-            return;
         }
-        //ResetJSONData();
+        JsonSerializer.Instance.LoadByJSON();
 
         for (int worldID = 0; worldID < WORLD_LIST.Count; worldID++)
         {
