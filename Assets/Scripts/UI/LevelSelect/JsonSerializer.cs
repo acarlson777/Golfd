@@ -29,6 +29,7 @@ public class JsonSerializer : MonoBehaviour
 
     public void DeleteJSONData()
     {
+        File.Delete(Application.persistentDataPath + "/Saves/JSONData.text");
         Directory.Delete(Application.persistentDataPath + "/Saves/");
     }
 

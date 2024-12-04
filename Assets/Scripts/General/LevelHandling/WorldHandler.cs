@@ -89,12 +89,12 @@ public class WorldHandler : MonoBehaviour
         yield return currLevelHandler.AnimateInCoroutine();
     }
 
-    private IEnumerator UpdateCurrentLevelHeightToFloorHeight()
+    private IEnumerator UpdateCurrentLevelHeightToFloorHeight() //I'm pretty sure this function is breaking it
     {
         GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
         while (true)
         {
-            currLevelHandler.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z);
+            currLevelHandler.LEVEL.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z); //I dont know if the level handler is the actual thing that moves
             currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
             yield return null;
         }
