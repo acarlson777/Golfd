@@ -13,7 +13,7 @@ public class Elevator_Platform : MonoBehaviour
     
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name.Equals("ball"))
+        if (other.gameObject.name.Equals("GolfBall"))
         {
 
 
