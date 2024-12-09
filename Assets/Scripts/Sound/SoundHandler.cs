@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio; 
+using System;
 
 public class SoundHandler : MonoBehaviour {
+
+    public delegate void MyFunctionDelegate();
 
     public static SoundHandler Instance { get; private set; }
 
@@ -53,5 +56,12 @@ public class SoundHandler : MonoBehaviour {
     private void ToogleMusic(){
         mixer.SetFloat("musicVol", music ? -80 : 0);
         music = !music;
+    }
+
+    public bool getSfxState(){
+        return sfx;
+    } 
+    public bool getMusicState(){
+        return music;
     }
 }
