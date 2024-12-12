@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio; 
 
-public class DialogueManager : MonoBehaviour {
+public class DualDialogueManager : MonoBehaviour {
     public Image characterImage;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI characterName;
