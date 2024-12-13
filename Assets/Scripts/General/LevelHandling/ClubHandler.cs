@@ -21,6 +21,10 @@ public class ClubHandler : MonoBehaviour
     private GameObject golfBall = null;
     [SerializeField] private float _ballVelocityTolerance;
     [SerializeField] private float _swingTime;
+    [SerializeField] private GameObject throwableClubPrefab;
+    private Vector3 clubVelocity;
+    private Vector3 lastClubPos;
+    //Need to calculate rotational velocity as well
 
     private void Start()
     {
@@ -33,6 +37,7 @@ public class ClubHandler : MonoBehaviour
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
         UpdateClubHeadPosition();
         UpdateClubHeadColliderStatus();
+        UpdateClubVelocity();
         FindGolfBall();
     }
 
@@ -77,8 +82,15 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
         {
+            WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
         }
+    }
+
+    private void UpdateClubVelocity()
+    {
+        clubVelocity = (rb.transform.position - lastClubPos) / Time.deltaTime;
+        lastClubPos = rb.transform.position;
     }
 
     public void OnScreenPressOrRelease(InputAction.CallbackContext context)
@@ -89,7 +101,8 @@ public class ClubHandler : MonoBehaviour
         } else if (context.canceled)
         {
             _clubHead.SetActive(false);
-
+            GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
+            thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity;
         }
     }
 

@@ -17,6 +17,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] bool debug;
     private Pose levelPosPose;
     private Coroutine updateCurrentLevelPositionToFloorHeightCoroutine = null;
+    private Vector3 lastKnownBallPos;
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class WorldHandler : MonoBehaviour
         if (updateCurrentLevelPositionToFloorHeightCoroutine != null) { StopCoroutine(updateCurrentLevelPositionToFloorHeightCoroutine); }
         yield return AnimateOut();
         yield return AnimateIn();
+        UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
     }
 
@@ -89,7 +91,7 @@ public class WorldHandler : MonoBehaviour
         yield return currLevelHandler.AnimateInCoroutine();
     }
 
-    private IEnumerator UpdateCurrentLevelHeightToFloorHeight() //I'm pretty sure this function is breaking it
+    private IEnumerator UpdateCurrentLevelHeightToFloorHeight()
     {
         GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
         while (true)
@@ -120,5 +122,16 @@ public class WorldHandler : MonoBehaviour
     public LevelHandler GetCurrLevelHandler()
     {
         return currLevelHandler;
+    }
+
+    public void ResetBallPosToLastKnownPos()
+    {
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        currLevelHandler.golfBall.transform.position = lastKnownBallPos;
+    }
+
+    public void UpdateLastKnownBallPos()
+    {
+        lastKnownBallPos = currLevelHandler.golfBall.transform.position;
     }
 }

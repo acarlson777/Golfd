@@ -11,6 +11,7 @@ public class LevelHandler : MonoBehaviour
     private float _animateOutDuration = 2f;
     public GameObject LEVEL;
     private float timeElapsed;
+    public GameObject golfBall;
 
     private void Start()
     {
