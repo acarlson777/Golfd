@@ -2,20 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class voidtrigger : MonoBehaviour
+public class spin : MonoBehaviour
 {
-
-    void Update()
+    // Start is called before the first frame update
+    void Start()
     {
 
     }
 
-    public void OnTriggerEnter(Collider other)
+    // Update is called once per frame
+    void Update()
     {
-        if (other.gameObject.name.Equals("ball"))
-        {
-            other.gameObject.transform.position = new Vector3(0, 1, 0);
-        }
-
+        transform.Rotate(new Vector3(0, 0, (float)0.02), Space.World);
     }
 }
