@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class nn5fakehole : MonoBehaviour
 {
+    private void Start()
+    {
+        
+    }
     readonly float x = GameObject.Find("GolfBallgen").transform.position.x;
     readonly float y = GameObject.Find("GolfBallgen").transform.position.y;
     readonly float z = GameObject.Find("GolfBallgen").transform.position.z;
