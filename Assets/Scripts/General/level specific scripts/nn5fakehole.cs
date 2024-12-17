@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class nn5fakehole : MonoBehaviour
 {
-    readonly GameObject b = GameObject.Find("GolfBallgen");
-    float x = GameObject.Find("GolfBallgen").transform.position.x;
-    float y = GameObject.Find("GolfBallgen").transform.position.y;
-    float z = GameObject.Find("GolfBallgen").transform.position.z;
+
+    public readonly GameObject b = GameObject.Find("GolfBallgen");
+    public float x = GameObject.Find("GolfBallgen").transform.position.x;
+    public float y = GameObject.Find("GolfBallgen").transform.position.y;
+    public float z = GameObject.Find("GolfBallgen").transform.position.z;
 
     public void OnTriggerEnter(Collider other)
     {
