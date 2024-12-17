@@ -24,6 +24,11 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private GameObject throwableClubPrefab;
     private Vector3 clubVelocity;
     private Vector3 lastClubPos;
+    private Vector3 clubRotationalVelocity;
+    private Quaternion lastClubRot;
+    [SerializeField] private float ROTATIONAL_DAMPENING;
+    [SerializeField] private float CLUB_LOFT;
+    [SerializeField] private float EXTRA_FORWARD_BOOST;
     //Need to calculate rotational velocity as well
 
     private void Start()
@@ -91,6 +96,12 @@ public class ClubHandler : MonoBehaviour
     {
         clubVelocity = (rb.transform.position - lastClubPos) / Time.deltaTime;
         lastClubPos = rb.transform.position;
+
+        var deltaRot = transform.rotation * Quaternion.Inverse(lastClubRot);
+        var eulerRot = new Vector3(Mathf.DeltaAngle(0, deltaRot.eulerAngles.x), Mathf.DeltaAngle(0, deltaRot.eulerAngles.y), Mathf.DeltaAngle(0, deltaRot.eulerAngles.z));
+
+        clubRotationalVelocity = eulerRot / Time.fixedDeltaTime;
+        lastClubRot = rb.transform.rotation;
     }
 
     public void OnScreenPressOrRelease(InputAction.CallbackContext context)
@@ -102,7 +113,8 @@ public class ClubHandler : MonoBehaviour
         {
             _clubHead.SetActive(false);
             GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
-            thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity;
+            thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
+            thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
         }
     }
 
