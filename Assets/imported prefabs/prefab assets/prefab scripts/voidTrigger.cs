@@ -14,7 +14,7 @@ public class voidTrigger : MonoBehaviour
     {
         if (other.gameObject.name.Equals("GolfBall"))
         {
-            other.gameObject.transform.position = new Vector3(0, 1, 0);
+            other.gameObject.transform.position = new Vector3(0, (float) 0.3, 0);
         }
 
     }
