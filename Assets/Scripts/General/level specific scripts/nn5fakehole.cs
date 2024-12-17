@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class nn5fakehole : MonoBehaviour
 {
-    GameObject b = GameObject.Find("GolfBallgen");
+    readonly GameObject b = GameObject.Find("GolfBallgen");
     //float x = GameObject.Find("GolfBallgen").transform.position.x;
     //float y = GameObject.Find("GolfBallgen").transform.position.y;
     //float z = GameObject.Find("GolfBallgen").transform.position.z;
