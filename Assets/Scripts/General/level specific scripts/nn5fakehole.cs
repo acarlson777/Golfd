@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class nn5fakehole : MonoBehaviour
 {
-    private void Start()
-    {
-        
-    }
-    readonly float x = GameObject.Find("GolfBallgen").transform.position.x;
-    readonly float y = GameObject.Find("GolfBallgen").transform.position.y;
-    readonly float z = GameObject.Find("GolfBallgen").transform.position.z;
+    GameObject b = GameObject.Find("GolfBallgen");
+    //float x = GameObject.Find("GolfBallgen").transform.position.x;
+    //float y = GameObject.Find("GolfBallgen").transform.position.y;
+    //float z = GameObject.Find("GolfBallgen").transform.position.z;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
-            other.gameObject.transform.position = new Vector3(x,y + (float) 0.5,z); 
+            other.gameObject.transform.position = new Vector3(b.transform.position.x, b.transform.position.y + (float) 0.4, b.transform.position.z); 
         }
         
         

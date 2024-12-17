@@ -1703,7 +1703,7 @@ Transform:
   m_GameObject: {fileID: 1640394353040524427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0061, y: -0.771, z: -0.5281}
+  m_LocalPosition: {x: 0.009, y: -0.756, z: -0.524}
   m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3870,7 +3870,6 @@ GameObject:
   - component: {fileID: 3249355937574323008}
   - component: {fileID: 3249355937574323021}
   - component: {fileID: 3249355937574323010}
-  - component: {fileID: 7168599849622270238}
   - component: {fileID: 7030903860254451153}
   m_Layer: 0
   m_Name: Hole
@@ -3946,19 +3945,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7168599849622270238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3249355937574323009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488ba6cc29ae142a782aa08a6f19752f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelHandler: {fileID: 2569853704738799926}
 --- !u!136 &7030903860254451153
 CapsuleCollider:
   m_ObjectHideFlags: 0
