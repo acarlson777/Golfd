@@ -35,7 +35,6 @@ public class LoadGolfPlayerData : MonoBehaviour
         golfWorld.NAME = "TEMPLATE WORLD";
         golfWorld.LEVELS = new List<GolfLevel>() { golfLevel, golfLevel, golfLevel, golfLevel, golfLevel, golfLevel };
         JsonSerializer.Instance.golfPlayerData.WORLDS = new List<GolfWorld> { golfWorld, golfWorld, golfWorld };
-        JsonSerializer.Instance.SaveByJSON();
     }
 
     private void UpdateEditorChanges()
