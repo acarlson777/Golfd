@@ -29,7 +29,7 @@ public class JsonSerializer : MonoBehaviour
 
     public void DeleteJSONData()
     {
-        File.Delete(Application.persistentDataPath + "/Saves/JSONData.text");
+        File.Delete(Application.persistentDataPath + "/Saves/GameData.json");
         Directory.Delete(Application.persistentDataPath + "/Saves/");
     }
 
@@ -41,10 +41,10 @@ public class JsonSerializer : MonoBehaviour
         {
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
         }
-        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Saves/JSONData.text");
+        StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Saves/GameData.json");
         sw.Write(JsonString);
         sw.Close();
-        print(Application.persistentDataPath + "/Saves/JSONData.text");
+        print(Application.persistentDataPath + "/Saves/GameData.json");
         Debug.Log("==============SAVED================");
     }
 
@@ -54,15 +54,15 @@ public class JsonSerializer : MonoBehaviour
         {
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
         }
-        if (File.Exists(Application.persistentDataPath + "/Saves/JSONData.text"))
+        if (File.Exists(Application.persistentDataPath + "/Saves/GameData.json"))
         {
-            StreamReader sr = new StreamReader(Application.persistentDataPath + "/Saves/JSONData.text");
+            StreamReader sr = new StreamReader(Application.persistentDataPath + "/Saves/GameData.json");
 
             string JsonString = sr.ReadToEnd();
             Debug.Log(JsonString);
             golfPlayerData = JsonUtility.FromJson<GolfPlayerData>(JsonString); //Convert JSON to the Object(GolfPlayerData)
             sr.Close();
-            print(Application.persistentDataPath + "/Saves/JSONData.text");
+            print(Application.persistentDataPath + "/Saves/GameData.json");
             Debug.Log("==============LOADED================");
         }
         else
