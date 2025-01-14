@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9024491797472973833}
   - component: {fileID: 5904585048975395676}
   - component: {fileID: 1324754702018435783}
-  - component: {fileID: 1133263399405945409}
   m_Layer: 5
   m_Name: Switch
   m_TagString: Untagged
@@ -142,28 +141,4 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5904585048975395676}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 59073667980556949}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: On
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1133263399405945409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7495321798370062039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4bf712ea59d845239ba782ba78a8198, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+      m_Calls: []

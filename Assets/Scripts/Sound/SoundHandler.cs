@@ -7,8 +7,6 @@ using System;
 
 public class SoundHandler : MonoBehaviour {
 
-    public delegate void MyFunctionDelegate();
-
     public static SoundHandler Instance { get; private set; }
 
     public AudioMixer mixer;
@@ -39,6 +37,8 @@ public class SoundHandler : MonoBehaviour {
     private void ToggleSfx(){
         mixer.SetFloat("sfxVol", sfx ? -80 : 0);
         sfx = !sfx;
+        // PlayerPrefs.SetBool("sfx", sfx);
+        Debug.Log("internal sfx: " + sfx);
     }
 
 
@@ -59,9 +59,11 @@ public class SoundHandler : MonoBehaviour {
     }
 
     public bool getSfxState(){
+        Debug.Log("SFX STATE: " + sfx);
         return sfx;
     } 
     public bool getMusicState(){
+        Debug.Log("MUSIC STATE: " + music);
         return music;
     }
 }

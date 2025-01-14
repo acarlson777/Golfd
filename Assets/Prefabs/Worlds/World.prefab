@@ -2129,54 +2129,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 418267275460759644}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+    - target: {fileID: 7212164469686245870, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: TapSfxButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SoundHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692979334334260679, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6699280059743829313, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6699280059743829313, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: soundHandler
       value: 
-      objectReference: {fileID: 7006859438791184387}
-    - target: {fileID: 6699280059743829313, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: functionToCall.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 418267275460759644}
     - target: {fileID: 8002608408130938585, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2279,39 +2239,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 418267275460759644}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: TapMusicButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SoundHandler, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8633491644245604952, guid: 3abfa451e5ef44a94bff5b9a79c51370,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

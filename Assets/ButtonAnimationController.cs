@@ -1,28 +1,77 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
+
 
 
 public class ButtonAnimationController : MonoBehaviour{
 
-    // public Button button;
-    public SoundHandler.MyFunctionDelegate functionToCall;
-    // public Animator animator;
-    // public SoundHandler soundHandler;
+    public SoundHandler soundHandler;
+    public Button buttonSfx;
+    private Animator sfxAnimator;
+    public Button buttonMusic;
+    private Animator musicAnimator;
 
-    // Start is called before the first frame update
-    void Start(){
+    private bool sfx;
+    private bool music;
 
-        // if(soundHandler != null){
 
-        // }
+
+    void OnEnable(){
+
+        if(buttonMusic == null || buttonSfx == null){
+            // Error message
+            return;
+        }
+
+        if(soundHandler == null){
+            return;
+        }
+
+        // get the state of the button 
+        sfx = soundHandler.getSfxState();
+        music = soundHandler.getMusicState();
+
+        Debug.Log("sfx: " + sfx);
+        Debug.Log("music: " + music);
+
+
+        sfxAnimator = buttonSfx.GetComponent<Animator>();
+        musicAnimator = buttonMusic.GetComponent<Animator>();
+
+        sfxAnimator.SetBool("isOn", sfx);
+        musicAnimator.SetBool("isOn", music);
+
+
+
+        buttonSfx.onClick.AddListener(onSfxButtonClick);
+        buttonMusic.onClick.AddListener(OnMusicButtonClick);
         
+
     }
 
-    // Update is called once per frame
-    void Update(){
-        
+    public void onSfxButtonClick(){
+
+
+            sfx = !sfx;
+            sfxAnimator.SetBool("isOn", sfx);
+            // soundHandler.TapSfxButton();
+            Debug.Log("called sound handler!");
+
+         
+
+    }
+
+    public void OnMusicButtonClick(){
+
+
+
+            music = !music;
+            musicAnimator.SetBool("isOn", music);
+            // soundHandler.TapMusicButton();
+            Debug.Log("called sound handler!");
+
+         
     }
 }
