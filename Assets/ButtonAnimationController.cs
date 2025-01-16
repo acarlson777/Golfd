@@ -16,8 +16,6 @@ public class ButtonAnimationController : MonoBehaviour{
     private bool sfx;
     private bool music;
 
-
-
     void OnEnable(){
 
         if(buttonMusic == null || buttonSfx == null){
@@ -29,49 +27,32 @@ public class ButtonAnimationController : MonoBehaviour{
             return;
         }
 
-        // get the state of the button 
-        sfx = soundHandler.getSfxState();
-        music = soundHandler.getMusicState();
-
-        Debug.Log("sfx: " + sfx);
-        Debug.Log("music: " + music);
-
-
         sfxAnimator = buttonSfx.GetComponent<Animator>();
         musicAnimator = buttonMusic.GetComponent<Animator>();
+
+        sfx = PlayerPrefs.GetInt("sfx") == 1;
+        music = PlayerPrefs.GetInt("music") == 1;
 
         sfxAnimator.SetBool("isOn", sfx);
         musicAnimator.SetBool("isOn", music);
 
 
 
-        buttonSfx.onClick.AddListener(onSfxButtonClick);
-        buttonMusic.onClick.AddListener(OnMusicButtonClick);
-        
-
+        //buttonSfx.onClick.AddListener(OnSfxButtonClick);
+        //buttonMusic.onClick.AddListener(OnMusicButtonClick);
     }
 
-    public void onSfxButtonClick(){
-
-
+    public void OnSfxButtonClick(){
             sfx = !sfx;
             sfxAnimator.SetBool("isOn", sfx);
             // soundHandler.TapSfxButton();
-            Debug.Log("called sound handler!");
-
-         
-
+            Debug.Log("called sfx sound handler and set to " + sfx);
     }
 
     public void OnMusicButtonClick(){
-
-
-
             music = !music;
             musicAnimator.SetBool("isOn", music);
             // soundHandler.TapMusicButton();
-            Debug.Log("called sound handler!");
-
-         
+            Debug.Log("called music sound handler and set to " + music);
     }
 }
