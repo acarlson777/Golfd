@@ -5587,9 +5587,9 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.99607843, g: 0.972549, b: 0.32156864, a: 1}
   m_Intensity: 1
-  m_Range: 0.96211225
+  m_Range: 1.3443948
   m_SpotAngle: 80.6377
-  m_InnerSpotAngle: 74.89466
+  m_InnerSpotAngle: 41.93142
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -5617,7 +5617,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 2800000, guid: d4af31c9cd405426488b1eaf34c38a9e, type: 3}
+  m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
@@ -5625,7 +5625,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -7148,8 +7148,9 @@ GameObject:
   - component: {fileID: 8475456172845688857}
   - component: {fileID: 5829380856654457743}
   - component: {fileID: 8518451328816004006}
+  - component: {fileID: 4404801124917730123}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: ObjectObstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7164,7 +7165,7 @@ Transform:
   m_GameObject: {fileID: 6380574491450733490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.193, y: -0.76139987, z: -0.144}
+  m_LocalPosition: {x: 0.1991, y: -0.76139987, z: -0.144}
   m_LocalScale: {x: 0.065, y: 0.065, z: 0.065}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7243,6 +7244,21 @@ CapsuleCollider:
   m_Height: 1.9999999
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4404801124917730123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6380574491450733490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7422567da184ea8b7b94c9aa757a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xint: 0
+  plusfour: 0
+  ObjectObstacle: {fileID: 6380574491450733490}
 --- !u!1 &6386304146628733906
 GameObject:
   m_ObjectHideFlags: 0
