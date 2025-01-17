@@ -50,12 +50,22 @@ public class WorldHandler : MonoBehaviour
         if (debug) { Time.timeScale = 0.1f; } else { Time.timeScale = 1; }
     }
 
-    public void OnLevelCompleted()
+    public void OnLevelCompleted() //Work on this function 
     {
         int score = CalculateScore();
+        //Store level score in json data if best score
+        //Show some sort of new best animation on screen if score was new best
+        //Constantly show par and current stroke count on the screen
+        //Automatically return to home if just finished last level
         _strokeCount = 0;
         isLevelComplete = true;
         LoadNextLevel();
+        //StartNextLevelDialogue() to do level ending dialogue (gonna need to position the dialogue index using the level position when first entering the world
+    }
+
+    private void StartNextLevelDialogue()
+    {
+
     }
 
     public void LoadNextLevel()
@@ -70,6 +80,7 @@ public class WorldHandler : MonoBehaviour
         yield return AnimateIn();
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
+        //wait until level dialogue not currently active then start StartNextLevelDialogue()
     }
 
     private IEnumerator AnimateOut()
