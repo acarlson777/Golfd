@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour {
     private List<DialogueEntry> dialogueEntries;
 
     public AudioMixer audioMixer; 
+
+    public Animator animator;
     private Dictionary<string, List<string>> dialogueDict;
     private Dictionary<string, List<string>> namesDict;
     private Dictionary<string, List<Sprite>> imagesDict;
@@ -67,7 +69,10 @@ public class DialogueManager : MonoBehaviour {
                     StopCoroutine(typingCoroutine);
                     dialogueText.text = dialogueDict[currentDialogueName][currentLineIndex];
                     typingCoroutine = null;
-                    PlayAudioClip();
+                    // Stop the current audio 
+                    audioSource.Stop();
+                    // Stop the animation 
+                    animator.SetBool("isAnimating", false);
                 } else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]) {
                     NextLine();
                 }
@@ -100,6 +105,8 @@ public class DialogueManager : MonoBehaviour {
         characterImage.sprite = imagesDict[currentDialogueName][currentLineIndex];
         characterName.text = namesDict[currentDialogueName][currentLineIndex];
         typingCoroutine = StartCoroutine(TypeLine(line));
+        PlayAudioClip();
+        StartAnimation();
     }
 
     public void NextLine() {
@@ -117,7 +124,11 @@ public class DialogueManager : MonoBehaviour {
             yield return new WaitForSeconds(typingSpeed);
         }
         typingCoroutine = null;
-        PlayAudioClip();
+        // Stop the audio
+        audioSource.Stop();
+        // Stop the animation
+        animator.SetBool("isAnimating", false);
+        
     }
 
     private void PlayAudioClip() {
@@ -130,5 +141,12 @@ public class DialogueManager : MonoBehaviour {
                 Debug.LogWarning($"No audio clip assigned for {currentDialogueName} at line {currentLineIndex}.");
             }
         }
+    }
+
+    private void StartAnimation(){
+
+
+        animator.SetBool("isAnimating", true);
+
     }
 }
