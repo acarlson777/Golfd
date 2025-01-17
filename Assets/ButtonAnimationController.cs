@@ -37,7 +37,6 @@ public class ButtonAnimationController : MonoBehaviour{
         musicAnimator.SetBool("isOn", music);
 
 
-
         //buttonSfx.onClick.AddListener(OnSfxButtonClick);
         //buttonMusic.onClick.AddListener(OnMusicButtonClick);
     }
