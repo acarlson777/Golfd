@@ -54,3 +54,5 @@ public class LevelHandler : MonoBehaviour
         _animateEndHeight = animteEndHeight + _heightOffset;
     }
 }
+
+// may be related to spotlight not working

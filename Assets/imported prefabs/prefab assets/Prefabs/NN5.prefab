@@ -604,7 +604,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 0.98662597, b: 0.43867922, a: 1}
-  m_Intensity: 10
+  m_Intensity: 50
   m_Range: 2.3483
   m_SpotAngle: 89.36833
   m_InnerSpotAngle: 59.19919
@@ -5348,7 +5348,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3777659560923569741}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61423608270b3bb48bbf8906d60b2099, type: 3}
   m_Name: 
@@ -6003,8 +6003,8 @@ Light:
   m_Type: 4
   m_Shape: 0
   m_Color: {r: 0.99607843, g: 0.9764706, b: 0.48235294, a: 1}
-  m_Intensity: 10
-  m_Range: 0.16744651
+  m_Intensity: 50
+  m_Range: 3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
