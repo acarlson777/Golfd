@@ -612,7 +612,7 @@ MonoBehaviour:
   _pageStep: {x: -375, y: 0, z: 0}
   _pagesRect: {fileID: 620350360}
   _tweenTime: 0.25
-  _tweenType: 0
+  _tweenType: 1
   _maxPage: 3
   _isWorldSwipeScreenHandler: 0
 --- !u!114 &346149944
@@ -3605,6 +3605,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9141240915564233091, guid: 7640d54da46498942b2ab0148d5abf44,
+        type: 3}
+      propertyPath: _tweenType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9215636572246042904, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}

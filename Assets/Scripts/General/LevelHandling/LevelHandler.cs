@@ -3,7 +3,6 @@ using System.Collections;
 
 public class LevelHandler : MonoBehaviour
 {
-    public int par;
     [SerializeField] private float _animateStartHeight;
     [SerializeField] private float _animateEndHeight;
     [SerializeField] public float _heightOffset;

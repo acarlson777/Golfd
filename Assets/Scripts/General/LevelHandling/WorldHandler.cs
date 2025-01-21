@@ -1,5 +1,6 @@
 ﻿ using UnityEngine;
 using System.Collections;
+using UnityEngine.XR.ARFoundation;
 
 public class WorldHandler : MonoBehaviour
 {
@@ -53,14 +54,24 @@ public class WorldHandler : MonoBehaviour
     public void OnLevelCompleted() //Work on this function 
     {
         int score = CalculateScore();
-        //Store level score in json data if best score
-        //Show some sort of new best animation on screen if score was new best
-        //Constantly show par and current stroke count on the screen
-        //Automatically return to home if just finished last level
+        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore)
+        {
+            JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore = score;
+            JsonSerializer.Instance.SaveByJSON();
+        }
+
+        if (levelIndex == _levelList.Length - 1)
+        {
+            SceneHandler.Instance.LoadScene("LevelSelect");
+        }
+
+        //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
+        //Constantly show par and current stroke count on the screen (this is a general note)
         _strokeCount = 0;
         isLevelComplete = true;
-        LoadNextLevel();
         //StartNextLevelDialogue() to do level ending dialogue (gonna need to position the dialogue index using the level position when first entering the world
+        //Wait until ending dialogue complete before loading next level, maybe just link the function call to load the next level to the end of the dialogue
+        LoadNextLevel();
     }
 
     private void StartNextLevelDialogue()
@@ -76,11 +87,13 @@ public class WorldHandler : MonoBehaviour
     private IEnumerator LoadNextLevelCoroutine()
     {
         if (updateCurrentLevelPositionToFloorHeightCoroutine != null) { StopCoroutine(updateCurrentLevelPositionToFloorHeightCoroutine); }
+        UpdateParText();
+        UpdateStrokeCountText();
         yield return AnimateOut();
         yield return AnimateIn();
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        //wait until level dialogue not currently active then start StartNextLevelDialogue()
+        //run StartNextLevelDialogue()
     }
 
     private IEnumerator AnimateOut()
@@ -123,11 +136,12 @@ public class WorldHandler : MonoBehaviour
     public void IncrementStrokeCount()
     {
         _strokeCount++;
+        UpdateStrokeCountText();
     }
 
     private int CalculateScore()
     {
-        return _strokeCount - currLevelHandler.par;
+        return _strokeCount - JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR;
     }
 
     public LevelHandler GetCurrLevelHandler()
@@ -144,5 +158,15 @@ public class WorldHandler : MonoBehaviour
     public void UpdateLastKnownBallPos()
     {
         lastKnownBallPos = currLevelHandler.golfBall.transform.position;
+    }
+
+    private void UpdateParText()
+    {
+        //Animate par text and change to new par amount
+    }
+
+    private void UpdateStrokeCountText()
+    {
+        //Animate stroke count text and change to _strokeCount;
     }
 }
