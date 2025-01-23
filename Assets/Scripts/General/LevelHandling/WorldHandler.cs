@@ -1,6 +1,7 @@
 ﻿ using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.ARFoundation;
+using TMPro;
 
 public class WorldHandler : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class WorldHandler : MonoBehaviour
     private Coroutine updateCurrentLevelPositionToFloorHeightCoroutine = null;
     private Vector3 lastKnownBallPos;
 
+    [SerializeField] TextMeshProUGUI levelParText;
+    [SerializeField] TextMeshProUGUI strokeCountText;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -35,6 +39,8 @@ public class WorldHandler : MonoBehaviour
 
     private void Start()
     {
+        JsonSerializer.Instance.LoadByJSON();
+
         instantiatedLevelList = new GameObject[_levelList.Length];
         for (int i = 0; i < _levelList.Length; i++)
         {
@@ -163,10 +169,12 @@ public class WorldHandler : MonoBehaviour
     private void UpdateParText()
     {
         //Animate par text and change to new par amount
+        levelParText.text = "Par " + JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR.ToString();
     }
 
     private void UpdateStrokeCountText()
     {
         //Animate stroke count text and change to _strokeCount;
+        strokeCountText.text = _strokeCount.ToString();
     }
 }
