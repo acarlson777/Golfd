@@ -285,11 +285,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 145836287}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df4347c996a064df9b981d33d55d0837, type: 3}
+  m_Script: {fileID: 11500000, guid: f76d8ab190bd6435ab9e5486f046e65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
-  musicMixer: {fileID: 24100000, guid: 6b047fb26c4d5449caad735de664536d, type: 2}
+  mixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
 --- !u!1 &152635675
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1833,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1551504714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c5dc74ecd1384a8da095622ea1e011e, type: 3}
+  m_Script: {fileID: 11500000, guid: bd2cface396744746ace5e5266ce17dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
@@ -2210,6 +2209,37 @@ Transform:
   - {fileID: 1231909356}
   m_Father: {fileID: 1063707800}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2133478401
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2133478402}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2133478402
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133478401}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2221,3 +2251,4 @@ SceneRoots:
   - {fileID: 97731084}
   - {fileID: 1551504715}
   - {fileID: 145836288}
+  - {fileID: 2133478402}
