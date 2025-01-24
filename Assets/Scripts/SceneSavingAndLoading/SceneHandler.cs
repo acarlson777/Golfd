@@ -10,6 +10,7 @@ public class SceneHandler : MonoBehaviour
     [SerializeField] private GameObject _loadingScreenCanvas;
     [SerializeField] private Animator _transition;
     [SerializeField] private float _transitionTime;
+    private Coroutine currCoroutine;
 
     // Use this tutorial: https://www.youtube.com/watch?v=CE9VOZivb3I
 
@@ -22,7 +23,7 @@ public class SceneHandler : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(this);
-        }
+        } 
     }
 
     private IEnumerator LoadSceneCoroutine(string sceneName)
@@ -42,10 +43,14 @@ public class SceneHandler : MonoBehaviour
 
         _transition.SetTrigger("End");
         _transition.ResetTrigger("Start");
+        currCoroutine = null;
     }
 
     public void LoadScene(string sceneName)
     {
-        StartCoroutine(LoadSceneCoroutine(sceneName));
+        if (currCoroutine == null)
+        {
+            currCoroutine = StartCoroutine(LoadSceneCoroutine(sceneName));
+        }
     }
 }

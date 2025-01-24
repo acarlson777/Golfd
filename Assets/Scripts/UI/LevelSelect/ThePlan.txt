@@ -1,0 +1,5 @@
+﻿Yo, I found a solution by rendering the objects into a
+image via secondary camera and making the camera and
+image child of ui and making the secondary camera and
+all the 3D objects away from primary camera.
+It worked flawlessly for me.

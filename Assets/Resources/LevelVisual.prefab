@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2682736549080003283}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5421646656586476617}
   - component: {fileID: 5860003269084921308}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LEVEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1395387545152518664}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LevelVisual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 7978574760429728091}
   - component: {fileID: 6350684668925886049}
   - component: {fileID: 4177343971630596920}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 8410595742275852619}
   - component: {fileID: 3551222427610500960}
   - component: {fileID: 2563313409725184847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 7399051123946427433}
   - component: {fileID: 2849756108082080149}
   - component: {fileID: 8478193854462079908}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 8251997297519864227}
   - component: {fileID: 898453832610585404}
   - component: {fileID: 8527758308914326310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 2769575838356274398}
   - component: {fileID: 3074352647292877477}
   - component: {fileID: 7678071973730164804}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -655,7 +655,7 @@ GameObject:
   - component: {fileID: 1536841276319248380}
   - component: {fileID: 8673669476181862178}
   - component: {fileID: 8072984421932074045}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GolfBall
   m_TagString: GolfBall
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b1585c4652b59449e9ef90fdac8bfe75,
         type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

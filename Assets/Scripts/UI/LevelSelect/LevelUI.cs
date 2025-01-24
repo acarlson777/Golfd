@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LevelUI : MonoBehaviour
     [SerializeField] private GameObject bestScoreText;
     [SerializeField] private GameObject levelModelParent;
     [SerializeField] private string levelModelPrefabName;
+    [SerializeField] private Button button;
     private GameObject levelModel;
     
     public void Setup(int worldID, int levelID)
@@ -20,27 +22,23 @@ public class LevelUI : MonoBehaviour
         parText.GetComponent<TextMeshProUGUI>().text = golfLevel.PAR.ToString();
         bestScoreText.GetComponent<TextMeshProUGUI>().text = golfLevel.bestScore.ToString();
         levelModelPrefabName = golfLevel.LEVEL_PREFAB_NAME;
-        GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);
-        levelModel = Instantiate(levelModelPrefab, levelModelParent.transform);
+        button.onClick.AddListener(() => { EnterWorldAtThisLevel(worldID, levelID); });
+
+        //GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);
+        //levelModel = Instantiate(levelModelPrefab, levelModelParent.transform);
     }
 
-    private bool Equals(GolfLevel golfLevel)
+    private void EnterWorldAtThisLevel(int worldID, int levelID)
     {
-        if (!levelNameText.GetComponent<TextMeshProUGUI>().text.Equals(golfLevel.NAME)) { return false; }
-        if (!parText.GetComponent<TextMeshProUGUI>().text.Equals(golfLevel.PAR)) { return false; }
-        if (!levelModelPrefabName.Equals(golfLevel.LEVEL_PREFAB_NAME)) { return false; }
-
-        return true;
+        PlayerPrefs.SetInt((worldID+1).ToString(), levelID);
+        SceneHandler.Instance.LoadScene("World " + (worldID +1).ToString());
     }
 
     public GolfLevel UpdateEditorChanges(GolfLevel golfLevel)
     {
-        if (!Equals(golfLevel))
-        {
-            golfLevel.NAME = levelNameText.GetComponent<TextMeshProUGUI>().text;
-            golfLevel.PAR = Int32.Parse(parText.GetComponent<TextMeshProUGUI>().text);
-            golfLevel.LEVEL_PREFAB_NAME = levelModelPrefabName;
-        }
+        golfLevel.NAME = levelNameText.GetComponent<TextMeshProUGUI>().text;
+        golfLevel.PAR = Int32.Parse(parText.GetComponent<TextMeshProUGUI>().text);
+        golfLevel.LEVEL_PREFAB_NAME = levelModelPrefabName;
         return golfLevel;
     }
 }

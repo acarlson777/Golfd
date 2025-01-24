@@ -2,13 +2,15 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
+public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler, IBeginDragHandler
 {
     [SerializeField] private Vector3 _pageStep;
     [SerializeField] private RectTransform _pagesRect;
     [SerializeField] private float _tweenTime;
-    [SerializeField] private LeanTweenType tweenType;
+    [SerializeField] private LeanTweenType _tweenType;
     [SerializeField] private int _maxPage;
+    [SerializeField] bool _isWorldSwipeScreenHandler;
+    private LevelPrefabCamera levelPrefabCamera;
     private Vector3 targetPos;
     private int currentPage = 1;
     private float dragThreshold;
@@ -19,6 +21,7 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
     {
         targetPos = _pagesRect.localPosition;
         dragThreshold = Screen.width / 15;
+        levelPrefabCamera = GameObject.FindGameObjectWithTag("LevelPrefabCamera").GetComponent<LevelPrefabCamera>();
     }
 
     public void Next()
@@ -43,7 +46,18 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler
 
     private void MovePage()
     {
-        _pagesRect.LeanMoveLocal(targetPos, _tweenTime).setEase(tweenType);
+        _pagesRect.LeanMoveLocal(targetPos, _tweenTime).setEase(_tweenType);
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        if (_isWorldSwipeScreenHandler)
+        {
+            levelPrefabCamera.GenerateCrossWorldLevels(_pageStep);
+        } else
+        {
+            levelPrefabCamera.GenerateSameWorldLevels(_pageStep);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)

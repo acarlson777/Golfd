@@ -3,7 +3,6 @@ using System.Collections;
 
 public class LevelHandler : MonoBehaviour
 {
-    public int par;
     [SerializeField] private float _animateStartHeight;
     [SerializeField] private float _animateEndHeight;
     [SerializeField] public float _heightOffset;
@@ -11,6 +10,7 @@ public class LevelHandler : MonoBehaviour
     private float _animateOutDuration = 2f;
     public GameObject LEVEL;
     private float timeElapsed;
+    public GameObject golfBall;
 
     private void Start()
     {
