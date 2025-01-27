@@ -1,56 +1,42 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueAnimationController : MonoBehaviour{
 
-    [SerializeField] float duration;
-    [SerializeField] LeanTweenType easeType;
+    [SerializeField] float easeInDuration;
+    [SerializeField] float easeOutDuration;
+    [SerializeField] LeanTweenType easeInType;
+    [SerializeField] LeanTweenType easeOutType;
 
 
     public void Start(){
 
-        scaleUp();
+        scaleUp(() =>
+            {
+                Debug.Log("FINIISHED SCALE UP");
+            });
 
     }
 
 
-    void scaleUp(){
+    public void scaleUp(Action callback){
 
-
-
-        LeanTween.scale(gameObject, new Vector3(1, 1, 1), duration).setEase(easeType).setOnComplete(wait);
-
-        
-
+    LeanTween.scale(gameObject, new Vector3(1, 1, 1), easeInDuration)
+             .setEase(easeInType)
+             .setOnComplete(() => callback?.Invoke());
+             
     }
 
+    
+    public void scaleDown(Action callback){
 
-    void wait(){
-
-        LeanTween.scale(gameObject, transform.localScale, 2).setOnComplete(scaleDown);
-
+    LeanTween.scale(gameObject, new Vector3(0.01f, 0.01f, 0.01f), easeOutDuration)
+             .setEase(easeOutType)
+             .setOnComplete(() => callback?.Invoke());
+             
     }
-
-
-    void wait1(){
-
-        LeanTween.scale(gameObject, transform.localScale, 2).setOnComplete(scaleUp);
-
-    }
-
-
-
-    void scaleDown(){
-
-
-       
-
-        LeanTween.scale(gameObject, new Vector3(0.01f,0.01f,0.01f), 0).setOnComplete(wait1);
-
-        
-    }
-
 
 
     void transformUp(){

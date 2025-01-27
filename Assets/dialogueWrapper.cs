@@ -4,21 +4,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem; // Required for the new Input System
 
-public class dialogueWrapper : MonoBehaviour
+public class DialogueWrapper : MonoBehaviour
 {
     [SerializeField]
-    private List<TextboxDropdownEntry> dialogueEntries;
+    private List<DialogueSequence> dialogueSequences; // List of dialogue sequences
 
     [System.Serializable]
-    public class TextboxDropdownEntry
+    public class DialogueSequence
     {
-        public string dialogueName;  // For the textbox input (string)
-        public DropdownOption dropdownOption;  // Dropdown selection (enum with two options)
+        public string sequenceName;  // The name of the dialogue sequence
+        public List<TextboxDropdownEntry> dialogueEntries; // List of dialogues in this sequence
 
-        public enum DropdownOption
+        [System.Serializable]
+        public class TextboxDropdownEntry
         {
-            Manager1,
-            Manager2
+            public string dialogueName;  // For the textbox input (string)
+            public DropdownOption dropdownOption;  // Dropdown selection (enum with two options)
+
+            public enum DropdownOption
+            {
+                Manager1,
+                Manager2
+            }
         }
     }
 
@@ -27,32 +34,52 @@ public class dialogueWrapper : MonoBehaviour
 
     private int currentDialogueIndex = 0;
     private bool isDialogueInProgress = false;
+    private DialogueSequence currentSequence;
+
+    // This method can be called externally to start a dialogue sequence by name
+    public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete)
+    {
+        DialogueSequence sequence = dialogueSequences.Find(seq => seq.sequenceName == dialogueSequenceName);
+        
+        if (sequence != null)
+        {
+            currentSequence = sequence;
+            currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
+            StartDialogueFromList();
+        }
+        else
+        {
+            Debug.LogError($"Dialogue sequence {dialogueSequenceName} not found.");
+        }
+    }
 
     // This is the method that will be called when the player taps the screen
     public void Tap(InputAction.CallbackContext context)
     {
         if (context.performed && !isDialogueInProgress) // Check if the tap action was performed and no dialogue is currently in progress
         {
-            StartDialogueFromList();
+            StartDialogueFromList(); // Start the dialogue without a callback (since it's handled by OnDialogueComplete)
         }
     }
 
-    void StartDialogueFromList()
-    {
-        // Ensure we haven't finished all dialogues
-        if (currentDialogueIndex < dialogueEntries.Count)
-        {
+    void StartDialogueFromList(){
+        // Ensure we haven't finished all dialogues in the sequence
+        if (currentDialogueIndex < currentSequence.dialogueEntries.Count){
             // Get the current dialogue entry
-            TextboxDropdownEntry currentEntry = dialogueEntries[currentDialogueIndex];
+            DialogueSequence.TextboxDropdownEntry currentEntry = currentSequence.dialogueEntries[currentDialogueIndex];
 
             // Choose the correct DialogueManager based on the dropdown option
-            DialogueManager selectedManager = currentEntry.dropdownOption == TextboxDropdownEntry.DropdownOption.Manager1
+            DialogueManager selectedManager = currentEntry.dropdownOption == DialogueSequence.TextboxDropdownEntry.DropdownOption.Manager1
                 ? manager1
                 : manager2;
 
             // Call StartDialogue with the appropriate dialogue name and callback to continue
             isDialogueInProgress = true;
             selectedManager.StartDialogue(currentEntry.dialogueName, OnDialogueComplete);
+        }else
+        {
+            Debug.Log("All dialogues in the sequence are finished.");
+            isDialogueInProgress = false; // Mark dialogue as complete
         }
     }
 
