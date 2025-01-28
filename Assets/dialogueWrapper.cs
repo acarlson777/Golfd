@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem; // Required for the new Input System
 
-public class DialogueWrapper : MonoBehaviour
-{
-    [SerializeField]
-    private List<DialogueSequence> dialogueSequences; // List of dialogue sequences
+public class DialogueWrapper : MonoBehaviour{
+
+
+    [SerializeField] Canvas canvas;
+    [SerializeField] DialogueAnimationController textBox;
+    [SerializeField] DialogueAnimationController image1;
+    [SerializeField] DialogueAnimationController image2;
+    [SerializeField] private List<DialogueSequence> dialogueSequences; // List of dialogue sequences
 
     [System.Serializable]
     public class DialogueSequence
@@ -37,14 +42,14 @@ public class DialogueWrapper : MonoBehaviour
     private DialogueSequence currentSequence;
 
     // This method can be called externally to start a dialogue sequence by name
-    public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete)
-    {
+    public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete){
         DialogueSequence sequence = dialogueSequences.Find(seq => seq.sequenceName == dialogueSequenceName);
         
         if (sequence != null)
         {
             currentSequence = sequence;
             currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
+            showDialogueObjects();
             StartDialogueFromList();
         }
         else
@@ -60,6 +65,27 @@ public class DialogueWrapper : MonoBehaviour
         {
             StartDialogueFromList(); // Start the dialogue without a callback (since it's handled by OnDialogueComplete)
         }
+    }
+
+    void showDialogueObjects(){
+        // TODO: aks manager 1 and manager 2 to set the picture before running 
+
+
+
+        // enable canvas 
+        canvas.gameObject.SetActive(true);
+
+        // use scaleUp on text box 
+
+        textBox.scaleUp(() =>{});
+
+        // Enable image 
+        // use transfrm up on both image
+
+    }
+
+    void hideDialogueObjects(){
+
     }
 
     void StartDialogueFromList(){

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestHandler : MonoBehaviour{
 
-    public DialogueManager manager;
+    public DialogueWrapper manager;
 
 
     void Start(){
@@ -36,6 +36,6 @@ public class TestHandler : MonoBehaviour{
         yield return new WaitForSeconds(2f);
 
         Debug.Log("Execution resumed.");
-        manager.StartDialogue("TEST1", onDialogueComplete);
+        manager.StartDialogueSequence("name1", onDialogueComplete);
     }
 }

@@ -39,7 +39,12 @@ public class DialogueAnimationController : MonoBehaviour{
     }
 
 
-    void transformUp(){
+    public void transformUp(Action callback){
+
+
+        LeanTween.scale(gameObject, new Vector3(0.01f, 0.01f, 0.01f), easeOutDuration)
+             .setEase(easeOutType)
+             .setOnComplete(() => callback?.Invoke());
 
 
     }
