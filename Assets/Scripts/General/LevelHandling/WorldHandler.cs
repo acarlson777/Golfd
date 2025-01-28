@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
@@ -134,7 +134,7 @@ public class WorldHandler : MonoBehaviour
 
     public void UpdateLevelPosition(Pose hitPose)
     {
-        //_ENVIRONMENT.transform.position = hitPose.position;
+        _ENVIRONMENT.transform.position = hitPose.position; //necessary to move level to where you tap in the world
         levelPosPose = hitPose;
         _mask.transform.position = new Vector3(_mask.transform.position.x ,-25 + hitPose.position.y, _mask.transform.position.z);
     }

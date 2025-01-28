@@ -29,7 +29,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float ROTATIONAL_DAMPENING;
     [SerializeField] private float CLUB_LOFT;
     [SerializeField] private float EXTRA_FORWARD_BOOST;
-    //Need to calculate rotational velocity as well
+    private bool canThrowClubs = false;
 
     private void Start()
     {
@@ -114,9 +114,12 @@ public class ClubHandler : MonoBehaviour
             if (_clubHead.activeInHierarchy)
             {
                 _clubHead.SetActive(false);
-                GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
-                thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
-                thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
+                if (canThrowClubs)
+                {
+                    GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
+                    thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
+                    thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
+                }
             }
         }
     }
@@ -135,5 +138,10 @@ public class ClubHandler : MonoBehaviour
         yield return new WaitForSeconds(_swingTime);
         _clubHead.GetComponent<BoxCollider>().enabled = false;
         WorldHandler.Instance.IncrementStrokeCount();
+    }
+
+    public void ToggleClubThrowing()
+    {
+        canThrowClubs = !canThrowClubs;
     }
 }
