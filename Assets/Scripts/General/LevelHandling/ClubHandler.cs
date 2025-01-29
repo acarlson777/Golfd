@@ -113,13 +113,13 @@ public class ClubHandler : MonoBehaviour
         {
             if (_clubHead.activeInHierarchy)
             {
-                _clubHead.SetActive(false);
                 if (canThrowClubs)
                 {
                     GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
                     thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
                     thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
                 }
+                _clubHead.SetActive(false);
             }
         }
     }

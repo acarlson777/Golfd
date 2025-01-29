@@ -45,6 +45,7 @@ public class WorldHandler : MonoBehaviour
         for (int i = 0; i < _levelList.Length; i++)
         {
             GameObject nextLevel = Instantiate(_levelList[i], _levelList[i].transform.position, _levelList[i].transform.rotation, _ENVIRONMENT.transform);
+            nextLevel.transform.localPosition = new Vector3(0, 0, 0);
             nextLevel.GetComponent<LevelHandler>().LEVEL.SetActive(false);
             instantiatedLevelList[i] = nextLevel;
         }
