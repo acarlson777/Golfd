@@ -475,7 +475,6 @@ GameObject:
   - component: {fileID: 5193837147260037119}
   - component: {fileID: 5193837147260037118}
   - component: {fileID: 5193837147260037113}
-  - component: {fileID: 8387774450113167325}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -492,10 +491,11 @@ Transform:
   m_GameObject: {fileID: 5193837147260037109}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30643597, y: 0.123, z: 0.032143343}
+  m_LocalPosition: {x: -0.30643597, y: 0.1095, z: 0.032143343}
   m_LocalScale: {x: 0.1, y: 0.0064999997, z: 0.1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2422690210822770242}
   m_Father: {fileID: 8162425440801786569}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5193837147260037119
@@ -571,19 +571,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &8387774450113167325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5193837147260037109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488ba6cc29ae142a782aa08a6f19752f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelHandler: {fileID: -35754504918574247}
 --- !u!1 &5193837147404210895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,11 +1668,11 @@ Transform:
   m_GameObject: {fileID: 5415799862349114123}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30253604, y: 0.129, z: 0.031956293}
-  m_LocalScale: {x: 0.065, y: 0.019500006, z: 0.065}
+  m_LocalPosition: {x: 0, y: 1.76, z: 0}
+  m_LocalScale: {x: 0.6499999, y: 3, z: 0.6499999}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 8162425440801786569}
+  m_Father: {fileID: 5193837147260037114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2668339799764929201
 MeshFilter:
@@ -1772,7 +1759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488ba6cc29ae142a782aa08a6f19752f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelHandler: {fileID: 0}
+  _levelHandler: {fileID: -35754504918574247}
 --- !u!1 &5528220437009773878
 GameObject:
   m_ObjectHideFlags: 0
@@ -6844,7 +6831,6 @@ Transform:
   m_LocalScale: {x: 15.384617, y: 15.384617, z: 15.384617}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2422690210822770242}
   - {fileID: 5193837147260037114}
   - {fileID: 7476477758686702683}
   - {fileID: 5193837147673758524}
