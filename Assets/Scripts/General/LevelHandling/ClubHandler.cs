@@ -126,9 +126,8 @@ public class ClubHandler : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("GolfBall"))
+        if (collision.gameObject.CompareTag("GolfBall"))// && _clubHead.GetComponent<BoxCollider>().enabled)
         {
-            //print("Golf Ball Hit");
             StartCoroutine(SwingTime());
         }
     }
@@ -137,7 +136,10 @@ public class ClubHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(_swingTime);
         _clubHead.GetComponent<BoxCollider>().enabled = false;
-        WorldHandler.Instance.IncrementStrokeCount();
+        if (gBrb.velocity.magnitude > _ballVelocityTolerance)
+        {
+            WorldHandler.Instance.IncrementStrokeCount();
+        }
     }
 
     public void ToggleClubThrowing()
