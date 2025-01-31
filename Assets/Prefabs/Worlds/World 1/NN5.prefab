@@ -287,6 +287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3039a04927d394909957e914d4cafb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GolfBallGen: {fileID: 9121775933116463710}
+  GolfBall: {fileID: 1640394353040524427}
 --- !u!1 &95499366531993332
 GameObject:
   m_ObjectHideFlags: 0
@@ -9476,12 +9478,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7729708738157987841}
   - {fileID: 5551784411426425687}
   - {fileID: 1831090197256409100}
   - {fileID: 3249355937574323008}
   - {fileID: 792400415260213334}
   - {fileID: 4579965912756256459}
-  - {fileID: 7729708738157987841}
   - {fileID: 3249355937769513799}
   - {fileID: 2709184700708553156}
   - {fileID: 1889840155659168759}
@@ -9660,6 +9662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3039a04927d394909957e914d4cafb93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GolfBallGen: {fileID: 9121775933116463710}
+  GolfBall: {fileID: 1640394353040524427}
 --- !u!1 &8398115590080958225
 GameObject:
   m_ObjectHideFlags: 0
@@ -10212,7 +10216,7 @@ GameObject:
   - component: {fileID: 861492256261883326}
   - component: {fileID: 8855372717703609309}
   m_Layer: 0
-  m_Name: GolfBall gen
+  m_Name: GolfBallGen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
