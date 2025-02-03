@@ -13,11 +13,11 @@ public class ventair1 : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name.Equals("ball"))
+        if (other.gameObject.name.Equals("GolfBall"))
         {
 
 
-            other.gameObject.transform.Translate(new Vector3(0, (float)0.2, 0), Space.World);
+            other.gameObject.transform.Translate(new Vector3(0, (float)0.1, 0), Space.World);
         }
     }
 }
