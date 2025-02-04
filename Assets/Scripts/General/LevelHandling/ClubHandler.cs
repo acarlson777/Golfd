@@ -30,10 +30,14 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float CLUB_LOFT;
     [SerializeField] private float EXTRA_FORWARD_BOOST;
     private bool canThrowClubs = false;
+    [SerializeField] private Animator clubThrowAnimator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        canThrowClubs = PlayerPrefs.GetInt("canThrowClubs") == 1;
+        clubThrowAnimator.SetBool("isOn", canThrowClubs);
     }
 
     private void Update()
@@ -145,5 +149,7 @@ public class ClubHandler : MonoBehaviour
     public void ToggleClubThrowing()
     {
         canThrowClubs = !canThrowClubs;
+        PlayerPrefs.SetInt("canThrowClubs", canThrowClubs ? 1 : 0);
+        clubThrowAnimator.SetBool("isOn", canThrowClubs);
     }
 }

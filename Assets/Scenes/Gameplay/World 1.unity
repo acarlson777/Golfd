@@ -278,6 +278,31 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1972478583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8388908002203596994, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1972478588 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2071100743298804864, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1972478589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972478583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5554c9cb8f191452b95a34a5fc48a49b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clubThrowAnimator: {fileID: 1972478588}
 --- !u!1001 &864916740176140643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -383,6 +408,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: clubThrowAnimator
+      value: 
+      objectReference: {fileID: 1972478588}
     - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _ballVelocityTolerance
@@ -813,6 +843,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1964125110}
+    - targetCorrespondingSourceObject: {fileID: 8388908002203596994, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1972478589}
   m_SourcePrefab: {fileID: 100100000, guid: b7e550269444e4d25a5d2a3cd7ab2ec2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
