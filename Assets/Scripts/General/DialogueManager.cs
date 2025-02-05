@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour {
 
     public AudioMixer audioMixer; 
 
-    public Animator animator;
+    public DialogueAnimationController animator;
     private Dictionary<string, List<string>> dialogueDict;
     private Dictionary<string, List<string>> namesDict;
     private Dictionary<string, List<Sprite>> imagesDict;
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour {
                     // Stop the current audio 
                     audioSource.Stop();
                     // Stop the animation 
-                    animator.SetBool("isAnimating", false);
+                    animator.startSinAnimation();
                 } else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]) {
                     NextLine();
                 }
@@ -127,7 +127,7 @@ public class DialogueManager : MonoBehaviour {
         // Stop the audio
         audioSource.Stop();
         // Stop the animation
-        animator.SetBool("isAnimating", false);
+        animator.stopSinAnimation();
         
     }
 
@@ -146,7 +146,7 @@ public class DialogueManager : MonoBehaviour {
     private void StartAnimation(){
 
 
-        animator.SetBool("isAnimating", true);
+        animator.startSinAnimation();
 
     }
 }

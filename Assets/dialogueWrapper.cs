@@ -77,9 +77,20 @@ public class DialogueWrapper : MonoBehaviour{
 
         // use scaleUp on text box 
 
-        textBox.scaleUp(() =>{});
+        textBox.scaleUp(() =>{
 
-        // Enable image 
+            // Enable image 
+            image1.gameObject.SetActive(true);
+            image2.gameObject.SetActive(true);
+
+            Debug.Log("Active is true"!);
+
+            image1.transformRelativeA(() => {});
+            image2.transformRelativeA(() => {});
+
+        });
+
+       
         // use transfrm up on both image
 
     }
