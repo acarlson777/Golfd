@@ -12729,7 +12729,6 @@ GameObject:
   - component: {fileID: 8475456172845688857}
   - component: {fileID: 5829380856654457743}
   - component: {fileID: 8518451328816004006}
-  - component: {fileID: 4404801124917730123}
   m_Layer: 0
   m_Name: ObjectObstacle
   m_TagString: Untagged
@@ -12825,21 +12824,6 @@ CapsuleCollider:
   m_Height: 1.9999999
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4404801124917730123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6380574491450733490}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be7422567da184ea8b7b94c9aa757a31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xint: 0
-  plusfour: 0
-  ObjectObstacle: {fileID: 6380574491450733490}
 --- !u!1 &6386304146628733906
 GameObject:
   m_ObjectHideFlags: 0
