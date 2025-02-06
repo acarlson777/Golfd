@@ -50,7 +50,7 @@ public class DialogueWrapper : MonoBehaviour{
             currentSequence = sequence;
             currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
             showDialogueObjects();
-            StartDialogueFromList();
+
         }
         else
         {
@@ -71,6 +71,9 @@ public class DialogueWrapper : MonoBehaviour{
         // TODO: aks manager 1 and manager 2 to set the picture before running 
 
 
+        setPictures();
+
+
 
         // enable canvas 
         canvas.gameObject.SetActive(true);
@@ -85,14 +88,56 @@ public class DialogueWrapper : MonoBehaviour{
 
             Debug.Log("Active is true"!);
 
-            image1.transformRelativeA(() => {});
-            image2.transformRelativeA(() => {});
+            int completedCount = 0;
+            
+            Action onComplete = () => {
+                completedCount++;
+                if (completedCount >= 2){
+                    StartDialogueFromList();
+                }
+            };
+
+            image1.transformRelativeA(onComplete);
+            image2.transformRelativeA(onComplete);
 
         });
 
        
         // use transfrm up on both image
 
+    }
+
+
+    void setPictures(){
+
+        if (currentSequence.dialogueEntries.Count > 0) {
+        // Find the first entry for Manager1 and Manager2
+        DialogueSequence.TextboxDropdownEntry firstManager1Entry = null;
+        DialogueSequence.TextboxDropdownEntry firstManager2Entry = null;
+
+        // Iterate through the entries to find the first one for each manager
+        foreach (var entry in currentSequence.dialogueEntries) {
+            if (firstManager1Entry == null && entry.dropdownOption == DialogueSequence.TextboxDropdownEntry.DropdownOption.Manager1) {
+                firstManager1Entry = entry;
+            }
+            if (firstManager2Entry == null && entry.dropdownOption == DialogueSequence.TextboxDropdownEntry.DropdownOption.Manager2) {
+                firstManager2Entry = entry;
+            }
+            
+            // Break early if both are found
+            if (firstManager1Entry != null && firstManager2Entry != null) {
+                break;
+            }
+        }
+
+        // Now, set pictures for both managers if the first entries were found
+        if (firstManager1Entry != null) {
+            manager1.SetPictureForDialogue(firstManager1Entry.dialogueName);
+        }
+        if (firstManager2Entry != null) {
+            manager2.SetPictureForDialogue(firstManager2Entry.dialogueName);
+        }
+        }
     }
 
     void hideDialogueObjects(){

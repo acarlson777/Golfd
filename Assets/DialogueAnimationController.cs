@@ -14,6 +14,8 @@ public class DialogueAnimationController : MonoBehaviour{
 
     [SerializeField] Vector2 positionB;
 
+    private Vector2 initPosition;
+
 
     public float amplitude = 10f;
     public float frequency = 1f;  
@@ -22,10 +24,13 @@ public class DialogueAnimationController : MonoBehaviour{
     
     private int tweenID;
 
+    public bool cancel = false;
+
 
     public void Awake(){
 
         rectTransform = GetComponent<RectTransform>();
+        initPosition = rectTransform.anchoredPosition;
 
 
     }
@@ -52,7 +57,8 @@ public class DialogueAnimationController : MonoBehaviour{
 
 
         LeanTween.moveLocal(gameObject, positionA, easeInDuration)
-                 .setEase(easeInType);
+                 .setEase(easeInType)
+                 .setOnComplete(() => callback?.Invoke());
 
     }
 
@@ -67,12 +73,10 @@ public class DialogueAnimationController : MonoBehaviour{
 
     public void transformRelativeA(Action callback){
 
-        Debug.Log(rectTransform.anchoredPosition.x);
-        Debug.Log(rectTransform.anchoredPosition.y);
-
 
         LeanTween.moveLocal(gameObject, (new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionA), easeInDuration)
-                 .setEase(easeInType);
+                 .setEase(easeInType)
+                 .setOnComplete(() => callback?.Invoke());
 
     }
 
@@ -91,6 +95,10 @@ public class DialogueAnimationController : MonoBehaviour{
     public void startSinAnimation(){
 
 
+        cancel = false;
+        
+        initPosition = rectTransform.anchoredPosition;
+
         tweenID = LeanTween.value(gameObject, UpdateYPosition, 0f, Mathf.PI * 2f, frequency)
             .setLoopClamp() 
             .setRepeat(-1)
@@ -103,6 +111,15 @@ public class DialogueAnimationController : MonoBehaviour{
 
         float yPosition = amplitude * sineValue; 
 
+
+        Debug.Log(initPosition.y);
+        Debug.Log(yPosition);
+
+
+        if(cancel && (Math.Abs(initPosition.y - yPosition) < 0.5f)){
+            stopSinAnimation();
+        }
+
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, yPosition);
     }
 
@@ -112,7 +129,25 @@ public class DialogueAnimationController : MonoBehaviour{
     }
 
     public void stopSinAnimation(){
-        LeanTween.cancel(gameObject, tweenID);
+
+        // set request stop to true
+
+         if(cancel){
+            LeanTween.cancel(gameObject, tweenID);
+            // rectTransform.anchoredPosition = initPosition;
+
+            cancel = false;
+        }else{
+            cancel = true;
+        }
+
+        
+
+
+       
+
+
+        
     }
 
 
