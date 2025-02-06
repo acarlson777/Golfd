@@ -235,6 +235,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3089024914219310661, guid: c45b7cda379d64abd8ab0c6d68936bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 284628190}
+    - target: {fileID: 3089024914219310661, guid: c45b7cda379d64abd8ab0c6d68936bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TapMusicButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547557736597946348, guid: c45b7cda379d64abd8ab0c6d68936bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 284628190}
+    - target: {fileID: 3547557736597946348, guid: c45b7cda379d64abd8ab0c6d68936bb7,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TapSfxButton
+      objectReference: {fileID: 0}
     - target: {fileID: 4864038365818936414, guid: c45b7cda379d64abd8ab0c6d68936bb7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -300,6 +320,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8601579600604304479, guid: c45b7cda379d64abd8ab0c6d68936bb7,
+        type: 3}
+      propertyPath: soundHandler
+      value: 
+      objectReference: {fileID: 284628190}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -712,6 +737,51 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1 &284628189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284628191}
+  - component: {fileID: 284628190}
+  m_Layer: 0
+  m_Name: SOUND HANDLER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &284628190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284628189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76d8ab190bd6435ab9e5486f046e65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
+--- !u!4 &284628191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284628189}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346149940
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,3 +4119,4 @@ SceneRoots:
   - {fileID: 1135002397}
   - {fileID: 1016629273}
   - {fileID: 648882710}
+  - {fileID: 284628191}
