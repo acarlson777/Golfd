@@ -61,9 +61,9 @@ public class WorldHandler : MonoBehaviour
     public void OnLevelCompleted() //Work on this function 
     {
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore)
+        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore)
         {
-            JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore = score;
+            JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
         }
 
