@@ -66,7 +66,8 @@ public class DialogueAnimationController : MonoBehaviour{
 
 
         LeanTween.moveLocal(gameObject, positionB, easeOutDuration)
-                 .setEase(easeOutType);
+                 .setEase(easeOutType)
+                 .setOnComplete(() => callback?.Invoke());
 
     }
 
@@ -87,7 +88,8 @@ public class DialogueAnimationController : MonoBehaviour{
 
 
         LeanTween.moveLocal(gameObject, (new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionB), easeOutDuration)
-                 .setEase(easeOutType);
+                 .setEase(easeOutType)
+                 .setOnComplete(() => callback?.Invoke());
 
     }
 

@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour {
                     // Stop the current audio 
                     audioSource.Stop();
                     // Stop the animation 
-                    animator.startSinAnimation();
+                    animator.stopSinAnimation();
                 } else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]) {
                     NextLine();
                 }
@@ -91,6 +91,13 @@ public class DialogueManager : MonoBehaviour {
         } else {
             Debug.LogWarning($"Dialogue '{dialogueName}' not found!");
         }
+    }
+
+
+    public void SetPictureForDialogue(string dialogueName){
+
+        characterImage.sprite = imagesDict[dialogueName][0];
+
     }
 
     private void EndDialogue() {

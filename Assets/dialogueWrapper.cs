@@ -41,19 +41,21 @@ public class DialogueWrapper : MonoBehaviour{
     private bool isDialogueInProgress = false;
     private DialogueSequence currentSequence;
 
+    private Action onSequenceComplete = null;
+
     // This method can be called externally to start a dialogue sequence by name
     public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete){
+
+        onSequenceComplete = onDialogueComplete;
+
         DialogueSequence sequence = dialogueSequences.Find(seq => seq.sequenceName == dialogueSequenceName);
         
-        if (sequence != null)
-        {
+        if (sequence != null){
             currentSequence = sequence;
             currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
             showDialogueObjects();
 
-        }
-        else
-        {
+        }else{
             Debug.LogError($"Dialogue sequence {dialogueSequenceName} not found.");
         }
     }
@@ -78,8 +80,7 @@ public class DialogueWrapper : MonoBehaviour{
         // enable canvas 
         canvas.gameObject.SetActive(true);
 
-        // use scaleUp on text box 
-
+        // use scaleUp on text box
         textBox.scaleUp(() =>{
 
             // Enable image 
@@ -142,6 +143,34 @@ public class DialogueWrapper : MonoBehaviour{
 
     void hideDialogueObjects(){
 
+        int completedCount = 0;
+            
+            Action onComplete = () => {
+                completedCount++;
+                if (completedCount >= 2){
+
+
+                    image1.gameObject.SetActive(false);
+                    image2.gameObject.SetActive(false);
+
+
+                    textBox.scaleDown(() =>{
+
+                        canvas.gameObject.SetActive(false);
+                        onSequenceComplete?.Invoke();
+
+
+                    });
+
+
+
+                }
+            };
+
+            image1.transformRelativeB(onComplete);
+            image2.transformRelativeB(onComplete);
+
+
     }
 
     void StartDialogueFromList(){
@@ -162,6 +191,8 @@ public class DialogueWrapper : MonoBehaviour{
         {
             Debug.Log("All dialogues in the sequence are finished.");
             isDialogueInProgress = false; // Mark dialogue as complete
+            hideDialogueObjects();
+
         }
     }
 
@@ -174,3 +205,9 @@ public class DialogueWrapper : MonoBehaviour{
         isDialogueInProgress = false;
     }
 }
+
+
+
+
+
+

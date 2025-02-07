@@ -767,9 +767,10 @@ MonoBehaviour:
   easeInType: 9
   easeOutType: 8
   positionA: {x: 0, y: 120}
-  positionB: {x: 0, y: 0}
+  positionB: {x: 0, y: -120}
   amplitude: 100
   frequency: 1
+  cancel: 0
 --- !u!1 &363891951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &829044194
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1469,9 +1470,10 @@ MonoBehaviour:
   easeInType: 9
   easeOutType: 8
   positionA: {x: 0, y: 120}
-  positionB: {x: 0, y: 100}
+  positionB: {x: 0, y: -120}
   amplitude: 20
   frequency: 0.5
+  cancel: 0
 --- !u!1 &1063707799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1524,7 +1526,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1092395765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2248,6 +2250,7 @@ MonoBehaviour:
   positionB: {x: 0, y: 0}
   amplitude: 100
   frequency: 1
+  cancel: 0
 --- !u!1 &1551504714
 GameObject:
   m_ObjectHideFlags: 0
@@ -2417,7 +2420,7 @@ MonoBehaviour:
   dialogueEntries:
   - name: TEST1
     lines:
-    - lol
+    - 'lol 123 123 123 123 '
     - adasdasjkdlsdfm,fhvsaghjkfv
     names:
     - aaa
@@ -2426,8 +2429,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 3283e5a1abbe4403cb5175ebcf8cede2, type: 3}
     - {fileID: 21300000, guid: db3e7b7c8db355e499429545071a0321, type: 3}
     audioClips:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   - name: TEST3
     lines:
     - asdasdasdasda
@@ -2436,7 +2439,7 @@ MonoBehaviour:
     images:
     - {fileID: 21300000, guid: 94c9b09dfd4db4a66b6efaf748a1407e, type: 3}
     audioClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   audioMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
   animator: {fileID: 1038097420}
 --- !u!114 &1612659501
@@ -2464,7 +2467,7 @@ MonoBehaviour:
     images:
     - {fileID: 21300000, guid: 4ca9120eb0e4f4fad97ed1ecddd2742b, type: 3}
     audioClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   - name: TEST4
     lines:
     - asdasdasd0[asdklasjdbaskldbasjlkdhbasjklda
@@ -2473,7 +2476,7 @@ MonoBehaviour:
     images:
     - {fileID: 21300000, guid: 0d77f64dcf23ba448b2a63ad6f4c50c2, type: 3}
     audioClips:
-    - {fileID: 0}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   audioMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
   animator: {fileID: 282360522}
 --- !u!114 &1612659502
