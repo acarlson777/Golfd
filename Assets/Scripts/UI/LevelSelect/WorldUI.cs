@@ -15,6 +15,7 @@ public class WorldUI : MonoBehaviour
 
     public void Setup(int worldID)
     {
+        print(worldID);
         GolfWorld golfWorld = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID]; //Something's wrong here
         worldNameText.GetComponent<TextMeshProUGUI>().text = (golfWorld.NAME);
         Vector2 parAndBestScoreSums = SumOfParsAndBestScores(golfWorld);

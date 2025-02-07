@@ -191,7 +191,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 4450109842883557241}
   m_OnClick:
     m_PersistentCalls:
@@ -832,7 +832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4bf712ea59d845239ba782ba78a8198, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundHandler: {fileID: 0}
   buttonSfx: {fileID: 3547557736597946348}
   buttonMusic: {fileID: 3089024914219310661}
 --- !u!1 &8883155547156307645
