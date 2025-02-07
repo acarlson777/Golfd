@@ -122,6 +122,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &420376617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7232053097841122397, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &981616380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3663377854271192371, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &864916740176140643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -152,6 +176,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
+      propertyPath: levelParText
+      value: 
+      objectReference: {fileID: 420376617}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: strokeCountText
+      value: 
+      objectReference: {fileID: 981616380}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
       propertyPath: _levelList.Array.data[0]
       value: 
       objectReference: {fileID: 6115498859240813101, guid: 025afc9413f5d48e3bd00af37c9f7f88,
@@ -162,20 +196,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2250495118365640520, guid: b0b489149b53942a0b9de64d3ed55eff,
         type: 3}
-    - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    - target: {fileID: 4123642393319043102, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: CLUB_LOFT
-      value: 3
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    - target: {fileID: 4123642393319043102, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: EXTRA_FORWARD_BOOST
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: ROTATIONAL_DAMPENING
-      value: 0.1
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -225,6 +254,11 @@ PrefabInstance:
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621144976908753839, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7753233556276469364, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,

@@ -14,12 +14,14 @@ public class LevelPlacementHandler : MonoBehaviour
     private bool hasTapOccured = false;
 
     private ARRaycastManager aRRayCastManager;
+    private ARPlaneManager aRPlaneManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         aRRayCastManager = GetComponent<ARRaycastManager>();
+        aRPlaneManager = GetComponent<ARPlaneManager>();
         pressPosition = playerInput.actions.FindAction("PressPosition");
     }
 
@@ -34,6 +36,7 @@ public class LevelPlacementHandler : MonoBehaviour
                 if (!hasTapOccured)
                 {
                     hasTapOccured = true;
+                    aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
                     WorldHandler.Instance.UpdateLevelPosition(hitPose);
                     WorldHandler.Instance.LoadNextLevel();
                     golfClub.SetActive(true);

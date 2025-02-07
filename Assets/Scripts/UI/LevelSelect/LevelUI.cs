@@ -34,23 +34,11 @@ public class LevelUI : MonoBehaviour
         SceneHandler.Instance.LoadScene("World " + (worldID +1).ToString());
     }
 
-    private bool Equals(GolfLevel golfLevel)
-    {
-        if (!levelNameText.GetComponent<TextMeshProUGUI>().text.Equals(golfLevel.NAME)) { return false; }
-        if (!parText.GetComponent<TextMeshProUGUI>().text.Equals(golfLevel.PAR)) { return false; }
-        if (!levelModelPrefabName.Equals(golfLevel.LEVEL_PREFAB_NAME)) { return false; }
-
-        return true;
-    }
-
     public GolfLevel UpdateEditorChanges(GolfLevel golfLevel)
     {
-        if (!Equals(golfLevel))
-        {
-            golfLevel.NAME = levelNameText.GetComponent<TextMeshProUGUI>().text;
-            golfLevel.PAR = Int32.Parse(parText.GetComponent<TextMeshProUGUI>().text);
-            golfLevel.LEVEL_PREFAB_NAME = levelModelPrefabName;
-        }
+        golfLevel.NAME = levelNameText.GetComponent<TextMeshProUGUI>().text;
+        golfLevel.PAR = Int32.Parse(parText.GetComponent<TextMeshProUGUI>().text);
+        golfLevel.LEVEL_PREFAB_NAME = levelModelPrefabName;
         return golfLevel;
     }
 }
