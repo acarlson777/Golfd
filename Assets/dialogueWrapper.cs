@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.InputSystem; // Required for the new Input System
 
 public class DialogueWrapper : MonoBehaviour{
-
-
     [SerializeField] Canvas canvas;
     [SerializeField] DialogueAnimationController textBox;
     [SerializeField] DialogueAnimationController image1;

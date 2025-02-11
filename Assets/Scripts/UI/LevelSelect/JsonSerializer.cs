@@ -50,6 +50,7 @@ public class JsonSerializer : MonoBehaviour
 
     public void LoadByJSON()
     {
+        print(Application.persistentDataPath);
         if (!Directory.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/")))
         {
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
@@ -67,7 +68,6 @@ public class JsonSerializer : MonoBehaviour
         }
         else
         {
-            print(Application.persistentDataPath);
             Debug.Log("FILE NOT FOUND");
         }
     }

@@ -24,6 +24,8 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelParText;
     [SerializeField] TextMeshProUGUI strokeCountText;
 
+    [SerializeField] DialogueWrapper dialogueWrapper;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -76,12 +78,20 @@ public class WorldHandler : MonoBehaviour
         //Constantly show par and current stroke count on the screen (this is a general note)
         _strokeCount = 0;
         isLevelComplete = true;
-        //StartNextLevelDialogue() to do level ending dialogue (gonna need to position the dialogue index using the level position when first entering the world
-        //Wait until ending dialogue complete before loading next level, maybe just link the function call to load the next level to the end of the dialogue
-        LoadNextLevel();
+        StartEndLevelDialogue();
+    }
+
+    private void StartEndLevelDialogue()
+    {
+        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex+1) + " END", LoadNextLevel);
     }
 
     private void StartNextLevelDialogue()
+    {
+        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " INTRO", DoNothingFunction);
+    }
+
+    private void DoNothingFunction()
     {
 
     }
@@ -100,7 +110,7 @@ public class WorldHandler : MonoBehaviour
         yield return AnimateIn();
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        //run StartNextLevelDialogue()
+        StartNextLevelDialogue();
     }
 
     private IEnumerator AnimateOut()
