@@ -26,9 +26,5 @@ public class MenuManager : MonoBehaviour{
     public void newScene(string sceneName){
         SceneHandler.Instance.LoadScene(sceneName);
     }
-    
-
-
-
 }
 

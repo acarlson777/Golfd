@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class ButtonAnimationController : MonoBehaviour{
 
-    public SoundHandler soundHandler;
+    private SoundHandler soundHandler;
     public Button buttonSfx;
     private Animator sfxAnimator;
     public Button buttonMusic;
@@ -23,7 +23,8 @@ public class ButtonAnimationController : MonoBehaviour{
             return;
         }
 
-        if(soundHandler == null){
+        soundHandler = GameObject.FindGameObjectWithTag("SoundHandler").GetComponent<SoundHandler>();
+        if (soundHandler == null){
             return;
         }
 
@@ -36,9 +37,8 @@ public class ButtonAnimationController : MonoBehaviour{
         sfxAnimator.SetBool("isOn", sfx);
         musicAnimator.SetBool("isOn", music);
 
-
-        //buttonSfx.onClick.AddListener(OnSfxButtonClick);
-        //buttonMusic.onClick.AddListener(OnMusicButtonClick);
+        buttonSfx.onClick.AddListener(soundHandler.TapSfxButton);
+        buttonMusic.onClick.AddListener(soundHandler.TapMusicButton);
     }
 
     public void OnSfxButtonClick(){

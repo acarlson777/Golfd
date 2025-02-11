@@ -29,11 +29,15 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float ROTATIONAL_DAMPENING;
     [SerializeField] private float CLUB_LOFT;
     [SerializeField] private float EXTRA_FORWARD_BOOST;
-    //Need to calculate rotational velocity as well
+    private bool canThrowClubs = false;
+    [SerializeField] private Animator clubThrowAnimator;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        canThrowClubs = PlayerPrefs.GetInt("canThrowClubs") == 1;
+        clubThrowAnimator.SetBool("isOn", canThrowClubs);
     }
 
     private void Update()
@@ -111,18 +115,23 @@ public class ClubHandler : MonoBehaviour
             _clubHead.SetActive(true);
         } else if (context.canceled)
         {
-            _clubHead.SetActive(false);
-            GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
-            thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
-            thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
+            if (_clubHead.activeInHierarchy)
+            {
+                if (canThrowClubs)
+                {
+                    GameObject thrownClub = Instantiate(throwableClubPrefab, rb.transform.position, rb.transform.rotation);
+                    thrownClub.GetComponent<Rigidbody>().velocity = clubVelocity + rb.transform.TransformPoint(new Vector3(0, CLUB_LOFT, EXTRA_FORWARD_BOOST));
+                    thrownClub.GetComponent<Rigidbody>().angularVelocity = clubRotationalVelocity * ROTATIONAL_DAMPENING;
+                }
+                _clubHead.SetActive(false);
+            }
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("GolfBall"))
+        if (collision.gameObject.CompareTag("GolfBall"))// && _clubHead.GetComponent<BoxCollider>().enabled)
         {
-            //print("Golf Ball Hit");
             StartCoroutine(SwingTime());
         }
     }
@@ -131,6 +140,16 @@ public class ClubHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(_swingTime);
         _clubHead.GetComponent<BoxCollider>().enabled = false;
-        WorldHandler.Instance.IncrementStrokeCount();
+        if (gBrb.velocity.magnitude > _ballVelocityTolerance)
+        {
+            WorldHandler.Instance.IncrementStrokeCount();
+        }
+    }
+
+    public void ToggleClubThrowing()
+    {
+        canThrowClubs = !canThrowClubs;
+        PlayerPrefs.SetInt("canThrowClubs", canThrowClubs ? 1 : 0);
+        clubThrowAnimator.SetBool("isOn", canThrowClubs);
     }
 }

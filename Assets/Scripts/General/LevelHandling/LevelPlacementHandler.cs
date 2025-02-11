@@ -16,6 +16,7 @@ public class LevelPlacementHandler : MonoBehaviour
     private ARRaycastManager aRRayCastManager;
     private ARPlaneManager aRPlaneManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private bool isMovingCurrentLevel = false;
 
     private void Awake()
     {
@@ -40,8 +41,19 @@ public class LevelPlacementHandler : MonoBehaviour
                     WorldHandler.Instance.UpdateLevelPosition(hitPose);
                     WorldHandler.Instance.LoadNextLevel();
                     golfClub.SetActive(true);
+                } else if (isMovingCurrentLevel)
+                {
+                    isMovingCurrentLevel = false;
+                    aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
+                    WorldHandler.Instance.UpdateLevelPosition(hitPose);
                 }
             }
         }
+    }
+
+    public void MoveCurrLevel()
+    {
+        isMovingCurrentLevel = true;
+        aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.Horizontal;
     }
 }

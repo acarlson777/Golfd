@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.XR.ARFoundation;
 using TMPro;
@@ -45,6 +45,7 @@ public class WorldHandler : MonoBehaviour
         for (int i = 0; i < _levelList.Length; i++)
         {
             GameObject nextLevel = Instantiate(_levelList[i], _levelList[i].transform.position, _levelList[i].transform.rotation, _ENVIRONMENT.transform);
+            //nextLevel.transform.localPosition = new Vector3(0, 0, 0);
             nextLevel.GetComponent<LevelHandler>().LEVEL.SetActive(false);
             instantiatedLevelList[i] = nextLevel;
         }
@@ -60,9 +61,9 @@ public class WorldHandler : MonoBehaviour
     public void OnLevelCompleted() //Work on this function 
     {
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore)
+        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore)
         {
-            JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].bestScore = score;
+            JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
         }
 
@@ -134,7 +135,7 @@ public class WorldHandler : MonoBehaviour
 
     public void UpdateLevelPosition(Pose hitPose)
     {
-        //_ENVIRONMENT.transform.position = hitPose.position;
+        _ENVIRONMENT.transform.position = hitPose.position; //necessary to move level to where you tap in the world
         levelPosPose = hitPose;
         _mask.transform.position = new Vector3(_mask.transform.position.x ,-25 + hitPose.position.y, _mask.transform.position.z);
     }

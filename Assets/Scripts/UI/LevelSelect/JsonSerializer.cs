@@ -67,6 +67,7 @@ public class JsonSerializer : MonoBehaviour
         }
         else
         {
+            print(Application.persistentDataPath);
             Debug.Log("FILE NOT FOUND");
         }
     }

@@ -15,6 +15,9 @@ public class LoadGolfPlayerData : MonoBehaviour
             ResetJSONData();
             UpdateEditorChanges();
             JsonSerializer.Instance.SaveByJSON();
+            PlayerPrefs.SetInt("music", 1);
+            PlayerPrefs.SetInt("sfx", 1);
+            PlayerPrefs.SetInt("canThrowClubs", 0);
         }
         
         JsonSerializer.Instance.LoadByJSON();
