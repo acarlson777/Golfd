@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3799411295192992696}
   - component: {fileID: 5427222027621648119}
   m_Layer: 5
-  m_Name: Text(Name)
+  m_Name: I. Ron Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 2732039618961728869}
   - component: {fileID: 617450237252504698}
   m_Layer: 5
-  m_Name: Text(Name)
+  m_Name: The Woods Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1543,7 +1543,7 @@ GameObject:
   - component: {fileID: 8784763468460034207}
   - component: {fileID: 5185975576380024609}
   m_Layer: 5
-  m_Name: Image
+  m_Name: I. Ron
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1559,14 +1559,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6135067514639055867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: -100}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -200, y: -150}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1089781783167568216
 CanvasRenderer:
@@ -1622,10 +1622,10 @@ MonoBehaviour:
   easeOutDuration: 1.5
   easeInType: 9
   easeOutType: 8
-  positionA: {x: 0, y: 120}
-  positionB: {x: 0, y: -120}
+  positionA: {x: 0, y: 225}
+  positionB: {x: 0, y: -225}
   amplitude: 20
-  frequency: 0.5
+  frequency: 0.25
   cancel: 0
 --- !u!1 &4023912903307527775
 GameObject:
@@ -1640,7 +1640,7 @@ GameObject:
   - component: {fileID: 9018032950903655821}
   - component: {fileID: 6485750620483543776}
   m_Layer: 5
-  m_Name: Image
+  m_Name: TextBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1664,7 +1664,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -120}
-  m_SizeDelta: {x: 432, y: 192}
+  m_SizeDelta: {x: 691.2, y: 307.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8582675859766008314
 CanvasRenderer:
@@ -1784,7 +1784,7 @@ MonoBehaviour:
   debug: 0
   levelParText: {fileID: 7232053097841122397}
   strokeCountText: {fileID: 3663377854271192371}
-  dialogueWrapper: {fileID: 0}
+  dialogueWrapper: {fileID: 5679126686437430835}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +2076,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0, y: 44}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 598, y: 162}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3551237017856940005
 CanvasRenderer:
@@ -2108,7 +2108,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 884b9c64836484e8fb53075a9e061c4a, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2133,8 +2133,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2172,7 +2172,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5250132988092196181
@@ -2370,6 +2370,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 6960761786838772680}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: Tap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5679126686437430835}
+        m_TargetAssemblyTypeName: DialogueWrapper, Assembly-CSharp
         m_MethodName: Tap
         m_Mode: 0
         m_Arguments:
@@ -2624,7 +2636,7 @@ GameObject:
   - component: {fileID: 7395106093096929012}
   - component: {fileID: 5633912404075750114}
   m_Layer: 5
-  m_Name: Image
+  m_Name: The Woods
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2640,14 +2652,14 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6135067514639055867}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112, y: -100}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 200, y: -150}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6900463415838413285
 CanvasRenderer:
@@ -2703,10 +2715,10 @@ MonoBehaviour:
   easeOutDuration: 1.5
   easeInType: 9
   easeOutType: 8
-  positionA: {x: 0, y: 120}
-  positionB: {x: 0, y: -120}
+  positionA: {x: 0, y: 225}
+  positionB: {x: 0, y: -225}
   amplitude: 20
-  frequency: 0.5
+  frequency: 0.25
   cancel: 0
 --- !u!1 &6950400555862296640
 GameObject:

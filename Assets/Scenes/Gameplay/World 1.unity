@@ -131,31 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 121701716685867901, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_Name
-      value: I. Ron Name
-      objectReference: {fileID: 0}
-    - target: {fileID: 1480717825604010022, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_Name
-      value: The Woods Name
-      objectReference: {fileID: 0}
-    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueWrapper
-      value: 
-      objectReference: {fileID: 864916740176140644}
-    - target: {fileID: 3413627398687336366, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_Name
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 4023912903307527775, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_Name
-      value: TextBox
-      objectReference: {fileID: 0}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -206,31 +181,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5185975576380024609, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: amplitude
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185975576380024609, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: frequency
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: amplitude
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: frequency
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6870419994381315729, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: m_Name
-      value: The Woods
-      objectReference: {fileID: 0}
     - target: {fileID: 8862696904540685804, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_Name
@@ -241,18 +191,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e550269444e4d25a5d2a3cd7ab2ec2, type: 3}
---- !u!114 &864916740176140644 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2118566ad4aac4edfba465d57456c704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

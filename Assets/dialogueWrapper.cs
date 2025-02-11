@@ -37,6 +37,7 @@ public class DialogueWrapper : MonoBehaviour{
 
     private int currentDialogueIndex = 0;
     private bool isDialogueInProgress = false;
+    private bool isSequenceInProgress = false;
     private DialogueSequence currentSequence;
 
     private Action onSequenceComplete = null;
@@ -44,31 +45,52 @@ public class DialogueWrapper : MonoBehaviour{
     // This method can be called externally to start a dialogue sequence by name
     public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete){
 
-        onSequenceComplete = onDialogueComplete;
+        if (isSequenceInProgress){
+            Time.timeScale = 0;
 
-        DialogueSequence sequence = dialogueSequences.Find(seq => seq.sequenceName == dialogueSequenceName);
+            while (true)
+            {
+                Debug.LogError("STUPID!!!!!!!");
+            }
         
-        if (sequence != null){
-            currentSequence = sequence;
-            currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
-            showDialogueObjects();
-
-        }else{
-            Debug.LogError($"Dialogue sequence {dialogueSequenceName} not found.");
         }
+        else{
+
+            isSequenceInProgress = true;
+
+            onSequenceComplete = onDialogueComplete;
+
+            DialogueSequence sequence = dialogueSequences.Find(seq => seq.sequenceName == dialogueSequenceName);
+
+            if (sequence != null)
+            {
+                currentSequence = sequence;
+                currentDialogueIndex = 0; // Reset the dialogue index for the new sequence
+                showDialogueObjects();
+
+            }
+            else
+            {
+                Debug.LogError($"Dialogue sequence {dialogueSequenceName} not found.");
+            }
+
+        }
+
+        
     }
 
     // This is the method that will be called when the player taps the screen
     public void Tap(InputAction.CallbackContext context)
     {
-        if (context.performed && !isDialogueInProgress) // Check if the tap action was performed and no dialogue is currently in progress
+        if (context.performed && !isDialogueInProgress && isSequenceInProgress) // Check if the tap action was performed and no dialogue is currently in progress
         {
             StartDialogueFromList(); // Start the dialogue without a callback (since it's handled by OnDialogueComplete)
         }
     }
 
     void showDialogueObjects(){
-        // TODO: aks manager 1 and manager 2 to set the picture before running 
+
+        isDialogueInProgress = true;
 
 
         setPictures();
@@ -141,6 +163,8 @@ public class DialogueWrapper : MonoBehaviour{
 
     void hideDialogueObjects(){
 
+        isDialogueInProgress = true;
+
         int completedCount = 0;
             
             Action onComplete = () => {
@@ -155,7 +179,10 @@ public class DialogueWrapper : MonoBehaviour{
                     textBox.scaleDown(() =>{
 
                         canvas.gameObject.SetActive(false);
+                        isSequenceInProgress = false;
                         onSequenceComplete?.Invoke();
+
+
 
 
                     });
@@ -203,9 +230,3 @@ public class DialogueWrapper : MonoBehaviour{
         isDialogueInProgress = false;
     }
 }
-
-
-
-
-
-

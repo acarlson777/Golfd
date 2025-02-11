@@ -111,7 +111,7 @@ public class DialogueAnimationController : MonoBehaviour{
 
         float sineValue = Mathf.Sin(t); 
 
-        float yPosition = amplitude * sineValue; 
+        float yPosition = amplitude * sineValue + initPosition.y; 
 
 
         Debug.Log(initPosition.y);
