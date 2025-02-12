@@ -25,6 +25,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI strokeCountText;
 
     [SerializeField] DialogueWrapper dialogueWrapper;
+    [SerializeField] ClubHandler clubHandler;
 
     private void Awake()
     {
@@ -83,21 +84,27 @@ public class WorldHandler : MonoBehaviour
 
     private void StartEndLevelDialogue()
     {
+        clubHandler.clubEnabled = false;
+        clubHandler._clubHead.SetActive(false);
         dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex+1) + " END", LoadNextLevel);
     }
 
     private void StartNextLevelDialogue()
     {
-        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " INTRO", DoNothingFunction);
+        clubHandler.clubEnabled = false;
+        clubHandler._clubHead.SetActive(false);
+        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " INTRO", UnPauseGame);
     }
 
-    private void DoNothingFunction()
+    private void UnPauseGame()
     {
-
+        clubHandler.clubEnabled = true;
+        clubHandler._clubHead.SetActive(true);
     }
 
     public void LoadNextLevel()
     {
+        UnPauseGame();
         StartCoroutine(LoadNextLevelCoroutine());
     }
 

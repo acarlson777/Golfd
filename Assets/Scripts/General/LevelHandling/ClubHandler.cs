@@ -8,7 +8,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private Camera _camera;
 
     [SerializeField] private GameObject _clubBody;
-    [SerializeField] private GameObject _clubHead;
+    public GameObject _clubHead;
     [SerializeField] private Vector3 _clubHeadOffset;
     private Rigidbody rb;
     private Rigidbody gBrb;
@@ -31,6 +31,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float EXTRA_FORWARD_BOOST;
     private bool canThrowClubs = false;
     [SerializeField] private Animator clubThrowAnimator;
+    public bool clubEnabled = true;
 
     private void Start()
     {
@@ -42,6 +43,11 @@ public class ClubHandler : MonoBehaviour
 
     private void Update()
     {
+        if (!clubEnabled)
+        {
+            return;
+        }
+
         UpdateClubPosition();
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
         UpdateClubHeadPosition();
@@ -110,6 +116,11 @@ public class ClubHandler : MonoBehaviour
 
     public void OnScreenPressOrRelease(InputAction.CallbackContext context)
     {
+        if (!clubEnabled)
+        {
+            return;
+        }
+
         if (context.started) {
             //print("press or released");
             _clubHead.SetActive(true);

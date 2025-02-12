@@ -104,6 +104,7 @@ public class DialogueManager : MonoBehaviour {
         Debug.Log("Dialogue Finished");
         currentLineIndex = -1;
         currentDialogueName = "";
+        dialogueText.text = "";
         onDialogueComplete?.Invoke();
     }
 

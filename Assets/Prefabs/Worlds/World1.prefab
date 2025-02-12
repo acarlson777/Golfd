@@ -727,6 +727,7 @@ MonoBehaviour:
   CLUB_LOFT: 3
   EXTRA_FORWARD_BOOST: 10
   clubThrowAnimator: {fileID: 2071100743298804864}
+  clubEnabled: 1
 --- !u!54 &2057719880168643663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1785,6 +1786,7 @@ MonoBehaviour:
   levelParText: {fileID: 7232053097841122397}
   strokeCountText: {fileID: 3663377854271192371}
   dialogueWrapper: {fileID: 5679126686437430835}
+  clubHandler: {fileID: 2639814560501103053}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,7 +2111,8 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 884b9c64836484e8fb53075a9e061c4a, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 1221390350077632859, guid: 884b9c64836484e8fb53075a9e061c4a,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2172,7 +2175,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5250132988092196181

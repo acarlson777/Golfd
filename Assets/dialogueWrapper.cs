@@ -75,8 +75,6 @@ public class DialogueWrapper : MonoBehaviour{
             }
 
         }
-
-        
     }
 
     // This is the method that will be called when the player taps the screen
