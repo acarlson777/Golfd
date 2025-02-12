@@ -15,7 +15,7 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.24705882, g: 0.34509805, b: 0.48235294, a: 1}
+  m_FogColor: {r: 0.042274818, g: 0.22120123, b: 0.4716981, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.5
   m_LinearFogStart: 0
@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SubtractiveShadowColor: {r: 0.1260235, g: 0.21851587, b: 0.4528302, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -750,7 +750,7 @@ PrefabInstance:
     - target: {fileID: 4964589058484805904, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_Intensity
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5250132988092196181, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
