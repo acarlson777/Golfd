@@ -125,7 +125,6 @@ public class DialogueAnimationController : MonoBehaviour{
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, yPosition);
     }
 
-
     public void stopAllAnimation(){
          LeanTween.cancel(gameObject, tweenID);
     }
@@ -136,7 +135,7 @@ public class DialogueAnimationController : MonoBehaviour{
 
          if(cancel){
             LeanTween.cancel(gameObject, tweenID);
-            // rectTransform.anchoredPosition = initPosition;
+            rectTransform.anchoredPosition = initPosition;
 
             cancel = false;
         }else{
