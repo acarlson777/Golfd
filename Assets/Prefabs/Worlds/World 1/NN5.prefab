@@ -1678,7 +1678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d170a8aa584240f4b18ce6a5e58ef2e, type: 2}
+  - {fileID: 2100000, guid: 587a18a931c494492b8d3b83dff2dcf9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7646,18 +7646,18 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 0
+  m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
-  m_Resolution: 128
+  m_Resolution: 512
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 1.5, y: 0.8, z: 0.8}
-  m_BoxOffset: {x: 0, y: 0.39999995, z: -0.000000029802322}
+  m_BoxSize: {x: 1.5, y: 1.1013012, z: 1.160261}
+  m_BoxOffset: {x: 0, y: 0.5506505, z: -0.18013036}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.17065683, g: 0.2911866, b: 0.6132076, a: 0}
+  m_BackGroundColor: {r: 0.9528302, g: 0.9169058, b: 0, a: 0}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -10251,18 +10251,18 @@ ReflectionProbe:
   m_Enabled: 1
   serializedVersion: 2
   m_Type: 0
-  m_Mode: 0
+  m_Mode: 1
   m_RefreshMode: 0
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 1.5, y: 0.8, z: 0.5}
-  m_BoxOffset: {x: 0.000000007450581, y: 0.39999995, z: 0.000000029802322}
+  m_BoxSize: {x: 1.5, y: 1.2384994, z: 0.78738725}
+  m_BoxOffset: {x: 0, y: 0.6192496, z: 0.14369363}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.13725491, g: 0.23137255, b: 0.32941177, a: 1}
+  m_BackGroundColor: {r: 0.076539695, g: 0.22387952, b: 0.3773585, a: 1}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
