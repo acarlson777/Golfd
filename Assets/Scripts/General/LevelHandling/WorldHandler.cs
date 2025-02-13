@@ -99,7 +99,6 @@ public class WorldHandler : MonoBehaviour
     private void UnPauseGame()
     {
         clubHandler.clubEnabled = true;
-        clubHandler._clubHead.SetActive(true);
     }
 
     public void LoadNextLevel()

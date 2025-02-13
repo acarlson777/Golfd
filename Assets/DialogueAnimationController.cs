@@ -31,8 +31,6 @@ public class DialogueAnimationController : MonoBehaviour{
 
         rectTransform = GetComponent<RectTransform>();
         initPosition = rectTransform.anchoredPosition;
-
-
     }
 
 

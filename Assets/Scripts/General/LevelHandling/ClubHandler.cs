@@ -76,6 +76,7 @@ public class ClubHandler : MonoBehaviour
         if (Physics.Raycast(toGroundRay, out groundHit, 100, _layerToHit))
         {
             clubLength = Mathf.Min(groundHit.distance, _maxClubLength);
+            _minClubLength = clubLength;
             //print("Ray hit " + groundHit.collider.gameObject.name);
             Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.green, 1f);
         }
@@ -99,6 +100,7 @@ public class ClubHandler : MonoBehaviour
         {
             WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
+            //clubEnabled = true;
         }
     }
 
@@ -154,6 +156,8 @@ public class ClubHandler : MonoBehaviour
         if (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
             WorldHandler.Instance.IncrementStrokeCount();
+            //clubEnabled = false;
+            //_clubHead.SetActive(false);
         }
     }
 
