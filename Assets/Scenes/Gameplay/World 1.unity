@@ -250,7 +250,7 @@ PrefabInstance:
     - target: {fileID: 4871496599140077892, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.161
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4871496599140077892, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
         type: 3}
@@ -424,6 +424,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ClubHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_CameraType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1085299852923690425, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -756,6 +771,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: SoundHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 5313506399094039756, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5605452633962188390, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
