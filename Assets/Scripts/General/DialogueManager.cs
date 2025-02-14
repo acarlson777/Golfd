@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour {
                     // Stop the current audio 
                     audioSource.Stop();
                     // Stop the animation 
-                    animator.stopSinAnimation();
+                    animator.stopSinAnimation(true);
                 } else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]) {
                     NextLine();
                 }
@@ -135,7 +135,7 @@ public class DialogueManager : MonoBehaviour {
         // Stop the audio
         audioSource.Stop();
         // Stop the animation
-        animator.stopSinAnimation();
+        animator.stopSinAnimation(false);
         
     }
 

@@ -117,7 +117,7 @@ public class DialogueAnimationController : MonoBehaviour{
 
 
         if(cancel && (Math.Abs(initPosition.y - yPosition) < 0.5f)){
-            stopSinAnimation();
+            stopSinAnimation(false);
         }
 
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, yPosition);
@@ -127,7 +127,15 @@ public class DialogueAnimationController : MonoBehaviour{
          LeanTween.cancel(gameObject, tweenID);
     }
 
-    public void stopSinAnimation(){
+    public void stopSinAnimation(bool teleport){
+
+        if(teleport){
+
+            LeanTween.cancel(gameObject, tweenID);
+            rectTransform.anchoredPosition = initPosition;
+            return;
+
+        }
 
         // set request stop to true
 
