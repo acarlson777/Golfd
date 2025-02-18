@@ -5,6 +5,7 @@ public class FirstLevelDialogue : MonoBehaviour
 {
     [SerializeField] private DialogueWrapper dialogueWrapper;
     [SerializeField] bool resetFirstTimeStatus;
+    [SerializeField] LevelPlacementHandler levelPlacementHandler;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class FirstLevelDialogue : MonoBehaviour
 
         if (PlayerPrefs.GetString("isFirstTimeInLevel", "true").Equals("true"))
         {
-            dialogueWrapper.StartDialogueSequence("INTRO-SEQUENCE", () => { });
+            levelPlacementHandler.canPlaceLevel = false;
+            dialogueWrapper.StartDialogueSequence("INTRO-SEQUENCE", () => {levelPlacementHandler.canPlaceLevel = true; });
         }
         PlayerPrefs.SetString("isFirstTimeInLevel", "false");
     }

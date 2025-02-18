@@ -886,6 +886,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueWrapper: {fileID: 864916740176140645}
   resetFirstTimeStatus: 1
+  levelPlacementHandler: {fileID: 864916740176140647}
+--- !u!114 &864916740176140647 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1649291066813248847, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
