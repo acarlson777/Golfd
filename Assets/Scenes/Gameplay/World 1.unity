@@ -242,6 +242,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 602874561971590886, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
+    - target: {fileID: 2544059342344700226, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
+    - target: {fileID: 3065192054521042205, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
     - target: {fileID: 4871496599140077892, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -297,6 +312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: neon nightscape vert slice type 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6496082450792881001, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
