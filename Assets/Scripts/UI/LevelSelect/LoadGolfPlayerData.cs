@@ -11,7 +11,7 @@ public class LoadGolfPlayerData : MonoBehaviour
     {
         if (!JsonSerializer.Instance.DoesJSONDirectoryExist() || shouldUpdateEditorChanges)
         {
-            print("Loading Editor Changes");
+            //print("Loading Editor Changes");
             ResetJSONData();
             UpdateEditorChanges();
             JsonSerializer.Instance.SaveByJSON();
@@ -24,7 +24,7 @@ public class LoadGolfPlayerData : MonoBehaviour
 
         for (int worldID = 0; worldID < WORLD_LIST.Count; worldID++)
         {
-            print("Setting up World " + worldID);
+            //print("Setting up World " + worldID);
             WORLD_LIST[worldID].Setup(worldID);
         }
     }

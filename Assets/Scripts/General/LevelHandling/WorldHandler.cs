@@ -26,6 +26,7 @@ public class WorldHandler : MonoBehaviour
 
     [SerializeField] DialogueWrapper dialogueWrapper;
     [SerializeField] ClubHandler clubHandler;
+    [SerializeField] private bool strokeCountBasedDialogue; 
 
     private void Awake()
     {
@@ -77,16 +78,33 @@ public class WorldHandler : MonoBehaviour
 
         //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
         //Constantly show par and current stroke count on the screen (this is a general note)
-        _strokeCount = 0;
         isLevelComplete = true;
         StartEndLevelDialogue();
+        _strokeCount = 0;
     }
 
     private void StartEndLevelDialogue()
     {
         clubHandler.clubEnabled = false;
         clubHandler._clubHead.SetActive(false);
-        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex+1) + " END", LoadNextLevel);
+        int par = JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR;
+        if (strokeCountBasedDialogue)
+        {
+            if (_strokeCount > par)
+            {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END+", LoadNextLevel);
+            }
+            else if (_strokeCount < par)
+            {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END-", LoadNextLevel);
+            }
+            else {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END", LoadNextLevel);
+            }
+        } else
+        {
+            dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END", LoadNextLevel);
+        }
     }
 
     private void StartNextLevelDialogue()

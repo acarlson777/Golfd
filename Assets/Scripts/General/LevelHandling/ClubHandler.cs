@@ -98,6 +98,7 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
         {
+            //Ball slowed down enough to count as stoppped 
             WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
             //clubEnabled = true;
@@ -155,7 +156,9 @@ public class ClubHandler : MonoBehaviour
         _clubHead.GetComponent<BoxCollider>().enabled = false;
         if (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
+            //Ball was hit fast enough to count as a real hit
             WorldHandler.Instance.IncrementStrokeCount();
+
             //clubEnabled = false;
             //_clubHead.SetActive(false);
         }
