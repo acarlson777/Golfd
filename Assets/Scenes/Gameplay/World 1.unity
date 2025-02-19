@@ -15,17 +15,17 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.042274818, g: 0.22120123, b: 0.4716981, a: 1}
+  m_FogColor: {r: 0.13188957, g: 0.13207549, b: 0.052954797, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.5
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.1260235, g: 0.21851587, b: 0.4528302, a: 1}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -242,21 +242,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 602874561971590886, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
-    - target: {fileID: 2544059342344700226, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
-    - target: {fileID: 3065192054521042205, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
     - target: {fileID: 4871496599140077892, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -310,13 +295,8 @@ PrefabInstance:
     - target: {fileID: 5647612427678580633, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
         type: 3}
       propertyPath: m_Name
-      value: neon nightscape vert slice type 1
+      value: neon nightscape vert slice type 3
       objectReference: {fileID: 0}
-    - target: {fileID: 6496082450792881001, guid: b6e8f9bcd10be43f88c5cbc4556fe46b,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 818baa4aa7d6845ffbd6a95ff9275a2b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
