@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour {
         public List<AudioClip> audioClips;
     }
 
-    void Start() {
+    void Awake() {
         dialogueDict = new Dictionary<string, List<string>>();
         namesDict = new Dictionary<string, List<string>>();
         imagesDict = new Dictionary<string, List<Sprite>>();
@@ -95,7 +95,6 @@ public class DialogueManager : MonoBehaviour {
 
 
     public void SetPictureForDialogue(string dialogueName){
-
         characterImage.sprite = imagesDict[dialogueName][0];
 
     }

@@ -2391,15 +2391,35 @@ PrefabInstance:
       propertyPath: dialogueSequences.Array.data[0].dialogueEntries.Array.data[0].dialogueName
       value: INTRO
       objectReference: {fileID: 0}
+    - target: {fileID: 3929355463674183139, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueSequences.Array.data[0].dialogueEntries.Array.data[1].dialogueName
+      value: The Woods
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929355463674183139, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueSequences.Array.data[0].dialogueEntries.Array.data[1].dropdownOption
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4455615590069492712, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6090288055607658216, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_Name
       value: DIALOGUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090288055607658216, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6469959392551608886, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
@@ -2429,8 +2449,7 @@ PrefabInstance:
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].lines.Array.data[0]
-      value: " Hello there! Welcome to the wonderful world of Golf\u2019d and I.
-        Ron! "
+      value: "Hello there! Welcome to the wonderful world of Golf\u2019d and I. Ron! "
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
@@ -2502,13 +2521,24 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 7990793903476202671, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 469e3d0bcb6164b549a4ec74471d2cf1,
+        type: 3}
+    - target: {fileID: 7990793903476202671, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990793903476202671, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8305026134998683035, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
