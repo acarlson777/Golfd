@@ -90,9 +90,8 @@ public class DialogueWrapper : MonoBehaviour{
 
         isDialogueInProgress = true;
 
-
+        
         setPictures();
-
 
 
         // enable canvas 
