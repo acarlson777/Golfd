@@ -9,6 +9,11 @@ public class LightsOut : MonoBehaviour
     public GameObject Spot_LightA2;
     public GameObject Spot_LightA3;
     public GameObject ForcefieldA1;
+    public GameObject Golf_light;
+    public void Start()
+    {
+        Golf_light.SetActive(false);
+    }
 
 
     public void OnTriggerEnter(Collider other)
@@ -19,6 +24,7 @@ public class LightsOut : MonoBehaviour
             Spot_LightA2.SetActive(false);
             Spot_LightA3.SetActive(false);
             ForcefieldA1.SetActive(false);
+            Golf_light.SetActive(true);
         }
     }
 }
