@@ -33,6 +33,8 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private Animator clubThrowAnimator;
     public bool clubEnabled = true;
 
+    public PositionUpdater ballIndicator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -61,6 +63,9 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
+
+
+
         }
     }
 
@@ -98,6 +103,8 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
         {
+
+            ballIndicator.gameObject.SetActive(true);
             //Ball slowed down enough to count as stoppped 
             WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
@@ -156,8 +163,12 @@ public class ClubHandler : MonoBehaviour
         _clubHead.GetComponent<BoxCollider>().enabled = false;
         if (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
+
+            ballIndicator.gameObject.SetActive(false);
             //Ball was hit fast enough to count as a real hit
             WorldHandler.Instance.IncrementStrokeCount();
+
+
 
             //clubEnabled = false;
             //_clubHead.SetActive(false);
