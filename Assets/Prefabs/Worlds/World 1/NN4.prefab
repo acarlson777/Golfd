@@ -51,7 +51,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -205,6 +205,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0955
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2051
+      objectReference: {fileID: 0}
+    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.3783
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
