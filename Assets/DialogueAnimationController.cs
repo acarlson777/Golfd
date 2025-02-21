@@ -112,8 +112,8 @@ public class DialogueAnimationController : MonoBehaviour{
         float yPosition = amplitude * sineValue + initPosition.y; 
 
 
-        Debug.Log(initPosition.y);
-        Debug.Log(yPosition);
+        //Debug.Log(initPosition.y);
+        //Debug.Log(yPosition);
 
 
         if(cancel && (Math.Abs(initPosition.y - yPosition) < 0.5f)){
