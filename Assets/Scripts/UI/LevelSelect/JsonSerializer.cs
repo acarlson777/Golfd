@@ -22,15 +22,17 @@ public class JsonSerializer : MonoBehaviour
         }
     }
 
-    public bool DoesJSONDirectoryExist()
+    public bool DoesJSONDataExist()
     {
-        return Directory.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
+        return File.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/GameData.json"));
     }
 
     public void DeleteJSONData()
     {
-        File.Delete(Application.persistentDataPath + "/Saves/GameData.json");
-        Directory.Delete(Application.persistentDataPath + "/Saves/");
+        if (DoesJSONDataExist())
+        {
+            File.Delete(Application.persistentDataPath + "/Saves/GameData.json");
+        }
     }
 
     public void SaveByJSON()

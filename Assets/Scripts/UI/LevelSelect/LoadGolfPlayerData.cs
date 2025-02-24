@@ -9,7 +9,8 @@ public class LoadGolfPlayerData : MonoBehaviour
 
     private void Start()
     {
-        if (!JsonSerializer.Instance.DoesJSONDirectoryExist() || shouldUpdateEditorChanges)
+        //print(JsonSerializer.Instance.DoesJSONDataExist());
+        if (!JsonSerializer.Instance.DoesJSONDataExist() || shouldUpdateEditorChanges)
         {
             //print("Loading Editor Changes");
             ResetJSONData();
