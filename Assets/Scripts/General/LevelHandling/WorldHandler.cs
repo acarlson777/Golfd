@@ -12,7 +12,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] private GameObject[] _levelList;
     private GameObject[] instantiatedLevelList;
     [SerializeField] private int _strokeCount = 0;
-    private LevelHandler currLevelHandler = null;
+    public LevelHandler currLevelHandler = null;
     public bool isLevelComplete = true;
     [SerializeField] private GameObject _ENVIRONMENT;
     [SerializeField] private GameObject _mask;
@@ -27,6 +27,8 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] DialogueWrapper dialogueWrapper;
     [SerializeField] ClubHandler clubHandler;
     [SerializeField] private bool strokeCountBasedDialogue; 
+
+    public GolfBallIndicatorHandler ballIndicatorHandler;
 
     private void Awake()
     {
@@ -62,17 +64,20 @@ public class WorldHandler : MonoBehaviour
         if (debug) { Time.timeScale = 0.1f; } else { Time.timeScale = 1; }
     }
 
-    public void OnLevelCompleted() //Work on this function 
-    {
+    public void OnLevelCompleted(){
+
+        clubHandler.clubEnabled = false;
+        clubHandler._clubHead.SetActive(false);
+        ballIndicatorHandler.gameObject.SetActive(false);
+        
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore)
-        {
+        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
+
             JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
         }
 
-        if (levelIndex == _levelList.Length - 1)
-        {
+        if (levelIndex == _levelList.Length - 1){
             SceneHandler.Instance.LoadScene("LevelSelect");
         }
 
@@ -85,8 +90,8 @@ public class WorldHandler : MonoBehaviour
 
     private void StartEndLevelDialogue()
     {
-        clubHandler.clubEnabled = false;
-        clubHandler._clubHead.SetActive(false);
+        // clubHandler.clubEnabled = false;
+        // clubHandler._clubHead.SetActive(false);
         int par = JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR;
         if (strokeCountBasedDialogue)
         {
@@ -121,7 +126,6 @@ public class WorldHandler : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        UnPauseGame();
         StartCoroutine(LoadNextLevelCoroutine());
     }
 
@@ -135,6 +139,7 @@ public class WorldHandler : MonoBehaviour
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
         StartNextLevelDialogue();
+        UnPauseGame();
     }
 
     private IEnumerator AnimateOut()

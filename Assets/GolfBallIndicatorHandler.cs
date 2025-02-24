@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionUpdater : MonoBehaviour{
+public class GolfBallIndicatorHandler : MonoBehaviour{
 
 
     // TODO: access galfball from worldHandler, level handler,
@@ -14,22 +14,19 @@ public class PositionUpdater : MonoBehaviour{
 
     public Vector3 offset; 
 
-    private float yPosition = 0f;
+    public float yPosition = 0f;
 
     public float amplitude = 10f;
     public float frequency = 1f;  
     private int tweenID;
 
 
-    void Awake(){
-        if(target == null && (GameObject.FindGameObjectWithTag(name) != null)) {
-            target = GameObject.FindGameObjectWithTag(name);
-        }
+    void OnEnable(){
 
-        // startSinAnimation();
+        target = WorldHandler.Instance.currLevelHandler.golfBall;
+
+        startSinAnimation();
     }
-
-
 
     void Update(){
 
@@ -38,7 +35,6 @@ public class PositionUpdater : MonoBehaviour{
         }
         
     }
-
 
 
     void startSinAnimation(){
@@ -53,14 +49,9 @@ public class PositionUpdater : MonoBehaviour{
 
         float sineValue = Mathf.Sin(t); 
 
-        float yPosition = amplitude * sineValue;
+        yPosition = amplitude * sineValue;
 
         Debug.Log(yPosition);
     }
 
 }
-
-
-    // public void stopAllAnimation(){
-    //      LeanTween.cancel(gameObject, tweenID);
-    // }

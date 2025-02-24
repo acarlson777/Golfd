@@ -33,7 +33,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private Animator clubThrowAnimator;
     public bool clubEnabled = true;
 
-    public PositionUpdater ballIndicator;
+    public GolfBallIndicatorHandler ballIndicator;
 
     private void Start()
     {
