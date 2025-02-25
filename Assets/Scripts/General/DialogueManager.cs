@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour {
         public List<AudioClip> audioClips;
     }
 
-    void Start() {
+    void Awake() {
         dialogueDict = new Dictionary<string, List<string>>();
         namesDict = new Dictionary<string, List<string>>();
         imagesDict = new Dictionary<string, List<Sprite>>();
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour {
                     // Stop the current audio 
                     audioSource.Stop();
                     // Stop the animation 
-                    animator.stopSinAnimation();
+                    animator.stopSinAnimation(true);
                 } else if (dialogueText.text == dialogueDict[currentDialogueName][currentLineIndex]) {
                     NextLine();
                 }
@@ -95,7 +95,6 @@ public class DialogueManager : MonoBehaviour {
 
 
     public void SetPictureForDialogue(string dialogueName){
-
         characterImage.sprite = imagesDict[dialogueName][0];
 
     }
@@ -104,6 +103,7 @@ public class DialogueManager : MonoBehaviour {
         Debug.Log("Dialogue Finished");
         currentLineIndex = -1;
         currentDialogueName = "";
+        dialogueText.text = "";
         onDialogueComplete?.Invoke();
     }
 
@@ -134,7 +134,7 @@ public class DialogueManager : MonoBehaviour {
         // Stop the audio
         audioSource.Stop();
         // Stop the animation
-        animator.stopSinAnimation();
+        animator.stopSinAnimation(false);
         
     }
 

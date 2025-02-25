@@ -17,6 +17,7 @@ public class LevelPlacementHandler : MonoBehaviour
     private ARPlaneManager aRPlaneManager;
     private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private bool isMovingCurrentLevel = false;
+    public bool canPlaceLevel = true;
 
     private void Awake()
     {
@@ -33,19 +34,22 @@ public class LevelPlacementHandler : MonoBehaviour
             if (aRRayCastManager.Raycast(pressPosition.ReadValue<Vector2>(), hits, TrackableType.PlaneWithinPolygon))
             {
                 Pose hitPose = hits[0].pose;
-
-                if (!hasTapOccured)
+                if (canPlaceLevel)
                 {
-                    hasTapOccured = true;
-                    aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
-                    WorldHandler.Instance.UpdateLevelPosition(hitPose);
-                    WorldHandler.Instance.LoadNextLevel();
-                    golfClub.SetActive(true);
-                } else if (isMovingCurrentLevel)
-                {
-                    isMovingCurrentLevel = false;
-                    aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
-                    WorldHandler.Instance.UpdateLevelPosition(hitPose);
+                    if (!hasTapOccured)
+                    {
+                        hasTapOccured = true;
+                        aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
+                        WorldHandler.Instance.UpdateLevelPosition(hitPose);
+                        WorldHandler.Instance.LoadNextLevel();
+                        golfClub.SetActive(true);
+                    }
+                    else if (isMovingCurrentLevel)
+                    {
+                        isMovingCurrentLevel = false;
+                        aRPlaneManager.requestedDetectionMode = PlaneDetectionMode.None;
+                        WorldHandler.Instance.UpdateLevelPosition(hitPose);
+                    }
                 }
             }
         }

@@ -8,7 +8,7 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private Camera _camera;
 
     [SerializeField] private GameObject _clubBody;
-    [SerializeField] private GameObject _clubHead;
+    public GameObject _clubHead;
     [SerializeField] private Vector3 _clubHeadOffset;
     private Rigidbody rb;
     private Rigidbody gBrb;
@@ -31,6 +31,9 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private float EXTRA_FORWARD_BOOST;
     private bool canThrowClubs = false;
     [SerializeField] private Animator clubThrowAnimator;
+    public bool clubEnabled = true;
+
+    public GolfBallIndicatorHandler ballIndicator;
 
     private void Start()
     {
@@ -42,6 +45,11 @@ public class ClubHandler : MonoBehaviour
 
     private void Update()
     {
+        if (!clubEnabled)
+        {
+            return;
+        }
+
         UpdateClubPosition();
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
         UpdateClubHeadPosition();
@@ -55,6 +63,9 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
+
+
+
         }
     }
 
@@ -70,6 +81,7 @@ public class ClubHandler : MonoBehaviour
         if (Physics.Raycast(toGroundRay, out groundHit, 100, _layerToHit))
         {
             clubLength = Mathf.Min(groundHit.distance, _maxClubLength);
+            _minClubLength = clubLength;
             //print("Ray hit " + groundHit.collider.gameObject.name);
             Debug.DrawLine(activeTransform.position, activeDirection.normalized * 10, Color.green, 1f);
         }
@@ -91,8 +103,12 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
         {
+
+            ballIndicator.gameObject.SetActive(true);
+            //Ball slowed down enough to count as stoppped 
             WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
+            //clubEnabled = true;
         }
     }
 
@@ -110,6 +126,11 @@ public class ClubHandler : MonoBehaviour
 
     public void OnScreenPressOrRelease(InputAction.CallbackContext context)
     {
+        if (!clubEnabled)
+        {
+            return;
+        }
+
         if (context.started) {
             //print("press or released");
             _clubHead.SetActive(true);
@@ -142,7 +163,15 @@ public class ClubHandler : MonoBehaviour
         _clubHead.GetComponent<BoxCollider>().enabled = false;
         if (gBrb.velocity.magnitude > _ballVelocityTolerance)
         {
+
+            ballIndicator.gameObject.SetActive(false);
+            //Ball was hit fast enough to count as a real hit
             WorldHandler.Instance.IncrementStrokeCount();
+
+
+
+            //clubEnabled = false;
+            //_clubHead.SetActive(false);
         }
     }
 

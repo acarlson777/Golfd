@@ -12,7 +12,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] private GameObject[] _levelList;
     private GameObject[] instantiatedLevelList;
     [SerializeField] private int _strokeCount = 0;
-    private LevelHandler currLevelHandler = null;
+    public LevelHandler currLevelHandler = null;
     public bool isLevelComplete = true;
     [SerializeField] private GameObject _ENVIRONMENT;
     [SerializeField] private GameObject _mask;
@@ -23,6 +23,12 @@ public class WorldHandler : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI levelParText;
     [SerializeField] TextMeshProUGUI strokeCountText;
+
+    [SerializeField] DialogueWrapper dialogueWrapper;
+    [SerializeField] ClubHandler clubHandler;
+    [SerializeField] private bool strokeCountBasedDialogue; 
+
+    public GolfBallIndicatorHandler ballIndicatorHandler;
 
     private void Awake()
     {
@@ -58,32 +64,64 @@ public class WorldHandler : MonoBehaviour
         if (debug) { Time.timeScale = 0.1f; } else { Time.timeScale = 1; }
     }
 
-    public void OnLevelCompleted() //Work on this function 
-    {
+    public void OnLevelCompleted(){
+
+        clubHandler.clubEnabled = false;
+        clubHandler._clubHead.SetActive(false);
+        ballIndicatorHandler.gameObject.SetActive(false);
+        
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore)
-        {
+        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
+
             JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
         }
 
-        if (levelIndex == _levelList.Length - 1)
-        {
+        if (levelIndex == _levelList.Length - 1){
             SceneHandler.Instance.LoadScene("LevelSelect");
         }
 
         //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
         //Constantly show par and current stroke count on the screen (this is a general note)
-        _strokeCount = 0;
         isLevelComplete = true;
-        //StartNextLevelDialogue() to do level ending dialogue (gonna need to position the dialogue index using the level position when first entering the world
-        //Wait until ending dialogue complete before loading next level, maybe just link the function call to load the next level to the end of the dialogue
-        LoadNextLevel();
+        StartEndLevelDialogue();
+        _strokeCount = 0;
+    }
+
+    private void StartEndLevelDialogue()
+    {
+        // clubHandler.clubEnabled = false;
+        // clubHandler._clubHead.SetActive(false);
+        int par = JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR;
+        if (strokeCountBasedDialogue)
+        {
+            if (_strokeCount > par)
+            {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END+", LoadNextLevel);
+            }
+            else if (_strokeCount < par)
+            {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END-", LoadNextLevel);
+            }
+            else {
+                dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END", LoadNextLevel);
+            }
+        } else
+        {
+            dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " END", LoadNextLevel);
+        }
     }
 
     private void StartNextLevelDialogue()
     {
+        clubHandler.clubEnabled = false;
+        clubHandler._clubHead.SetActive(false);
+        dialogueWrapper.StartDialogueSequence(_worldIndex + "-" + (levelIndex + 1) + " INTRO", UnPauseGame);
+    }
 
+    private void UnPauseGame()
+    {
+        clubHandler.clubEnabled = true;
     }
 
     public void LoadNextLevel()
@@ -100,7 +138,8 @@ public class WorldHandler : MonoBehaviour
         yield return AnimateIn();
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        //run StartNextLevelDialogue()
+        StartNextLevelDialogue();
+        UnPauseGame();
     }
 
     private IEnumerator AnimateOut()

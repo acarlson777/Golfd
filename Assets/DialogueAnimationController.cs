@@ -31,8 +31,6 @@ public class DialogueAnimationController : MonoBehaviour{
 
         rectTransform = GetComponent<RectTransform>();
         initPosition = rectTransform.anchoredPosition;
-
-
     }
 
 
@@ -111,32 +109,39 @@ public class DialogueAnimationController : MonoBehaviour{
 
         float sineValue = Mathf.Sin(t); 
 
-        float yPosition = amplitude * sineValue; 
+        float yPosition = amplitude * sineValue + initPosition.y; 
 
 
-        Debug.Log(initPosition.y);
-        Debug.Log(yPosition);
+        //Debug.Log(initPosition.y);
+        //Debug.Log(yPosition);
 
 
         if(cancel && (Math.Abs(initPosition.y - yPosition) < 0.5f)){
-            stopSinAnimation();
+            stopSinAnimation(false);
         }
 
         rectTransform.anchoredPosition = new Vector2(rectTransform.anchoredPosition.x, yPosition);
     }
 
-
     public void stopAllAnimation(){
          LeanTween.cancel(gameObject, tweenID);
     }
 
-    public void stopSinAnimation(){
+    public void stopSinAnimation(bool teleport){
+
+        if(teleport){
+
+            LeanTween.cancel(gameObject, tweenID);
+            rectTransform.anchoredPosition = initPosition;
+            return;
+
+        }
 
         // set request stop to true
 
          if(cancel){
             LeanTween.cancel(gameObject, tweenID);
-            // rectTransform.anchoredPosition = initPosition;
+            rectTransform.anchoredPosition = initPosition;
 
             cancel = false;
         }else{
