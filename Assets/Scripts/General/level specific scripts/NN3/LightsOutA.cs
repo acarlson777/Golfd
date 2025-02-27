@@ -11,8 +11,7 @@ public class LightsOutA : MonoBehaviour
     void Start()
     {
         Ball_Light.SetActive(false);
-        LightA1.SetActive(true);
-        LightA2.SetActive(true);
+        
     }
 
 

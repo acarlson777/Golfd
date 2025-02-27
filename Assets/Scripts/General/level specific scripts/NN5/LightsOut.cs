@@ -13,10 +13,7 @@ public class LightsOut : MonoBehaviour
     void Start()
     {
         Golf_light.SetActive(false);
-        Spot_LightA1.SetActive(true);
-        Spot_LightA2.SetActive(true);
-        Spot_LightA3.SetActive(true);
-        ForcefieldA1.SetActive(true);
+        
     }
 
 
