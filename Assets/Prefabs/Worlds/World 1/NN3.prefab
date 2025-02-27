@@ -264,7 +264,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.493, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3011687744936635296}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 8419366799727953230}
   - component: {fileID: 3134034252584979862}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: Ball_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -854,8 +854,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8704019906284411315, guid: e24c89058008a479c8d9ef54559015ad,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3683252375550964758}
   m_SourcePrefab: {fileID: 100100000, guid: e24c89058008a479c8d9ef54559015ad, type: 3}
+--- !u!1 &1456989656072586632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8704019906284411315, guid: e24c89058008a479c8d9ef54559015ad,
+    type: 3}
+  m_PrefabInstance: {fileID: 7850521415821483067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3683252375550964758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456989656072586632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af6d1802165c497296248e7f627da75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ball_Light: {fileID: 6347224365139085865}
+  LightA1: {fileID: 339802887688605566}
+  LightA2: {fileID: 1474453792190192581}
 --- !u!4 &2178658073304454963 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8272692896134302472, guid: e24c89058008a479c8d9ef54559015ad,

@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class LightsOutA : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject Ball_Light;
+    public GameObject LightA1;
+    public GameObject LightA2;
+
     void Start()
     {
-        
+        Ball_Light.SetActive(false);
+        LightA1.SetActive(true);
+        LightA2.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OnTriggerEnter(Collider other)
     {
-        
+        if (other.gameObject.CompareTag("GolfBall"))
+        {
+            Ball_Light.SetActive(true);
+            LightA1.SetActive(false);
+            LightA2.SetActive(false);
+        }
     }
 }
