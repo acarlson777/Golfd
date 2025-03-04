@@ -728,6 +728,7 @@ MonoBehaviour:
   EXTRA_FORWARD_BOOST: 10
   clubThrowAnimator: {fileID: 2071100743298804864}
   clubEnabled: 1
+  ballIndicator: {fileID: 0}
 --- !u!54 &2057719880168643663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1116,11 +1117,11 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -1779,6 +1780,7 @@ MonoBehaviour:
   - {fileID: 2069086058050412760, guid: c07214f66af69be469b60bebf581c903, type: 3}
   - {fileID: 3813703094480613108, guid: 1296bd05473b841589858c4db45baac3, type: 3}
   _strokeCount: 0
+  currLevelHandler: {fileID: 0}
   isLevelComplete: 1
   _ENVIRONMENT: {fileID: 1567857202111435229}
   _mask: {fileID: 7340282472474447374}
@@ -1787,6 +1789,8 @@ MonoBehaviour:
   strokeCountText: {fileID: 3663377854271192371}
   dialogueWrapper: {fileID: 5679126686437430835}
   clubHandler: {fileID: 2639814560501103053}
+  strokeCountBasedDialogue: 0
+  ballIndicatorHandler: {fileID: 0}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golfClub: {fileID: 1549212987625140037}
+  canPlaceLevel: 1
 --- !u!1 &6598587850674541198
 GameObject:
   m_ObjectHideFlags: 0
