@@ -42,16 +42,18 @@ public class ButtonAnimationController : MonoBehaviour{
     }
 
     public void OnSfxButtonClick(){
-            sfx = !sfx;
-            sfxAnimator.SetBool("isOn", sfx);
-            // soundHandler.TapSfxButton();
-            Debug.Log("called sfx sound handler and set to " + sfx);
+        sfx = !sfx;
+        sfxAnimator.SetBool("isOn", sfx);
+        sfxAnimator.SetTrigger("isAnimating");
+        // soundHandler.TapSfxButton();
+        Debug.Log("called sfx sound handler and set to " + sfx);
     }
 
     public void OnMusicButtonClick(){
-            music = !music;
-            musicAnimator.SetBool("isOn", music);
-            // soundHandler.TapMusicButton();
-            Debug.Log("called music sound handler and set to " + music);
+        music = !music;
+        musicAnimator.SetBool("isOn", music);
+        musicAnimator.SetTrigger("isAnimating");
+        // soundHandler.TapMusicButton();
+        Debug.Log("called music sound handler and set to " + music);
     }
 }
