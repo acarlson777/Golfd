@@ -834,6 +834,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonSfx: {fileID: 3547557736597946348}
   buttonMusic: {fileID: 3089024914219310661}
+  buttonSfxImage: {fileID: 5430697800870087676}
+  buttonMusicImage: {fileID: 5816585682367228501}
+  buttonOff: {fileID: 21300000, guid: 22a85cf294c714a80a5a32fdde784ff2, type: 3}
+  buttonOn: {fileID: 21300000, guid: 05b21be74aad34634b515cc343db7dd2, type: 3}
 --- !u!1 &8883155547156307645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,12 +1133,18 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2547082005410850091}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5430697800870087676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5430697800870087676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7495321798370062039, guid: eda190f4bca144448b0d0796cff757d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 2547082005410850091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4088163087361361026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1355,9 +1365,15 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4088163087361361026}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 5816585682367228501}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5816585682367228501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7495321798370062039, guid: eda190f4bca144448b0d0796cff757d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 4088163087361361026}
+  m_PrefabAsset: {fileID: 0}

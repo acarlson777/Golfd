@@ -12,6 +12,10 @@ public class ButtonAnimationController : MonoBehaviour{
     private Animator sfxAnimator;
     public Button buttonMusic;
     private Animator musicAnimator;
+    public GameObject buttonSfxImage;
+    public GameObject buttonMusicImage;
+    public Sprite buttonOff;
+    public Sprite buttonOn;
 
     private bool sfx;
     private bool music;
@@ -33,11 +37,27 @@ public class ButtonAnimationController : MonoBehaviour{
 
         sfx = PlayerPrefs.GetInt("sfx") == 1;
         music = PlayerPrefs.GetInt("music") == 1;
+        if (sfx)
+        {
+            buttonSfxImage.GetComponent<Image>().sprite = buttonOn;
+        } else
+        {
+            buttonSfxImage.GetComponent<Image>().sprite = buttonOff;
+        }
 
-        sfxAnimator.SetBool("isOn", sfx);
-        musicAnimator.SetBool("isOn", music);
+        if (music)
+        {
+            buttonMusicImage.GetComponent<Image>().sprite = buttonOn;
+        } else
+        {
+            buttonMusicImage.GetComponent<Image>().sprite = buttonOff;
+        }
 
-        buttonSfx.onClick.AddListener(soundHandler.TapSfxButton);
+
+        //sfxAnimator.SetBool("isOn", sfx);
+        //musicAnimator.SetBool("isOn", music);
+
+        buttonSfx.onClick.AddListener(soundHandler.TapSfxButton); //something weird happening here
         buttonMusic.onClick.AddListener(soundHandler.TapMusicButton);
     }
 
