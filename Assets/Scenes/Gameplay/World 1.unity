@@ -141,6 +141,16 @@ PrefabInstance:
       propertyPath: m_Dithering
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueWrapper
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: strokeCountBasedDialogue
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -195,6 +205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Intensity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8490380630506677344, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8862696904540685804, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}

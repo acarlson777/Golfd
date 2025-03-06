@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueWrapper: {fileID: 4577491822771980431}
-  resetFirstTimeStatus: 0
+  resetFirstTimeStatus: 1
 --- !u!1 &444310236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2495,7 +2495,7 @@ PrefabInstance:
     - target: {fileID: 6090288055607658216, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6469959392551608886, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
