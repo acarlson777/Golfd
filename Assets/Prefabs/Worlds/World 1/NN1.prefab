@@ -258,7 +258,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.99315065, b: 0, a: 1}
+  m_Color: {r: 0.55124855, g: 0, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 0.8918759
   m_SpotAngle: 74.03313
@@ -376,7 +376,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.99315065, b: 0, a: 1}
+  m_Color: {r: 0.5529412, g: 0, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 1.0423259
   m_SpotAngle: 96.286674
@@ -701,7 +701,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 1, g: 0.99315065, b: 0, a: 1}
+  m_Color: {r: 0.5529412, g: 0, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 1.0423259
   m_SpotAngle: 72.33399
@@ -2134,6 +2134,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5116038034022423509}
+    - targetCorrespondingSourceObject: {fileID: 5421646656586476617, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7658774640920157004}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
 --- !u!4 &388710062151276245 stripped
