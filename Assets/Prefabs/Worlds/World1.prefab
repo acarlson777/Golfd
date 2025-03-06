@@ -728,7 +728,6 @@ MonoBehaviour:
   EXTRA_FORWARD_BOOST: 10
   clubThrowAnimator: {fileID: 2071100743298804864}
   clubEnabled: 1
-  ballIndicator: {fileID: 0}
 --- !u!54 &2057719880168643663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1789,8 +1788,6 @@ MonoBehaviour:
   strokeCountText: {fileID: 3663377854271192371}
   dialogueWrapper: {fileID: 5679126686437430835}
   clubHandler: {fileID: 2639814560501103053}
-  strokeCountBasedDialogue: 0
-  ballIndicatorHandler: {fileID: 0}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
