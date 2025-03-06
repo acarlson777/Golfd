@@ -14,6 +14,9 @@ public class SoundHandler : MonoBehaviour {
     private bool sfx;
     private bool music;
 
+    private bool canTapSFX = true;
+    private bool canTapMUSIC = true;
+
     private void Awake() {
         if (Instance != null && Instance != this){
             Destroy(this);
@@ -37,11 +40,17 @@ public class SoundHandler : MonoBehaviour {
     }
 
     private void ToggleSfx(){
+        if (!canTapSFX)
+        {
+            return;
+        }
+        canTapSFX = false;
         sfx = PlayerPrefs.GetInt("sfx") == 1;
         mixer.SetFloat("sfxVol", sfx ? -80 : 0);
         sfx = !sfx;
         PlayerPrefs.SetInt("sfx", sfx ? 1 : 0);
         Debug.Log("internal sfx: " + sfx);
+        StartCoroutine(WaitBeforeTapAgainSFX());
     }
 
     /*
@@ -58,11 +67,18 @@ public class SoundHandler : MonoBehaviour {
     }
 
     private void ToogleMusic(){
+        if (!canTapMUSIC)
+        {
+            return;
+        }
+        canTapMUSIC = false;
         music = PlayerPrefs.GetInt("music") == 1;
         mixer.SetFloat("musicVol", music ? -80 : 0);
         music = !music;
         PlayerPrefs.SetInt("music", music ? 1 : 0);
         Debug.Log("internal music: " + music);
+        StartCoroutine(WaitBeforeTapAgainMUSIC());
+
     }
 
     public bool getSfxState(){
@@ -72,5 +88,17 @@ public class SoundHandler : MonoBehaviour {
     public bool getMusicState(){
         Debug.Log("MUSIC STATE: " + music);
         return music;
+    }
+
+    public IEnumerator WaitBeforeTapAgainSFX()
+    {
+        yield return new WaitForSeconds(.3333f);
+        canTapSFX = true;
+    }
+
+    public IEnumerator WaitBeforeTapAgainMUSIC()
+    {
+        yield return new WaitForSeconds(.3333f);
+        canTapMUSIC = true;
     }
 }

@@ -12,13 +12,17 @@ public class ButtonAnimationController : MonoBehaviour{
     private Animator sfxAnimator;
     public Button buttonMusic;
     private Animator musicAnimator;
-    public GameObject buttonSfxImage;
-    public GameObject buttonMusicImage;
-    public Sprite buttonOff;
-    public Sprite buttonOn;
 
     private bool sfx;
     private bool music;
+
+    private bool canTapSFX = true;
+    private bool canTapMUSIC = true;
+
+    private void Start()
+    {
+   
+    }
 
     void OnEnable(){
 
@@ -37,43 +41,56 @@ public class ButtonAnimationController : MonoBehaviour{
 
         sfx = PlayerPrefs.GetInt("sfx") == 1;
         music = PlayerPrefs.GetInt("music") == 1;
-        if (sfx)
-        {
-            buttonSfxImage.GetComponent<Image>().sprite = buttonOn;
-        } else
-        {
-            buttonSfxImage.GetComponent<Image>().sprite = buttonOff;
-        }
 
-        if (music)
-        {
-            buttonMusicImage.GetComponent<Image>().sprite = buttonOn;
-        } else
-        {
-            buttonMusicImage.GetComponent<Image>().sprite = buttonOff;
-        }
+        print(sfx);
+        print(music);
 
+        sfxAnimator.SetBool("isOn", sfx);
+        musicAnimator.SetBool("isOn", music);
 
-        //sfxAnimator.SetBool("isOn", sfx);
-        //musicAnimator.SetBool("isOn", music);
-
-        buttonSfx.onClick.AddListener(soundHandler.TapSfxButton); //something weird happening here
+        buttonSfx.onClick.AddListener(soundHandler.TapSfxButton);
         buttonMusic.onClick.AddListener(soundHandler.TapMusicButton);
     }
 
     public void OnSfxButtonClick(){
+        if (!canTapSFX)
+        {
+            return;
+        }
         sfx = !sfx;
         sfxAnimator.SetBool("isOn", sfx);
         sfxAnimator.SetTrigger("isAnimating");
+        canTapSFX = false;
+        StartCoroutine(WaitBeforeTapAgainSFX());
+
         // soundHandler.TapSfxButton();
         Debug.Log("called sfx sound handler and set to " + sfx);
     }
 
     public void OnMusicButtonClick(){
+        if (!canTapMUSIC)
+        {
+            return;
+        }
         music = !music;
         musicAnimator.SetBool("isOn", music);
         musicAnimator.SetTrigger("isAnimating");
+        canTapMUSIC = false;
+        StartCoroutine(WaitBeforeTapAgainMUSIC());
+
         // soundHandler.TapMusicButton();
         Debug.Log("called music sound handler and set to " + music);
+    }
+
+    public IEnumerator WaitBeforeTapAgainSFX()
+    {
+        yield return new WaitForSeconds(.3333f);
+        canTapSFX = true;
+    }
+
+    public IEnumerator WaitBeforeTapAgainMUSIC()
+    {
+        yield return new WaitForSeconds(.3333f);
+        canTapMUSIC = true;
     }
 }
