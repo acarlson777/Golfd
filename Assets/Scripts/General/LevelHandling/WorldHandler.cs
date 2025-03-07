@@ -30,6 +30,9 @@ public class WorldHandler : MonoBehaviour
 
     public GolfBallIndicatorHandler ballIndicatorHandler;
 
+    public AnimationController strokeAnimationController;
+    public AnimationController parAnimationController;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -207,14 +210,30 @@ public class WorldHandler : MonoBehaviour
     }
 
     private void UpdateParText()
-    {
-        //Animate par text and change to new par amount
-        levelParText.text = "Par " + JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR.ToString();
+    {       
+        parAnimationController.transformRelativeA(()=> {
+            levelParText.text = "Par " + JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex].LEVELS[levelIndex].PAR.ToString();
+            parAnimationController.transformRelativeB(()=>{});
+
+        });
+
+        
     }
 
     private void UpdateStrokeCountText()
     {
-        //Animate stroke count text and change to _strokeCount;
-        strokeCountText.text = _strokeCount.ToString();
+
+        strokeAnimationController.scaleDown(() => {
+
+            strokeCountText.text = _strokeCount.ToString();
+            strokeAnimationController.scaleUp(()=> {});
+
+
+
+        });
+
+        
+
+        
     }
 }

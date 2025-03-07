@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem; // Required for the new Input System
+using UnityEngine.EventSystems;
 
 public class DialogueWrapper : MonoBehaviour{
     [SerializeField] Canvas canvas;
-    [SerializeField] DialogueAnimationController textBox;
-    [SerializeField] DialogueAnimationController image1;
-    [SerializeField] DialogueAnimationController image2;
+    [SerializeField] AnimationController textBox;
+    [SerializeField] AnimationController image1;
+    [SerializeField] AnimationController image2;
     [SerializeField] private List<DialogueSequence> dialogueSequences; // List of dialogue sequences
 
     [System.Serializable]
@@ -78,9 +79,8 @@ public class DialogueWrapper : MonoBehaviour{
     }
 
     // This is the method that will be called when the player taps the screen
-    public void Tap(InputAction.CallbackContext context)
-    {
-        if (context.performed && !isDialogueInProgress && isSequenceInProgress) // Check if the tap action was performed and no dialogue is currently in progress
+    public void OnPointerClick(BaseEventData eventData){
+        if (!isDialogueInProgress && isSequenceInProgress) // Check if the tap action was performed and no dialogue is currently in progress
         {
             StartDialogueFromList(); // Start the dialogue without a callback (since it's handled by OnDialogueComplete)
         }
