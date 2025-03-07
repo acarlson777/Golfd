@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio; 
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour {
     public Image characterImage;
@@ -18,7 +19,7 @@ public class DialogueManager : MonoBehaviour {
 
     public AudioMixer audioMixer; 
 
-    public DialogueAnimationController animator;
+    public AnimationController animator;
     private Dictionary<string, List<string>> dialogueDict;
     private Dictionary<string, List<string>> namesDict;
     private Dictionary<string, List<Sprite>> imagesDict;
@@ -62,8 +63,8 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    public void Tap(InputAction.CallbackContext context) {
-        if (context.started) {
+    public void OnPointerClick(BaseEventData eventData){
+        // if (context.started) {
             if (currentLineIndex >= 0) {
                 if (typingCoroutine != null) {
                     StopCoroutine(typingCoroutine);
@@ -77,7 +78,7 @@ public class DialogueManager : MonoBehaviour {
                     NextLine();
                 }
             }
-        }
+        // }
     }
 
     public void StartDialogue(string dialogueName, Action onDialogueComplete) {
