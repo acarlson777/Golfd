@@ -47,6 +47,8 @@ public class ButtonAnimationController : MonoBehaviour{
 
         sfxAnimator.SetBool("isOn", sfx);
         musicAnimator.SetBool("isOn", music);
+        canTapSFX = true;
+        canTapMUSIC = true;
 
         buttonSfx.onClick.AddListener(soundHandler.TapSfxButton);
         buttonMusic.onClick.AddListener(soundHandler.TapMusicButton);
