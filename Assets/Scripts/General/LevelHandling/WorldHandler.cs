@@ -138,8 +138,8 @@ public class WorldHandler : MonoBehaviour
         yield return AnimateIn();
         UpdateLastKnownBallPos();
         updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        StartNextLevelDialogue();
         UnPauseGame();
+        StartNextLevelDialogue();
     }
 
     private IEnumerator AnimateOut()
