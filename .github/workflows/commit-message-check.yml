@@ -1,0 +1,31 @@
+name: Check Commit Message Length
+
+on:
+  push:
+    branches:
+      - '**'  # Apply this to all branches
+  pull_request:
+    branches:
+      - '**'  # Apply this to all branches
+
+jobs:
+  check-commit-msg:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Get commit messages
+        run: |
+          # Extract commit messages from the push
+          commits=$(git log --oneline --no-merges --reverse)
+
+          # Loop through each commit to check its length
+          while IFS= read -r commit; do
+            commit_msg=$(echo $commit | sed 's/^[0-9a-f]* //')
+            if [ ${#commit_msg} -le 12 ]; then
+              echo "Error: Commit message must be longer than 12 characters: '$commit_msg'"
+              exit 1
+            fi
+          done <<< "$commits"
