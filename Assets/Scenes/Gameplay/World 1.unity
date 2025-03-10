@@ -191,6 +191,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6e8f9bcd10be43f88c5cbc4556fe46b, type: 3}
+--- !u!114 &620206129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8901193709773312894, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ec832694074635806d426d110f749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &1990591618 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 4964589058484805904, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -205,6 +217,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2639814560501103053, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: ballIndicator
+      value: 
+      objectReference: {fileID: 620206129}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
