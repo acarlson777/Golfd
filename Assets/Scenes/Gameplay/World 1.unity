@@ -274,6 +274,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &563112003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 165896606189842667, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ec832694074635806d426d110f749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &927395755 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6950400555862296640, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -672,7 +684,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ballIndicatorHandler
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 563112003}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.size
@@ -709,7 +721,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ballIndicator
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 563112003}
     - target: {fileID: 3400982006416506480, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
