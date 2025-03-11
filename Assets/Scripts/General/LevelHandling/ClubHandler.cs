@@ -32,6 +32,8 @@ public class ClubHandler : MonoBehaviour
     private bool canThrowClubs = false;
     [SerializeField] private Animator clubThrowAnimator;
     public bool clubEnabled = true;
+    private bool canToggleClubThrowing = true;
+    private bool attemptedToUpdateCanToggleClubThrowing = false;
 
     public GolfBallIndicatorHandler ballIndicator;
 
@@ -177,8 +179,21 @@ public class ClubHandler : MonoBehaviour
 
     public void ToggleClubThrowing()
     {
+        if (!gameObject.activeInHierarchy) { return; }
+        if (!canToggleClubThrowing && !attemptedToUpdateCanToggleClubThrowing) { return; }
         canThrowClubs = !canThrowClubs;
         PlayerPrefs.SetInt("canThrowClubs", canThrowClubs ? 1 : 0);
+        canToggleClubThrowing = false;
+        clubThrowAnimator.SetTrigger("isAnimating");
         clubThrowAnimator.SetBool("isOn", canThrowClubs);
+        StartCoroutine(ReactivateTogglingOfClubThrowing());
     }
+
+    private IEnumerator ReactivateTogglingOfClubThrowing()
+    {
+        attemptedToUpdateCanToggleClubThrowing = true;
+        yield return new WaitForSeconds(0.33f);
+        canToggleClubThrowing = true;
+        attemptedToUpdateCanToggleClubThrowing = false;
+    }   
 }

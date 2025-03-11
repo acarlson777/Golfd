@@ -728,6 +728,7 @@ MonoBehaviour:
   EXTRA_FORWARD_BOOST: 10
   clubThrowAnimator: {fileID: 2071100743298804864}
   clubEnabled: 1
+  ballIndicator: {fileID: 0}
 --- !u!54 &2057719880168643663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -786,6 +787,7 @@ Transform:
   m_Children:
   - {fileID: 165661745143869046}
   - {fileID: 5248468757694392490}
+  - {fileID: 7306412813284841910}
   m_Father: {fileID: 4753884740388015718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1778614381276214930
@@ -1779,6 +1781,7 @@ MonoBehaviour:
   - {fileID: 2069086058050412760, guid: c07214f66af69be469b60bebf581c903, type: 3}
   - {fileID: 3813703094480613108, guid: 1296bd05473b841589858c4db45baac3, type: 3}
   _strokeCount: 0
+  currLevelHandler: {fileID: 0}
   isLevelComplete: 1
   _ENVIRONMENT: {fileID: 1567857202111435229}
   _mask: {fileID: 7340282472474447374}
@@ -1787,6 +1790,10 @@ MonoBehaviour:
   strokeCountText: {fileID: 3663377854271192371}
   dialogueWrapper: {fileID: 5679126686437430835}
   clubHandler: {fileID: 2639814560501103053}
+  strokeCountBasedDialogue: 0
+  ballIndicatorHandler: {fileID: 0}
+  strokeAnimationController: {fileID: 0}
+  parAnimationController: {fileID: 0}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golfClub: {fileID: 1549212987625140037}
+  canPlaceLevel: 1
 --- !u!1 &6598587850674541198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,3 +4248,176 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clubThrowAnimator: {fileID: 2071100743298804864}
+--- !u!1001 &7128968151823941213
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6677112473899358082}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2666514
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2022296
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.0734819
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fc226930e8fad4c499969204cecfbc05, type: 2}
+    - target: {fileID: -1853094968961178454, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1853094968961178454, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_Name
+      value: ballIndicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: ac10845e00a9640648f52ca012e647dc, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 165896606189842667}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3142632825574631527}
+  m_SourcePrefab: {fileID: 100100000, guid: ac10845e00a9640648f52ca012e647dc, type: 3}
+--- !u!4 &7306412813284841910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7128968151823941213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7939361337959039756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ac10845e00a9640648f52ca012e647dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 7128968151823941213}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &165896606189842667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939361337959039756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8ec832694074635806d426d110f749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  name: GolfBall
+  offset: {x: 0, y: 0.12, z: 0}
+  yPosition: 0
+  amplitude: 0.02
+  frequency: 1.5
+--- !u!95 &3142632825574631527
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939361337959039756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af00337c78fe746e4b0a135d51c07c71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -51,7 +51,7 @@ public class GolfBallIndicatorHandler : MonoBehaviour{
 
         yPosition = amplitude * sineValue;
 
-        Debug.Log(yPosition);
+        // Debug.Log(yPosition);
     }
 
 }
