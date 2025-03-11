@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.16470589, g: 0.13725491, b: 0.32941177, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ca9eb04d8fdac401986afb4d9197daa8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 864916740176140648}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,74 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &38336088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871496599140077892, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5647612427678580633, guid: 27c9610ba53a44c15bfaf4b561de1910,
+        type: 3}
+      propertyPath: m_Name
+      value: neon nightscape vert slice type 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 27c9610ba53a44c15bfaf4b561de1910, type: 3}
 --- !u!114 &169456447 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6960761786838772680, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -233,18 +301,6 @@ MonoBehaviour:
   amplitude: 10
   frequency: 1
   cancel: 0
---- !u!114 &1454564018 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 165896606189842667, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8ec832694074635806d426d110f749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1470998659 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8299744320005354200, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -289,6 +345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 644462787241984647, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 689875705178174779, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -1186,8 +1247,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!108 &864916740176140648 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 4964589058484805904, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 864916740176140643}
+  - {fileID: 38336088}
