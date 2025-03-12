@@ -25,8 +25,8 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.16470589, g: 0.13725491, b: 0.32941177, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ca9eb04d8fdac401986afb4d9197daa8, type: 2}
+  m_SubtractiveShadowColor: {r: 0.3426486, g: 0.7401276, b: 0.9433962, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -96,7 +96,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2fcd0cde21f784188a576e3b8d43f50d,
+  m_LightingDataAsset: {fileID: 112000000, guid: 98aded3fad5774c67b3722079665cab6,
     type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
@@ -293,7 +293,7 @@ PrefabInstance:
     - target: {fileID: 644462787241984647, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 689875705178174779, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -614,19 +614,36 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
+      propertyPath: _strokeCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
       propertyPath: ballIndicatorHandler
       value: 
       objectReference: {fileID: 563112003}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.size
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: parAnimationController
       value: 
       objectReference: {fileID: 927395759}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: _levelList.Array.data[0]
+      value: 
+      objectReference: {fileID: 2315538492363410310, guid: 59c48693748914cd7a258705cf062d85,
+        type: 3}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: _levelList.Array.data[1]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: bb9646c409b0542148823452827b2064,
+        type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[4]
