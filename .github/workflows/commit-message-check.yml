@@ -11,21 +11,92 @@ on:
 jobs:
   check-commit-msg:
     runs-on: ubuntu-latest
+    outputs:
+      valid_commit: ${{ steps.find-valid.outputs.valid_commit }}
+      last_invalid_commit: ${{ steps.find-valid.outputs.last_invalid_commit }}
+      invalid_commit_message: ${{ steps.find-valid.outputs.invalid_commit_message }}
 
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Get commit messages
+      - name: Get Commit Messages and Validate
+        id: find-valid
         run: |
-          # Extract commit messages from the push
+          echo "🔍 Checking commit messages..."
           commits=$(git log --oneline --no-merges --reverse)
+          last_valid_commit=""
+          last_invalid_commit=""
+          invalid_commit_message=""
 
-          # Loop through each commit to check its length
           while IFS= read -r commit; do
+            commit_hash=$(echo $commit | awk '{print $1}')
             commit_msg=$(echo $commit | sed 's/^[0-9a-f]* //')
+
+            echo "📝 Checking commit: $commit_hash - '$commit_msg'"
+
             if [ ${#commit_msg} -le 12 ]; then
-              echo "Error: Commit message must be longer than 12 characters: '$commit_msg'"
-              exit 1
+              echo "❌ ERROR: Commit '$commit_hash' has a short message: '$commit_msg'"
+              last_invalid_commit=$commit_hash
+              invalid_commit_message=$commit_msg
+            else
+              echo "✅ VALID: Commit '$commit_hash' passes."
+              last_valid_commit=$commit_hash
             fi
           done <<< "$commits"
+
+          echo "Valid commit: $last_valid_commit"
+          echo "Invalid commit: $last_invalid_commit"
+          echo "Invalid message: $invalid_commit_message"
+
+          echo "valid_commit=$last_valid_commit" >> $GITHUB_ENV
+          echo "last_invalid_commit=$last_invalid_commit" >> $GITHUB_ENV
+          echo "invalid_commit_message=$invalid_commit_message" >> $GITHUB_ENV
+
+          if [ -n "$last_invalid_commit" ]; then
+            exit 1  # Fail the job if there's an invalid commit
+          fi
+
+  revert-bad-push:
+    needs: check-commit-msg
+    if: failure() && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure we have full commit history
+
+      - name: Revert to Last Valid Commit
+        run: |
+          echo "🚨 Reverting to last valid commit: ${{ env.valid_commit }}"
+
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [ -z "${{ env.valid_commit }}" ]; then
+            echo "⚠️ No valid commit found! Aborting revert."
+            exit 1
+          fi
+
+          git reset --hard ${{ env.valid_commit }}
+          git push origin HEAD --force
+          echo "✅ Repository reverted to ${{ env.valid_commit }}"
+
+      - name: Create GitHub Issue (Notify Users)
+        run: |
+          repo=${{ github.repository }}
+          token=${{ secrets.GITHUB_TOKEN }}
+
+          issue_title="🚨 Push Reverted: Commit Message Too Short"
+          issue_body="A commit was pushed but had a message shorter than 12 characters. It was **automatically reverted**.\n\n\
+          **Invalid Commit:** `${{ env.last_invalid_commit }}`\n\
+          **Message:** '${{ env.invalid_commit_message }}'\n\n\
+          **Action Required:** Please re-push with a descriptive commit message."
+
+          echo "📝 Creating GitHub Issue..."
+          curl -X POST -H "Authorization: token $token" \
+            -d "{\"title\": \"$issue_title\", \"body\": \"$issue_body\"}" \
+            https://api.github.com/repos/$repo/issues
+          echo "✅ Issue created to notify users."
