@@ -31,7 +31,7 @@ jobs:
             BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
             echo "The branch name is $BRANCH_NAME"
           else
-            echo "Source branch is ${{ github.event.pull_request.head.ref }}
+            echo "Source branch is ${{ github.event.pull_request.head.ref }}"
           fi
 
 
