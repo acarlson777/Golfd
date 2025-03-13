@@ -47,6 +47,8 @@ jobs:
               invalid_commit="$commit_hash"
               invalid_message="$commit_msg"
               all_valid=false
+            else
+              echo "✅ VALID: Commit '$commit_hash' - '$commit_msg' passes."
             fi
           done <<< "$new_commits"
 
