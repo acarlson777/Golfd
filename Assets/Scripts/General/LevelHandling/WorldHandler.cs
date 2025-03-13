@@ -231,9 +231,10 @@ public class WorldHandler : MonoBehaviour
 
 
         });
+    }
 
-        
-
-        
+    public DialogueWrapper GetDialogueWrapper()
+    {
+        return dialogueWrapper;
     }
 }

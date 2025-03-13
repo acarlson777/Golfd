@@ -65,9 +65,6 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
-
-
-
         }
     }
 
