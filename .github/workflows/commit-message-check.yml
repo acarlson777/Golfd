@@ -41,12 +41,12 @@ jobs:
           echo "$new_commits"
 
           echo "🔍 Checking commit messages...(log)"
-          commits=$(git log --oneline --no-merges --reverse origin/${branch_name)
+          commits=$(git log --oneline --no-merges --reverse origin/${branch_name})
           echo "Commit list before processing: (git log)"
           echo "$commits"
 
           echo "🔍 Checking commit messages...(rev)"
-          commits_rev=$(git rev-list --no-merges --reverse origin/${branch_name)
+          commits_rev=$(git rev-list --no-merges --reverse origin/${branch_name})
 
 
           echo "Commit list before processing: (git rev)"
