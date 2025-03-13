@@ -25,6 +25,18 @@ jobs:
       - name: Get Commit Messages and Validate
         id: find-valid
         run: |
+
+        
+          if [[ $GITHUB_EVENT_NAME == 'push' ]]; then
+            BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+            echo "The branch name is $BRANCH_NAME"
+          else
+            echo "Source branch is ${{ github.event.pull_request.head.ref }}
+          fi
+
+
+
+        
           if [[ $GITHUB_EVENT_NAME == "push" ]]; then
             branch_name="${GITHUB_REF#refs/heads/}"
           elif [[ $GITHUB_EVENT_NAME == "pull_request" ]]; then
