@@ -29,6 +29,7 @@ jobs:
           if [ "$GITHUB_EVENT_NAME" = "push" ]; then
             branch_name="${GITHUB_REF#refs/heads/}"
           elif [  "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+            echo "github pull request triggered (branch_name)"
             branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
           fi
 
