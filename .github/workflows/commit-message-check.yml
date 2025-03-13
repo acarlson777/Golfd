@@ -3,18 +3,14 @@ name: Check Commit Message Length
 on:
   push:
     branches:
-      - '**'  # Apply this to all branches
+      - '**'  # Apply to all branches
   pull_request:
     branches:
-      - '**'  # Apply this to all branches
+      - '**'  # Apply to all branches
 
 jobs:
   check-commit-msg:
     runs-on: ubuntu-latest
-    outputs:
-      valid_commit: ${{ steps.find-valid.outputs.valid_commit }}
-      last_invalid_commit: ${{ steps.find-valid.outputs.last_invalid_commit }}
-      invalid_commit_message: ${{ steps.find-valid.outputs.invalid_commit_message }}
 
     steps:
       - name: Checkout the repository
@@ -25,55 +21,40 @@ jobs:
       - name: Get Commit Messages and Validate
         id: find-valid
         run: |
-        
-          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
-            branch_name="${GITHUB_REF#refs/heads/}"
+          event_type="${{ github.event_name }}"
+
+          if [ "$event_type" = "push" ]; then
             new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
-          elif [  "$GITHUB_EVENT_NAME" == "pull_request" ]; then
-            echo "github pull request triggered (branch_name)"
-            branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
+          elif [ "$event_type" = "pull_request" ]; then
             new_commits=$(git log ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} --no-merges --oneline)
           fi
 
-          echo "The branch name is $branch_name"
-
-          
-        
-          
           echo "📜 New commits in this push/PR:"
           echo "$new_commits"
 
-          # last_valid_commit=""
-          # last_invalid_commit=""
-          # invalid_commit_message=""
+          invalid_commit=""
+          invalid_message=""
+          all_valid=true  # Flag to check if all commits are valid
 
-          # while IFS= read -r commit; do
-          #   commit_hash=$(echo $commit | awk '{print $1}')
-          #   commit_msg=$(echo $commit | sed 's/^[0-9a-f]* //')
+          while IFS= read -r commit; do
+            commit_hash=$(echo $commit | awk '{print $1}')
+            commit_msg=$(git log --format=%B -n 1 $commit_hash | tr -d '\n')
 
-          #   echo "📝 Checking commit: $commit_hash - '$commit_msg'"
+            echo "📝 Checking commit: $commit_hash - '$commit_msg'"
 
-          #   if [ ${#commit_msg} -le 12 ]; then
-          #     echo "❌ ERROR: Commit '$commit_hash' has a short message: '$commit_msg'"
-          #     last_invalid_commit=$commit_hash
-          #     invalid_commit_message=$commit_msg
-          #   else
-          #     echo "✅ VALID: Commit '$commit_hash' passes."
-          #     last_valid_commit=$commit_hash
-          #   fi
-          # done <<< "$commits"
+            if [ ${#commit_msg} -le 12 ]; then
+              echo "❌ ERROR: Commit '$commit_hash' has a short message: '$commit_msg'"
+              invalid_commit="$commit_hash"
+              invalid_message="$commit_msg"
+              all_valid=false
+            fi
+          done <<< "$new_commits"
 
-          # echo "Valid commit: $last_valid_commit"
-          # echo "Invalid commit: $last_invalid_commit"
-          # echo "Invalid message: $invalid_commit_message"
-
-          # echo "valid_commit=$last_valid_commit" >> $GITHUB_ENV
-          # echo "last_invalid_commit=$last_invalid_commit" >> $GITHUB_ENV
-          # echo "invalid_commit_message=$invalid_commit_message" >> $GITHUB_ENV
-
-          # if [ -n "$last_invalid_commit" ]; then
-          #   exit 1  # Fail the job if there's an invalid commit
-          # fi
+          if ! $all_valid; then
+            echo "invalid_commit=$invalid_commit" >> $GITHUB_ENV
+            echo "invalid_message=$invalid_message" >> $GITHUB_ENV
+            exit 1  # Fail the job if there's an invalid commit
+          fi
 
   revert-bad-push:
     needs: check-commit-msg
@@ -88,19 +69,18 @@ jobs:
 
       - name: Revert to Last Valid Commit
         run: |
-          echo "🚨 Reverting to last valid commit: ${{ env.valid_commit }}"
+          last_valid_commit="${{ github.event.before }}"
+          last_valid_message=$(git log -1 --format=%B $last_valid_commit | tr -d '\n')
+
+          echo "🚨 Reverting to last valid commit: $last_valid_commit"
+          echo "🔍 Last valid commit message: '$last_valid_message'"
 
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          if [ -z "${{ env.valid_commit }}" ]; then
-            echo "⚠️ No valid commit found! Aborting revert."
-            exit 1
-          fi
-
-          git reset --hard ${{ env.valid_commit }}
+          git reset --hard $last_valid_commit
           git push origin HEAD --force
-          echo "✅ Repository reverted to ${{ env.valid_commit }}"
+          echo "✅ Repository reverted to $last_valid_commit"
 
       - name: Create GitHub Issue (Notify Users)
         run: |
@@ -109,8 +89,10 @@ jobs:
 
           issue_title="🚨 Push Reverted: Commit Message Too Short"
           issue_body="A commit was pushed but had a message shorter than 12 characters. It was **automatically reverted**.\n\n\
-          **Invalid Commit:** `${{ env.last_invalid_commit }}`\n\
-          **Message:** '${{ env.invalid_commit_message }}'\n\n\
+          **Invalid Commit:** `${{ env.invalid_commit }}`\n\
+          **Invalid Message:** '${{ env.invalid_message }}'\n\n\
+          **Reverted To:** `${{ github.event.before }}`\n\
+          **Last Valid Message:** '${last_valid_message}'\n\n\
           **Action Required:** Please re-push with a descriptive commit message."
 
           echo "📝 Creating GitHub Issue..."
