@@ -28,8 +28,8 @@ jobs:
 
         
           if [ "$GITHUB_EVENT_NAME" = "push" ]; then
-            BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
-            echo "The branch name is $BRANCH_NAME"
+            BRANCH_NAME1=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
+            echo "The branch name is $BRANCH_NAME1"
           else
             echo "Source branch is ${{ github.event.pull_request.head.ref }}"
           fi
@@ -37,11 +37,15 @@ jobs:
 
 
         
-          # if [[ $GITHUB_EVENT_NAME == "push" ]]; then
-          #   branch_name="${GITHUB_REF#refs/heads/}"
-          # elif [[ $GITHUB_EVENT_NAME == "pull_request" ]]; then
-          #   branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
-          # fi
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
+            branch_name="${GITHUB_REF#refs/heads/}"
+          elif [  "$GITHUB_EVENT_NAME" == "pull_request" ]; then
+            branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
+          fi
+
+          echo "The branch name1 is $branch_name"
+
+          
         
           # new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
           # echo "📜 New commits in this push:"
