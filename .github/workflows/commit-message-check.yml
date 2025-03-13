@@ -27,7 +27,7 @@ jobs:
         run: |
 
         
-          if [[ $GITHUB_EVENT_NAME == 'push' ]]; then
+          if [ "$GITHUB_EVENT_NAME" = "push" ]; then
             BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')
             echo "The branch name is $BRANCH_NAME"
           else
