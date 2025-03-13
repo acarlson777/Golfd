@@ -32,7 +32,7 @@ jobs:
           elif [  "$GITHUB_EVENT_NAME" == "pull_request" ]; then
             echo "github pull request triggered (branch_name)"
             branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
-            new_commits=$(git rev-list origin/${branch_name}..${{ github.event.pull_request.base.sha }} --no-merges --reverse)
+            new_commits=$(git log ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} --no-merges --oneline)
           fi
 
           echo "The branch name is $branch_name"
