@@ -5,7 +5,6 @@ public class ButtonHandler : MonoBehaviour
 {
     private Animator animator;
     [SerializeField] private Animator[] animatorsToTrigger;
-    [SerializeField] private string dialogueToTrigger;
 
     private void Start(){
         animator = GetComponent<Animator>();
@@ -19,10 +18,6 @@ public class ButtonHandler : MonoBehaviour
             foreach (Animator animatorToTrigger in animatorsToTrigger)
             {
                 animatorToTrigger.SetBool("isOn", true);
-            }
-            if (dialogueToTrigger != "")
-            {
-                WorldHandler.Instance.GetDialogueWrapper().StartDialogueSequence(dialogueToTrigger, ()=> { });
             }
         }
     }
