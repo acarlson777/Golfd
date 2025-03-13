@@ -25,17 +25,23 @@ jobs:
       - name: Get Commit Messages and Validate
         id: find-valid
         run: |
+          if [[ $GITHUB_EVENT_NAME == "push" ]]; then
+            branch_name="${GITHUB_REF#refs/heads/}"
+          elif [[ $GITHUB_EVENT_NAME == "pull_request" ]]; then
+            branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
+          fi
+        
           new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
           echo "📜 New commits in this push:"
           echo "$new_commits"
 
           echo "🔍 Checking commit messages...(log)"
-          commits=$(git log --oneline --no-merges --reverse)
+          commits=$(git log --oneline --no-merges --reverse origin/${branch_name)
           echo "Commit list before processing: (git log)"
           echo "$commits"
 
           echo "🔍 Checking commit messages...(rev)"
-          commits_rev=$(git rev-list --no-merges --reverse origin/${GITHUB_REF#refs/heads/})
+          commits_rev=$(git rev-list --no-merges --reverse origin/${branch_name)
 
 
           echo "Commit list before processing: (git rev)"
