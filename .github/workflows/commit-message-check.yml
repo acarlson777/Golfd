@@ -28,30 +28,20 @@ jobs:
         
           if [ "$GITHUB_EVENT_NAME" = "push" ]; then
             branch_name="${GITHUB_REF#refs/heads/}"
+            new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
           elif [  "$GITHUB_EVENT_NAME" == "pull_request" ]; then
             echo "github pull request triggered (branch_name)"
             branch_name="${GITHUB_HEAD_REF}"  # For PRs, use the source branch (head_ref)
+            new_commits=$(git rev-list origin/${branch_name}..${{ github.event.pull_request.base.sha }} --no-merges --reverse)
           fi
 
           echo "The branch name is $branch_name"
 
           
         
-          new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
-          echo "📜 New commits in this push:"
+          
+          echo "📜 New commits in this push/PR:"
           echo "$new_commits"
-
-          echo "🔍 Checking commit messages...(log)"
-          commits=$(git log --oneline --no-merges --reverse origin/${branch_name})
-          echo "Commit list before processing: (git log)"
-          echo "$commits"
-
-          echo "🔍 Checking commit messages...(rev)"
-          commits_rev=$(git rev-list --no-merges --reverse origin/${branch_name})
-
-
-          echo "Commit list before processing: (git rev)"
-          echo "$commits_rev"
 
           # last_valid_commit=""
           # last_invalid_commit=""
