@@ -23,30 +23,20 @@ jobs:
       - name: Get Commit Messages and Validate
         id: find-valid
         run: |
-	  new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
-       
-	  echo "📜 New commits in this push:"
-	  echo "$new_commits"
-
-					
+          new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
+          echo "📜 New commits in this push:"
+          echo "$new_commits"
 
           echo "🔍 Checking commit messages...(log)"
           commits=$(git log --oneline --no-merges --reverse)
+          echo "Commit list before processing: (git log)"
+          echo "$commits"
 
-	  echo "Commit list before processing: (git log)"
-	  echo "$commits"
+          echo "🔍 Checking commit messages...(rev)"
+          commits_rev=$(git rev-list --oneline --no-merges --reverse HEAD)
 
-
-
-	  echo "🔍 Checking commit messages...(rev)"
-	  commits_rev=$(git rev-list --oneline --no-merges --reverse HEAD)
-
-	  echo "Commit list before processing: (git rev)"
-	  echo "$commits_rev"
-
-
-					
-
+          echo "Commit list before processing: (git rev)"
+          echo "$commits_rev"
 
           last_valid_commit=""
           last_invalid_commit=""
