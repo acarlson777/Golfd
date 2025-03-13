@@ -35,7 +35,7 @@ jobs:
           echo "$commits"
 
           echo "🔍 Checking commit messages...(rev)"
-          commits=$(git rev-list --no-merges --reverse origin/${GITHUB_REF#refs/heads/})
+          commits_rev=$(git rev-list --no-merges --reverse origin/${GITHUB_REF#refs/heads/})
 
 
           echo "Commit list before processing: (git rev)"
