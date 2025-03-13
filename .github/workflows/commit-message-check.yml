@@ -8,6 +8,9 @@ on:
     branches:
       - '**'  # Apply to all branches
 
+permissions:
+  contents: write  # ✅ Allows GitHub Actions to push changes
+
 jobs:
   check-commit-msg:
     runs-on: ubuntu-latest
