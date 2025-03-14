@@ -98,12 +98,14 @@ jobs:
           repo=${{ github.repository }}
           token=${{ secrets.GITHUB_TOKEN }}
 
+          echo "Last valid message: ${last_valid_message}"
+
           issue_title="🚨 Push Reverted: Commit Message Too Short"
           issue_body="A commit was pushed but had a message shorter than 12 characters. It was **automatically reverted**.\n\n\
           **Invalid Commit:** `${{ env.invalid_commit }}`\n\
           **Invalid Message:** '${{ env.invalid_message }}'\n\n\
           **Reverted To:** `${{ github.event.before }}`\n\
-          **Last Valid Message:** '${last_valid_message}'\n\n\
+          **Last Valid Message:** '${{last_valid_message}}'\n\n\
           **Action Required:** Please re-push with a descriptive commit message."
 
           echo "📝 Creating GitHub Issue..."
