@@ -52,7 +52,7 @@ public class ClubHandler : MonoBehaviour
         {
             return;
         }   
-        clubThrowAnimator.gameObject.GetComponent<Button>().interactable = true;
+        clubThrowAnimator.gameObject.GetComponent<Button>().interactable = true; //fix this later
 
         UpdateClubPosition();
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
