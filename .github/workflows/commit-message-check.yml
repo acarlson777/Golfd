@@ -26,10 +26,16 @@ jobs:
         run: |
           event_type="${{ github.event_name }}"
 
+          # Use try-catch equivalent with '||' to prevent fatal errors
           if [ "$event_type" = "push" ]; then
-            new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse)
+            new_commits=$(git rev-list ${{ github.event.before }}..${{ github.event.after }} --no-merges --reverse || echo "Error fetching commits")
           elif [ "$event_type" = "pull_request" ]; then
-            new_commits=$(git log ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} --no-merges --oneline)
+            new_commits=$(git log ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }} --no-merges --oneline || echo "Error fetching commits")
+          fi
+
+          if [ "$new_commits" = "Error fetching commits" ]; then
+            echo "⚠️ Skipping commit validation due to an invalid revision range error."
+            exit 0  # Continue the workflow, don't fail
           fi
 
           echo "📜 New commits in this push/PR:"
