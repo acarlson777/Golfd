@@ -1928,33 +1928,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4577491822771980433}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: Tap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4577491822771980432}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: Tap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4577491822771980431}
-        m_TargetAssemblyTypeName: DialogueWrapper, Assembly-CSharp
-        m_MethodName: Tap
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2593,30 +2569,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2118566ad4aac4edfba465d57456c704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4577491822771980432 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7085631852093479936, guid: 2663f3877fa2140f8999f259cb63856a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4577491822771980430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371163504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0a0a184483c41bebbca9d78de7ef52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4577491822771980433 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
-    type: 3}
-  m_PrefabInstance: {fileID: 4577491822771980430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371163504}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0a0a184483c41bebbca9d78de7ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
