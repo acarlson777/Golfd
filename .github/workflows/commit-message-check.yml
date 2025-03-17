@@ -104,7 +104,7 @@ jobs:
           issue_body="A commit was pushed but had a message shorter than 12 characters. It was **automatically reverted**.\n\n\
           **Invalid Commit:** `${{ env.invalid_commit }}`\n\
           **Invalid Message:** '${{ env.invalid_message }}'\n\n\
-          **Reverted To:** `${{ github.event.before }}`\n\
+          **Reverted To:** '$last_valid_commit'\n\
           **Last Valid Message:** '$last_valid_message'\n\n\
           **Action Required:** Please re-push with a descriptive commit message."
 
