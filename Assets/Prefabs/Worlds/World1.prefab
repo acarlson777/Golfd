@@ -161,8 +161,8 @@ RectTransform:
   m_GameObject: {fileID: 220373722310035462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.65, y: 1.65, z: 1.65}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 184647343628496536}
   - {fileID: 8350064264573423815}
@@ -173,8 +173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -180}
+  m_SizeDelta: {x: 0, y: -360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4577395651661437977
 CanvasRenderer:
@@ -191,7 +191,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220373722310035462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &165661745143869046
 Transform:
   m_ObjectHideFlags: 0
@@ -1494,7 +1494,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -200, y: -150}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1089781783167568216
 CanvasRenderer:
@@ -1567,6 +1567,7 @@ GameObject:
   - component: {fileID: 8582675859766008314}
   - component: {fileID: 9018032950903655821}
   - component: {fileID: 6485750620483543776}
+  - component: {fileID: 6073065256251789232}
   m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
@@ -1653,6 +1654,59 @@ MonoBehaviour:
   amplitude: 100
   frequency: 1
   cancel: 0
+--- !u!114 &6073065256251789232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023912903307527775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1564932514128694432}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6960761786838772680}
+          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5679126686437430835}
+          m_TargetAssemblyTypeName: DialogueWrapper, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4143741948775335270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1717,8 +1771,8 @@ MonoBehaviour:
   clubHandler: {fileID: 2639814560501103053}
   strokeCountBasedDialogue: 0
   ballIndicatorHandler: {fileID: 165896606189842667}
-  strokeAnimationController: {fileID: 0}
-  parAnimationController: {fileID: 0}
+  strokeAnimationController: {fileID: 7881794932322542969}
+  parAnimationController: {fileID: 8317964171896517927}
 --- !u!1 &4257098632563372220
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,42 +2345,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1564932514128694432}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: Tap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6960761786838772680}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: Tap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5679126686437430835}
-        m_TargetAssemblyTypeName: DialogueWrapper, Assembly-CSharp
-        m_MethodName: Tap
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_ActionId: 02e93553-6dd8-47fc-8269-2433cf6b47bc
     m_ActionName: TouchControl/Press[/Mouse/press]
   - m_PersistentCalls:
@@ -2595,7 +2613,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 200, y: -150}
-  m_SizeDelta: {x: 300, y: 300}
+  m_SizeDelta: {x: 250, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6900463415838413285
 CanvasRenderer:
@@ -2625,7 +2643,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 469e3d0bcb6164b549a4ec74471d2cf1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2667,6 +2685,7 @@ GameObject:
   - component: {fileID: 8299145334976181175}
   - component: {fileID: 6406747669106806746}
   - component: {fileID: 1654327900094961367}
+  - component: {fileID: 8317964171896517927}
   m_Layer: 5
   m_Name: LevelPar
   m_TagString: Untagged
@@ -2732,6 +2751,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8317964171896517927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6950400555862296640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46359a0b85a844549433965101caefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easeInDuration: 0.5
+  easeOutDuration: 0.5
+  easeInType: 12
+  easeOutType: 12
+  positionA: {x: -150, y: 0}
+  positionB: {x: 150, y: 0}
+  amplitude: 10
+  frequency: 1
+  cancel: 0
 --- !u!1 &7290464107780882420
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,6 +3146,7 @@ GameObject:
   - component: {fileID: 689875705178174779}
   - component: {fileID: 9048719496762136040}
   - component: {fileID: 3663377854271192371}
+  - component: {fileID: 7881794932322542969}
   m_Layer: 5
   m_Name: StrokeCountText
   m_TagString: Untagged
@@ -3122,7 +3163,7 @@ RectTransform:
   m_GameObject: {fileID: 8299744320005354200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7921841573697631533}
@@ -3130,7 +3171,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -129.8}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 2000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9048719496762136040
 CanvasRenderer:
@@ -3188,8 +3229,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 360
+  m_fontSizeBase: 360
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3230,6 +3271,27 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7881794932322542969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8299744320005354200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46359a0b85a844549433965101caefc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  easeInDuration: 0.5
+  easeOutDuration: 0.5
+  easeInType: 12
+  easeOutType: 11
+  positionA: {x: 0, y: 0}
+  positionB: {x: 0, y: 0}
+  amplitude: 10
+  frequency: 1
+  cancel: 0
 --- !u!1 &8375916778844425435
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,6 +3383,7 @@ GameObject:
   - component: {fileID: 1564932514128694432}
   - component: {fileID: 5679126686437430835}
   - component: {fileID: 6960761786838772680}
+  - component: {fileID: 3795152435053376759}
   m_Layer: 5
   m_Name: DIALOGUE
   m_TagString: Untagged
@@ -3430,10 +3493,21 @@ MonoBehaviour:
   dialogueEntries:
   - name: 1-1 INTRO | I. Ron
     lines:
-    - Hi! I'm I. Ron!
-    - I'll be your caddy for this course!
-    - Why is your caddy an animate golf club?
-    - We know the course the best of course!
+    - Good luck and happy putting!
+    names:
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-2 INTRO | I. Ron
+    lines:
+    - In my defense, I remember this hole being way cooler.
+    - "Here, how about this, you complete this hole and next hole, I\u2019ll take
+      you to a windmill? "
+    - "How\u2019s that sound?"
+    - "What the heck, who wouldn\u2019t love visiting a windmill? I\u2019m sure you
+      said yes.  "
     names:
     - I. Ron
     - I. Ron
@@ -3447,14 +3521,64 @@ MonoBehaviour:
     audioClips:
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-3 INTRO | I. Ron
+    lines:
+    - 'What a wonderful windm- '
+    - Uh oh, it appears those dastardly Woods are literally gatekeeping this level.
+      Quick! Press the button, open the gate!
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-4 INTRO | I. Ron
+    lines:
+    - Oh great, the lights are still out.
+    - What was that? I cannot see anything. Who goes there!
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-5 INTRO | I. Ron
+    lines:
+    - "Here\u2019s the park! Enjoy! "
+    names:
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-6 INTRO | I. Ron
+    lines:
+    - "Here\u2019s a theme park that\u2019s sure to give you a good time!"
+    - "Oh! And there\u2019s a golf hole here too"
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   - name: 1-1 END | I. Ron
     lines:
-    - Nice putting pal!
-    - You'll be a getting par in no time!
-    - Wait, you got a quintuple bogey?
-    - You'll be getting par in some time!
+    - "Sorry, this is one of our\u2026less developed holes."
+    - "Hope you don\u2019t mind the lack of, well, everything really. Don\u2019t
+      worry, the next hole is sure to shock you! "
+    - (Not literally)
+    - (Hopefully, fingers crossed)
     names:
     - I. Ron
     - I. Ron
@@ -3466,6 +3590,110 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-2 END | I. Ron
+    lines:
+    - Prepare to be blown away! Here comes the windmill!
+    names:
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-3 END | I. Ron
+    lines:
+    - "Please don\u2019t let that minor light-related mishap doesn\u2019t affect
+      your rating of me as a caddy. "
+    - "My 9-Iron supervisor didn\u2019t want caddies let any players go too far above
+      par and you know how 9-Iron\u2019s only play the short-game.  "
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-4 END | I. Ron
+    lines:
+    - "Thank goodness we\u2019re out of that mess, don\u2019t listen to those Woods."
+    - 'Anyway, let''s head to a much less chaotic park '
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-5 END | I. Ron
+    lines:
+    - "See, now wasn\u2019t that a totally normal, not crazy hole of golf! "
+    - "Hope you don\u2019t mind the lack of, well, everything really. Don\u2019t
+      worry, the next hole is sure to shock you! "
+    - (Not literally)
+    names:
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: 1-6 END | I. Ron
+    lines:
+    - Great work!
+    - You might have just saved my job!
+    names:
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+  - name: INTRO
+    lines:
+    - "Welcome to your first level in the world of Golf\u2019d!"
+    - First, please scan your environment until a grid of dots appears.
+    - Once that grid of dots does appear, feel free to tap anywhere on the screen
+      to place your level.
+    - "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here over at
+      Golf\u2019d Inc. flying your level over to you via helicopter! "
+    - "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals instead!"
+    - After you tap, your level will arrive shortly!
+    - Great job placing your first level! To pull out your club, tap and hold the
+      screen. To put it away, release the screen.
+    names:
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
@@ -3493,14 +3721,54 @@ MonoBehaviour:
     dialogueEntries:
     - dialogueName: 1-1 INTRO | I. Ron
       dropdownOption: 0
-    - dialogueName: 1-1 INTRO | The Woods
-      dropdownOption: 1
+  - sequenceName: 1-2 INTRO
+    dialogueEntries:
+    - dialogueName: 1-2 INTRO | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-3 INTRO
+    dialogueEntries:
+    - dialogueName: 1-3 INTRO | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-4 INTRO
+    dialogueEntries:
+    - dialogueName: 1-1 INTRO | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-5 INTRO
+    dialogueEntries:
+    - dialogueName: 1-5 INTRO | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-6 INTRO
+    dialogueEntries:
+    - dialogueName: 1-5 INTRO | I. Ron
+      dropdownOption: 0
   - sequenceName: 1-1 END
     dialogueEntries:
     - dialogueName: 1-1 END | I. Ron
       dropdownOption: 0
-    - dialogueName: 1-1 END | The Woods
-      dropdownOption: 1
+  - sequenceName: 1-2 END
+    dialogueEntries:
+    - dialogueName: 1-2 END | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-3 END
+    dialogueEntries:
+    - dialogueName: 1-3 END | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-4 END
+    dialogueEntries:
+    - dialogueName: 1-4 END | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-5 END
+    dialogueEntries:
+    - dialogueName: 1-5 END | I. Ron
+      dropdownOption: 0
+  - sequenceName: 1-6 END
+    dialogueEntries:
+    - dialogueName: 1-6 END | I. Ron
+      dropdownOption: 0
+  - sequenceName: INTRO-SEQUENCE
+    dialogueEntries:
+    - dialogueName: INTRO
+      dropdownOption: 0
   manager1: {fileID: 1564932514128694432}
   manager2: {fileID: 6960761786838772680}
 --- !u!114 &6960761786838772680
@@ -3552,6 +3820,21 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
   audioMixer: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc, type: 2}
   animator: {fileID: 5633912404075750114}
+--- !u!114 &3795152435053376759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490380630506677344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20c4fc3dcaaf47f59ef81e4eb319c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueWrapper: {fileID: 5679126686437430835}
+  resetFirstTimeStatus: 1
+  levelPlacementHandler: {fileID: 1649291066813248847}
 --- !u!1 &8862696904540685804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,6 +4107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3227332695816971373, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3227332695816971373, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3852,6 +4140,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1560678020804744298}
+    - target: {fileID: 5209074657293498781, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5209074657293498781, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5209074657293498781, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3892,6 +4190,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 53.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5584036136229877841, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fb4e21a0e225f439ca0b7cc33d7fca3c,
+        type: 3}
     - target: {fileID: 6166030461548794935, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
       propertyPath: m_fontSize
@@ -3901,6 +4205,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166030461548794935, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166030461548794935, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166030461548794935, guid: 3abfa451e5ef44a94bff5b9a79c51370,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6791299568328918938, guid: 3abfa451e5ef44a94bff5b9a79c51370,
         type: 3}
