@@ -9,7 +9,7 @@ on:
       - '**'  # Apply to all branches
 
 permissions:
-  contents: write  # ✅ Allows GitHub Actions to push changes
+  contents: write-all  # ✅ Allows GitHub Actions to push changes
 
 jobs:
   check-commit-msg:
