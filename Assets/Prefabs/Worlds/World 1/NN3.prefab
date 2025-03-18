@@ -763,6 +763,21 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
         type: 3}
+      propertyPath: oneTimeButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
+        type: 3}
+      propertyPath: dialogueToTrigger
+      value: NN3-POST-BUTTON-SEQUENCE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
+        type: 3}
+      propertyPath: gameObjectToBeActivated
+      value: 
+      objectReference: {fileID: 6347224365139085865}
+    - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
+        type: 3}
       propertyPath: animatorsToTrigger.Array.size
       value: 2
       objectReference: {fileID: 0}

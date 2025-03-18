@@ -204,6 +204,186 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].name
+      value: NN3-POST-BUTTON
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[0]
+      value: Oh, I forgot to mention, the button that opened the gate also powered
+        down the generator which runs the lights.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[1]
+      value: Luckily, your ball comes with a light pre-installed! Free of charge.
+        Give me a second to activate it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[2]
+      value: Which wire did I need to cut again?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[3]
+      value: One of these was the explode on-cut wire, and one of them was extra
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[4]
+      value: '*snip*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[5]
+      value: Oh hey it worked, alright, happy putting!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[6]
+      value: Great job placing your first level! To pull out your club, tap and hold
+        the screen. To put it away, release the screen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[0]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[1]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[2]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[3]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[4]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[5]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[6]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -253,6 +433,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185975576380024609, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185975576380024609, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueSequences.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueSequences.Array.data[13].sequenceName
+      value: NN3-POST-BUTTON-SEQUENCE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueSequences.Array.data[13].dialogueEntries.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueSequences.Array.data[13].dialogueEntries.Array.data[0].dialogueName
+      value: NN3-POST-BUTTON
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485750620483543776, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485750620483543776, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8862696904540685804, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
