@@ -8,6 +8,7 @@ public class ClubThrowButtonHandler : MonoBehaviour
 
     private void OnEnable()
     {
+
         canThrowClubs = PlayerPrefs.GetInt("canThrowClubs") == 1;
         clubThrowAnimator.SetBool("isOn", canThrowClubs);
     }

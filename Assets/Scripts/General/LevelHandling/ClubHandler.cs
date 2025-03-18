@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ClubHandler : MonoBehaviour
 {
@@ -32,6 +33,8 @@ public class ClubHandler : MonoBehaviour
     private bool canThrowClubs = false;
     [SerializeField] private Animator clubThrowAnimator;
     public bool clubEnabled = true;
+    private bool canToggleClubThrowing = true;
+    private bool attemptedToUpdateCanToggleClubThrowing = false;
 
     public GolfBallIndicatorHandler ballIndicator;
 
@@ -48,7 +51,8 @@ public class ClubHandler : MonoBehaviour
         if (!clubEnabled)
         {
             return;
-        }
+        }   
+        clubThrowAnimator.gameObject.GetComponent<Button>().interactable = true; //fix this later
 
         UpdateClubPosition();
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
@@ -63,9 +67,6 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
-
-
-
         }
     }
 
@@ -177,8 +178,21 @@ public class ClubHandler : MonoBehaviour
 
     public void ToggleClubThrowing()
     {
+        if (!gameObject.activeInHierarchy) { return; }
+        if (!canToggleClubThrowing && !attemptedToUpdateCanToggleClubThrowing) { return; }
         canThrowClubs = !canThrowClubs;
         PlayerPrefs.SetInt("canThrowClubs", canThrowClubs ? 1 : 0);
+        canToggleClubThrowing = false;
+        clubThrowAnimator.SetTrigger("isAnimating");
         clubThrowAnimator.SetBool("isOn", canThrowClubs);
+        StartCoroutine(ReactivateTogglingOfClubThrowing());
     }
+
+    private IEnumerator ReactivateTogglingOfClubThrowing()
+    {
+        attemptedToUpdateCanToggleClubThrowing = true;
+        yield return new WaitForSeconds(0.33f);
+        canToggleClubThrowing = true;
+        attemptedToUpdateCanToggleClubThrowing = false;
+    }   
 }
