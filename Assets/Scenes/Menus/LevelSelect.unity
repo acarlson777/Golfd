@@ -1384,6 +1384,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 2111551657751874961, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2120267954854825937, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1653,6 +1658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3141833365767341396, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3359805848318079115, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
@@ -1994,6 +2004,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5180307645524177297, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5599311150120292944, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2213,6 +2228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6013677046007179861, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6050859299668159440, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
@@ -2534,6 +2554,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7970715246798378606, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7979431011861730350, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2728,6 +2753,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9008967735152490043, guid: 7d183c0b7a20a4828a31535924590b06,
+        type: 3}
+      propertyPath: m_text
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9046165381252872126, guid: 7d183c0b7a20a4828a31535924590b06,
         type: 3}
@@ -2968,6 +2998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
+      propertyPath: typingSpeed
+      value: 0.035
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
       propertyPath: dialogueEntries.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3012,6 +3047,21 @@ PrefabInstance:
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - target: {fileID: 7085631852093479936, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.size

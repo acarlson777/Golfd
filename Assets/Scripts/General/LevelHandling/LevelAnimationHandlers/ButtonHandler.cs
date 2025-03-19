@@ -28,7 +28,11 @@ public class ButtonHandler : MonoBehaviour
             }
             if (dialogueToTrigger != "")
             {
-                WorldHandler.Instance.GetDialogueWrapper().StartDialogueSequence(dialogueToTrigger, ()=> { if (gameObjectToBeActivated != null) gameObjectToBeActivated.SetActive(true); });
+                WorldHandler.Instance.clubHandler.enabled = false;
+                WorldHandler.Instance.GetDialogueWrapper().StartDialogueSequence(dialogueToTrigger, ()=> {
+                    if (gameObjectToBeActivated != null) { gameObjectToBeActivated.SetActive(true); }
+                    WorldHandler.Instance.clubHandler.enabled = true;
+                });
             }
         }
     }
