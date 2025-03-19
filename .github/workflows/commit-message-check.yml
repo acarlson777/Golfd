@@ -66,6 +66,10 @@ jobs:
           done <<< "$new_commits"
 
           if ! $all_valid; then
+
+            echo "Commit '$invalid_commit'"
+            echo "Message '$invalid_message'"
+            
             echo "invalid_commit=$invalid_commit" >> $GITHUB_ENV
             echo "invalid_message=$invalid_message" >> $GITHUB_ENV
             
