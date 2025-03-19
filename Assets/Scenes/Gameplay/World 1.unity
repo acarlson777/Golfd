@@ -196,155 +196,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c9610ba53a44c15bfaf4b561de1910, type: 3}
---- !u!114 &169456447 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6960761786838772680, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864916740176140644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0a0a184483c41bebbca9d78de7ef52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &169456448 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864916740176140644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0a0a184483c41bebbca9d78de7ef52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &344646185 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4023912903307527775, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &344646190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344646185}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 169456448}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: OnPointerClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 169456447}
-          m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-          m_MethodName: OnPointerClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 864916740176140645}
-          m_TargetAssemblyTypeName: DialogueWrapper, Assembly-CSharp
-          m_MethodName: OnPointerClick
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!114 &563112003 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 165896606189842667, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f8ec832694074635806d426d110f749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &927395755 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6950400555862296640, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &927395759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 927395755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46359a0b85a844549433965101caefc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  easeInDuration: 0.5
-  easeOutDuration: 0.5
-  easeInType: 12
-  easeOutType: 12
-  positionA: {x: -150, y: 0}
-  positionB: {x: 150, y: 0}
-  amplitude: 10
-  frequency: 1
-  cancel: 0
---- !u!1 &1470998659 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8299744320005354200, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1470998663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470998659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d46359a0b85a844549433965101caefc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  easeInDuration: 0.5
-  easeOutDuration: 0.5
-  easeInType: 12
-  easeOutType: 11
-  positionA: {x: 0, y: 0}
-  positionB: {x: 0, y: 0}
-  amplitude: 10
-  frequency: 1
-  cancel: 0
 --- !u!1001 &864916740176140643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -406,1668 +257,181 @@ PrefabInstance:
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: dialogueEntries.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[1].name
-      value: 1-2 INTRO | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].name
+      value: NN3-POST-BUTTON
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].name
-      value: 1-3 INTRO | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[3].name
-      value: 1-4 INTRO | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].names.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[4].name
-      value: 1-5 INTRO | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].images.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[5].name
-      value: 1-6 INTRO | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[0]
+      value: Oh, I forgot to mention, the button that opened the gate also powered
+        down the generator which runs the lights.
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[6].name
-      value: 1-1 END | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[1]
+      value: Luckily, your ball comes with a light pre-installed! Free of charge.
+        Give me a second to activate it.
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[7].name
-      value: 1-2 END | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[2]
+      value: Which wire did I need to cut again?
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[8].name
-      value: 1-3 END | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[3]
+      value: One of these was the explode on-cut wire, and one of them was extra
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[9].name
-      value: 1-4 END | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[4]
+      value: '*snip*'
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[10].name
-      value: 1-5 END | I. Ron
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[5]
+      value: Oh hey it worked, alright, happy putting!
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[11].name
-      value: 1-6 END | I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].name
-      value: INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].lines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].names.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].lines.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].names.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].images.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].images.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[0]
-      value: Good luck and happy putting!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[1]
-      value: Why is your caddy an animate golf club?
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[2]
-      value: We know the course the best of course!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[0]
-      value: In my defense, I remember this hole being way cooler.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[1]
-      value: "Here, how about this, you complete this hole and next hole, I\u2019ll
-        take you to a windmill? "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[2]
-      value: "How\u2019s that sound?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[3]
-      value: "What the heck, who wouldn\u2019t love visiting a windmill? I\u2019m
-        sure you said yes.  "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[0]
-      value: 'What a wonderful windm- '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[1]
-      value: Uh oh, it appears those dastardly Woods are literally gatekeeping this
-        level. Quick! Press the button, open the gate!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[2]
-      value: "How\u2019s that sound?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[3]
-      value: "What the heck, who wouldn\u2019t love visiting a windmill? I\u2019m
-        sure you said yes.  "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[6]
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[6]
       value: Great job placing your first level! To pull out your club, tap and hold
         the screen. To put it away, release the screen.
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[0]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[0]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[1]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[1]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[2]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[2]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[3]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[3]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[4]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[4]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[5]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[5]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].names.Array.data[6]
+      propertyPath: dialogueEntries.Array.data[13].names.Array.data[6]
       value: I. Ron
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[0]
-      value: Oh great, the lights are still out.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[1]
-      value: What was that? I cannot see anything. Who goes there!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[3]
-      value: (Hopefully, fingers crossed)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[0]
-      value: "Here\u2019s the park! Enjoy! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[1]
-      value: "Oh! And there\u2019s a golf hole here too"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[3]
-      value: (Hopefully, fingers crossed)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[0]
-      value: "Here\u2019s a theme park that\u2019s sure to give you a good time!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[1]
-      value: "Oh! And there\u2019s a golf hole here too"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[3]
-      value: (Hopefully, fingers crossed)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[0]
-      value: "Sorry, this is one of our\u2026less developed holes."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[1]
-      value: "Hope you don\u2019t mind the lack of, well, everything really. Don\u2019t
-        worry, the next hole is sure to shock you! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[3]
-      value: (Hopefully, fingers crossed)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[0]
-      value: Prepare to be blown away! Here comes the windmill!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[1]
-      value: "My 9-Iron supervisor didn\u2019t want caddies let any players go too
-        far above par and you know how 9-Iron\u2019s only play the short-game.  "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[2]
-      value: Once that grid of dots does appear, feel free to tap anywhere on the
-        screen to place your level.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[3]
-      value: "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here
-        over at Golf\u2019d Inc. flying your level over to you via helicopter! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[0]
-      value: "Please don\u2019t let that minor light-related mishap doesn\u2019t
-        affect your rating of me as a caddy. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[1]
-      value: "My 9-Iron supervisor didn\u2019t want caddies let any players go too
-        far above par and you know how 9-Iron\u2019s only play the short-game.  "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[2]
-      value: Once that grid of dots does appear, feel free to tap anywhere on the
-        screen to place your level.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[3]
-      value: "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here
-        over at Golf\u2019d Inc. flying your level over to you via helicopter! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[0]
-      value: "Thank goodness we\u2019re out of that mess, don\u2019t listen to those
-        Woods."
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[1]
-      value: 'Anyway, let''s head to a much less chaotic park '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[3]
-      value: (Hopefully, fingers crossed)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[0]
-      value: "See, now wasn\u2019t that a totally normal, not crazy hole of golf! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[1]
-      value: "Hope you don\u2019t mind the lack of, well, everything really. Don\u2019t
-        worry, the next hole is sure to shock you! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[3]
-      value: "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here
-        over at Golf\u2019d Inc. flying your level over to you via helicopter! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[0]
-      value: Great work!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[1]
-      value: You might have just saved my job!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[2]
-      value: (Not literally)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[3]
-      value: "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here
-        over at Golf\u2019d Inc. flying your level over to you via helicopter! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[0]
-      value: "Welcome to your first level in the world of Golf\u2019d!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[1]
-      value: First, please scan your environment until a grid of dots appears.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[2]
-      value: Once that grid of dots does appear, feel free to tap anywhere on the
-        screen to place your level.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[3]
-      value: "I don\u2019t worry if there\u2019s a wait, that\u2019s just us here
-        over at Golf\u2019d Inc. flying your level over to you via helicopter! "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[4]
-      value: "Just kidding, we don\u2019t do helicopters-too dangerous, we use portals
-        instead!"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[5]
-      value: After you tap, your level will arrive shortly!
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[6]
-      value: Great job placing your first level! To pull out your club, tap and hold
-        the screen. To put it away, release the screen.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[0]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[1]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[2]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[3]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[4]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[5]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].names.Array.data[6]
-      value: I. Ron
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[3]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[4]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[5]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].images.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
-        type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[0]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[1]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[2]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[3]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[3]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[4]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[4]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[5]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[5]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].images.Array.data[6]
+      propertyPath: dialogueEntries.Array.data[13].images.Array.data[6]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
         type: 3}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[1].audioClips.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[3].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[4].audioClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[5].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[6].audioClips.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[7].audioClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[8].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[10].audioClips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueEntries.Array.data[11].audioClips.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[12].audioClips.Array.size
-      value: 7
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.size
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[0]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[1]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[2]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[3]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[4]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[5]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.data[6]
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.data[6]
       value: 
       objectReference: {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -2634,93 +998,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185975576380024609, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633912404075750114, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
       propertyPath: dialogueSequences.Array.size
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueSequences.Array.data[0].sequenceName
-      value: 1-1 INTRO
+      propertyPath: dialogueSequences.Array.data[13].sequenceName
+      value: NN3-POST-BUTTON-SEQUENCE
       objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueSequences.Array.data[1].sequenceName
-      value: 1-2 INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[2].sequenceName
-      value: 1-3 INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[3].sequenceName
-      value: 1-4 INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[4].sequenceName
-      value: 1-5 INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[5].sequenceName
-      value: 1-6 INTRO
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[6].sequenceName
-      value: 1-1 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[7].sequenceName
-      value: 1-2 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[8].sequenceName
-      value: 1-3 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[9].sequenceName
-      value: 1-4 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[10].sequenceName
-      value: 1-5 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[11].sequenceName
-      value: 1-6 END
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[12].sequenceName
-      value: INTRO-SEQUENCE
-      objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      propertyPath: dialogueSequences.Array.data[0].dialogueEntries.Array.size
+      propertyPath: dialogueSequences.Array.data[13].dialogueEntries.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueSequences.Array.data[1].dialogueEntries.Array.size
-      value: 1
+      propertyPath: dialogueSequences.Array.data[13].dialogueEntries.Array.data[0].dialogueName
+      value: NN3-POST-BUTTON
       objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    - target: {fileID: 6485750620483543776, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueSequences.Array.data[2].dialogueEntries.Array.size
-      value: 1
+      propertyPath: easeInDuration
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    - target: {fileID: 6485750620483543776, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
-      propertyPath: dialogueSequences.Array.data[3].dialogueEntries.Array.size
-      value: 1
+      propertyPath: easeOutDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -3147,69 +1471,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6950400555862296640, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 927395759}
-    - targetCorrespondingSourceObject: {fileID: 8299744320005354200, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1470998663}
-    - targetCorrespondingSourceObject: {fileID: 8490380630506677344, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 864916740176140646}
-    - targetCorrespondingSourceObject: {fileID: 4023912903307527775, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 344646190}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7e550269444e4d25a5d2a3cd7ab2ec2, type: 3}
---- !u!1 &864916740176140644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8490380630506677344, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &864916740176140645 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864916740176140644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2118566ad4aac4edfba465d57456c704, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &864916740176140646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 864916740176140644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b20c4fc3dcaaf47f59ef81e4eb319c48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueWrapper: {fileID: 864916740176140645}
-  resetFirstTimeStatus: 1
-  levelPlacementHandler: {fileID: 864916740176140647}
---- !u!114 &864916740176140647 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1649291066813248847, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
-    type: 3}
-  m_PrefabInstance: {fileID: 864916740176140643}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3344f4ded71894767b7162d5eafbde71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &864916740176140648 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 4964589058484805904, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
