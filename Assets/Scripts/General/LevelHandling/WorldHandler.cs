@@ -25,7 +25,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI strokeCountText;
 
     [SerializeField] DialogueWrapper dialogueWrapper;
-    [SerializeField] ClubHandler clubHandler;
+    public ClubHandler clubHandler;
     [SerializeField] private bool strokeCountBasedDialogue; 
 
     public GolfBallIndicatorHandler ballIndicatorHandler;
