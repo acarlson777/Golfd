@@ -54,6 +54,11 @@ jobs:
               echo "❌ ERROR: Commit '$commit_hash' has a short message: '$commit_msg'"
               invalid_commit="$commit_hash"
               invalid_message="$commit_msg"
+
+              echo "Commit '$invalid_commit'"
+              echo "Message '$invalid_message'"
+
+              
               all_valid=false
             else
               echo "✅ VALID: Commit '$commit_hash' - '$commit_msg' passes."
@@ -63,6 +68,10 @@ jobs:
           if ! $all_valid; then
             echo "invalid_commit=$invalid_commit" >> $GITHUB_ENV
             echo "invalid_message=$invalid_message" >> $GITHUB_ENV
+            
+            echo "Invalid commit: ${{ env.invalid_commit }}"
+            echo "Invalid message: ${{ env.invalid_message }}"
+            
             exit 1  # Fail the job if there's an invalid commit
           fi
 
@@ -79,6 +88,11 @@ jobs:
 
       - name: Revert to Last Valid Commit
         run: |
+
+          echo "Invalid commit: ${{ env.invalid_commit }}"
+          echo "Invalid message: ${{ env.invalid_message }}"
+
+          
           last_valid_commit="${{ github.event.before }}"
           last_valid_message=$(git log -1 --format=%B $last_valid_commit | tr -d '\n')
 
