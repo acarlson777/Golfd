@@ -73,8 +73,8 @@ jobs:
             echo "invalid_commit=$invalid_commit" >> $GITHUB_ENV
             echo "invalid_message=$invalid_message" >> $GITHUB_ENV
             
-            echo "Invalid commit: ${{ env.invalid_commit }}"
-            echo "Invalid message: ${{ env.invalid_message }}"
+            echo "Invalid commit: '${{ env.invalid_commit }}'"
+            echo "Invalid message: '${{ env.invalid_message }}'"
             
             exit 1  # Fail the job if there's an invalid commit
           fi
@@ -93,8 +93,8 @@ jobs:
       - name: Revert to Last Valid Commit
         run: |
 
-          echo "Invalid commit: ${{ env.invalid_commit }}"
-          echo "Invalid message: ${{ env.invalid_message }}"
+          echo "Invalid commit: '${{ env.invalid_commit }}'"
+          echo "Invalid message: '${{ env.invalid_message }}'"
 
           
           last_valid_commit="${{ github.event.before }}"
@@ -115,8 +115,8 @@ jobs:
           echo "last_valid_message=$last_valid_message" >> $GITHUB_ENV
 
 
-          echo "ENV LAST VALID COMMIT: ${{ env.last_valid_commit }}"
-          echo "ENV LAST VALID MESSAGE: ${{ env.last_valid_message }}"
+          echo "ENV LAST VALID COMMIT: '${{ env.last_valid_commit }}'"
+          echo "ENV LAST VALID MESSAGE: '${{ env.last_valid_message }}'"
 
       - name: Create GitHub Issue (Notify Users)
         run: |
