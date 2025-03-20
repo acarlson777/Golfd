@@ -11,6 +11,7 @@ public class LightsOutA : MonoBehaviour
     void Start()
     {
         Ball_Light.SetActive(false);
+        
     }
 
 
@@ -18,6 +19,7 @@ public class LightsOutA : MonoBehaviour
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
+            Ball_Light.SetActive(true);
             LightA1.SetActive(false);
             LightA2.SetActive(false);
         }
