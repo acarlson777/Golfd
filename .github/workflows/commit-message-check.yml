@@ -114,6 +114,10 @@ jobs:
           echo "last_valid_commit=$last_valid_commit" >> $GITHUB_ENV
           echo "last_valid_message=$last_valid_message" >> $GITHUB_ENV
 
+
+          echo "ENV LAST VALID COMMIT: ${{ env.last_valid_commit }}"
+          echo "ENV LAST VALID MESSAGE: ${{ env.last_valid_message }}"
+
       - name: Create GitHub Issue (Notify Users)
         run: |
           repo=${{ github.repository }}
