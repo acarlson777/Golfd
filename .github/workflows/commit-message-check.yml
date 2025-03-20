@@ -127,8 +127,8 @@ jobs:
 
           issue_title="🚨 Push Reverted: Commit Message Too Short"
           issue_body="A commit was pushed but had a message shorter than 12 characters. It was **automatically reverted**.\n\n\
-          **Invalid Commit:** '${{ env.invalid_commit }}'\n\
-          **Invalid Message:** '${{ env.invalid_message }}'\n\n\
+          **Invalid Commit:** '${{ env.invalid_commit_env }}'\n\
+          **Invalid Message:** '${{ env.invalid_message_env }}'\n\n\
           **Reverted To:** '${{ env.last_valid_commit_env }}'\n\
           **Last Valid Message:** '${{ env.last_valid_message_env }}'\n\n\
           **Action Required:** Please re-push with a descriptive commit message."
