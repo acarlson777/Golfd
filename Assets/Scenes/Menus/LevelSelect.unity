@@ -3051,17 +3051,17 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - target: {fileID: 7085631852093479936, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.size
@@ -3199,12 +3199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0a0a184483c41bebbca9d78de7ef52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!224 &1795221200 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7979431011861730350, guid: 7d183c0b7a20a4828a31535924590b06,
-    type: 3}
-  m_PrefabInstance: {fileID: 1674910658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2086739368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3235,7 +3229,7 @@ RectTransform:
   m_LocalScale: {x: 1.06, y: 1.06, z: 1.06}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1795221200}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3293,3 +3287,4 @@ SceneRoots:
   - {fileID: 648882710}
   - {fileID: 284628191}
   - {fileID: 1766877880}
+  - {fileID: 2086739369}
