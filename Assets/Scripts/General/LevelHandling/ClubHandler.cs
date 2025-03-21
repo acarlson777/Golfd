@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class ClubHandler : MonoBehaviour
 {
@@ -50,7 +51,8 @@ public class ClubHandler : MonoBehaviour
         if (!clubEnabled)
         {
             return;
-        }
+        }   
+        clubThrowAnimator.gameObject.GetComponent<Button>().interactable = true; //fix this later
 
         UpdateClubPosition();
         UpdateClubLength(_clubBody.transform, _clubBody.transform.forward);
@@ -65,6 +67,9 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
+
+
+
         }
     }
 
