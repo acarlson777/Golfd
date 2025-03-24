@@ -12,7 +12,7 @@ public class LoadGolfPlayerData : MonoBehaviour
         //print(JsonSerializer.Instance.DoesJSONDataExist());
         if (!JsonSerializer.Instance.DoesJSONDataExist() || shouldUpdateEditorChanges)
         {
-            //print("Loading Editor Changes");
+            print("Loading Editor Changes");
             ResetJSONData();
             UpdateEditorChanges();
             JsonSerializer.Instance.SaveByJSON();
@@ -45,7 +45,7 @@ public class LoadGolfPlayerData : MonoBehaviour
                 golfLevel.NAME = "TEMPLATE LEVEL";
                 golfLevel.LEVEL_PREFAB_NAME = "DEFAULT_LEVEL";
                 golfLevel.PAR = 1;
-                golfLevel.bestScore = 1;
+                golfLevel.bestScore = 100;
                 golfWorld.LEVELS.Add(golfLevel);
             }
             JsonSerializer.Instance.golfPlayerData.WORLDS.Add(golfWorld);
