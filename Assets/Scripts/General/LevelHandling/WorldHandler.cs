@@ -74,7 +74,7 @@ public class WorldHandler : MonoBehaviour
         ballIndicatorHandler.gameObject.SetActive(false);
         
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
+        if (score < JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
 
             JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
