@@ -367,8 +367,8 @@ RectTransform:
   - {fileID: 3219188644084467436}
   - {fileID: 8299145334976181175}
   - {fileID: 7921841573697631533}
-  - {fileID: 5605452633962188390}
   - {fileID: 4149870701913442897}
+  - {fileID: 5605452633962188390}
   m_Father: {fileID: 4753884740388015718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3993,6 +3993,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a98a6065dc3d4f6cb2313083e98c5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceFromClubToHole: {x: 0, y: 0, z: 0}
+  angleToHole: 0
+  cameraAngle: {x: 0, y: 0, z: 0}
+  arrow: {fileID: 0}
+  arrowPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!1001 &2227375721117174681
 PrefabInstance:
   m_ObjectHideFlags: 0
