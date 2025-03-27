@@ -200,8 +200,10 @@ public class WorldHandler : MonoBehaviour
 
     public void ResetBallPosToLastKnownPos()
     {
-        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currLevelHandler.golfBall.transform.position = lastKnownBallPos;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        IncrementStrokeCount();
     }
 
     public void UpdateLastKnownBallPos()
