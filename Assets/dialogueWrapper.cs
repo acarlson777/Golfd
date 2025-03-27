@@ -48,7 +48,6 @@ public class DialogueWrapper : MonoBehaviour{
 
         if (isSequenceInProgress){
             //Removed for now
-        
         }
         else{
 
