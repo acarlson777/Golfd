@@ -75,23 +75,29 @@ public class AnimationController : MonoBehaviour{
     public void transformRelativeA(Action callback){
 
 
-
+        Vector2 endPos = new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionA;
 
         LeanTween.move(rectTransform, (new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionA), easeInDuration)
                  .setEase(easeInType)
-                 .setOnComplete(() =>callback?.Invoke());
+                 .setOnComplete(() => {
+                     rectTransform.anchoredPosition = endPos;
+                     callback?.Invoke();
+                     });
 
     }
 
     public void transformRelativeB(Action callback){
 
 
-     
 
+        Vector2 endPos = new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionB;
 
         LeanTween.move(rectTransform, (new Vector2(rectTransform.anchoredPosition.x, rectTransform.anchoredPosition.y) + positionB), easeOutDuration)
                  .setEase(easeOutType)
-                 .setOnComplete(() => callback?.Invoke());
+                 .setOnComplete(() => {
+                     rectTransform.anchoredPosition = endPos;
+                     callback?.Invoke();
+                     });
 
     }
 
