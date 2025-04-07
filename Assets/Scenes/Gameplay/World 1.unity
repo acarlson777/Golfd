@@ -123,6 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1176406731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954440053327713127, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 864916740176140643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1546432209 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4746385990581946551, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
@@ -175,6 +181,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4039864661599024439, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 1176406731}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
