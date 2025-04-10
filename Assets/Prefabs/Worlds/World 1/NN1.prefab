@@ -2261,7 +2261,7 @@ PrefabInstance:
     - target: {fileID: 1461816074790534943, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3551222427610500960, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
@@ -2413,6 +2413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408841115794858382, guid: 5928ee9a779114658b56997da300cda8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4621132051348322499, guid: 5928ee9a779114658b56997da300cda8,
         type: 3}
