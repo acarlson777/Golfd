@@ -8,6 +8,10 @@ public class HoleLocator : MonoBehaviour
     [SerializeField] private Vector3 cameraAngle;
     [SerializeField] private GameObject arrow;
     [SerializeField] private Vector3 arrowPositionOffset;
+    [SerializeField] private float maxDistanceFromHoleSize;
+    [SerializeField] private float minDistanceFromHoleSize;
+    [SerializeField] private float ARROW_SCALAR;
+
 
     void Update()
     {
@@ -23,6 +27,14 @@ public class HoleLocator : MonoBehaviour
 
         cameraAngle = new Vector3(Camera.main.transform.rotation.eulerAngles.x, (Camera.main.transform.rotation.eulerAngles.y + angleToHole)%360, Camera.main.transform.rotation.eulerAngles.z);
 
+        float scaledDistanceFromHole = (new Vector2(distanceFromClubToHole.x, distanceFromClubToHole.z) * ARROW_SCALAR).magnitude;
+
         arrow.GetComponent<RectTransform>().eulerAngles = new Vector3(0, 0, cameraAngle.y+180);
+        float clippedArrowScale = Mathf.Max(Mathf.Min(scaledDistanceFromHole, maxDistanceFromHoleSize), minDistanceFromHoleSize);
+        float logarithmicScale = 0;
+
+        logarithmicScale = Mathf.Clamp(Mathf.Log(clippedArrowScale) + 1, 0, 1);
+        
+        gameObject.GetComponent<RectTransform>().localScale = new Vector3(logarithmicScale, logarithmicScale, 1);
     }
 }
