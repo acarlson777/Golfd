@@ -47,13 +47,7 @@ public class DialogueWrapper : MonoBehaviour{
     public void StartDialogueSequence(string dialogueSequenceName, Action onDialogueComplete){
 
         if (isSequenceInProgress){
-            Time.timeScale = 0;
-
-            while (true)
-            {
-                Debug.LogError("STUPID!!!!!!!");
-            }
-        
+            //Removed for now
         }
         else{
 

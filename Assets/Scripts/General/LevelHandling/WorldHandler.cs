@@ -25,7 +25,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI strokeCountText;
 
     [SerializeField] DialogueWrapper dialogueWrapper;
-    [SerializeField] ClubHandler clubHandler;
+    public ClubHandler clubHandler;
     [SerializeField] private bool strokeCountBasedDialogue; 
 
     public GolfBallIndicatorHandler ballIndicatorHandler;
@@ -200,8 +200,10 @@ public class WorldHandler : MonoBehaviour
 
     public void ResetBallPosToLastKnownPos()
     {
-        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currLevelHandler.golfBall.transform.position = lastKnownBallPos;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        IncrementStrokeCount();
     }
 
     public void UpdateLastKnownBallPos()
@@ -231,9 +233,10 @@ public class WorldHandler : MonoBehaviour
 
 
         });
+    }
 
-        
-
-        
+    public DialogueWrapper GetDialogueWrapper()
+    {
+        return dialogueWrapper;
     }
 }
