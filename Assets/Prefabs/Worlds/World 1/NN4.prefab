@@ -1294,7 +1294,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19c996c2df5f744ec9fbd3b7cbd9dc26, type: 2}
+      objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 2849756108082080149, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_Enabled
@@ -1389,6 +1389,12 @@ PrefabInstance:
       addedObject: {fileID: 9132617687858660727}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
+--- !u!1 &496612242984984684 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7210956592234620805, guid: e4fb71dba940546f7bcc321b821596e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7130927624156415977}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2762445209624786282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
@@ -1545,9 +1551,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af6d1802165c497296248e7f627da75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GolfBall: {fileID: 496612242984984684}
   Ball_Light: {fileID: 6347224365139085865}
   LightA1: {fileID: 339802887688605566}
   LightA2: {fileID: 1474453792190192581}
+  Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
+  Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
 --- !u!64 &3850375916399820177
 MeshCollider:
   m_ObjectHideFlags: 0
