@@ -406,8 +406,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.01
-  m_Range: 0.2
+  m_Intensity: 0.001
+  m_Range: 0.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1423,7 +1423,7 @@ PrefabInstance:
     - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
         type: 3}
       propertyPath: dialogueToTrigger
-      value: NN3-POST-BUTTON-SEQUENCE
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1568172697130114594, guid: e24c89058008a479c8d9ef54559015ad,
         type: 3}
