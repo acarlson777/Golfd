@@ -1664,6 +1664,7 @@ GameObject:
   - component: {fileID: 4830143810127873009}
   - component: {fileID: 427966826535377504}
   - component: {fileID: 2552412574615648888}
+  - component: {fileID: 4318826903528377182}
   m_Layer: 0
   m_Name: flagEnd
   m_TagString: Untagged
@@ -1758,6 +1759,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4318826903528377182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629850963409090657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e59c3f07c2f44ca9aceeebc6dc10ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  golfBallInHole: {fileID: 7755898929037067418}
+  flagEnd: {fileID: 2552412574615648888}
+  flagRaise: {fileID: 0}
 --- !u!1 &1640394353040524427
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,7 +2880,7 @@ Transform:
   m_GameObject: {fileID: 2226378602647708534}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.419, y: -1.455, z: -0.548}
+  m_LocalPosition: {x: -0.419, y: -1.2903, z: -0.548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6186,7 +6202,6 @@ GameObject:
   - component: {fileID: 6562440844003105196}
   - component: {fileID: 3369243175334032049}
   - component: {fileID: 7755898929037067418}
-  - component: {fileID: 2734959136817562796}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -6295,19 +6310,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelHandler: {fileID: 2569853704738799926}
---- !u!114 &2734959136817562796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5981320240276115180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e59c3f07c2f44ca9aceeebc6dc10ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  golfBallInHole: {fileID: 0}
 --- !u!1 &5985160105782729583
 GameObject:
   m_ObjectHideFlags: 0
@@ -13182,9 +13184,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7729708738157987841}
+  - {fileID: 3751187762295209168}
   - {fileID: 5551784411426425687}
   - {fileID: 3249355937574323008}
-  - {fileID: 3751187762295209168}
   - {fileID: 1831090197256409100}
   - {fileID: 2625306531808337354}
   - {fileID: 9023276747226206483}
