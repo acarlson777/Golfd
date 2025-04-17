@@ -1665,8 +1665,9 @@ GameObject:
   - component: {fileID: 427966826535377504}
   - component: {fileID: 2552412574615648888}
   - component: {fileID: 4318826903528377182}
+  - component: {fileID: 7045686654145879180}
   m_Layer: 0
-  m_Name: flagEnd
+  m_Name: FlagHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1772,8 +1773,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golfBallInHole: {fileID: 7755898929037067418}
-  flagEnd: {fileID: 2552412574615648888}
-  flagRaise: {fileID: 0}
+  FlagHolder: {fileID: 1629850963409090657}
+  FlagController: {fileID: 2552412574615648888}
+  FlagRaise: {fileID: 7045686654145879180}
+--- !u!111 &7045686654145879180
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629850963409090657}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7a9c647c32fea4ae795bac9d47b27ba0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7a9c647c32fea4ae795bac9d47b27ba0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1640394353040524427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6310,6 +6328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelHandler: {fileID: 2569853704738799926}
+  golfBallInHole: 0
 --- !u!1 &5985160105782729583
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,34 +5,46 @@ using UnityEngine;
 public class flagHole : MonoBehaviour
 {
     public HoleHandler golfBallInHole;
-    public Animator flagEnd;
+    public GameObject FlagHolder;
+    public Animator FlagController;
     public Animation FlagRaise;
-        
+    
 
-        
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        flagEnd = gameObject.GetComponent<Animator>();
+        
+        FlagController = gameObject.GetComponent<Animator>();
         FlagRaise = gameObject.GetComponent<Animation>();
-        flagEnd.ResetTrigger("FlagRaise");
+        FlagController.ResetTrigger("FlagRaise");
+        FlagHolder.SetActive(false);
+        Debug.Log("flag ready");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (golfBallInHole == true)
+        if (golfBallInHole)
+            
         {
 
-            flagEnd.SetTrigger("FlagRaise");
+            FlagController.SetTrigger("FlagRaise");
+            FlagHolder.SetActive(true);
+            Debug.Log("flag");
+            FlagRaise.Play("FlagRaise");
         }
 
-        if (golfBallInHole == false)
+        if (!golfBallInHole)
         {
 
-            flagEnd.ResetTrigger("FlagRaise");
+            FlagController.ResetTrigger("FlagRaise");
+            FlagHolder.SetActive(false);
+            Debug.Log("flag gone");
+            FlagRaise.Stop("FlagRaise");
         }
     }
-    
+
 }
