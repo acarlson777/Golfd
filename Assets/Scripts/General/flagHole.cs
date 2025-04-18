@@ -4,47 +4,63 @@ using UnityEngine;
 
 public class flagHole : MonoBehaviour
 {
-    public HoleHandler golfBallInHole;
+    public HoleHandler holeHandler;
     public GameObject FlagHolder;
     public Animator FlagController;
     public Animation FlagRaise;
-    
 
 
 
+    private IEnumerator Golfcoroutine;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Check starting");
         FlagController = gameObject.GetComponent<Animator>();
         FlagRaise = gameObject.GetComponent<Animation>();
-        FlagController.ResetTrigger("FlagRaise");
-        FlagHolder.SetActive(false);
+        
         Debug.Log("flag ready");
+        Golfcoroutine = WaitAndCheck(2.0f);
+        StartCoroutine(Golfcoroutine);
+        Debug.Log("Check ready");
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private IEnumerator WaitAndCheck(float waitTime)
     {
-        if (golfBallInHole)
-            
+        Debug.Log("Check Commencing");
+        if (holeHandler.golfBallInHole == true)
+
         {
 
-            FlagController.SetTrigger("FlagRaise");
-            FlagHolder.SetActive(true);
+
+            
             Debug.Log("flag");
             FlagRaise.Play("FlagRaise");
+            yield return new WaitForSeconds(waitTime);
+            FlagRaise.Stop("FlagRaise");
+
+
         }
 
-        if (!golfBallInHole)
+        if (holeHandler.golfBallInHole == false)
         {
 
-            FlagController.ResetTrigger("FlagRaise");
-            FlagHolder.SetActive(false);
+
+            
             Debug.Log("flag gone");
-            FlagRaise.Stop("FlagRaise");
+            FlagRaise.Rewind("FlagRaise");
         }
+        Debug.Log("Check Finished");
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("Check Commenced");
+    }
+        // Update is called once per frame
+        void Update()
+    {
+
+        
     }
 
 }
