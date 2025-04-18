@@ -5419,7 +5419,7 @@ GameObject:
   - component: {fileID: 968743419992678103}
   - component: {fileID: 8507206480145008645}
   m_Layer: 0
-  m_Name: Box Volume
+  m_Name: NN5 Box Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5477,7 +5477,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 1
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 985892cc40853491f903dce318b0380c, type: 2}
 --- !u!1 &4386671744919243768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5783,7 +5783,7 @@ ReflectionProbe:
   m_FarClip: 1000
   m_ShadowDistance: 200
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.9528302, g: 0.9169058, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.99215686, g: 0.22352941, b: 0.99607843, a: 0}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7979,7 +7979,7 @@ ReflectionProbe:
   m_FarClip: 1000
   m_ShadowDistance: 100
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.076539695, g: 0.22387952, b: 0.3773585, a: 1}
+  m_BackGroundColor: {r: 0.35686275, g: 0.14509805, b: 0.64705884, a: 1}
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
