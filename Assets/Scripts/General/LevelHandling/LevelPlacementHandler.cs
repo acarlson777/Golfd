@@ -77,7 +77,7 @@ public class LevelPlacementHandler : MonoBehaviour
         Transform trackablesTransform = gameObject.transform.Find("Trackables");
         for (int i = 0; i < trackablesTransform.childCount; i++)
         {
-            trackablesTransform.GetChild(i).gameObject.SetActive(visibility);
+            trackablesTransform.GetChild(i).gameObject.GetComponent<MeshRenderer>().enabled=visibility;
         }
     }
 }

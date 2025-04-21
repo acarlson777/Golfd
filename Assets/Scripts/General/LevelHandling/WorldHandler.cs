@@ -80,10 +80,6 @@ public class WorldHandler : MonoBehaviour
             JsonSerializer.Instance.SaveByJSON();
         }
 
-        if (levelIndex == _levelList.Length - 1){
-            SceneHandler.Instance.LoadScene("LevelSelect");
-        }
-
         //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
         //Constantly show par and current stroke count on the screen (this is a general note)
         isLevelComplete = true;
@@ -138,11 +134,15 @@ public class WorldHandler : MonoBehaviour
         UpdateParText();
         UpdateStrokeCountText();
         yield return AnimateOut();
-        yield return AnimateIn();
-        UpdateLastKnownBallPos();
-        updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        UnPauseGame();
-        StartNextLevelDialogue();
+        if (levelIndex == _levelList.Length){
+            SceneHandler.Instance.LoadScene("LevelSelect");
+        } else {
+            yield return AnimateIn();
+            UpdateLastKnownBallPos();
+            updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
+            UnPauseGame();
+            StartNextLevelDialogue();
+        }
     }
 
     private IEnumerator AnimateOut()
@@ -169,9 +169,11 @@ public class WorldHandler : MonoBehaviour
         GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
         while (true)
         {
-            currLevelHandler.LEVEL.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z); //I dont know if the level handler is the actual thing that moves
-            currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
-            yield return null;
+            if (currLevelHandler != null){
+                currLevelHandler.LEVEL.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z); //I dont know if the level handler is the actual thing that moves
+                currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
+                yield return null;
+            }
         }
     }
 
@@ -229,9 +231,7 @@ public class WorldHandler : MonoBehaviour
 
             strokeCountText.text = _strokeCount.ToString();
             strokeAnimationController.scaleUp(()=> {});
-
-
-
+            
         });
     }
 
