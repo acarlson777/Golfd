@@ -1750,7 +1750,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b6a9ad347e6f54df1b6516eede8d561d, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -1791,7 +1791,7 @@ Animation:
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_CullingType: 1
 --- !u!1 &1640394353040524427
 GameObject:
   m_ObjectHideFlags: 0
@@ -4744,6 +4744,8 @@ MonoBehaviour:
   Spot_LightA3: {fileID: 1953549794296116226}
   ForcefieldA1: {fileID: 1104630395222253070}
   Golf_light: {fileID: 3048090399253636525}
+  Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
+  Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
 --- !u!1 &3429225337819552625
 GameObject:
   m_ObjectHideFlags: 0

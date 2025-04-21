@@ -8,7 +8,7 @@ public class flagHole : MonoBehaviour
     public GameObject FlagHolder;
     public Animator FlagController;
     public Animation FlagRaise;
-    private IEnumerator Golfcoroutine;
+    public IEnumerator Golfcoroutine;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +21,7 @@ public class flagHole : MonoBehaviour
         StartCoroutine(Golfcoroutine);
         Debug.Log("Check ready");
     }
-    private IEnumerator WaitAndCheck(float waitTime)
+    public IEnumerator WaitAndCheck(float waitTime)
     {
         //Checks for if golfBallInHole is true
         Debug.Log("Check Commencing");

@@ -10858,6 +10858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelHandler: {fileID: 2813040360520747909}
+  golfBallInHole: 0
 --- !u!1 &3636190953504500330
 GameObject:
   m_ObjectHideFlags: 0
@@ -26866,7 +26867,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a00b5423e80994fed81797b9793d5ce0, type: 2}
+  - {fileID: 2100000, guid: 845ffad7a667e4559aaf5030f7d88b5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
