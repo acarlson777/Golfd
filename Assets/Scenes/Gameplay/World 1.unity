@@ -170,7 +170,7 @@ PrefabInstance:
         type: 3}
       propertyPath: mixer
       value: 
-      objectReference: {fileID: 24100000, guid: d5bdbba9a08124bf1a363a6be3e6d639,
+      objectReference: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc,
         type: 2}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -523,6 +523,12 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 3725172047619299118, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8448556729267558563, guid: 173a46452009a4b42b792ec1ce2845dc,
+        type: 2}
     - target: {fileID: 3795152435053376759, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: resetFirstTimeStatus
