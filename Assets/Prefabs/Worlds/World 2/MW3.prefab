@@ -5683,6 +5683,7 @@ MonoBehaviour:
   _heightOffset: 0
   LEVEL: {fileID: 1502868423350953018}
   golfBall: {fileID: 6361924514726175079}
+  hole: {fileID: 0}
 --- !u!1 &2545884004709163974
 GameObject:
   m_ObjectHideFlags: 0
@@ -10857,6 +10858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelHandler: {fileID: 2813040360520747909}
+  golfBallInHole: 0
 --- !u!1 &3636190953504500330
 GameObject:
   m_ObjectHideFlags: 0
@@ -16754,7 +16756,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6361924514726175079}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5495902117074765545, guid: 016b4063a678b4017b9d9a09030fc536, type: 3}
 --- !u!23 &5488598770087414973
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26865,7 +26867,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a00b5423e80994fed81797b9793d5ce0, type: 2}
+  - {fileID: 2100000, guid: 845ffad7a667e4559aaf5030f7d88b5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

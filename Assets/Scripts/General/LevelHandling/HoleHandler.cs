@@ -5,10 +5,10 @@ public class HoleHandler : MonoBehaviour
 {
     [SerializeField] private LevelHandler _levelHandler;
     private float _ballVelocityTolerance = 0.1f;
-    private bool golfBallInHole;
-    private Coroutine currCoroutine;
+    public bool golfBallInHole; // made the classes public for flagHole script. Alex a
+    public Coroutine currCoroutine;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
@@ -20,7 +20,7 @@ public class HoleHandler : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    public void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
@@ -30,7 +30,7 @@ public class HoleHandler : MonoBehaviour
         }
     }
 
-    private IEnumerator CheckForGolfBallStopped(Collider other)
+    public IEnumerator CheckForGolfBallStopped(Collider other)
     {
         Rigidbody gBrb = other.gameObject.GetComponent<Rigidbody>();
 

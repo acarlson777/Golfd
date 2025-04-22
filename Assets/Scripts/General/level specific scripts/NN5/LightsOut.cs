@@ -10,10 +10,12 @@ public class LightsOut : MonoBehaviour
     public GameObject Spot_LightA3;
     public GameObject ForcefieldA1;
     public GameObject Golf_light;
+    public Material Glow;
+    public Material Lit;
     void Start()
     {
         Golf_light.SetActive(false);
-        
+        GolfBall.GetComponent<MeshRenderer>().material = Lit;
     }
 
 
@@ -21,6 +23,7 @@ public class LightsOut : MonoBehaviour
     {
         if (other.gameObject.CompareTag("GolfBall"))
         {
+            GolfBall.GetComponent<MeshRenderer>().material = Glow;
             Spot_LightA1.SetActive(false);
             Spot_LightA2.SetActive(false);
             Spot_LightA3.SetActive(false);

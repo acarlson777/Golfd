@@ -13,11 +13,11 @@ public class conveyor1 : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.name.Equals("ball"))
+        if (other.gameObject.name.Equals("GolfBallnon"))
         {
 
 
-            other.gameObject.transform.Translate(new Vector3((float)0.03, 0, 0), Space.World);
+            other.gameObject.transform.Translate(new Vector3(0, 0, (float)-0.005), Space.World);
         }
     }
 }
