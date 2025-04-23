@@ -135,6 +135,7 @@ MonoBehaviour:
   _heightOffset: 0
   LEVEL: {fileID: 772519720621400855}
   golfBall: {fileID: 7210956592234620805}
+  hole: {fileID: 1461816074790534943}
 --- !u!1 &1321990255206742590
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +227,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321990255206742590}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 313009211f1b643ac95bf0d734a5d355, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -557,7 +558,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2241784083428214791}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 313009211f1b643ac95bf0d734a5d355, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -662,7 +663,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2653319032899336970}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 313009211f1b643ac95bf0d734a5d355, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -767,7 +768,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2831103276883152528}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 313009211f1b643ac95bf0d734a5d355, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

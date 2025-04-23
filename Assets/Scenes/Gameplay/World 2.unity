@@ -320,6 +320,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: dialogueEntries.Array.size
@@ -625,7 +630,7 @@ PrefabInstance:
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -643,6 +648,12 @@ PrefabInstance:
       propertyPath: _levelList.Array.data[1]
       value: 
       objectReference: {fileID: 2315538492363410310, guid: b41ffbf5d5dc44e30bd8afedda146093,
+        type: 3}
+    - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: _levelList.Array.data[2]
+      value: 
+      objectReference: {fileID: 5912555901579130597, guid: d28200002cb37466fa4cfdf5231a8213,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}

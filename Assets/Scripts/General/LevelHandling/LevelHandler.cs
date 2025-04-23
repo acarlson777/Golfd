@@ -11,6 +11,7 @@ public class LevelHandler : MonoBehaviour
     public GameObject LEVEL;
     private float timeElapsed;
     public GameObject golfBall;
+    public GameObject hole;
 
     private void Start()
     {

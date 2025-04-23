@@ -24,7 +24,7 @@ public class JsonSerializer : MonoBehaviour
 
     public bool DoesJSONDataExist()
     {
-        return File.Exists(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/GameData.json"));
+        return File.Exists(Application.persistentDataPath + "/Saves/GameData.json");
     }
 
     public void DeleteJSONData()
@@ -44,6 +44,7 @@ public class JsonSerializer : MonoBehaviour
             Directory.CreateDirectory(Path.GetDirectoryName(Application.persistentDataPath + "/Saves/"));
         }
         StreamWriter sw = new StreamWriter(Application.persistentDataPath + "/Saves/GameData.json");
+        Debug.Log(JsonString);
         sw.Write(JsonString);
         sw.Close();
         print(Application.persistentDataPath + "/Saves/GameData.json");

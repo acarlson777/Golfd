@@ -25,7 +25,7 @@ public class WorldHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI strokeCountText;
 
     [SerializeField] DialogueWrapper dialogueWrapper;
-    [SerializeField] ClubHandler clubHandler;
+    public ClubHandler clubHandler;
     [SerializeField] private bool strokeCountBasedDialogue; 
 
     public GolfBallIndicatorHandler ballIndicatorHandler;
@@ -74,14 +74,10 @@ public class WorldHandler : MonoBehaviour
         ballIndicatorHandler.gameObject.SetActive(false);
         
         int score = CalculateScore();
-        if (score > JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
+        if (score < JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
 
             JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
             JsonSerializer.Instance.SaveByJSON();
-        }
-
-        if (levelIndex == _levelList.Length - 1){
-            SceneHandler.Instance.LoadScene("LevelSelect");
         }
 
         //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
@@ -138,11 +134,15 @@ public class WorldHandler : MonoBehaviour
         UpdateParText();
         UpdateStrokeCountText();
         yield return AnimateOut();
-        yield return AnimateIn();
-        UpdateLastKnownBallPos();
-        updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
-        UnPauseGame();
-        StartNextLevelDialogue();
+        if (levelIndex == _levelList.Length){
+            SceneHandler.Instance.LoadScene("LevelSelect");
+        } else {
+            yield return AnimateIn();
+            UpdateLastKnownBallPos();
+            updateCurrentLevelPositionToFloorHeightCoroutine = StartCoroutine(UpdateCurrentLevelHeightToFloorHeight());
+            UnPauseGame();
+            StartNextLevelDialogue();
+        }
     }
 
     private IEnumerator AnimateOut()
@@ -169,9 +169,11 @@ public class WorldHandler : MonoBehaviour
         GameObject worldFloor = GameObject.FindGameObjectWithTag("WorldFloor");
         while (true)
         {
-            currLevelHandler.LEVEL.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z); //I dont know if the level handler is the actual thing that moves
-            currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
-            yield return null;
+            if (currLevelHandler != null){
+                currLevelHandler.LEVEL.transform.position = new Vector3(currLevelHandler.transform.position.x, worldFloor.transform.position.y, currLevelHandler.transform.position.z); //I dont know if the level handler is the actual thing that moves
+                currLevelHandler.SetAnimateEndHeight(worldFloor.transform.position.y);
+                yield return null;
+            }
         }
     }
 
@@ -200,8 +202,10 @@ public class WorldHandler : MonoBehaviour
 
     public void ResetBallPosToLastKnownPos()
     {
-        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
         currLevelHandler.golfBall.transform.position = lastKnownBallPos;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        currLevelHandler.golfBall.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+        IncrementStrokeCount();
     }
 
     public void UpdateLastKnownBallPos()
@@ -227,9 +231,7 @@ public class WorldHandler : MonoBehaviour
 
             strokeCountText.text = _strokeCount.ToString();
             strokeAnimationController.scaleUp(()=> {});
-
-
-
+            
         });
     }
 

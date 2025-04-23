@@ -20,7 +20,14 @@ public class LevelUI : MonoBehaviour
         GolfLevel golfLevel = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID].LEVELS[levelID];
         levelNameText.GetComponent<TextMeshProUGUI>().text = golfLevel.NAME;
         parText.GetComponent<TextMeshProUGUI>().text = golfLevel.PAR.ToString();
-        bestScoreText.GetComponent<TextMeshProUGUI>().text = golfLevel.bestScore.ToString();
+        if (golfLevel.bestScore > 0)
+        {
+            bestScoreText.GetComponent<TextMeshProUGUI>().text = "+" + golfLevel.bestScore.ToString();
+        } else
+        {
+            bestScoreText.GetComponent<TextMeshProUGUI>().text = golfLevel.bestScore.ToString();
+        }
+        
         levelModelPrefabName = golfLevel.LEVEL_PREFAB_NAME;
         button.onClick.AddListener(() => { EnterWorldAtThisLevel(worldID, levelID); });
 
@@ -38,6 +45,7 @@ public class LevelUI : MonoBehaviour
     {
         golfLevel.NAME = levelNameText.GetComponent<TextMeshProUGUI>().text;
         golfLevel.PAR = Int32.Parse(parText.GetComponent<TextMeshProUGUI>().text);
+        golfLevel.bestScore = Int32.Parse(bestScoreText.GetComponent<TextMeshProUGUI>().text);
         golfLevel.LEVEL_PREFAB_NAME = levelModelPrefabName;
         return golfLevel;
     }
