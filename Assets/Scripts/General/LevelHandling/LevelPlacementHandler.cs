@@ -77,6 +77,7 @@ public class LevelPlacementHandler : MonoBehaviour
         Transform trackablesTransform = gameObject.transform.Find("Trackables");
         for (int i = 0; i < trackablesTransform.childCount; i++)
         {
+            //Debug.Log(trackablesTransform.GetChild(i).gameObject.name); For some reason, trackable planes' meshrenderers cannot be disabled
             trackablesTransform.GetChild(i).gameObject.GetComponent<MeshRenderer>().enabled=visibility;
         }
     }

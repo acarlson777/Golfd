@@ -5,13 +5,13 @@ public class GolfBallTriggerController : MonoBehaviour
     public float moveHeight = 2f;
     public float animationTime = 0.5f;
 
-    private Vector3 originalPosition;
-    private Vector3 targetPosition;
+    public Vector3 originalPosition;
+    public Vector3 targetPosition;
     private bool isRaised = false;
 
     void Start()
     {
-        originalPosition = gameObject.transform.position;
+        originalPosition = gameObject.transform.localPosition;
         targetPosition = originalPosition + new Vector3(0, moveHeight, 0);
     }
 
@@ -21,7 +21,7 @@ public class GolfBallTriggerController : MonoBehaviour
 
         if (other.CompareTag("GolfBall"))
         {
-            LeanTween.move(gameObject, targetPosition, animationTime).setEaseOutQuad();
+            LeanTween.moveLocal(gameObject, targetPosition, animationTime).setEaseOutQuad();
             isRaised = true;
         }
     }
@@ -32,7 +32,7 @@ public class GolfBallTriggerController : MonoBehaviour
 
         if (other.CompareTag("GolfBall"))
         {
-            LeanTween.move(gameObject, originalPosition, animationTime).setEaseInQuad();
+            LeanTween.moveLocal(gameObject, originalPosition, animationTime).setEaseInQuad();
             isRaised = false;
         }
     }
