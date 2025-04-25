@@ -5,7 +5,7 @@ using UnityEngine;
 public class GolfBallIndicatorHandler : MonoBehaviour{
 
 
-    // TODO: access galfball from worldHandler, level handler,
+    // TODO: access golfball from worldHandler, level handler,
 
 
     public GameObject target;
