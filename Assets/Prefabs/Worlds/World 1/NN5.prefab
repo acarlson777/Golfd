@@ -1669,7 +1669,7 @@ Transform:
   m_GameObject: {fileID: 1629850963409090657}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 36, y: 66.5, z: 0}
+  m_LocalPosition: {x: 36, y: 119.8, z: -0}
   m_LocalScale: {x: 200, y: 200, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1734,7 +1734,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629850963409090657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b6a9ad347e6f54df1b6516eede8d561d, type: 2}
   m_CullingMode: 2
@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629850963409090657}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e59c3f07c2f44ca9aceeebc6dc10ae, type: 3}
   m_Name: 
@@ -1770,7 +1770,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629850963409090657}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 7a9c647c32fea4ae795bac9d47b27ba0, type: 2}
   m_Animations:
@@ -4611,9 +4611,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GolfBall: {fileID: 1640394353040524427}
-  lightbulb: {fileID: 0}
-  lightbulb1: {fileID: 0}
-  lightbulb2: {fileID: 0}
+  lightbulb: {fileID: 7283087806608496858}
+  lightbulb1: {fileID: 4486962455907967619}
+  lightbulb2: {fileID: 9128381694511582771}
   Spot_LightA1: {fileID: 311443753458770208}
   Spot_LightA2: {fileID: 7418747594266048090}
   Spot_LightA3: {fileID: 1953549794296116226}
@@ -4621,8 +4621,8 @@ MonoBehaviour:
   Golf_light: {fileID: 3048090399253636525}
   Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
   Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  lights: {fileID: 0}
-  lightsOff: {fileID: 0}
+  lights: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
+  lightsOff: {fileID: 2100000, guid: 8cf5b0e68d4554d0187b03c01b075537, type: 2}
 --- !u!1 &3429225337819552625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5621,7 +5621,7 @@ GameObject:
   - component: {fileID: 7934366140779917082}
   - component: {fileID: 4504421563522461410}
   m_Layer: 0
-  m_Name: lightbulb
+  m_Name: lightbulb1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14439,7 +14439,7 @@ GameObject:
   - component: {fileID: 669920441961655580}
   - component: {fileID: 1269395603649060040}
   m_Layer: 0
-  m_Name: lightbulb1
+  m_Name: lightbulb2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
