@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class LightsOutA : MonoBehaviour
 {
     public GameObject GolfBall;
-    public GameObject Walls;
+    public GameObject Walls1;
     public GameObject Ball_Light;
-    public GameObject LightA1;
-    public GameObject LightA2;
+    public GameObject Magical_purple_Spot_Lightb;
+    //public GameObject LightA1; legacy
+    //public GameObject LightA2; legacy
     public Material Glow;
     public Material Lit;
     public Material lights;
@@ -17,7 +18,8 @@ public class LightsOutA : MonoBehaviour
     {
         Ball_Light.SetActive(false);
         GolfBall.GetComponent<MeshRenderer>().material = Lit;
-        Walls.GetComponent<MeshRenderer>().material = lights;
+        Walls1.GetComponent<MeshRenderer>().material = lights;
+        Magical_purple_Spot_Lightb.SetActive(true);
     }
 
 
@@ -26,9 +28,10 @@ public class LightsOutA : MonoBehaviour
         if (other.gameObject.CompareTag("GolfBall"))
         {
             GolfBall.GetComponent<MeshRenderer>().material = Glow;
-            Walls.GetComponent<MeshRenderer>().material = Lit;
-            LightA1.SetActive(false);
-            LightA2.SetActive(false);
+            Walls1.GetComponent<MeshRenderer>().material = Lit;
+            //LightA1.SetActive(false); legacy
+            //LightA2.SetActive(false); legacy
+            Magical_purple_Spot_Lightb.SetActive(false);
 
         }
     }
