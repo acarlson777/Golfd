@@ -13,6 +13,6 @@ public class spinbutx : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(new Vector3((float)0.2, 0, 0), Space.Self);
+        transform.Rotate(new Vector3((float)0.3, 0, 0), Space.Self);
     }
 }
