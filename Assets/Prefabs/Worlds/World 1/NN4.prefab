@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 852942587606103217}
   - component: {fileID: 4809356465490010657}
   m_Layer: 0
-  m_Name: Magical purple Spot Light
+  m_Name: Magical_purple_Spot_Lightb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1071,7 +1071,7 @@ PrefabInstance:
     - target: {fileID: 8416272007918961125, guid: eb34153a65d5e4d618d8171372e529f2,
         type: 3}
       propertyPath: m_Name
-      value: Walls
+      value: Walls1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1745,11 +1745,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GolfBall: {fileID: 496612242984984684}
+  Walls1: {fileID: 2924887953855673281}
   Ball_Light: {fileID: 6347224365139085865}
-  LightA1: {fileID: 339802887688605566}
-  LightA2: {fileID: 1474453792190192581}
+  Magical_purple_Spot_Lightb: {fileID: 4244934013377558222}
   Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
   Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  lights: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
 --- !u!64 &3850375916399820177
 MeshCollider:
   m_ObjectHideFlags: 0
