@@ -21,6 +21,8 @@ public class ClubHandler : MonoBehaviour
     [SerializeField] private LayerMask _layerToHit;
     private GameObject golfBall = null;
     [SerializeField] private float _ballVelocityTolerance;
+    [SerializeField] private float ANGULAR_VELOCITY_REDUCTION_CONSTANT;
+    [SerializeField] private float VELOCITY_REDUCTION_CONSTANT;
     [SerializeField] private float _swingTime;
     [SerializeField] private GameObject throwableClubPrefab;
     private Vector3 clubVelocity;
@@ -102,14 +104,17 @@ public class ClubHandler : MonoBehaviour
     private void UpdateClubHeadColliderStatus()
     {
         if (gBrb == null) { return; }
-        if (gBrb.velocity.magnitude <= _ballVelocityTolerance)
+        if (gBrb.angularVelocity.magnitude <= _ballVelocityTolerance)
         {
-
             ballIndicator.gameObject.SetActive(true);
             //Ball slowed down enough to count as stoppped 
             WorldHandler.Instance.UpdateLastKnownBallPos();
             _clubHead.GetComponent<BoxCollider>().enabled = true;
             //clubEnabled = true;
+            //Make ball slow down after this occurs over time 
+        } else {
+            gBrb.angularVelocity = gBrb.angularVelocity * ANGULAR_VELOCITY_REDUCTION_CONSTANT;
+            gBrb.velocity = gBrb.velocity * VELOCITY_REDUCTION_CONSTANT;
         }
     }
 
@@ -162,13 +167,12 @@ public class ClubHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(_swingTime);
         _clubHead.GetComponent<BoxCollider>().enabled = false;
-        if (gBrb.velocity.magnitude > _ballVelocityTolerance)
+        if (gBrb.angularVelocity.magnitude > _ballVelocityTolerance)
         {
 
             ballIndicator.gameObject.SetActive(false);
             //Ball was hit fast enough to count as a real hit
             WorldHandler.Instance.IncrementStrokeCount();
-
 
 
             //clubEnabled = false;
