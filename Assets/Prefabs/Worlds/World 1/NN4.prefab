@@ -205,7 +205,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -1834,6 +1834,7 @@ MonoBehaviour:
   Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
   Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   lights: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
+  lightsOff: {fileID: 2100000, guid: 8cf5b0e68d4554d0187b03c01b075537, type: 2}
 --- !u!64 &3850375916399820177
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class LightsOutA : MonoBehaviour
     public Material Glow;
     public Material Lit;
     public Material lights;
+    public Material lightsOff;
     void Start()
     {
         Ball_Light.SetActive(false);
@@ -28,7 +29,7 @@ public class LightsOutA : MonoBehaviour
         if (other.gameObject.CompareTag("GolfBall"))
         {
             GolfBall.GetComponent<MeshRenderer>().material = Glow;
-            Walls1.GetComponent<MeshRenderer>().material = Lit;
+            Walls1.GetComponent<MeshRenderer>().material = lightsOff;
             //LightA1.SetActive(false); legacy
             //LightA2.SetActive(false); legacy
             Magical_purple_Spot_Lightb.SetActive(false);
