@@ -2667,6 +2667,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1536841276319248380, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536841276319248380, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dd9c4fd8f9ee84bb689a0275bd9202b2, type: 2}
     - target: {fileID: 2849756108082080149, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_Enabled
@@ -2739,33 +2749,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
-        type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.513
+      value: -0.535
       objectReference: {fileID: 0}
     - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1864
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4944963027942716035, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0141
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5853311755858335742, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
@@ -2786,11 +2781,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8673669476181862178, guid: e4fb71dba940546f7bcc321b821596e2,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.015
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3070,7 +3060,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.42052332, g: 0.8490566, b: 0.42838645, a: 1}
+      maxColor: {r: 0.35031566, g: 0.6603774, b: 0.27100393, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -3134,7 +3124,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.01
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3187,7 +3177,7 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.01
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3240,7 +3230,7 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.01
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
