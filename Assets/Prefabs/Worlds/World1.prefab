@@ -951,6 +951,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _ballVelocityTolerance: 0.1
+  ANGULAR_VELOCITY_REDUCTION_CONSTANT: 0
+  VELOCITY_REDUCTION_CONSTANT: 0
   _swingTime: 0.1
   throwableClubPrefab: {fileID: 4368525248075390483, guid: a9b4fc194e59e460caa72e53407b519b,
     type: 3}
@@ -5400,6 +5402,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ac10845e00a9640648f52ca012e647dc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: ac10845e00a9640648f52ca012e647dc,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4683669308469848369, guid: ac10845e00a9640648f52ca012e647dc,
