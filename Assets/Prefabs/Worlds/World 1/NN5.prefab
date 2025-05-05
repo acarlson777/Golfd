@@ -6954,7 +6954,6 @@ Transform:
   m_Children:
   - {fileID: 4771591205176218750}
   - {fileID: 3005156403070034936}
-  - {fileID: 1831090197256409100}
   - {fileID: 4507261678968046512}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7485,7 +7484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1831090197256409100}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7501,12 +7500,12 @@ Transform:
   m_GameObject: {fileID: 2685929672654584923}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 15.79, z: 0}
-  m_LocalScale: {x: 15.384615, y: 15.384615, z: 15.384615}
+  m_LocalPosition: {x: 0, y: 0.0028499812, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3655494426465854426}
-  m_Father: {fileID: 3634633150076874925}
+  m_Father: {fileID: 4245875751303934099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2703237628639860703
 GameObject:
@@ -9684,9 +9683,9 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -5495902117074765545, guid: 3e196e317e6fd4a43bf18224f52aea42, type: 3}
+  m_Mesh: {fileID: 3880742574062520132, guid: 08bcd781c2a9d4599a3f4448a12064c3, type: 3}
 --- !u!1 &4209215846188726793
 GameObject:
   m_ObjectHideFlags: 0
@@ -17281,6 +17280,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1831090197256409100}
   - {fileID: 6830988379616025606}
   - {fileID: 7729708738157987841}
   - {fileID: 3751187762295209168}
