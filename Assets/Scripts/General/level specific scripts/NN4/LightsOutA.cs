@@ -8,19 +8,19 @@ public class LightsOutA : MonoBehaviour
     public GameObject GolfBall;
     public GameObject Walls1;
     public GameObject Ball_Light;
-    public GameObject Magical_purple_Spot_Lightb;
+    public GameObject Magical_Spot_Lightb;
     //public GameObject LightA1; legacy
     //public GameObject LightA2; legacy
     public Material Glow;
-    public Material Lit;
+    public Material White;
     public Material lights;
     public Material lightsOff;
     void Start()
     {
         Ball_Light.SetActive(false);
-        GolfBall.GetComponent<MeshRenderer>().material = Lit;
+        GolfBall.GetComponent<MeshRenderer>().material = White;
         Walls1.GetComponent<MeshRenderer>().material = lights;
-        Magical_purple_Spot_Lightb.SetActive(true);
+        Magical_Spot_Lightb.SetActive(true);
     }
 
 
@@ -32,7 +32,7 @@ public class LightsOutA : MonoBehaviour
             Walls1.GetComponent<MeshRenderer>().material = lightsOff;
             //LightA1.SetActive(false); legacy
             //LightA2.SetActive(false); legacy
-            Magical_purple_Spot_Lightb.SetActive(false);
+            Magical_Spot_Lightb.SetActive(false);
 
         }
     }
