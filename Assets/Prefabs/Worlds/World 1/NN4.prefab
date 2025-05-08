@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 852942587606103217}
   - component: {fileID: 4809356465490010657}
   m_Layer: 0
-  m_Name: Magical_purple_Spot_Lightb
+  m_Name: Magical_Spot_Lightb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,8 +406,8 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 20
   m_SpotAngle: 51.437126
   m_InnerSpotAngle: 25.921732
   m_CookieSize: 10
@@ -1062,7 +1062,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
+      objectReference: {fileID: 2100000, guid: 276c20a0b2c96443aba37c43661ad575, type: 2}
     - target: {fileID: -3195828791156449804, guid: eb34153a65d5e4d618d8171372e529f2,
         type: 3}
       propertyPath: m_Materials.Array.data[3]
@@ -1097,7 +1097,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f0e4717710b0f4b72a1cdaf330509990, type: 2}
+      objectReference: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
     - target: {fileID: -466329591000292508, guid: eb34153a65d5e4d618d8171372e529f2,
         type: 3}
       propertyPath: m_Layer
@@ -1571,7 +1571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fc226930e8fad4c499969204cecfbc05, type: 2}
+      objectReference: {fileID: 2100000, guid: 169d89c5ffce342b192dcc7f7797b500, type: 2}
     - target: {fileID: 2849756108082080149, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_Enabled
@@ -1830,9 +1830,9 @@ MonoBehaviour:
   GolfBall: {fileID: 496612242984984684}
   Walls1: {fileID: 2924887953855673281}
   Ball_Light: {fileID: 6347224365139085865}
-  Magical_purple_Spot_Lightb: {fileID: 4244934013377558222}
+  Magical_Spot_Lightb: {fileID: 4244934013377558222}
   Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
-  Lit: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  White: {fileID: 2100000, guid: 169d89c5ffce342b192dcc7f7797b500, type: 2}
   lights: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
   lightsOff: {fileID: 2100000, guid: 8cf5b0e68d4554d0187b03c01b075537, type: 2}
 --- !u!64 &3850375916399820177
