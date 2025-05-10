@@ -7,6 +7,7 @@ public class HoleHandler : MonoBehaviour
     private float _ballVelocityTolerance = 0.1f;
     public bool golfBallInHole; // made the classes public for flagHole script. Alex a
     public Coroutine currCoroutine;
+    [SerializeField] ParticleSystem particleSystem;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -39,6 +40,7 @@ public class HoleHandler : MonoBehaviour
             //print("Checking for golf ball stopped");
             yield return null;
         }
+        particleSystem.Play();
         WorldHandler.Instance.OnLevelCompleted();
     }
 }
