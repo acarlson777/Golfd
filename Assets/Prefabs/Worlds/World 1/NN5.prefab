@@ -11251,6 +11251,7 @@ GameObject:
   - component: {fileID: 5829380856654457743}
   - component: {fileID: 8518451328816004006}
   - component: {fileID: 7174551793449520818}
+  - component: {fileID: 9219838439320378943}
   m_Layer: 0
   m_Name: ObjectObstacle1
   m_TagString: Untagged
@@ -11369,6 +11370,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!111 &9219838439320378943
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6380574491450733490}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: d6b428f23f44248cebdfc0307efe8e78, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6490938052807518730
 GameObject:
   m_ObjectHideFlags: 0
