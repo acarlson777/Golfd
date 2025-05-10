@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Profile: {fileID: 11400000, guid: 00a5ca48ac9824295a3a1cf8d12bd757, type: 2}
   m_StaticLightingSkyUniqueID: 0
   m_StaticLightingCloudsUniqueID: 0
-  m_StaticLightingVolumetricClouds: 0
+  m_StaticLightingVolumetricClouds: 1
 --- !u!4 &508285173
 Transform:
   m_ObjectHideFlags: 1
@@ -352,6 +352,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 662591834795114423, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 1e6f17dcde97242e3b1836d2b3af93e5,
+        type: 2}
     - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_RenderPostProcessing
@@ -366,6 +372,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1137970576873558567, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1560678020804744298, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
