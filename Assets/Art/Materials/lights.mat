@@ -37,17 +37,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: lights
-  m_Shader: {fileID: 4800000, guid: c4edd00ff2db5b24391a4fcb1762e459, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - _ENABLE_FOG_ON_TRANSPARENT
-  - _SURFACE_TYPE_TRANSPARENT
-  m_InvalidKeywords:
-  - _DISABLE_SSR_TRANSPARENT
   - _DOUBLESIDED_ON
+  - _ENABLE_FOG_ON_TRANSPARENT
   - _ENABLE_GEOMETRIC_SPECULAR_AA
+  - _MATERIAL_FEATURE_SPECULAR_COLOR
   - _NORMALMAP_TANGENT_SPACE
+  - _SURFACE_TYPE_TRANSPARENT
+  m_InvalidKeywords: []
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -57,6 +57,9 @@ Material:
   disabledShaderPasses:
   - MOTIONVECTORS
   - DistortionVectors
+  - RayTracingPrepass
+  - TransparentDepthPostpass
+  - TransparentBackface
   m_LockedProperties: _EmissiveColorLDR _EmissiveColorMap _EmissiveIntensity _EmissiveIntensityUnit
   m_SavedProperties:
     serializedVersion: 3
@@ -245,7 +248,7 @@ Material:
     - _DiffusionProfileHash: 0
     - _DisplacementLockObjectScale: 1
     - _DisplacementLockTilingScale: 1
-    - _DisplacementMode: 3
+    - _DisplacementMode: 0
     - _DistortionBlendMode: 0
     - _DistortionBlurBlendMode: 0
     - _DistortionBlurDstBlend: 1
@@ -268,7 +271,7 @@ Material:
     - _DstBlendAlpha: 10
     - _EmissiveColorMode: 1
     - _EmissiveExposureWeight: 0
-    - _EmissiveIntensity: 3
+    - _EmissiveIntensity: 75
     - _EmissiveIntensityUnit: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
@@ -293,7 +296,7 @@ Material:
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 1
-    - _MaterialID: 1
+    - _MaterialID: 4
     - _Metallic: 1
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
@@ -313,7 +316,7 @@ Material:
     - _RayTracing: 0
     - _ReceiveShadows: 1
     - _ReceivesSSR: 1
-    - _ReceivesSSRTransparent: 0
+    - _ReceivesSSRTransparent: 1
     - _RefractionModel: 0
     - _Smoothness: 0.984
     - _SmoothnessRemapMax: 1
@@ -326,15 +329,15 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 1
+    - _StencilRefDepth: 8
     - _StencilRefDistortionVec: 4
     - _StencilRefGBuffer: 10
-    - _StencilRefMV: 33
+    - _StencilRefMV: 40
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 9
     - _StencilWriteMaskDistortionVec: 4
     - _StencilWriteMaskGBuffer: 15
-    - _StencilWriteMaskMV: 43
+    - _StencilWriteMaskMV: 41
     - _SubsurfaceMask: 1
     - _SupportDecals: 1
     - _Surface: 1
@@ -374,21 +377,21 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.55294114, g: 0, b: 1, a: 0.8862745}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 0.5882353, g: 0.003921569, b: 1, a: 1}
+    - _Color: {r: 0.55294114, g: 0, b: 1, a: 0.8862745}
     - _DiffusionProfileAsset: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 0.9176472, g: 0, b: 3, a: 3}
-    - _EmissiveColorLDR: {r: 0.58902115, g: 0, b: 1, a: 1}
+    - _EmissiveColor: {r: 17.183386, g: 0, b: 56.176468, a: 75}
+    - _EmissiveColorLDR: {r: 0.5159599, g: 0, b: 0.88031507, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.5529412, g: 0, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 0.5529412, g: 0, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
-    - _UnlitColor: {r: 0.5882353, g: 0.003921569, b: 1, a: 1}
+    - _UnlitColor: {r: 0.5882353, g: 0.003921569, b: 1, a: 0.5803922}
     - _UnlitColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
