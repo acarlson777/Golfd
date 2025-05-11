@@ -42,7 +42,7 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
@@ -125,7 +125,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AddPrecomputedVelocity: 0
-    - _AlbedoAffectEmissive: 0
+    - _AlbedoAffectEmissive: 1
     - _AlphaClip: 0
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
@@ -164,8 +164,8 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 10
-    - _EmissiveExposureWeight: 1
-    - _EmissiveIntensity: 12.01571
+    - _EmissiveExposureWeight: 0
+    - _EmissiveIntensity: 50
     - _EmissiveIntensityUnit: 0
     - _EnableFogOnTransparent: 0
     - _EnvironmentReflections: 1
@@ -205,11 +205,11 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.8066038, g: 0.9648087, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9294118, g: 0.99607843, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissiveColor: {r: 10.14534, g: 11.941719, b: 12.01571, a: 12.01571}
+    - _EmissiveColor: {r: 42.21698, g: 49.69211, b: 50, a: 50}
     - _EmissiveColorLDR: {r: 0.9281835, g: 0.99728817, b: 1, a: 1}
     - _SpecColor: {r: 0.80784315, g: 0.9647059, b: 1, a: 1}
-    - _UnlitColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UnlitColor: {r: 0.9294118, g: 0.9960785, b: 1, a: 1}
     - _UnlitColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
