@@ -39,6 +39,7 @@ public class ClubHandler : MonoBehaviour
     private bool attemptedToUpdateCanToggleClubThrowing = false;
 
     public GolfBallIndicatorHandler ballIndicator;
+    private AudioSource ballRollingSound;
 
     private void Start()
     {
@@ -69,6 +70,7 @@ public class ClubHandler : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("GolfBall") != null) {
             golfBall = GameObject.FindGameObjectWithTag("GolfBall");
             gBrb = golfBall.GetComponent<Rigidbody>();
+            ballRollingSound = golfBall.GetComponent<AudioSource>();
         }
     }
 
@@ -106,6 +108,7 @@ public class ClubHandler : MonoBehaviour
         if (gBrb == null) { return; }
         if (gBrb.angularVelocity.magnitude <= _ballVelocityTolerance)
         {
+            ballRollingSound.Stop();
             ballIndicator.gameObject.SetActive(true);
             //Ball slowed down enough to count as stoppped 
             WorldHandler.Instance.UpdateLastKnownBallPos();
@@ -172,6 +175,7 @@ public class ClubHandler : MonoBehaviour
 
             ballIndicator.gameObject.SetActive(false);
             //Ball was hit fast enough to count as a real hit
+            ballRollingSound.Play();
             WorldHandler.Instance.IncrementStrokeCount();
 
 

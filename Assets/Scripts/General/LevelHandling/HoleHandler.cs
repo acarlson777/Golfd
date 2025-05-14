@@ -8,6 +8,7 @@ public class HoleHandler : MonoBehaviour
     public bool golfBallInHole; // made the classes public for flagHole script. Alex a
     public Coroutine currCoroutine;
     [SerializeField] ParticleSystem particleSystem;
+    [SerializeField] AudioSource golfBallInHoleSound;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -41,6 +42,7 @@ public class HoleHandler : MonoBehaviour
             yield return null;
         }
         particleSystem.Play();
+        golfBallInHoleSound.Play();
         WorldHandler.Instance.OnLevelCompleted();
     }
 }
