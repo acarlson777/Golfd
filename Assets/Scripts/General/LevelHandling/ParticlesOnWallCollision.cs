@@ -7,7 +7,7 @@ public class ParticlesOnWallCollision : MonoBehaviour
     [SerializeField] private ParticleSystem collisionParticleSystem;
     [SerializeField] private GameObject collisionParticleSystemGameObject;
     [SerializeField] private float particleDirectionStrength;
-    [SerializeField] private AudioSource ballHitWall;
+    [SerializeField] private AudioClip ballHitWall;
 
     public void OnCollisionEnter(Collision collision){
         if (collision.gameObject.CompareTag("Wall")){
@@ -19,7 +19,7 @@ public class ParticlesOnWallCollision : MonoBehaviour
             emitParams.velocity = (transform.position - collisionParticleSystemGameObject.transform.position).normalized * particleDirectionStrength;
 
             collisionParticleSystem.Emit(emitParams, Random.Range(1,8));
-            ballHitWall.Play();
+            AudioSource.PlayClipAtPoint(ballHitWall, collision.GetContact(0).point);
         }
     }
 }

@@ -14,6 +14,10 @@ public class DialogueManager : MonoBehaviour {
     public TextMeshProUGUI characterName;
     public float typingSpeed = 0.05f;
 
+
+    [SerializeField] public List<AudioClip> possibleAudioClips;
+
+
     [SerializeField]
     private List<DialogueEntry> dialogueEntries;
 
@@ -56,7 +60,12 @@ public class DialogueManager : MonoBehaviour {
                 dialogueDict[entry.name] = entry.lines;
                 namesDict[entry.name] = entry.names;
                 imagesDict[entry.name] = entry.images;
-                audioDict[entry.name] = entry.audioClips;
+                //audioDict[entry.name] = entry.audioClips;
+                List<AudioClip> randomizedSelectedClips = new List<AudioClip>();
+                for (int i = 0; i < entry.audioClips.Count; i++){
+                    randomizedSelectedClips.Add(possibleAudioClips[UnityEngine.Random.Range(0, possibleAudioClips.Count)]);
+                }
+                audioDict[entry.name] = randomizedSelectedClips;
             } else {
                 Debug.LogError($"Dialogue entry {entry.name} components not equal in size! Dialogue will not work!");
             }

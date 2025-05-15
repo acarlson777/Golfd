@@ -176,6 +176,7 @@ public class ClubHandler : MonoBehaviour
             ballIndicator.gameObject.SetActive(false);
             //Ball was hit fast enough to count as a real hit
             ballRollingSound.Play();
+
             WorldHandler.Instance.IncrementStrokeCount();
 
 
