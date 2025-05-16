@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour {
                 //audioDict[entry.name] = entry.audioClips;
                 List<AudioClip> randomizedSelectedClips = new List<AudioClip>();
                 for (int i = 0; i < entry.audioClips.Count; i++){
-                    randomizedSelectedClips.Add(possibleAudioClips[UnityEngine.Random.Range(0, possibleAudioClips.Count)]);
+                    randomizedSelectedClips.Add(possibleAudioClips[UnityEngine.Random.Range(0, possibleAudioClips.Count-1)]);
                 }
                 audioDict[entry.name] = randomizedSelectedClips;
             } else {
