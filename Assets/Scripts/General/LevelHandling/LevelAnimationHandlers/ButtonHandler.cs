@@ -22,10 +22,15 @@ public class ButtonHandler : MonoBehaviour
         {
             hasBeenPressed = true;
             animator.SetBool("isOn", true);
-            foreach (Animator animatorToTrigger in animatorsToTrigger)
-            {
-                animatorToTrigger.SetBool("isOn", true);
+            if (animatorsToTrigger.Length == 1){
+                animatorsToTrigger[0].SetBool("isOn", true);
+            } else {
+                foreach (Animator animatorToTrigger in animatorsToTrigger)
+                {
+                    animatorToTrigger.SetBool("isOn", true);
+                }
             }
+
             if (dialogueToTrigger != "")
             {
                 WorldHandler.Instance.clubHandler.enabled = false;
