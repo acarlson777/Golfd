@@ -368,6 +368,11 @@ MonoBehaviour:
   golfBallInHole: 0
   particleSystem: {fileID: 897794090404647421}
   golfBallInHoleSound: {fileID: 7062363949266184057}
+  possibleGolfClaps:
+  - {fileID: 8300000, guid: 34ab6ccc64fae492f9cd81bdcd6ecab6, type: 3}
+  - {fileID: 8300000, guid: 6819ba31f32b44865af90f2b28a338e5, type: 3}
+  - {fileID: 8300000, guid: 7b113bd1e402c4c12971e54dd2c5cd88, type: 3}
+  - {fileID: 8300000, guid: 2317b8ca7d3d840899b4959b8cba1b34, type: 3}
 --- !u!82 &7062363949266184057
 AudioSource:
   m_ObjectHideFlags: 0

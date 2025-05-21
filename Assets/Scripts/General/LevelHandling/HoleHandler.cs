@@ -7,8 +7,9 @@ public class HoleHandler : MonoBehaviour
     private float _ballVelocityTolerance = 0.1f;
     public bool golfBallInHole; // made the classes public for flagHole script. Alex a
     public Coroutine currCoroutine;
-    [SerializeField] ParticleSystem particleSystem;
-    [SerializeField] AudioSource golfBallInHoleSound;
+    [SerializeField] private ParticleSystem particleSystem;
+    [SerializeField] private AudioSource golfBallInHoleSound;
+    [SerializeField] private AudioClip[] possibleGolfClaps;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -41,8 +42,11 @@ public class HoleHandler : MonoBehaviour
             //print("Checking for golf ball stopped");
             yield return null;
         }
+        AudioClip selectedGolfClapClip = possibleGolfClaps[Random.Range(0, possibleGolfClaps.Length - 1)];
         particleSystem.Play();
         golfBallInHoleSound.Play();
+        AudioSource.PlayClipAtPoint(selectedGolfClapClip, transform.position);
+
         WorldHandler.Instance.OnLevelCompleted();
     }
 }

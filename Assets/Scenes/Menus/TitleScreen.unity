@@ -2683,6 +2683,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
+      propertyPath: possibleAudioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: possibleAudioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e087af4a598134527a7526c7ed595bc2, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: possibleAudioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b16c79c2a5964f2c96200b3be199b1c, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: possibleAudioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 863313aa4b3334eb2b1c7b515a8b2405, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
       propertyPath: dialogueEntries.Array.data[0].name
       value: INTRO
       objectReference: {fileID: 0}
