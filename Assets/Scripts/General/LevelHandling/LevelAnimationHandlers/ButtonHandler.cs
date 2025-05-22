@@ -7,6 +7,7 @@ public class ButtonHandler : MonoBehaviour
     [SerializeField] private Animator[] animatorsToTrigger;
     [SerializeField] private string dialogueToTrigger;
     [SerializeField] private GameObject gameObjectToBeActivated;
+    [SerializeField] private GameObject gameObjectToBeHidden;
     [SerializeField] private bool oneTimeButton = false;
     private bool hasBeenPressed = false;
 
@@ -38,6 +39,10 @@ public class ButtonHandler : MonoBehaviour
                     if (gameObjectToBeActivated != null) { gameObjectToBeActivated.SetActive(true); }
                     WorldHandler.Instance.clubHandler.enabled = true;
                 });
+            } else
+            {
+                if (gameObjectToBeActivated != null) { gameObjectToBeActivated.SetActive(true); }
+                if (gameObjectToBeHidden != null) { gameObjectToBeHidden.SetActive(false); }
             }
         }
     }

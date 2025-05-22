@@ -678,7 +678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8cf5b0e68d4554d0187b03c01b075537, type: 2}
+  - {fileID: 2100000, guid: f0e4717710b0f4b72a1cdaf330509990, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1117,7 +1117,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4683910211685357712
 Transform:
   m_ObjectHideFlags: 0
@@ -1235,7 +1235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4061943835216601116
 Transform:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 51.437126
   m_InnerSpotAngle: 25.921732
@@ -3130,6 +3130,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1105568687175579824}
     m_Modifications:
+    - target: {fileID: -7511558181221131132, guid: 1fbecdca878a144e680ff46152db793d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbaf1f5484d2b4d6a911935d2d049834, type: 2}
     - target: {fileID: -8679921383154817045, guid: 4f72e7c83684140598dc9249c3aaf997,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3205,11 +3210,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RampForNN6
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 1fbecdca878a144e680ff46152db793d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: dbaf1f5484d2b4d6a911935d2d049834, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3430,7 +3430,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: feb02a227ad134c0997fdbe2d76c67e2, type: 2}
+      objectReference: {fileID: 2100000, guid: 169d89c5ffce342b192dcc7f7797b500, type: 2}
     - target: {fileID: 3551222427610500960, guid: e4fb71dba940546f7bcc321b821596e2,
         type: 3}
       propertyPath: m_Enabled
@@ -3535,20 +3535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76404ae4385b048edb16c217ed347652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GolfBall: {fileID: 6869175966673996357}
-  Walls1a: {fileID: 2101551246006964025}
-  Ball_LightA: {fileID: 4813370065219200537}
-  Magical_Spot_LightC: {fileID: 5617529677361011885}
-  Glow: {fileID: 2100000, guid: d497ce295b5684d12a0f52a1de07c72c, type: 2}
-  white: {fileID: 2100000, guid: 169d89c5ffce342b192dcc7f7797b500, type: 2}
-  lights: {fileID: 2100000, guid: df7777691c61345beb1cfd8f608c2b6d, type: 2}
-  lightsOff: {fileID: 2100000, guid: 8cf5b0e68d4554d0187b03c01b075537, type: 2}
---- !u!1 &6869175966673996357 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7210956592234620805, guid: e4fb71dba940546f7bcc321b821596e2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4271173817325776320}
-  m_PrefabAsset: {fileID: 0}
+  levelLight: {fileID: 5004875475157019533}
 --- !u!4 &8105299681000784265 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5421646656586476617, guid: e4fb71dba940546f7bcc321b821596e2,
