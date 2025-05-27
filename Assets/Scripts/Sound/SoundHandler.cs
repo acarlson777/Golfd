@@ -5,7 +5,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.Audio; 
 using System;
 
-public class SoundHandler : MonoBehaviour {
+public class SoundHandler : MonoBehaviour
+{
 
     public static SoundHandler Instance { get; private set; }
 
@@ -22,7 +23,8 @@ public class SoundHandler : MonoBehaviour {
         if (Instance != null && Instance != this){
             Destroy(this);
         }
-        else{
+        else
+        {
             Instance = this;
             DontDestroyOnLoad(this);
         }
@@ -55,7 +57,8 @@ public class SoundHandler : MonoBehaviour {
     }
     */
 
-    public void TapSfxButton(){
+    public void TapSfxButton()
+    {
         ToggleSfx();
     }
 
@@ -73,6 +76,11 @@ public class SoundHandler : MonoBehaviour {
         StartCoroutine(WaitBeforeTapAgainSFX());
     }
 
+    public void UpdateSfx()
+    {
+        mixer.SetFloat("sfxVol", sfx ? -80 : 0);
+    }
+
     /*
     public void TapMusic(InputAction.CallbackContext context) {
 
@@ -82,7 +90,8 @@ public class SoundHandler : MonoBehaviour {
     }
     */
 
-    public void TapMusicButton(){
+    public void TapMusicButton()
+    {
         ToogleMusic();
     }
 
@@ -100,13 +109,18 @@ public class SoundHandler : MonoBehaviour {
         Debug.Log("internal music: " + music);
         StartCoroutine(WaitBeforeTapAgainMUSIC());
 
+    public void UpdateMusic()
+    {
+        mixer.SetFloat("musicVol", music ? -80 : 0);
     }
 
-    public bool getSfxState(){
+    public bool getSfxState()
+    {
         Debug.Log("SFX STATE: " + sfx);
         return sfx;
-    } 
-    public bool getMusicState(){
+    }
+    public bool getMusicState()
+    {
         Debug.Log("MUSIC STATE: " + music);
         return music;
     }

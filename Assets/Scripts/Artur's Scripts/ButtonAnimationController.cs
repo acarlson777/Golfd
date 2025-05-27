@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 
 
-public class ButtonAnimationController : MonoBehaviour{
+public class ButtonAnimationController : MonoBehaviour
+{
 
     private SoundHandler soundHandler;
     public Button buttonSfx;
@@ -19,20 +20,18 @@ public class ButtonAnimationController : MonoBehaviour{
     private bool canTapSFX = true;
     private bool canTapMUSIC = true;
 
-    private void Start()
+    void OnEnable()
     {
-   
-    }
 
-    void OnEnable(){
-
-        if(buttonMusic == null || buttonSfx == null){
+        if (buttonMusic == null || buttonSfx == null)
+        {
             // Error message
             return;
         }
 
         soundHandler = GameObject.FindGameObjectWithTag("SoundHandler").GetComponent<SoundHandler>();
-        if (soundHandler == null){
+        if (soundHandler == null)
+        {
             return;
         }
 
@@ -54,7 +53,8 @@ public class ButtonAnimationController : MonoBehaviour{
         buttonMusic.onClick.AddListener(soundHandler.TapMusicButton);
     }
 
-    public void OnSfxButtonClick(){
+    public void OnSfxButtonClick()
+    {
         if (!canTapSFX)
         {
             return;
@@ -69,7 +69,8 @@ public class ButtonAnimationController : MonoBehaviour{
         Debug.Log("called sfx sound handler and set to " + sfx);
     }
 
-    public void OnMusicButtonClick(){
+    public void OnMusicButtonClick()
+    {
         if (!canTapMUSIC)
         {
             return;
