@@ -497,12 +497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 375, y: 667}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -541,6 +541,11 @@ MonoBehaviour:
   dialogueText: {fileID: 4913797021261508657}
   characterName: {fileID: 5974140590151012709}
   typingSpeed: 0.05
+  possibleAudioClips:
+  - {fileID: 8300000, guid: e087af4a598134527a7526c7ed595bc2, type: 3}
+  - {fileID: 8300000, guid: fde7411e56fe64420a4d63022953a4bc, type: 3}
+  - {fileID: 8300000, guid: 36373c8fbe9014cb69b031d5f1353cff, type: 3}
+  - {fileID: 8300000, guid: ae544e731cb844d28a1dc429072cd774, type: 3}
   dialogueEntries:
   - name: 1-1 INTRO | I. Ron
     lines:
@@ -693,6 +698,7 @@ MonoBehaviour:
   dialogueText: {fileID: 4913797021261508657}
   characterName: {fileID: 2718498509306175800}
   typingSpeed: 0.05
+  possibleAudioClips: []
   dialogueEntries:
   - name: 1-1 INTRO | The Woods
     lines:
