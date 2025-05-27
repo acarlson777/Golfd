@@ -7,7 +7,6 @@ using System;
 
 public class SoundHandler : MonoBehaviour
 {
-
     public static SoundHandler Instance { get; private set; }
 
     public AudioMixer mixer;
@@ -34,19 +33,12 @@ public class SoundHandler : MonoBehaviour
 
     }
 
-    void Start(){
+    public void FakeStart(){
         sfx = PlayerPrefs.GetInt("sfx") == 1;
         music = PlayerPrefs.GetInt("music") == 1;
 
-        getSfxState();
-        getMusicState();
-
         mixer.SetFloat("musicVol", music ? 0 : -80);
         mixer.SetFloat("sfxVol", sfx ? 0 : -80);
-        // mixer.SetFloat("musicVol", -80f);
-
-        getSfxState();
-        getMusicState();
     }
 
     /*
@@ -95,19 +87,21 @@ public class SoundHandler : MonoBehaviour
         ToogleMusic();
     }
 
-    private void ToogleMusic(){
+    private void ToogleMusic()
+    {
         if (!canTapMUSIC)
         {
             return;
         }
         canTapMUSIC = false;
         getMusicState();
-        
+
         music = !music;
         mixer.SetFloat("musicVol", music ? 0 : -80);
         PlayerPrefs.SetInt("music", music ? 1 : 0);
         Debug.Log("internal music: " + music);
         StartCoroutine(WaitBeforeTapAgainMUSIC());
+    }
 
     public void UpdateMusic()
     {

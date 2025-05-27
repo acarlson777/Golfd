@@ -9,7 +9,6 @@ public class ActivateSoundSettings : MonoBehaviour
 {
     private void Start()
     {
-        SoundHandler.Instance.UpdateSfx();
-        SoundHandler.Instance.UpdateMusic();
+        SoundHandler.Instance.FakeStart();
     }
 }
