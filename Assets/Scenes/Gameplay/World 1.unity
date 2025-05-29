@@ -378,6 +378,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 331278564746624666, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_Maskable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 377501952212197182, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -413,6 +418,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 657025644104664297, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838331358163166696, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1031256594832579765, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_RenderPostProcessing
@@ -438,12 +453,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1549212987625140037, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1560678020804744298, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: mixer
       value: 
       objectReference: {fileID: 24100000, guid: 173a46452009a4b42b792ec1ce2845dc,
         type: 2}
+    - target: {fileID: 1563737828487684434, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_ShowMaskGraphic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: dialogueEntries.Array.data[4].lines.Array.size
@@ -690,6 +715,16 @@ PrefabInstance:
       propertyPath: dialogueEntries.Array.data[11].audioClips.Array.data[4]
       value: 
       objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1748189604570721815, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778614381276214930, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1838142968567200104, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -853,6 +888,16 @@ PrefabInstance:
       propertyPath: maxDistanceFromHoleSize
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4257098632563372220, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294418767861903804, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4753884740388015718, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -958,6 +1003,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -55.799988
       objectReference: {fileID: 0}
+    - target: {fileID: 5641902266235395864, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.024425162
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641902266235395864, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.12252811
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641902266235395864, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.31278
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641902266235395864, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15933
+      objectReference: {fileID: 0}
     - target: {fileID: 5679126686437430835, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: dialogueSequences.Array.data[4].sequenceName
@@ -1017,6 +1082,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507853968362422286, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 6507853968362422286, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 33.08
       objectReference: {fileID: 0}
     - target: {fileID: 6960761786838772680, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
