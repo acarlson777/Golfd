@@ -39,7 +39,7 @@ public class LightsOut : MonoBehaviour
             Spot_LightA1.SetActive(false);
             Spot_LightA2.SetActive(false);
             Spot_LightA3.SetActive(false);
-            ForcefieldA1.SetActive(false);
+            //ForcefieldA1.SetActive(false);(legacy)
             Golf_light.SetActive(true);
         }
     }
