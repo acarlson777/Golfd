@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.16470589, g: 0.13725491, b: 0.32941177, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ca9eb04d8fdac401986afb4d9197daa8, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 286b14ae101474a4aafd4fc366168742, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -755,37 +755,37 @@ PrefabInstance:
         type: 3}
       propertyPath: _levelList.Array.data[0]
       value: 
-      objectReference: {fileID: 7880344781453837533, guid: 18fe60f7eeb9d41398f192f0cb1c6ed0,
+      objectReference: {fileID: 4544668479902191415, guid: 4a1a6f543fbe8482a842fce54e13d482,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[1]
       value: 
-      objectReference: {fileID: 4752362357090761128, guid: 923999d77f91e4f91852bb5585d2e780,
+      objectReference: {fileID: 4544668479902191415, guid: e8a0312e598dd4f5db84af0aa8c73057,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[2]
       value: 
-      objectReference: {fileID: 4752362357090761128, guid: 52a6b2b1c7adc17459caf369585a6d42,
+      objectReference: {fileID: 3716078818961699766, guid: 7633ce4c9a4894f70aceda8deede6130,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[3]
       value: 
-      objectReference: {fileID: 8807223139530652429, guid: 3b2ff1f2676734b12afe8c70636b348a,
+      objectReference: {fileID: 3813703094480613108, guid: 1296bd05473b841589858c4db45baac3,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[4]
       value: 
-      objectReference: {fileID: 3813703094480613108, guid: df6d306e8f9b04899baeee8ff96b0a1b,
+      objectReference: {fileID: 4544668479902191415, guid: a07830e4908ef42c792aa2362c28350c,
         type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[5]
       value: 
-      objectReference: {fileID: 509917332660612094, guid: 595858f615e5844c5a7de2b3baa50b14,
+      objectReference: {fileID: 4544668479902191415, guid: 0bdf96a46a302465f97f8ddceb1bc089,
         type: 3}
     - target: {fileID: 2142005544916913623, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -1349,6 +1349,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9183033520265373359, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: weight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9183033520265373359, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 623aaaa3354a440aeb43e14718b1c3c8,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 719032481004118286, guid: b7e550269444e4d25a5d2a3cd7ab2ec2, type: 3}
