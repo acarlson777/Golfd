@@ -19,12 +19,13 @@ public class FanTrigger : MonoBehaviour
         if (other.gameObject.name.Equals("ball"))
         {
             FanOn = true;
+            FanBox.SetActive(true);
 
-            
         }
         else
         {
             FanOn = false;
+            FanBox.SetActive(false);
         }
     }
 }
