@@ -11,6 +11,7 @@ public class FanTrigger : MonoBehaviour
     void Start()
     {
         FanOn = false;
+        FanBox.SetActive(false);
     }
     
 
@@ -20,6 +21,7 @@ public class FanTrigger : MonoBehaviour
         {
             FanOn = true;
             FanBox.SetActive(true);
+            UnityEngine.Debug.Log("Fan is on");
 
         }
         else
