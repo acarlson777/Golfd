@@ -18,7 +18,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5163303548821375793
 Transform:
@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 482713195237025213}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5739, y: -0.167, z: 0.3238}
-  m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
+  m_LocalPosition: {x: -0.39890003, y: -0.167, z: -0.192}
+  m_LocalScale: {x: 0.1453625, y: 0.1453625, z: 0.1453625}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4761516442138662356}
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482713195237025213}
-  m_Mesh: {fileID: -5495902117074765545, guid: 016b4063a678b4017b9d9a09030fc536, type: 3}
+  m_Mesh: {fileID: -2785055716824109072, guid: d2109bb45ed084e7499e76404f78de5d, type: 3}
 --- !u!23 &5135724055501996171
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.233
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6255850481370646743
 Rigidbody:
@@ -151,7 +151,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1276944431591140424
 Transform:
@@ -162,8 +162,8 @@ Transform:
   m_GameObject: {fileID: 654053619917793059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5739, y: -0.167, z: 0.5357}
-  m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
+  m_LocalPosition: {x: -0.39890003, y: -0.167, z: 0.038839996}
+  m_LocalScale: {x: 0.1453625, y: 0.1453625, z: 0.1453625}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4761516442138662356}
@@ -175,7 +175,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654053619917793059}
-  m_Mesh: {fileID: -5495902117074765545, guid: 016b4063a678b4017b9d9a09030fc536, type: 3}
+  m_Mesh: {fileID: -2785055716824109072, guid: d2109bb45ed084e7499e76404f78de5d, type: 3}
 --- !u!23 &8470042075232818673
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.233
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &8818814383671740565
 Rigidbody:
@@ -278,8 +278,7 @@ GameObject:
   - component: {fileID: 1871105339183915123}
   - component: {fileID: 6882467246693893219}
   - component: {fileID: 6674914681160010518}
-  - component: {fileID: 5235853915271624783}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
   m_Icon: {fileID: 0}
@@ -374,33 +373,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.22
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5235853915271624783
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747605700993889831}
-  serializedVersion: 4
-  m_Mass: 10
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 1
 --- !u!1 &1236019108532916289
 GameObject:
   m_ObjectHideFlags: 0
@@ -5256,7 +5228,7 @@ Transform:
   m_GameObject: {fileID: 1382968396485158706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5687, y: -0.528, z: 0.048}
+  m_LocalPosition: {x: -0.4041, y: -0.528, z: -0.45879996}
   m_LocalScale: {x: 0.065, y: 0.065, z: 0.065}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5409,8 +5381,8 @@ Transform:
   m_GameObject: {fileID: 1497770376181207337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0544, y: 0, z: 0.2131}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.6}
+  m_LocalPosition: {x: -0.055111, y: 0, z: 0.2131}
+  m_LocalScale: {x: 0.010144, y: 0.13988, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1079426119912425353}
@@ -10434,7 +10406,6 @@ GameObject:
   - component: {fileID: 3099506655018898780}
   - component: {fileID: 112206267841509842}
   - component: {fileID: 2788026805865040036}
-  - component: {fileID: 5708420783420383017}
   m_Layer: 0
   m_Name: GolfBallBox
   m_TagString: Untagged
@@ -10532,33 +10503,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &5708420783420383017
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940836572384891838}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2010716622275692070
 GameObject:
   m_ObjectHideFlags: 0
@@ -15835,7 +15779,7 @@ GameObject:
   - component: {fileID: 2699307876315747286}
   - component: {fileID: 2506917065467001695}
   - component: {fileID: 8901803469817793491}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16046,8 +15990,7 @@ GameObject:
   - component: {fileID: 5403567961189597478}
   - component: {fileID: 8956527169908189559}
   - component: {fileID: 9186578860402236533}
-  - component: {fileID: 2907976165875873799}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
   m_Icon: {fileID: 0}
@@ -16142,33 +16085,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.22
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &2907976165875873799
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210306086159462065}
-  serializedVersion: 4
-  m_Mass: 10
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 1
 --- !u!1 &3377907848553687149
 GameObject:
   m_ObjectHideFlags: 0
@@ -16181,8 +16097,7 @@ GameObject:
   - component: {fileID: 4371347018542017419}
   - component: {fileID: 2897425419592192859}
   - component: {fileID: 872271349486135440}
-  - component: {fileID: 4082498818211356495}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
   m_Icon: {fileID: 0}
@@ -16277,33 +16192,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.22
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4082498818211356495
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3377907848553687149}
-  serializedVersion: 4
-  m_Mass: 10
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 1
 --- !u!1 &3849585966709794625
 GameObject:
   m_ObjectHideFlags: 0
@@ -21942,7 +21830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8251442814874991920
 Transform:
   m_ObjectHideFlags: 0
@@ -31714,7 +31602,7 @@ Transform:
   m_GameObject: {fileID: 5343447527996864291}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5708, y: -0.1562, z: 0.5868}
+  m_LocalPosition: {x: -0.402, y: -0.1562, z: 0.08}
   m_LocalScale: {x: 0.065, y: 0.065, z: 0.065}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37252,9 +37140,7 @@ GameObject:
   - component: {fileID: 4247833167757270109}
   - component: {fileID: 3870881197328186674}
   - component: {fileID: 1045169892323961923}
-  - component: {fileID: 3829223168346557461}
-  - component: {fileID: 9078115349643550488}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
   m_Icon: {fileID: 0}
@@ -37349,49 +37235,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.22
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3829223168346557461
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6399051482231593432}
-  serializedVersion: 4
-  m_Mass: 10
-  m_Drag: 0.5
-  m_AngularDrag: 0.5
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 14
-  m_CollisionDetection: 1
---- !u!114 &9078115349643550488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6399051482231593432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb3a6d1431d7401f84831488a2eed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionParticleSystem: {fileID: 0}
-  collisionParticleSystemGameObject: {fileID: 0}
-  particleDirectionStrength: 0.1
-  ballHitWall: {fileID: 0}
 --- !u!1 &6613632073129171183
 GameObject:
   m_ObjectHideFlags: 0
@@ -37420,8 +37263,8 @@ Transform:
   m_GameObject: {fileID: 6613632073129171183}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0442, y: 0, z: 0.2131}
-  m_LocalScale: {x: 0.01, y: 0.1, z: 0.6}
+  m_LocalPosition: {x: 0.044911, y: 0, z: 0.2131}
+  m_LocalScale: {x: 0.010144, y: 0.13988, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1079426119912425353}
@@ -37509,7 +37352,6 @@ GameObject:
   - component: {fileID: 1427969626435914461}
   - component: {fileID: 7776554287177948387}
   - component: {fileID: 996856307227585666}
-  - component: {fileID: 1279543863269897154}
   m_Layer: 0
   m_Name: GolfBallBox (3)
   m_TagString: Untagged
@@ -37607,33 +37449,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1279543863269897154
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6645261203444738039}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6713781621505792719
 GameObject:
   m_ObjectHideFlags: 0
@@ -37856,7 +37671,6 @@ GameObject:
   - component: {fileID: 5131230410216964721}
   - component: {fileID: 3658283339204072007}
   - component: {fileID: 7059201880756026736}
-  - component: {fileID: 18389275608220055}
   m_Layer: 0
   m_Name: GolfBallBox (1)
   m_TagString: Untagged
@@ -37954,33 +37768,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &18389275608220055
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6967233887278892517}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7283307278197390653
 GameObject:
   m_ObjectHideFlags: 0
@@ -42829,7 +42616,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1160718656151263955
 Transform:
@@ -42840,8 +42627,8 @@ Transform:
   m_GameObject: {fileID: 7632224115455382427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5739, y: -0.167, z: 0.4362}
-  m_LocalScale: {x: 0.0625, y: 0.0625, z: 0.0625}
+  m_LocalPosition: {x: -0.39890003, y: -0.167, z: -0.075}
+  m_LocalScale: {x: 0.1453625, y: 0.1453625, z: 0.1453625}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4761516442138662356}
@@ -42853,7 +42640,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7632224115455382427}
-  m_Mesh: {fileID: -5495902117074765545, guid: 016b4063a678b4017b9d9a09030fc536, type: 3}
+  m_Mesh: {fileID: -2785055716824109072, guid: d2109bb45ed084e7499e76404f78de5d, type: 3}
 --- !u!23 &8788482540637007265
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -42915,7 +42702,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.233
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6991808109450810570
 Rigidbody:
@@ -42973,11 +42760,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 616153449286829436}
+  - {fileID: 2162843311320082289}
   - {fileID: 5163303548821375793}
   - {fileID: 1160718656151263955}
   - {fileID: 1276944431591140424}
-  - {fileID: 6049012105623652925}
+  - {fileID: 1079426119912425353}
+  - {fileID: 616153449286829436}
   - {fileID: 7260732664966751972}
   - {fileID: 6172282512246778381}
   - {fileID: 2512590936741957682}
@@ -42985,8 +42773,6 @@ Transform:
   - {fileID: 723260726893842669}
   - {fileID: 7225680063475134211}
   - {fileID: 3550851094633057499}
-  - {fileID: 1079426119912425353}
-  - {fileID: 2162843311320082289}
   - {fileID: 4020177683303278570}
   - {fileID: 8899000212263934858}
   - {fileID: 8222617506182255016}
@@ -43048,7 +42834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2512590141500706981
 Transform:
   m_ObjectHideFlags: 0
@@ -47873,7 +47659,7 @@ GameObject:
   - component: {fileID: 392404956157234478}
   - component: {fileID: 5748056060897674948}
   - component: {fileID: 9214402696294314753}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52914,7 +52700,6 @@ GameObject:
   - component: {fileID: 5715994605701000825}
   - component: {fileID: 2502242117820003191}
   - component: {fileID: 864303410930221311}
-  - component: {fileID: 1517403520000641707}
   m_Layer: 0
   m_Name: GolfBallBox (2)
   m_TagString: Untagged
@@ -53012,33 +52797,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1517403520000641707
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8244478370313482252}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8560515750203213548
 GameObject:
   m_ObjectHideFlags: 0
@@ -53051,7 +52809,7 @@ GameObject:
   - component: {fileID: 8804074590322571838}
   - component: {fileID: 8717782634884274255}
   - component: {fileID: 1560425830279781958}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53157,7 +52915,7 @@ GameObject:
   - component: {fileID: 689354109386836248}
   - component: {fileID: 5419693024243611541}
   - component: {fileID: 4376563808002711198}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53383,15 +53141,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8894527145300777476}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.412, y: -0.7578, z: -0.431}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.412, y: 0.13319999, z: -0.431}
   m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2512590141500706981}
   - {fileID: 8251442814874991920}
   - {fileID: 9113633162457011019}
-  m_Father: {fileID: 4761516442138662356}
+  m_Father: {fileID: 8576287594418019531}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &288154438872152174
 MeshFilter:
@@ -53489,7 +53247,7 @@ Transform:
   m_GameObject: {fileID: 8958785259418917996}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.575, y: -0.201, z: 0.104}
+  m_LocalPosition: {x: -0.39780003, y: -0.201, z: -0.40279996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -54065,6 +53823,10 @@ PrefabInstance:
         type: 3}
       insertIndex: 0
       addedObject: {fileID: 4761516442138662356}
+    - targetCorrespondingSourceObject: {fileID: 5421646656586476617, guid: e4fb71dba940546f7bcc321b821596e2,
+        type: 3}
+      insertIndex: 3
+      addedObject: {fileID: 6049012105623652925}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4fb71dba940546f7bcc321b821596e2, type: 3}
 --- !u!4 &8576287594418019531 stripped
