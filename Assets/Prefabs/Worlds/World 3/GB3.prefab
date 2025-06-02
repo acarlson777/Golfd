@@ -279,7 +279,6 @@ GameObject:
   - component: {fileID: 6882467246693893219}
   - component: {fileID: 6674914681160010518}
   - component: {fileID: 5235853915271624783}
-  - component: {fileID: 7460464514050395822}
   m_Layer: 7
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
@@ -402,22 +401,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
---- !u!114 &7460464514050395822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747605700993889831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb3a6d1431d7401f84831488a2eed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionParticleSystem: {fileID: 0}
-  collisionParticleSystemGameObject: {fileID: 0}
-  particleDirectionStrength: 0.1
-  ballHitWall: {fileID: 0}
 --- !u!1 &1236019108532916289
 GameObject:
   m_ObjectHideFlags: 0
@@ -10545,7 +10528,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
@@ -15858,7 +15841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5797889073113535093
 Transform:
   m_ObjectHideFlags: 0
@@ -16064,7 +16047,6 @@ GameObject:
   - component: {fileID: 8956527169908189559}
   - component: {fileID: 9186578860402236533}
   - component: {fileID: 2907976165875873799}
-  - component: {fileID: 8933855373470336478}
   m_Layer: 7
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
@@ -16187,22 +16169,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
---- !u!114 &8933855373470336478
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3210306086159462065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb3a6d1431d7401f84831488a2eed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionParticleSystem: {fileID: 0}
-  collisionParticleSystemGameObject: {fileID: 0}
-  particleDirectionStrength: 0.1
-  ballHitWall: {fileID: 0}
 --- !u!1 &3377907848553687149
 GameObject:
   m_ObjectHideFlags: 0
@@ -16216,7 +16182,6 @@ GameObject:
   - component: {fileID: 2897425419592192859}
   - component: {fileID: 872271349486135440}
   - component: {fileID: 4082498818211356495}
-  - component: {fileID: 6106972612148030108}
   m_Layer: 7
   m_Name: GolfBallPackaged
   m_TagString: GolfBall
@@ -16339,22 +16304,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 14
   m_CollisionDetection: 1
---- !u!114 &6106972612148030108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3377907848553687149}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb3a6d1431d7401f84831488a2eed6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionParticleSystem: {fileID: 0}
-  collisionParticleSystemGameObject: {fileID: 0}
-  particleDirectionStrength: 0.1
-  ballHitWall: {fileID: 0}
 --- !u!1 &3849585966709794625
 GameObject:
   m_ObjectHideFlags: 0
@@ -17130,7 +17079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &9116556242856605543
 Transform:
   m_ObjectHideFlags: 0
@@ -21993,7 +21942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8251442814874991920
 Transform:
   m_ObjectHideFlags: 0
@@ -37654,7 +37603,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
@@ -38001,7 +37950,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Center: {x: 0, y: 0, z: 0}
@@ -38049,7 +37998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2158574477695801810
 Transform:
   m_ObjectHideFlags: 0
@@ -43099,7 +43048,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2512590141500706981
 Transform:
   m_ObjectHideFlags: 0
@@ -48035,7 +47984,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &831079260392231840
 Transform:
   m_ObjectHideFlags: 0
@@ -53108,7 +53057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3755158074004875478
 Transform:
   m_ObjectHideFlags: 0
@@ -53214,7 +53163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4305941518195633015
 Transform:
   m_ObjectHideFlags: 0
@@ -53841,6 +53790,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 228f19fb2e9de493fa2505c858f6b6c6,
         type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 228f19fb2e9de493fa2505c858f6b6c6,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -53880,7 +53834,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 6338602783125654165, guid: 228f19fb2e9de493fa2505c858f6b6c6, type: 3}
+  m_Mesh: {fileID: 8423711865974079229, guid: 228f19fb2e9de493fa2505c858f6b6c6, type: 3}
 --- !u!4 &654000908623768069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 228f19fb2e9de493fa2505c858f6b6c6,
