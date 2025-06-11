@@ -20,7 +20,12 @@ public class LevelUI : MonoBehaviour
         GolfLevel golfLevel = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID].LEVELS[levelID];
         levelNameText.GetComponent<TextMeshProUGUI>().text = golfLevel.NAME;
         parText.GetComponent<TextMeshProUGUI>().text = golfLevel.PAR.ToString();
-        if (golfLevel.bestScore > 0)
+
+        if (golfLevel.bestScore >= 100000000)
+        {
+            bestScoreText.GetComponent<TextMeshProUGUI>().text = "N/A";
+        }
+        else if (golfLevel.bestScore > 0)
         {
             bestScoreText.GetComponent<TextMeshProUGUI>().text = "+" + golfLevel.bestScore.ToString();
         } else

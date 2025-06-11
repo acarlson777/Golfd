@@ -15,6 +15,11 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler, IBeginDr
     private int currentPage = 1;
     private float dragThreshold;
 
+    [SerializeField] private GameObject golfCart;
+    [SerializeField] private float lengthOfRotation;
+    [SerializeField] private LeanTweenType easeType;
+    private LTDescr currentLeanTween = null;
+
     //Follow this tutorial to create the level select screen: https://www.youtube.com/watch?v=qf9xe2mbWeU
 
     private void Awake()
@@ -31,6 +36,7 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler, IBeginDr
             currentPage++;
             targetPos += _pageStep;
             MovePage();
+            golfCartRotation(1);
         }
     }
 
@@ -41,6 +47,7 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler, IBeginDr
             currentPage--;
             targetPos -= _pageStep;
             MovePage();
+            golfCartRotation(-1);
         }
     }
 
@@ -81,5 +88,15 @@ public class SwipeScreenSelectHandler : MonoBehaviour, IEndDragHandler, IBeginDr
     public void SetMaxPage(int maxPage)
     {
         this._maxPage = maxPage;
+    }
+
+    private void golfCartRotation(int endScale)
+    {
+        if (currentLeanTween != null)
+        {
+            //currentLeanTween.cancel(golfCart);
+        }
+        currentLeanTween = LeanTween.scaleX(golfCart, endScale, lengthOfRotation)
+         .setEase(easeType);
     }
 }

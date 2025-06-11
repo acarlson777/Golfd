@@ -45,7 +45,7 @@ public class LoadGolfPlayerData : MonoBehaviour
                 golfLevel.NAME = "TEMPLATE LEVEL";
                 golfLevel.LEVEL_PREFAB_NAME = "DEFAULT_LEVEL";
                 golfLevel.PAR = 1;
-                golfLevel.bestScore = 100;
+                golfLevel.bestScore = 100000000;
                 golfWorld.LEVELS.Add(golfLevel);
             }
             JsonSerializer.Instance.golfPlayerData.WORLDS.Add(golfWorld);
