@@ -15,6 +15,7 @@ public class LoadGolfPlayerData : MonoBehaviour
             print("Loading Editor Changes");
             ResetJSONData();
             UpdateEditorChanges();
+            //JsonSerializer.Instance.golfPlayerData.WORLDS[0].LEVELS[0].isComplete = true;
             JsonSerializer.Instance.SaveByJSON();
             PlayerPrefs.SetInt("music", 1);
             PlayerPrefs.SetInt("sfx", 1);
@@ -22,7 +23,7 @@ public class LoadGolfPlayerData : MonoBehaviour
         }
         
         JsonSerializer.Instance.LoadByJSON();
-
+        
         for (int worldID = 0; worldID < WORLD_LIST.Count; worldID++)
         {
             //print("Setting up World " + worldID);
@@ -46,6 +47,7 @@ public class LoadGolfPlayerData : MonoBehaviour
                 golfLevel.LEVEL_PREFAB_NAME = "DEFAULT_LEVEL";
                 golfLevel.PAR = 1;
                 golfLevel.bestScore = 100000000;
+                golfLevel.isComplete = false;
                 golfWorld.LEVELS.Add(golfLevel);
             }
             JsonSerializer.Instance.golfPlayerData.WORLDS.Add(golfWorld);

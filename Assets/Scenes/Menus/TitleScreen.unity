@@ -2946,18 +2946,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -128
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -64
       objectReference: {fileID: 0}
     - target: {fileID: 1997646532440952664, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
@@ -3008,6 +3018,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueSequences.Array.data[0].dialogueEntries.Array.data[1].dropdownOption
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077769139542026369, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: easeInDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077769139542026369, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4455615590069492712, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
@@ -3202,6 +3222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8720792197351944411, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: easeOutDuration
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

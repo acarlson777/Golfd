@@ -1079,10 +1079,7 @@ RectTransform:
   m_Children:
   - {fileID: 4978388828182210715}
   - {fileID: 3348132174710378204}
-  - {fileID: 2690648773244310919}
   - {fileID: 4916549248864694677}
-  - {fileID: 4955776949448929086}
-  - {fileID: 5997417587231946519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1196,6 +1193,9 @@ RectTransform:
   - {fileID: 824526013974333245}
   - {fileID: 2906987974373678499}
   - {fileID: 5396931718474000545}
+  - {fileID: 2690648773244310919}
+  - {fileID: 4955776949448929086}
+  - {fileID: 5997417587231946519}
   m_Father: {fileID: 5757469190208501947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1428,7 +1428,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 5757469190208501947}
+  m_Father: {fileID: 3348132174710378204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1602,7 +1602,7 @@ RectTransform:
   m_Children:
   - {fileID: 26198789751723658}
   - {fileID: 7575947254595011042}
-  m_Father: {fileID: 5757469190208501947}
+  m_Father: {fileID: 3348132174710378204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2228,7 +2228,7 @@ PrefabInstance:
     - target: {fileID: 2204285458454624850, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
       propertyPath: m_text
-      value: Moana Water
+      value: <color=blue>Moana Water</color>
       objectReference: {fileID: 0}
     - target: {fileID: 2332204446838804210, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
@@ -2834,7 +2834,7 @@ PrefabInstance:
     - target: {fileID: 2204285458454624850, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
       propertyPath: m_text
-      value: Neon Nightscape
+      value: <color=#1F51FF>Neon</color> <color=#FF10F0>Nightscape</color>
       objectReference: {fileID: 0}
     - target: {fileID: 2204285458454624850, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
@@ -3450,7 +3450,7 @@ PrefabInstance:
     - target: {fileID: 2204285458454624850, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
       propertyPath: m_text
-      value: Goldburg
+      value: <color=#FFD700>Goldburg</color>
       objectReference: {fileID: 0}
     - target: {fileID: 2332204446838804210, guid: 7640d54da46498942b2ab0148d5abf44,
         type: 3}
@@ -3941,8 +3941,13 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 5757469190208501947}
+    m_TransformParent: {fileID: 3348132174710378204}
     m_Modifications:
+    - target: {fileID: 916470123426062514, guid: 343f2871f22014494abc3a02c072a2e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2652978513562420708, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_Name
@@ -4011,17 +4016,17 @@ PrefabInstance:
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}

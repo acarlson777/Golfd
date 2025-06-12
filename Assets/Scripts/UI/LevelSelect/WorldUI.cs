@@ -16,11 +16,11 @@ public class WorldUI : MonoBehaviour
     public void Setup(int worldID)
     {
         //print(worldID);
-        GolfWorld golfWorld = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID]; //Something's wrong here
+        GolfWorld golfWorld = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID];
         worldNameText.GetComponent<TextMeshProUGUI>().text = (golfWorld.NAME);
         Vector2 parAndBestScoreSums = SumOfParsAndBestScores(golfWorld);
-        if (parAndBestScoreSums.y < 100000000)
-        {
+        if (parAndBestScoreSums.y < 900000) // the number 1 million is hardcoded elsewhere and this ensures that when players go under par it can't subtract enough to trigger the actual 
+        {                                   // score being registered before all levels have been played (million's replaced by actual scores)
             bestScoreText.GetComponent<TextMeshProUGUI>().text = parAndBestScoreSums.y.ToString();
         } else
         {

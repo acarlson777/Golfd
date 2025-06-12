@@ -6,5 +6,8 @@ public class DeleteJSONDataDirectory : MonoBehaviour
     public void DeleteJSONData()
     {
         JsonSerializer.Instance.DeleteJSONData();
+        PlayerPrefs.SetString("FirstLevelScreen", "true");
+        PlayerPrefs.SetString("FirstTitleScreen", "true");
+        SceneHandler.Instance.LoadScene("TitleScreen");
     }
 }

@@ -9,4 +9,5 @@ public class GolfLevel
     public int PAR;
     public int bestScore;
     public string LEVEL_PREFAB_NAME;
+    public bool isComplete;
 }

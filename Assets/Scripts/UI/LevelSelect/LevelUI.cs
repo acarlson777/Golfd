@@ -34,6 +34,18 @@ public class LevelUI : MonoBehaviour
         }
         
         levelModelPrefabName = golfLevel.LEVEL_PREFAB_NAME;
+
+        if (levelID == 0 && worldID == 0)
+        {
+            button.interactable = true;
+        } else if (levelID == 0)
+        {
+            button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID-1].LEVELS[5].isComplete;
+        } else 
+        {
+            button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID].LEVELS[levelID - 1].isComplete;
+        }
+        
         button.onClick.AddListener(() => { EnterWorldAtThisLevel(worldID, levelID); });
 
         //GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);

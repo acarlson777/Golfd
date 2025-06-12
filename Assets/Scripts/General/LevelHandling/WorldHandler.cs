@@ -77,12 +77,12 @@ public class WorldHandler : MonoBehaviour
         if (score < JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
 
             JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore = score;
-            JsonSerializer.Instance.SaveByJSON();
+            
         }
-
-        //Show some sort of new best animation on screen if score was new best (conffetti would be fun)
-        //Constantly show par and current stroke count on the screen (this is a general note)
+        JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex - 1].LEVELS[levelIndex].isComplete = true;
+        JsonSerializer.Instance.SaveByJSON();
         isLevelComplete = true;
+
         StartEndLevelDialogue();
         _strokeCount = 0;
     }
