@@ -580,7 +580,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3062145746516792882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1071,7 +1071,7 @@ GameObject:
   - component: {fileID: 3352604708074786673}
   - component: {fileID: 5853463685489844740}
   m_Layer: 5
-  m_Name: Course
+  m_Name: Level Name BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aac4cd9591a1a1e4aa6a79cee486d523, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1416,7 +1416,7 @@ GameObject:
   - component: {fileID: 1454584792616650603}
   - component: {fileID: 202793688278891276}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
