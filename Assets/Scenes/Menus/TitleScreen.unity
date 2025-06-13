@@ -3082,39 +3082,78 @@ PrefabInstance:
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].lines.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].names.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].images.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].lines.Array.data[0]
-      value: "Hello there! Welcome to the wonderful world of Golf\u2019d and I. Ron! "
+      value: "Hello there I. Ron! Sorry, hello there, I\u2019m I. Ron and welcome
+        to the wonderful world of Golf\u2019d! "
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].lines.Array.data[1]
-      value: "Sorry, I\u2019m I. Ron, your whimsical Iron companion. Not to be confused
-        with Wood. NEVER confuse me with a Wood, those guys are the WORST!"
+      value: "I\u2019m here to help you through this course today as your caddy,
+        doing my best to give you the tips and tricks you\u2019ll need to be sub-par. "
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].lines.Array.data[2]
-      value: "Anyways, as your caddy, I\u2019ll be guiding you through your Golf\u2019d
-        adventure, let\u2019s begin!"
+      value: "\u201CPar\u201D being the number of hits it should take a pro golfer
+        like myself to complete a certain hole"
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[3]
+      value: "And not as in being sub-par is bad or anything, just that you\u2019ll
+        be below par, which is not to say\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[4]
+      value: "\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[5]
+      value: You know what I mean.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].names.Array.data[4]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].names.Array.data[5]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].images.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
@@ -3129,6 +3168,21 @@ PrefabInstance:
     - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
       propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 7023487528945028877, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - target: {fileID: 7085631852093479936, guid: 2663f3877fa2140f8999f259cb63856a,

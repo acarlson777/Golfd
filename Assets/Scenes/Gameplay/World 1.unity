@@ -711,6 +711,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].names.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
       propertyPath: dialogueEntries.Array.data[4].images.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -728,6 +738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueEntries.Array.data[11].images.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].images.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
@@ -831,6 +846,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[0]
+      value: "CORPORATE would like me to extend you an official congratulations from
+        all of us here at Golf\u2019d Inc for making it to your first hole of the
+        day! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[1]
+      value: 'Wait a minute the hole is not here, is it?  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[2]
+      value: "Try moving your phone--sorry--DIGITAL PUTTER\u2122 around to get a
+        good look at the ground. If done properly, CORPORATE tells me you should
+        see a grid of dots appear. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[3]
+      value: "After seeing the grid of dots, you will need to tap anywhere on that
+        grid to place your level and once your level is placed, pressing and holding
+        the screen of your DIGITAL PUTTER\u2122 will make your club appear.  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
       propertyPath: dialogueEntries.Array.data[4].images.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
@@ -884,6 +925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueEntries.Array.data[11].audioClips.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].audioClips.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
