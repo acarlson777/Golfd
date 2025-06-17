@@ -392,12 +392,12 @@ PrefabInstance:
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 41
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2794987373121433742, guid: 343f2871f22014494abc3a02c072a2e7,
         type: 3}
@@ -485,7 +485,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 375, y: 667}
+  m_ReferenceResolution: {x: 308, y: 666}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -1273,7 +1273,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -202}
-  m_SizeDelta: {x: 375, y: 100}
+  m_SizeDelta: {x: 308, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &672220068
 GameObject:
@@ -1310,7 +1310,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 375, y: 667}
+  m_SizeDelta: {x: 308, y: 666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672220070
 MonoBehaviour:
@@ -1685,7 +1685,7 @@ Transform:
   m_GameObject: {fileID: 1259668297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 377.99194, y: 147.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1737,7 +1737,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 375, y: 667}
+  m_SizeDelta: {x: 308, y: 666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1366327264
 MonoBehaviour:
@@ -2157,7 +2157,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -35.000008}
-  m_SizeDelta: {x: 375, y: 667}
+  m_SizeDelta: {x: 308, y: 666}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1609518475
 GameObject:
@@ -3276,6 +3276,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681915220041876162, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 308
+      objectReference: {fileID: 0}
+    - target: {fileID: 8681915220041876162, guid: 2663f3877fa2140f8999f259cb63856a,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 666
       objectReference: {fileID: 0}
     - target: {fileID: 8720792197351944411, guid: 2663f3877fa2140f8999f259cb63856a,
         type: 3}
