@@ -136,6 +136,12 @@ public class DialogueManager : MonoBehaviour {
     }
 
     private IEnumerator TypeLine(string line) {
+        if (line[0].ToString()=='<'.ToString())
+        {
+            print("SKIPPED IT");
+            dialogueText.text += line.Substring(0, line.IndexOf(">")+1);
+            line = line.Substring(line.IndexOf(">") + 1);
+        }
         foreach (char letter in line) {
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);

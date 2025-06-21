@@ -2445,8 +2445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 17}
-  m_SizeDelta: {x: -92.00001, y: -96}
+  m_AnchoredPosition: {x: 0.5, y: 17}
+  m_SizeDelta: {x: -69, y: -96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3551237017856940005
 CanvasRenderer:
@@ -2504,8 +2504,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2516,7 +2516,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 15
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3202,7 +3202,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 160, y: -150}
+  m_AnchoredPosition: {x: 150, y: -150}
   m_SizeDelta: {x: 1426, y: 1122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6900463415838413285
@@ -3693,7 +3693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6296994259038090981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4162,7 +4162,7 @@ MonoBehaviour:
   characterImage: {fileID: 8784763468460034207}
   dialogueText: {fileID: 5757524383031080016}
   characterName: {fileID: 5427222027621648119}
-  typingSpeed: 0.035
+  typingSpeed: 0.05
   possibleAudioClips:
   - {fileID: 8300000, guid: e087af4a598134527a7526c7ed595bc2, type: 3}
   - {fileID: 8300000, guid: fde7411e56fe64420a4d63022953a4bc, type: 3}
@@ -4171,7 +4171,7 @@ MonoBehaviour:
   dialogueEntries:
   - name: 1-1 INTRO | I. Ron
     lines:
-    - Good luck and happy putting!
+    - "From all of us here at Golf\u2019d Inc., we wish you good luck and happy putting!"
     names:
     - I. Ron
     images:
@@ -4180,77 +4180,123 @@ MonoBehaviour:
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
   - name: 1-2 INTRO | I. Ron
     lines:
-    - In my defense, I remember this hole being way cooler.
-    - "Here, how about this, you complete this hole and next hole, I\u2019ll take
-      you to a windmill? "
-    - "How\u2019s that sound?"
-    - "What the heck, who wouldn\u2019t love visiting a windmill? I\u2019m sure you
-      said yes.  "
+    - "Welcome to THE TRIANGLE\u2122. With its distinct lack of twists or turns,
+      it\u2019s known for being straight and to the point, three actually."
+    - Good luck and happy putting!
     names:
-    - I. Ron
-    - I. Ron
     - I. Ron
     - I. Ron
     images:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
-    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
-    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
   - name: 1-3 INTRO | I. Ron
     lines:
-    - 'What a wonderful windm- '
-    - Uh oh, it appears those dastardly Woods are literally gatekeeping this level.
-      Quick! Press the button, open the gate!
+    - "Welcome to THE WINDMILLS\u2122."
+    - Known for its smooth greens and nicely cut rough, this hole should just be
+      a matter of hitting the ball into the ho--
+    - "--ld on\u2026I don\u2019t remember these pits being here last time."
+    - "Shouldn\u2019t be too big of a deal\u2026as long as your ball never goes there\u2026"
+    - "...I\u2019ll call CORPORATE to see what\u2019s up with this slightly frightening
+      change."
+    - My best guess is that the greenskeeper must have been having a very bad day.
+    - Anyways, good luck and happy putting!
     names:
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
     - I. Ron
     - I. Ron
     images:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
   - name: 1-4 INTRO | I. Ron
     lines:
-    - Oh great, the lights are still out.
-    - What was that? I cannot see anything. Who goes there!
+    - "Welcome to THE SINGULAR WINDMILL\u2122. *sigh* I\u2019ve been telling CORPORATE
+      we need to change the name of this hole. "
     names:
+    - I. Ron
+    images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    audioClips:
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+  - name: 1-4 INTRO | I. Ron | 2
+    lines:
+    - "Oh no! It\u2019s the dastardly Woods!"
+    - "Those guys are known to mess with Golf\u2019d Inc. courses, and this time
+      it looks like they are literally gatekeeping this level."
+    - "As your caddy however, I know that there\u2019s a safety precaution which
+      means that the gate will open in the case it is disconnected from electricity. "
+    - Also as your caddy, I know that there just so happens to be a button which
+      does exactly that somewhere on this hole.
+    - Find that button and open the gate!
+    names:
+    - I. Ron
+    - I. Ron
+    - I. Ron
     - I. Ron
     - I. Ron
     images:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-5 INTRO | I. Ron
     lines:
-    - 'Man, this place is a safety hazard without the lights on! '
-    - Just be careful not to trip into any sand traps, ok? The nearest hospital is
-      almost 30 strokes away!
+    - I just got word from CORPORATE that our in-house ball retrieval services are
+      down, along with the power.
+    - "Now that I think about it, that might\u2019ve been our fault\u2026"
+    - Anyways, be careful not to trip into any sand traps, ok? The nearest hospital
+      is almost 30 strokes away!
+    - Good luck and happy putting!
     names:
+    - I. Ron
+    - I. Ron
     - I. Ron
     - I. Ron
     images:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-6 INTRO | I. Ron
     lines:
-    - 'Good job getting to the final level! '
-    - If my memory serves, this windmill holds the dynamo that supplies all the power
-      to the golf course!
-    - 'I think corporate installed the emergency power switch inside the hole, just
-      past the windmill. '
-    - "If you\u2019re quick, my supervisor might not get all rough with me about
-      the power. Good luck and happy putting!"
+    - "Welcome to the SINGULAR WINDMILL PART 2\u2122. Wow, CORPORATE really needs
+      to look into changing the names of these holes."
+    - "Speaking of CORPORATE, I\u2019m now remembering they recently installed a
+      power switch inside the hole just past the windmill."
+    - "I thought it was a weird decision at the time but I guess it wasn\u2019t after
+      all."
+    - Try to bring the power back!
     names:
     - I. Ron
     - I. Ron
@@ -4268,12 +4314,15 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-1 END | I. Ron
     lines:
-    - "Sorry, this is one of our\u2026less developed holes."
-    - "Hope you don\u2019t mind the lack of, well, everything really. Don\u2019t
-      worry, the next hole is sure to shock you! "
-    - (Not literally)
-    - (Hopefully, fingers crossed)
+    - CORPORATE recently issued a mandate for a golf pun to be given to players after
+      every hole to improve player retention.
+    - "Let\u2019s see what we got here\u2026"
+    - "\u2026okay this one is alright."
+    - "\u201CThat might\u2019ve been a little rough, but I\u2019m sure you\u2019ll
+      be on the green in no time!\u201D"
+    - Do you feel any more retained than you were previously?
     names:
+    - I. Ron
     - I. Ron
     - I. Ron
     - I. Ron
@@ -4283,39 +4332,61 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-2 END | I. Ron
     lines:
-    - Prepare to be blown away! Here comes the windmill!
+    - "CORPORATE also wants me to mention that this particular course is sponsored
+      by \u201CJust So Many Investments Inc.\u201D"
+    - Apparently, their parent company also owns minigolf courses so why they wanted
+      an ad here, I have no idea.
+    - "Speaking of CORPORATE, here\u2019s one from them: Why are badly hit golf balls
+      on the first hole the tastiest?"
+    - "Because they\u2019re breakfast balls!"
     names:
     - I. Ron
+    - I. Ron
+    - I. Ron
+    - I. Ron
     images:
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-3 END | I. Ron
     lines:
-    - "Please don\u2019t let that minor light-related mishap doesn\u2019t affect
-      your rating of me as a caddy. "
-    - "My 9-Iron supervisor didn\u2019t want caddies let any players go too far above
-      par and you know how 9-Iron\u2019s only play the short-game.  "
+    - Great work in getting through that holey challenge!
+    - "I\u2019ve seen holes in one, but I\u2019ve never heard of two gaping holes
+      in one hole."
+    - "CORPORATE didn\u2019t seem to know about these extra holes--something\u2019s
+      off here."
     names:
+    - I. Ron
     - I. Ron
     - I. Ron
     images:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
+    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
   - name: 1-4 END | I. Ron
     lines:
-    - "Thank goodness we\u2019re out of that mess, don\u2019t listen to those Woods."
-    - 'Anyway, let''s head to a much less chaotic park '
+    - It seems those evil Woods have gotten away for now but I have no doubts that
+      they will return.
+    - Keep your club face open--I mean your eyes peeled.
     names:
     - I. Ron
     - I. Ron
@@ -4340,13 +4411,13 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
   - name: 1-6 END | I. Ron
     lines:
-    - 'Thanks for the help! All the lights should be back on! '
-    - "We built the windmill to get out of a power contract with Putts\u2122 Energy."
-    - 'They used to upcharge us 20 bucks for each swing above par! '
-    - "Alright, let\u2019s move on to the next world!"
-    - I hope you're ready for a vacation!
+    - 'We had originally built that windmill to get out of a power contract with
+      Puttz and Co. '
+    - They used to charge us $20 for each swing above par!
+    - "Also this is slightly awkward but due to wear and tear over the years, we\u2019ve
+      exhausted this courses\u2019 Neon Nightscape holes."
+    - "I\u2019ll meet you on our next course, Moana Water, for the remaining holes."
     names:
-    - I. Ron
     - I. Ron
     - I. Ron
     - I. Ron
@@ -4356,9 +4427,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
-    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
@@ -4366,15 +4435,18 @@ MonoBehaviour:
   - name: INTRO
     lines:
     - "CORPORATE would like me to extend you an official congratulations from all
-      of us here at Golf\u2019d Inc for making it to your first hole of the day! "
-    - 'Wait a minute the hole is not here, is it?  '
+      of us here at Golf\u2019d Inc. for making it to your first hole of the day!"
+    - Wait a minute the hole is not here, is it?
     - "Try moving your phone--sorry--DIGITAL PUTTER\u2122 around to get a good look
-      at the ground. If done properly, CORPORATE tells me you should see a grid of
-      dots appear. "
-    - "After seeing the grid of dots, you will need to tap anywhere on that grid
-      to place your level and once your level is placed, pressing and holding the
-      screen of your DIGITAL PUTTER\u2122 will make your club appear.  "
+      at the ground."
+    - If done properly, CORPORATE tells me you should see a grid of dots appear.
+    - After seeing the grid of dots, you will need to tap anywhere on that grid to
+      place your level.
+    - "Once your level is placed, pressing and holding the screen of your DIGITAL
+      PUTTER\u2122 will make your club appear."
     names:
+    - I. Ron
+    - I. Ron
     - I. Ron
     - I. Ron
     - I. Ron
@@ -4384,25 +4456,24 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
+    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
     - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
-  - name: NN3-POST-BUTTON
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+  - name: NN4-POST-BUTTON
     lines:
-    - Oh, I forgot to mention, the button that opened the gate also powered down
-      the generator which runs the lights.
-    - Luckily, your ball comes with a light pre-installed! Free of charge. Give me
-      a second to activate it.
-    - Which wire did I need to cut again?
-    - One of these was the explode on-cut wire, and one of them was extra
-    - '*snip*'
-    - Oh hey it worked, alright, happy putting!
+    - 'Uh oh, it looks like that disconnected the electricity for more than just
+      the gate. '
+    - Luckily, we just updated our golf balls to generate energy when hit which should
+      keep the lights at low power for a short time.
+    - "Still, we should definitely find a way to get the power fully back on before
+      CORPORATE realizes it\u2019s gone out."
     names:
-    - I. Ron
-    - I. Ron
-    - I. Ron
     - I. Ron
     - I. Ron
     - I. Ron
@@ -4410,13 +4481,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
-    - {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c, type: 3}
     audioClips:
-    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
-    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
-    - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
@@ -4453,7 +4518,11 @@ MonoBehaviour:
       dropdownOption: 0
   - sequenceName: 1-4 INTRO
     dialogueEntries:
-    - dialogueName: 1-1 INTRO | I. Ron
+    - dialogueName: 1-4 INTRO | I. Ron
+      dropdownOption: 0
+    - dialogueName: 1-4 INTRO | The Woods
+      dropdownOption: 1
+    - dialogueName: 1-4 INTRO | I. Ron | 2
       dropdownOption: 0
   - sequenceName: 1-5 INTRO
     dialogueEntries:
@@ -4487,15 +4556,13 @@ MonoBehaviour:
     dialogueEntries:
     - dialogueName: 1-6 END | I. Ron
       dropdownOption: 0
-    - dialogueName: 1-6 END | The Woods
-      dropdownOption: 1
   - sequenceName: INTRO-SEQUENCE
     dialogueEntries:
     - dialogueName: INTRO
       dropdownOption: 0
-  - sequenceName: NN3-POST-BUTTON-SEQUENCE
+  - sequenceName: NN4-POST-BUTTON-SEQUENCE
     dialogueEntries:
-    - dialogueName: NN3-POST-BUTTON
+    - dialogueName: NN4-POST-BUTTON
       dropdownOption: 0
   manager1: {fileID: 1564932514128694432}
   manager2: {fileID: 6960761786838772680}
@@ -4520,58 +4587,24 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2c4696a139645464cae8948a8b6d1657, type: 3}
   - {fileID: 8300000, guid: 5169449241bc74327835baaf3aa55aab, type: 3}
   dialogueEntries:
-  - name: 1-1 INTRO | The Woods
+  - name: 1-4 INTRO | The Woods
     lines:
-    - Don't listen to him!
-    - Don't ever listen to an Iron.
-    - Believe me, they won't hit a ball over 200 yards in their lives!
-    - Ahahahaha!
+    - "<color=#A52A2A>Muahahaha, you\u2019ll never make it past this hole now! The
+      gate is locked, and we threw away the device that opens it!"
+    - <color=#964B00>But Woodothy, I thought we lost the remote in the river?
+    - "<color=#A52A2A>Shush Woodzekiel! They don\u2019t need to know that!"
+    - <color=#A52A2A>Let's get out of here!
     names:
     - The Woods
     - The Woods
     - The Woods
     - The Woods
     images:
-    - {fileID: 21300000, guid: 934e3e48af4e6c146be9c3f63af9dcaf, type: 3}
-    - {fileID: 21300000, guid: 934e3e48af4e6c146be9c3f63af9dcaf, type: 3}
-    - {fileID: 21300000, guid: 934e3e48af4e6c146be9c3f63af9dcaf, type: 3}
-    - {fileID: 21300000, guid: 934e3e48af4e6c146be9c3f63af9dcaf, type: 3}
+    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
+    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
+    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
+    - {fileID: 21300000, guid: 469e3d0bcb6164b549a4ec74471d2cf1, type: 3}
     audioClips:
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
-  - name: 1-1 END | The Woods
-    lines:
-    - I told you!
-    names:
-    - The Woods
-    images:
-    - {fileID: 21300000, guid: 934e3e48af4e6c146be9c3f63af9dcaf, type: 3}
-    audioClips:
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
-  - name: 1-6 END | The Woods
-    lines:
-    - Rats! They found a way around our death pits! And the gate!
-    - "This wouldn\u2019t\u2019ve happened if YOU remembered to buy a gate that wasn\u2019t
-      electric!"
-    - "You were there when we bought it, why didn\u2019t you say anything?! "
-    - "Guys, stop fighting! Let\u2019s report back."
-    - 'Putts is going to be so mad at us. '
-    names:
-    - Woody
-    - Woodeil
-    - Woody
-    - Woodzekiel
-    - Woodzekiel
-    images:
-    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
-    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
-    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
-    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
-    - {fileID: 21300000, guid: 63486df51b472b84cbfea8e76296d97d, type: 3}
-    audioClips:
-    - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
     - {fileID: 8300000, guid: 2d8f0f55097224df588a56bfb9f21613, type: 3}
@@ -5052,7 +5085,7 @@ PrefabInstance:
     - target: {fileID: 1726852544051449712, guid: 0231a834b17964403bb7b2290e99fd7b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2539071865282821779, guid: 0231a834b17964403bb7b2290e99fd7b,
         type: 3}
