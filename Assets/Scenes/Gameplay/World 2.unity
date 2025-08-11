@@ -131,6 +131,909 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 644462787241984647, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].name
+      value: 1-6 INTRO  I. Ron | 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].name
+      value: 1-1 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].name
+      value: 1-2 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].name
+      value: 1-3 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[11].name
+      value: 1-4 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].name
+      value: 1-5 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].name
+      value: 1-6 END | I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].name
+      value: INTRO
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].name
+      value: NN4-POST-BUTTON
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].lines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].names.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[6].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].names.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].names.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].images.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].images.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].images.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].images.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].images.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].images.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].images.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].images.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[0]
+      value: Welcome to Moana Waters, our luxury resort nestled just inland of a
+        tropical shore!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[1]
+      value: Take some time to rest and relax after our adventures in Neon Nightscapes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].lines.Array.data[2]
+      value: "Just\u2026 try not to get too relaxed. You don\u2019t want to accidentally
+        go above par! Or float away in that river\u2026 Happy putting!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].names.Array.data[1]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].names.Array.data[2]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[0]
+      value: More ads!? CORPORATE must have really not liked how we did last quarter.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[1]
+      value: "Anyways, welcome to Golf\u2019d Inc.\u2019s very own SERENE LAKE\u2122."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[2]
+      value: " At this hole, there\u2019s the scenic route and the scary route, and
+        I won\u2019t try to convince you which route to take but I will say watch
+        out for that water hazard!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].lines.Array.data[3]
+      value: "It\u2019s very much water\u2026and even more hazardous!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].names.Array.data[2]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].names.Array.data[3]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[0]
+      value: "Welcome to our HOT SPRINGS\u2122! You\u2019ll surely be relaxed after
+        bathing in one of our natural geysers."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[1]
+      value: "Although now that I think of it, CORPORATE has told me there\u2019s
+        been some abnormal activity lately, so you might not want to stay too long."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].lines.Array.data[2]
+      value: Good luck and happy putting!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[0]
+      value: "Welcome to THE WATERFALL\u2122! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].lines.Array.data[1]
+      value: You might not see the hole now, but just hit your ball into the water
+        and see what happens!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].names.Array.data[1]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[0]
+      value: Look at that! An all-natural plinko machine that takes you right into
+        a water cave.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[1]
+      value: "It is a little dark in here\u2026 you know what, let's just get par
+        before one of us gets spooked!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].lines.Array.data[2]
+      value: "I mean - before you get spooked. I\u2019m not scared at all!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[0]
+      value: "Welcome to THE WATERWHEEL\u2122. But wait a minute\u2026I don\u2019t
+        remember all these holes being around here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[1]
+      value: "It\u2019s almost as if someone is digging for treasure, but I don\u2019t
+        remember any pirates on this course."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].lines.Array.data[2]
+      value: "I\u2019m sure it\u2019s nothing. Good luck and happy putting!  "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[0]
+      value: "Welcome to Golf\u2019d Inc.\u2019s very own PILE O\u2019 ROCKS\u2122.
+        Famous for boasting nothing more than a pile of ro\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[1]
+      value: WHY IS THERE A PIRATE SHIP HERE???
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[6].lines.Array.data[2]
+      value: Try to bring the power back!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[0]
+      value: Alright. As your caddy, I am obligated to have a backup plan for every
+        situation. Run!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[1]
+      value: "Although, I guess we\u2019re stuck between a bunker and a hard place.
+        If you can make it to the hole on the other side of the river, we can finish
+        this hole and get out of here!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].lines.Array.data[2]
+      value: "I\u2019ve got it! Try to hit the ball right between the cannonballs.
+        I\u2019m 9% confident you can make it through!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[0]
+      value: "Sorry about the billboards by the way, Golf\u2019d Inc. has fallen
+        on rough times recently with a decline in players and CORPORATE is trying
+        all they can to keep these courses afloat"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[1]
+      value: "Even if that means advertising, whatever \u201Creal golf\u201D is."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[2]
+      value: "\u2026okay this one is alright."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[3]
+      value: "\u201CThat might\u2019ve been a little rough, but I\u2019m sure you\u2019ll
+        be on the green in no time!\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].lines.Array.data[4]
+      value: Do you feel any more retained than you were previously?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].names.Array.data[4]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[0]
+      value: "I wonder where those pesky Woods went\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[1]
+      value: "Well at least they\u2019re no longer interrupting the perfectly good
+        round of minigolf we have going right now, am I right?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[2]
+      value: "\u2026am I right?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].lines.Array.data[3]
+      value: "It\u2019s very much water\u2026and even more hazardous!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].names.Array.data[3]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[0]
+      value: As a caddy, those geysers were scary!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[1]
+      value: I was nervous you were going to fly out of bounds!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].lines.Array.data[2]
+      value: "CORPORATE didn\u2019t seem to know about these extra holes--something\u2019s
+        off here."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].names.Array.data[2]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[0]
+      value: "Alright, I\u2019ll admit, I am a little spooked\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[11].lines.Array.data[1]
+      value: "Well what are you waiting for? Let\u2019s get out of here!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[0]
+      value: "Argh! That was a good putt matey! You\u2019ll be getting par-rgh on
+        every hole in no time!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].lines.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[0]
+      value: "Big Puttz? That\u2019s the guy who\u2019s been buying up golf courses
+        left and right! And now, he\u2019s trying to starve out ours!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[1]
+      value: "We have to stop him. Let\u2019s head to Goldberg to finish this 18-hole
+        adventure and confront Big Puttz. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[2]
+      value: "Also this is slightly awkward but due to wear and tear over the years,
+        we\u2019ve exhausted this courses\u2019 Neon Nightscape holes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].lines.Array.data[3]
+      value: "I\u2019ll meet you on our next course, Moana Water, for the remaining
+        holes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[0]
+      value: "CORPORATE would like me to extend you an official congratulations from
+        all of us here at Golf\u2019d Inc. for making it to your first hole of the
+        day!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[1]
+      value: Wait a minute the hole is not here, is it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[2]
+      value: "Try moving your phone--sorry--DIGITAL PUTTER\u2122 around to get a
+        good look at the ground."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[3]
+      value: If done properly, CORPORATE tells me you should see a grid of dots appear.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[4]
+      value: After seeing the grid of dots, you will need to tap anywhere on that
+        grid to place your level.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].lines.Array.data[5]
+      value: "Once your level is placed, pressing and holding the screen of your
+        DIGITAL PUTTER\u2122 will make your club appear."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].names.Array.data[3]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].names.Array.data[4]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].names.Array.data[5]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].lines.Array.data[0]
+      value: 'Uh oh, it looks like that disconnected the electricity for more than
+        just the gate. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].lines.Array.data[1]
+      value: Luckily, we just updated our golf balls to generate energy when hit
+        which should keep the lights at low power for a short time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].lines.Array.data[2]
+      value: "Still, we should definitely find a way to get the power fully back
+        on before CORPORATE realizes it\u2019s gone out."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].names.Array.data[0]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].names.Array.data[1]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].names.Array.data[2]
+      value: I. Ron
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].images.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].images.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].images.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].images.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].images.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].images.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: cc5df9a9b52d18d4dbcb7d8bc3e5549c,
+        type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].audioClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[2].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[4].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[5].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[7].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[12].audioClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[13].audioClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].audioClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[0].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[1].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[3].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[8].audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[9].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[10].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[14].audioClips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2899e70a801f34ea0804dc94c4d2e035, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].audioClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].audioClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
+    - target: {fileID: 1564932514128694432, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
+        type: 3}
+      propertyPath: dialogueEntries.Array.data[15].audioClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cc5abd66006f848f79a1fdec024ae68e, type: 3}
     - target: {fileID: 2020533599812406984, guid: b7e550269444e4d25a5d2a3cd7ab2ec2,
         type: 3}
       propertyPath: _levelList.Array.data[0]
