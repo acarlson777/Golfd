@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HoleHandler : MonoBehaviour
 {
+    [SerializeField] private int penalty = 0;
     [SerializeField] private LevelHandler _levelHandler;
     private float _ballVelocityTolerance = 0.1f;
     public bool golfBallInHole; // made the classes public for flagHole script. Alex a
@@ -47,6 +48,6 @@ public class HoleHandler : MonoBehaviour
         golfBallInHoleSound.Play();
         AudioSource.PlayClipAtPoint(selectedGolfClapClip, transform.position);
 
-        WorldHandler.Instance.OnLevelCompleted();
+        WorldHandler.Instance.OnLevelCompleted(penalty);
     }
 }

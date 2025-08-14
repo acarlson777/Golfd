@@ -67,12 +67,13 @@ public class WorldHandler : MonoBehaviour
         if (debug) { Time.timeScale = 0.1f; } else { Time.timeScale = 1; }
     }
 
-    public void OnLevelCompleted(){
+    public void OnLevelCompleted(int penalty){
 
         clubHandler.clubEnabled = false;
         clubHandler._clubHead.SetActive(false);
         ballIndicatorHandler.gameObject.SetActive(false);
-        
+
+        _strokeCount += penalty;
         int score = CalculateScore();
         if (score < JsonSerializer.Instance.golfPlayerData.WORLDS[_worldIndex-1].LEVELS[levelIndex].bestScore){
 
