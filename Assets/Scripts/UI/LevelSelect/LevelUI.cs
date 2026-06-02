@@ -35,18 +35,33 @@ public class LevelUI : MonoBehaviour
         
         levelModelPrefabName = golfLevel.LEVEL_PREFAB_NAME;
 
+        // Since Golf'd Lite Edition only has 1 world (6 levels), we want to turn off / rewrite the "level unlocking"
+        // logic for the rest of the game which is what I am doing here - Cai
+        //if (levelID == 0 && worldID == 0)
+        //{
+        //    button.interactable = true;
+        //} else if (levelID == 0)
+        //{
+        //    button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID-1].LEVELS[5].isComplete;
+        //} else 
+        //{
+        //    button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID].LEVELS[levelID - 1].isComplete;
+        //}
+
+        // this logic prevents worlds that aren't the first world from having their levels get unlocked 
         if (levelID == 0 && worldID == 0)
         {
             button.interactable = true;
-        } else if (levelID == 0)
-        {
-            button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID-1].LEVELS[5].isComplete;
-        } else 
+        }
+        else if (worldID == 0)
         {
             button.interactable = JsonSerializer.Instance.golfPlayerData.WORLDS[worldID].LEVELS[levelID - 1].isComplete;
+        } else
+        {
+            button.interactable = false;
         }
-        
-        button.onClick.AddListener(() => { EnterWorldAtThisLevel(worldID, levelID); });
+
+            button.onClick.AddListener(() => { EnterWorldAtThisLevel(worldID, levelID); });
 
         //GameObject levelModelPrefab = (GameObject) Resources.Load(levelModelPrefabName);
         //levelModel = Instantiate(levelModelPrefab, levelModelParent.transform);
