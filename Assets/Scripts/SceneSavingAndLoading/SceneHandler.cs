@@ -53,7 +53,9 @@ public class SceneHandler : MonoBehaviour
     {
         if (currCoroutine == null)
         {
+            // _loadingScreenCanvas.SetActive(true);
             currCoroutine = StartCoroutine(LoadSceneCoroutine(sceneName));
+            // _loadingScreenCanvas.SetActive(false);
         }
     }
 }
