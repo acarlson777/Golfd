@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glow
+  m_Name: GlowLess
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -117,7 +117,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.12735844, g: 0.52870744, b: 1, a: 1}
     - _Color: {r: 0.1273584, g: 0.52870744, b: 1, a: 1}
-    - _EmissionColor: {r: 1.4980392, g: 1.3254902, b: 1.3254902, a: 0}
+    - _EmissionColor: {r: 0.09362745, g: 0.08284314, b: 0.08284314, a: 0}
     - _SpecColor: {r: 0, g: 0.3827634, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &4156283410779082409

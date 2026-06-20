@@ -22,21 +22,25 @@ public class ButtonHandler : MonoBehaviour
         if (other.gameObject.CompareTag("GolfBall"))
         {
             hasBeenPressed = true;
-            animator.SetBool("isOn", true);
-            if (animatorsToTrigger.Length == 1){
-                animatorsToTrigger[0].SetBool("isOn", true);
-            } else {
-                foreach (Animator animatorToTrigger in animatorsToTrigger)
-                {
-                    animatorToTrigger.SetBool("isOn", true);
-                }
+            if (animator != null)
+            {
+                animator.SetBool("isOn", true);
+            }
+            foreach (Animator animatorToTrigger in animatorsToTrigger)
+            {
+                animatorToTrigger.SetBool("isOn", true);
             }
 
             if (dialogueToTrigger != "")
             {
                 WorldHandler.Instance.clubHandler.enabled = false;
-                WorldHandler.Instance.GetDialogueWrapper().StartDialogueSequence(dialogueToTrigger, ()=> {
-                    if (gameObjectToBeActivated != null) { gameObjectToBeActivated.SetActive(true); }
+                if (gameObjectToBeActivated != null && gameObjectToBeHidden != null)
+                {
+                    gameObjectToBeHidden.SetActive(false);
+                    gameObjectToBeActivated.SetActive(true);
+                }
+                WorldHandler.Instance.GetDialogueWrapper().StartDialogueSequence(dialogueToTrigger, () =>
+                {
                     WorldHandler.Instance.clubHandler.enabled = true;
                 });
             } else
